@@ -1,92 +1,92 @@
 import streamlit as st
-import numpy as np
 import pandas as pd
-import streamlit as st
+import plotly.express as px
 
-# Set page configuration for a better first impression
-st.set_page_config(page_title="HACK THE FUTURE", layout="wide", page_icon=":sparkles:")
+# Set page configuration
+st.set_page_config(page_title="Creative Streamlit App", layout="wide", page_icon=":sparkles:")
 
-# Customize the background color and text
+# Custom CSS for attractive design
 st.markdown("""
     <style>
-        .main {
-            background-color: #f0f2f6;
-        }
-        .title h1 {
-            font-size: 3em;
-            font-weight: bold;
-            color: #4B6587;
-        }
-        .header-text {
-            font-size: 1.2em;
-            color: #333;
-        }
+    .main {
+        background: linear-gradient(135deg, #6e8efb, #a777e3);
+        color: white;
+    }
+    h1 {
+        font-family: 'Verdana', sans-serif;
+        font-size: 3em;
+        font-weight: bold;
+        color: #fff;
+    }
+    .sidebar .sidebar-content {
+        background: linear-gradient(135deg, #a777e3, #6e8efb);
+    }
+    .css-1d391kg {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
     </style>
     """, unsafe_allow_html=True)
 
-# Create a stylish header
-st.markdown("<div class='title'><h1>Welcome to My Beautiful App</h1></div>", unsafe_allow_html=True)
+# Header
+st.markdown("<h1 style='text-align: center;'>Welcome to the Creative App 🌟</h1>", unsafe_allow_html=True)
 
-# Sidebar for user interaction
-st.sidebar.header("Navigation")
-st.sidebar.markdown("Use the following options to interact:")
-page = st.sidebar.selectbox("Choose a page:", ["Home", "Analytics", "About"])
+# Sidebar for navigation
+st.sidebar.markdown("## Explore the App")
+options = st.sidebar.radio("Go to", ['Home', 'Interactive Data', 'About'])
 
-st.sidebar.markdown("## Other Settings")
-if st.sidebar.checkbox("Show tips"):
-    st.sidebar.markdown("Here are some tips on how to use the app...")
-
-# Main layout
-if page == "Home":
-    st.markdown("<div class='header-text'><p>Explore the key features of our app below.</p></div>", unsafe_allow_html=True)
+# Home Page
+if options == 'Home':
+    st.markdown("<h3 style='text-align: center;'>A New Way to Experience Data 🎨</h3>", unsafe_allow_html=True)
     
-    # Create three columns
-    col1, col2, col3 = st.columns(3)
-    
+    # Two Columns Layout for an Introduction
+    col1, col2 = st.columns(2)
     with col1:
-        st.image("https://source.unsplash.com/400x300/?nature", use_column_width=True)
-        st.markdown("### Feature 1")
-        st.write("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
-    
+        st.image("https://source.unsplash.com/500x300/?creative,design", use_column_width=True)
+        st.markdown("### Why Choose Us?")
+        st.write("""
+            - Interactive Data Visualizations
+            - Dynamic User Input
+            - Beautiful, Responsive Design
+        """)
+        
     with col2:
-        st.image("https://source.unsplash.com/400x300/?tech", use_column_width=True)
-        st.markdown("### Feature 2")
-        st.write("Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.")
+        st.image("https://source.unsplash.com/500x300/?innovation,tech", use_column_width=True)
+        st.markdown("### Our Key Features")
+        st.write("""
+            - Real-time Analytics
+            - Engaging User Experience
+            - Intuitive Interface
+        """)
+
+# Interactive Data Page
+elif options == 'Interactive Data':
+    st.markdown("<h3>Analyze with Beautiful Visuals 📊</h3>", unsafe_allow_html=True)
     
-    with col3:
-        st.image("https://source.unsplash.com/400x300/?business", use_column_width=True)
-        st.markdown("### Feature 3")
-        st.write("Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.")
+    # Sample DataFrame
+    df = pd.DataFrame({
+        'Category': ['A', 'B', 'C', 'D'],
+        'Values': [300, 150, 400, 250]
+    })
     
-    # Create a section with a different layout
-    st.markdown("---")
-    st.markdown("### Detailed Analytics")
-    col4, col5 = st.columns([1, 2])
+    # Display DataFrame and Chart
+    st.markdown("#### Data Overview:")
+    st.dataframe(df)
     
-    with col4:
-        st.markdown("##### Key Metrics")
-        st.metric(label="Visitors", value="1000", delta="5%")
-        st.metric(label="Conversion Rate", value="4.5%", delta="0.3%")
-        st.metric(label="Revenue", value="$1500", delta="10%")
+    # Create interactive chart with Plotly
+    fig = px.bar(df, x='Category', y='Values', title='Category vs Values', color='Category', text='Values')
+    fig.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)', font_color='white')
     
-    with col5:
-        st.line_chart({"Sales": [100, 120, 150, 170, 200], "Expenses": [50, 60, 70, 90, 100]})
-    
-elif page == "Analytics":
-    st.markdown("<div class='header-text'><p>Analyze key performance metrics in real-time.</p></div>", unsafe_allow_html=True)
-    st.area_chart({"Data": [1, 3, 2, 4, 7, 6, 8]})
-    
-    st.bar_chart({"Category A": [5, 3, 8], "Category B": [6, 7, 3], "Category C": [4, 6, 5]})
-    
-elif page == "About":
-    st.markdown("<div class='header-text'><p>Learn more about our project and its creators.</p></div>", unsafe_allow_html=True)
+    st.plotly_chart(fig, use_container_width=True)
+
+# About Page
+elif options == 'About':
+    st.markdown("<h3>About Us 💡</h3>", unsafe_allow_html=True)
     st.write("""
-        This app was built using [Streamlit](https://streamlit.io), a simple and powerful framework for building data apps.
-        Our team is dedicated to creating intuitive and interactive user experiences with the latest technologies.
+        This app is built to showcase a beautiful, functional interface while keeping the user experience simple.
+        Created with [Streamlit](https://streamlit.io).
     """)
+    st.video("https://www.youtube.com/watch?v=B2iAodr0fOo")
 
-# Footer section
+# Footer
 st.markdown("---")
-st.markdown("<h5 style='text-align:center; color:gray;'>Made with ❤️ by [Your Name]</h5>", unsafe_allow_html=True)
-
-
+st.markdown("<h5 style='text-align: center;'>Made with ❤️ by Muhirwa Jean Bosco</h5>", unsafe_allow_html=True)
