@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 
 # Set page configuration for a better first impression
-st.set_page_config(page_title="Beautiful Streamlit App", layout="wide", page_icon=":sparkles:")
+st.set_page_config(page_title="HACK THE FUTURE", layout="wide", page_icon=":sparkles:")
 
 # Customize the background color and text
 st.markdown("""
