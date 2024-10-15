@@ -3,14 +3,23 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 
-# Set page config for a professional look
-st.set_page_config(page_title="Outstanding Dashboard", page_icon="📊", layout="wide")
+# Machine Learning Libraries (Example)
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
 
-# CSS for custom animations and design
+# Set up page configuration
+st.set_page_config(
+    page_title="AI-Powered Data Science Dashboard", 
+    page_icon="🔍", 
+    layout="wide"
+)
+
+# Custom CSS for UI/UX Design
 st.markdown("""
     <style>
     .main {
-        background-color: #F5F7F9;
+        background-color: #F0F8FF;
     }
     .stSidebar {
         background-color: #002B5B;
@@ -32,97 +41,118 @@ st.markdown("""
         color: white;
         border-radius: 5px;
     }
-    .animate-fade {
-        animation: fadeIn 2s ease-in-out;
+    .stTabs .tab-bar {
+        border-bottom: 2px solid #007BFF;
     }
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
+    .ml-section {
+        background-color: #F0F8FF;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     }
     </style>
     """, unsafe_allow_html=True)
 
-# Sidebar Navigation
-st.sidebar.title("📊 Navigation")
-page = st.sidebar.radio("Go to", ["Home", "Data Insights", "Trends", "Predictions"])
+# Sidebar - Navigation
+st.sidebar.title("🔍 AI & Data Science Dashboard")
+st.sidebar.subheader("Navigation")
+page = st.sidebar.radio("Select Page", ["Home", "Data Analysis", "Model Training", "Model Predictions"])
 
-# Dummy DataFrame
-df = pd.DataFrame({
-    'Category': ['A', 'B', 'C', 'D', 'E'],
-    'Values': [150, 450, 200, 300, 500]
-})
+# Header Animation
+st.markdown("<h1 class='animate-fade'>🔍 AI-Powered Data Science Dashboard</h1>", unsafe_allow_html=True)
 
-# Dummy dataset for trends
-time_series_data = pd.DataFrame({
-    'Date': pd.date_range(start='1/1/2022', periods=100),
-    'Value': [i**0.5 + (i/10) for i in range(100)]
-})
-
-# Header with animations
-st.markdown("<h1 class='animate-fade'>📊 Outstanding Interactive Dashboard</h1>", unsafe_allow_html=True)
-
-# Home Page Layout
+# Define the layout of the application
 if page == "Home":
-    st.markdown("## Welcome to the **Home** Page")
+    st.markdown("## Welcome to the **Home** Page of the AI-Powered Dashboard")
+    
+    # A dynamic two-column layout
     col1, col2 = st.columns(2)
 
-    # Pie Chart
+    # First Column: Introduction
     with col1:
-        st.markdown("### Category Breakdown")
-        fig_pie = px.pie(df, values='Values', names='Category', title='Category Distribution')
-        fig_pie.update_traces(textinfo='percent+label')
-        st.plotly_chart(fig_pie, use_container_width=True)
+        st.write("""
+        This dashboard is designed for **data scientists** and **machine learning practitioners** to:
+        - Perform exploratory **data analysis** with interactive charts
+        - **Train models** directly from the dashboard
+        - **Visualize model performance**
+        - Analyze **predictions** with easy-to-use interfaces.
+        """)
 
-    # Bar Chart
+    # Second Column: Image or Animation
     with col2:
-        st.markdown("### Category Values")
-        fig_bar = px.bar(df, x='Category', y='Values', color='Category', title='Category Values')
-        fig_bar.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(255,255,255,0.8)')
-        st.plotly_chart(fig_bar, use_container_width=True)
+        st.image("https://via.placeholder.com/400x300.png?text=Data+Science+Visualization", caption="AI & Data Science", use_column_width=True)
 
-elif page == "Data Insights":
-    st.markdown("## **Data Insights** Page")
-    
-    # Data Summary
-    st.write("### Data Overview")
+# Data Analysis Section
+elif page == "Data Analysis":
+    st.markdown("## 📊 **Data Analysis** Section")
+
+    # Load Sample Dataset (Iris dataset)
+    st.subheader("Dataset Overview")
+    iris = load_iris()
+    df = pd.DataFrame(iris.data, columns=iris.feature_names)
+    df['target'] = iris.target
+
+    # Show DataFrame
+    st.write("### Iris Dataset")
     st.dataframe(df)
 
-    # Animated Line Chart
-    st.markdown("### Trends Over Time")
-    fig_line = px.line(time_series_data, x='Date', y='Value', title='Time Series Data')
-    fig_line.update_traces(line=dict(color='royalblue', width=3), marker=dict(size=8, symbol='circle'))
-    st.plotly_chart(fig_line, use_container_width=True)
+    # Add Plots
+    st.write("### Feature Distributions")
+    fig = px.scatter_matrix(df, dimensions=iris.feature_names, color="target", title="Iris Feature Correlation")
+    st.plotly_chart(fig, use_container_width=True)
 
-elif page == "Trends":
-    st.markdown("## **Trends** Page")
+# Model Training Section
+elif page == "Model Training":
+    st.markdown("## 🧠 **Train Your Machine Learning Model**")
+
+    st.write("""
+    This section allows you to upload your dataset, configure model parameters, and train a model using the 
+    Random Forest algorithm.
+    """)
+
+    # Allow file upload
+    uploaded_file = st.file_uploader("Upload your dataset (.csv)", type=["csv"])
     
-    # Multi-chart layout
-    col1, col2 = st.columns(2)
+    if uploaded_file:
+        data = pd.read_csv(uploaded_file)
+        st.write("### Uploaded Dataset", data.head())
 
-    # Box plot on left
-    with col1:
-        st.markdown("### Distribution of Values (Box Plot)")
-        fig_box = px.box(df, x='Category', y='Values', color='Category', title='Category Distribution')
-        st.plotly_chart(fig_box, use_container_width=True)
+        # Sidebar for model configuration
+        st.sidebar.subheader("Model Configuration")
+        test_size = st.sidebar.slider("Test Size (%)", 10, 50, 20)
+        n_estimators = st.sidebar.slider("Number of Trees in Forest", 50, 200, 100)
+        
+        # Model training process
+        if st.sidebar.button("Train Model"):
+            X = data.iloc[:, :-1]
+            y = data.iloc[:, -1]
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size/100, random_state=42)
 
-    # Scatter plot on right
-    with col2:
-        st.markdown("### Correlation of Categories")
-        fig_scatter = px.scatter(df, x='Category', y='Values', color='Category', title='Category Correlation')
-        st.plotly_chart(fig_scatter, use_container_width=True)
+            # Training Random Forest
+            model = RandomForestClassifier(n_estimators=n_estimators, random_state=42)
+            model.fit(X_train, y_train)
+            accuracy = model.score(X_test, y_test)
+            st.write(f"Model Accuracy: {accuracy * 100:.2f}%")
 
-elif page == "Predictions":
-    st.markdown("## **Predictions** Page")
-    
-    # Sample Prediction Chart using a basic model output
-    st.markdown("### Predicted Future Values (Line Chart)")
-    future_data = pd.DataFrame({
-        'Date': pd.date_range(start='1/1/2023', periods=50),
-        'Predicted Values': [i * 1.02 for i in range(50)]
-    })
-    
-    fig_future = px.line(future_data, x='Date', y='Predicted Values', title="Predicted Future Trends")
-    st.plotly_chart(fig_future, use_container_width=True)
+# Model Predictions Section
+elif page == "Model Predictions":
+    st.markdown("## 🔮 **Model Predictions**")
 
-# Footer
-st.markdown("<h5 style='text-align: center;'>Built with ❤️ using Streamlit & React Components</h5>", unsafe_allow_html=True)
+    st.write("""
+    In this section, you can generate predictions using the trained machine learning model.
+    """)
+
+    # Placeholder for prediction input
+    st.write("### Enter Features for Prediction")
+    feature_1 = st.number_input("Feature 1")
+    feature_2 = st.number_input("Feature 2")
+    feature_3 = st.number_input("Feature 3")
+    feature_4 = st.number_input("Feature 4")
+
+    if st.button("Predict"):
+        # Using the pre-trained model (from the previous section) to predict
+        if 'model' in globals():
+            prediction = model.predict([[feature_1, feature_2, feature_3, feature_4]])
+            st.write(f"Predicted Class: {prediction[0]}")
+        else:
+            st.warning("No model trained yet! Go to 'Model Training' first.")
