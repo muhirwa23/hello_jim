@@ -3,90 +3,79 @@ import pandas as pd
 import plotly.express as px
 
 # Set page configuration
-st.set_page_config(page_title="Creative Streamlit App", layout="wide", page_icon=":sparkles:")
+st.set_page_config(page_title="Modern Dashboard", layout="wide", page_icon="📊")
 
-# Custom CSS for attractive design
+# Add some custom CSS for a modern feel
 st.markdown("""
     <style>
     .main {
-        background: linear-gradient(135deg, #6e8efb, #a777e3);
-        color: white;
+        background-color: #f0f2f6;
+        font-family: 'Helvetica', sans-serif;
     }
     h1 {
-        font-family: 'Verdana', sans-serif;
-        font-size: 3em;
+        color: #333333;
         font-weight: bold;
-        color: #fff;
     }
-    .sidebar .sidebar-content {
-        background: linear-gradient(135deg, #a777e3, #6e8efb);
+    .stButton button {
+        background-color: #007BFF;
+        color: white;
+        font-size: 18px;
+        border-radius: 10px;
     }
-    .css-1d391kg {
-        background-color: rgba(0, 0, 0, 0.5);
+    .css-1aumxhk {
+        background-color: #007BFF;
+        color: white;
+        border-radius: 5px;
     }
     </style>
     """, unsafe_allow_html=True)
 
 # Header
-st.markdown("<h1 style='text-align: center;'>Welcome to the Creative App 🌟</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>📊 Modern Interactive Dashboard</h1>", unsafe_allow_html=True)
+st.markdown("### A Dashboard with an Interactive UI/UX Experience", unsafe_allow_html=True)
 
 # Sidebar for navigation
-st.sidebar.markdown("## Explore the App")
-options = st.sidebar.radio("Go to", ['Home', 'Interactive Data', 'About'])
+st.sidebar.title("🔍 Explore the Data")
+st.sidebar.markdown("Use the sidebar to navigate and filter data")
 
-# Home Page
-if options == 'Home':
-    st.markdown("<h3 style='text-align: center;'>A New Way to Experience Data 🎨</h3>", unsafe_allow_html=True)
-    
-    # Two Columns Layout for an Introduction
-    col1, col2 = st.columns(2)
-    with col1:
-        st.image("https://source.unsplash.com/500x300/?creative,design", use_column_width=True)
-        st.markdown("### Why Choose Us?")
-        st.write("""
-            - Interactive Data Visualizations
-            - Dynamic User Input
-            - Beautiful, Responsive Design
-        """)
-        
-    with col2:
-        st.image("https://source.unsplash.com/500x300/?innovation,tech", use_column_width=True)
-        st.markdown("### Our Key Features")
-        st.write("""
-            - Real-time Analytics
-            - Engaging User Experience
-            - Intuitive Interface
-        """)
+# Dummy DataFrame
+df = pd.DataFrame({
+    'Category': ['A', 'B', 'C', 'D'],
+    'Values': [300, 500, 250, 400]
+})
 
-# Interactive Data Page
-elif options == 'Interactive Data':
-    st.markdown("<h3>Analyze with Beautiful Visuals 📊</h3>", unsafe_allow_html=True)
-    
-    # Sample DataFrame
-    df = pd.DataFrame({
-        'Category': ['A', 'B', 'C', 'D'],
-        'Values': [300, 150, 400, 250]
-    })
-    
-    # Display DataFrame and Chart
-    st.markdown("#### Data Overview:")
-    st.dataframe(df)
-    
-    # Create interactive chart with Plotly
-    fig = px.bar(df, x='Category', y='Values', title='Category vs Values', color='Category', text='Values')
-    fig.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)', font_color='white')
-    
-    st.plotly_chart(fig, use_container_width=True)
+# Create a filter in the sidebar
+category_filter = st.sidebar.multiselect("Select Category", df['Category'].unique())
 
-# About Page
-elif options == 'About':
-    st.markdown("<h3>About Us 💡</h3>", unsafe_allow_html=True)
-    st.write("""
-        This app is built to showcase a beautiful, functional interface while keeping the user experience simple.
-        Created with [Streamlit](https://streamlit.io).
-    """)
-    st.video("https://www.youtube.com/watch?v=B2iAodr0fOo")
+# Apply filter
+if category_filter:
+    df = df[df['Category'].isin(category_filter)]
+
+# Create the dashboard layout using columns
+col1, col2 = st.columns(2)
+
+# Column 1: Display a pie chart
+with col1:
+    st.markdown("### Data Breakdown (Pie Chart)")
+    fig_pie = px.pie(df, values='Values', names='Category', title='Category Breakdown')
+    fig_pie.update_traces(textinfo='percent+label')
+    st.plotly_chart(fig_pie, use_container_width=True)
+
+# Column 2: Display a bar chart
+with col2:
+    st.markdown("### Category Values (Bar Chart)")
+    fig_bar = px.bar(df, x='Category', y='Values', color='Category', title='Values by Category')
+    fig_bar.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(255,255,255,0.6)')
+    st.plotly_chart(fig_bar, use_container_width=True)
+
+# Interactive user input: Create a slider
+st.markdown("### Adjust Values")
+value_input = st.slider("Select a value for category A", min_value=100, max_value=600, step=50)
+
+# Update the dataframe based on user input and replot
+df.loc[df['Category'] == 'A', 'Values'] = value_input
+st.markdown(f"**Updated Value for Category A:** {value_input}")
 
 # Footer
 st.markdown("---")
-st.markdown("<h5 style='text-align: center;'>Made with ❤️ by Muhirwa Jean Bosco</h5>", unsafe_allow_html=True)
+st.markdown("<h5 style='text-align: center;'>Built with ❤️ using Streamlit & Plotly</h5>", unsafe_allow_html=True)
