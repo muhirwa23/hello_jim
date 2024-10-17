@@ -2,15 +2,17 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 # Set up Streamlit Page Configuration
 st.set_page_config(
-    page_title="Complex AI Dashboard",
+    page_title="Unemployment in Youth - Rwanda",
     page_icon="📊",
     layout="wide"
 )
 
-# Custom CSS for styling the dashboard (dark theme)
+# Custom CSS for Tailwind-inspired design and SVG icons
 st.markdown("""
     <style>
     .main {
@@ -31,20 +33,47 @@ st.markdown("""
         background-color: #4CAF50;
         color: white;
         border-radius: 5px;
+        padding: 10px 20px;
     }
-    .stProgress {
-        background-color: #4CAF50;
+    .metric-container {
+        display: flex;
+        justify-content: space-around;
+        background-color: #292b2e;
+        border-radius: 10px;
+        padding: 20px;
     }
-    .css-1aumxhk {
-        background-color: #007BFF;
-        color: white;
+    .metric-box {
+        background-color: #1a202c;
+        padding: 15px;
         border-radius: 8px;
+        text-align: center;
+        width: 150px;
+    }
+    .metric-box h3 {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+    .metric-box p {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    .icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+    .footer {
+        text-align: center;
+        padding: 10px;
+        color: white;
+        font-size: 0.9em;
     }
     </style>
     """, unsafe_allow_html=True)
 
 # Sidebar Navigation
-st.sidebar.title("🔍 AI & Data Dashboard")
+st.sidebar.title("🔍 Unemployment Dashboard")
 st.sidebar.subheader("Navigation")
 page = st.sidebar.radio("Select a Page", ["Home", "Data Analysis", "Statistics", "Model Training", "Predictions"])
 
@@ -61,32 +90,52 @@ pie_chart_data = pd.DataFrame({
     'Percentage': [75, 15, 10]
 })
 
-# Page Layout for each page
+# Tailwind CSS-inspired widgets for Metrics in Home Page
 if page == "Home":
-    st.markdown("## 🏠 Welcome to the **AI & Data Dashboard**")
-
-    # Top-level KPIs
-    kpi1, kpi2, kpi3 = st.columns(3)
-
-    with kpi1:
-        st.metric(label="Total Success", value="85%", delta="5%")
+    st.markdown("## 🏠 Welcome to the **Unemployment in Youth - Rwanda Dashboard**")
     
-    with kpi2:
-        st.metric(label="Total Exchange", value="45%", delta="-10%")
+    # KPI Metrics with Tailwind-inspired styling
+    st.markdown("<div class='metric-container'>", unsafe_allow_html=True)
     
-    with kpi3:
-        st.metric(label="Total Failures", value="15%", delta="-2%")
+    col1, col2, col3 = st.columns(3)
+    with col1:
+        st.markdown("""
+            <div class="metric-box">
+                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/employment.png" class="icon"/>
+                <h3>Total Employed</h3>
+                <p>85%</p>
+            </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown("""
+            <div class="metric-box">
+                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/exchange.png" class="icon"/>
+                <h3>Total Exchange</h3>
+                <p>45%</p>
+            </div>
+        """, unsafe_allow_html=True)
+    
+    with col3:
+        st.markdown("""
+            <div class="metric-box">
+                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/error.png" class="icon"/>
+                <h3>Total Failures</h3>
+                <p>15%</p>
+            </div>
+        """, unsafe_allow_html=True)
+    
+    st.markdown("</div>", unsafe_allow_html=True)
 
-    # Example Chart
-    st.markdown("### Monthly Success and Failure Rates")
-    fig = px.line(dummy_data, x='Month', y=['Success Rate', 'Failure Rate'], title="Success & Failure Over Time")
-    fig.update_layout(
-        plot_bgcolor='rgba(0,0,0,0)',
-        paper_bgcolor='rgba(0,0,0,0)',
-        font_color='white',
-        title_font_color="white"
-    )
-    st.plotly_chart(fig, use_container_width=True)
+    # Seaborn Visualization
+    st.markdown("### Monthly Success and Failure Rates with Seaborn")
+    
+    sns.set_theme(style="darkgrid")
+    fig, ax = plt.subplots(figsize=(10, 6))
+    sns.lineplot(data=dummy_data, x='Month', y='Success Rate', ax=ax, label="Success Rate", marker="o")
+    sns.lineplot(data=dummy_data, x='Month', y='Failure Rate', ax=ax, label="Failure Rate", marker="x")
+    ax.set_title("Success & Failure Rates Over Time", fontsize=16)
+    st.pyplot(fig)
 
 elif page == "Data Analysis":
     st.markdown("## 📊 Data Analysis Section")
@@ -150,9 +199,9 @@ elif page == "Predictions":
         # You can link this to a trained model
         st.write("Prediction Results: Class 1")
 
-# Footer
+# Footer with SVG Icon
 st.markdown("""
-    <footer style='text-align:center; padding:10px;'>
-        <p>Powered by Streamlit and Plotly</p>
+    <footer class='footer'>
+        <p>Powered by Streamlit and Plotly with 💻 from Rwanda's Data Science Solutions</p>
     </footer>
     """, unsafe_allow_html=True)
