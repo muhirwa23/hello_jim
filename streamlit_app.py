@@ -4,23 +4,20 @@ import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 from transformers import pipeline, AutoModelForCausalLM, AutoTokenizer  # Hugging Face imports
-
 # Set up Streamlit Page Configuration
 st.set_page_config(
     page_title="Unemployment in Youth - Rwanda",
     page_icon="📊",
     layout="wide"
 )
-
 # Load Hugging Face Text-Generation Model
 @st.cache(allow_output_mutation=True)
 def load_hugging_face_model():
-    # Load pre-trained model and tokenizer for conversation
-    model = AutoModelForCausalLM.from_pretrained("CognitivessAI/cognitivess")
-    tokenizer = AutoTokenizer.from_pretrained("CognitivessAI/cognitivess")
+    # Load pre-trained GPT-2 model and tokenizer
+    model = AutoModelForCausalLM.from_pretrained("gpt2")  # Use gpt2 for Causal LM
+    tokenizer = AutoTokenizer.from_pretrained("gpt2")
     pipe = pipeline("text-generation", model=model, tokenizer=tokenizer)
     return pipe
-
 # Load the model for the app
 hugging_face_model = load_hugging_face_model()
 
