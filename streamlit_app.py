@@ -3,187 +3,194 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-from transformers import pipeline, AutoModelForCausalLM, AutoTokenizer  # Hugging Face imports
-# Set up Streamlit Page Configuration
-st.set_page_config(
-    page_title="Unemployment in Youth - Rwanda",
-    page_icon="📊",
-    layout="wide"
+import time
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import PolynomialFeatures
+from io import StringIO
+
+# --- Load Route Data ---
+@st.cache_data
+def load_route_data():
+    """Load the complete route data."""
+    data = """route_id,agency_id,route_short_name,route_long_name,route_type,route_desc
+    101,1,101,KBS - Zone I - 101,3,Remera Taxi Park-Sonatubes-Rwandex-CBD
+    102,1,102,Kabuga-Mulindi-Remera-Sonatubes-Rwandex-Nyabugogo Taxi Park
+    212,2,212,ROYAL - Zone II - 212,3,St. Joseph-Kicukiro Centre-Sonatubes-Rwandex-Nyabugogo Taxi Park
+    """
+    return pd.read_csv(StringIO(data))
+
+routes_df = load_route_data()
+
+# --- Initialize Session State ---
+if 'traffic_data' not in st.session_state:
+    st.session_state.traffic_data = pd.DataFrame(columns=[
+        'route', 'timestamp', 'vehicle_count', 'travel_time', 'latitude', 'longitude'
+    ])
+
+if 'event_data' not in st.session_state:
+    st.session_state.event_data = pd.DataFrame(columns=['latitude', 'longitude', 'event_time', 'event_type'])
+
+# --- Generate Live Traffic Data ---
+def generate_live_traffic_data():
+    route = np.random.choice(routes_df['route_short_name'])
+    vehicle_count = np.random.randint(10, 100)
+    travel_time = np.random.uniform(10, 60)
+    timestamp = pd.Timestamp.now()
+    latitude = -1.9499 + np.random.uniform(-0.01, 0.01)
+    longitude = 30.0589 + np.random.uniform(-0.01, 0.01)
+    return {
+        'route': route, 'timestamp': timestamp, 
+        'vehicle_count': vehicle_count, 'travel_time': travel_time,
+        'latitude': latitude, 'longitude': longitude
+    }
+
+def generate_event_data():
+    event_types = ['Traffic Jam', 'Accident', 'Road Break', 'Congestion']
+    latitude = -1.9499 + np.random.uniform(-0.02, 0.02)
+    longitude = 30.0589 + np.random.uniform(-0.02, 0.02)
+    event_time = pd.Timestamp.now()
+    event_type = np.random.choice(event_types)
+    return {'latitude': latitude, 'longitude': longitude, 'event_time': event_time, 'event_type': event_type}
+
+# --- UI Display ---
+st.title("🚦 Kigali Traffic Monitoring and Prediction System")
+
+# --- Sidebar Filters ---
+selected_routes = st.sidebar.multiselect(
+    "Select Routes", routes_df['route_short_name'].unique(), default=[]
 )
-# Load Hugging Face Text-Generation Model
-@st.cache(allow_output_mutation=True)
-def load_hugging_face_model():
-    # Load pre-trained GPT-2 model and tokenizer
-    model = AutoModelForCausalLM.from_pretrained("gpt2")  # Use gpt2 for Causal LM
-    tokenizer = AutoTokenizer.from_pretrained("gpt2")
-    pipe = pipeline("text-generation", model=model, tokenizer=tokenizer)
-    return pipe
-# Load the model for the app
-hugging_face_model = load_hugging_face_model()
+min_vehicle_count = st.sidebar.slider("Min Vehicle Count", 0, 100, 10)
+max_travel_time = st.sidebar.slider("Max Travel Time (minutes)", 10, 60, 30)
 
-# Custom CSS for UI
-st.markdown("""
-    <style>
-    .main { background-color: #1c1e21; color: white; }
-    h1 { color: #F0F8FF; font-size: 2.5em; font-weight: bold; text-align: center; }
-    .footer { text-align: center; padding: 10px; color: white; font-size: 0.9em; }
-    </style>
-    """, unsafe_allow_html=True)
+# --- Update Data ---
+new_traffic_data = generate_live_traffic_data()
+st.session_state.traffic_data = pd.concat(
+    [st.session_state.traffic_data, pd.DataFrame([new_traffic_data])], ignore_index=True
+).tail(50)
 
-# Simulated Dataset for Unemployment
-np.random.seed(42)
-regions = ['North', 'South', 'East', 'West', 'Central']
-months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+new_event = generate_event_data()
+st.session_state.event_data = pd.concat(
+    [st.session_state.event_data, pd.DataFrame([new_event])], ignore_index=True
+).tail(20)
 
-simulated_data = pd.DataFrame({
-    'Month': np.random.choice(months, 100),
-    'Region': np.random.choice(regions, 100),
-    'Youth Employed': np.random.randint(300, 1000, size=100),
-    'Unemployed': np.random.randint(50, 200, size=100),
-    'Success Rate': np.random.uniform(60, 90, size=100),
-    'Failure Rate': np.random.uniform(10, 40, size=100)
-})
+# --- KPI Cards ---
+st.header("Key Performance Indicators")
+col1, col2, col3 = st.columns(3)
 
-# Sidebar Navigation
-st.sidebar.title("🔍 Unemployment Dashboard")
-st.sidebar.subheader("Navigation")
-page = st.sidebar.radio("Select a Page", ["Home", "Data Analysis", "Statistics", "Dynamic Charts", "Model Training", "AI-Powered Insights"])
+with col1:
+    avg_vehicle_count = st.session_state.traffic_data['vehicle_count'].mean() if not st.session_state.traffic_data.empty else 0
+    st.metric("Avg Vehicle Count", f"{avg_vehicle_count:.2f}")
 
-# Home Page with AI-Suggested Insights
-if page == "Home":
-    st.markdown("## 🏠 Welcome to the **Unemployment in Youth - Rwanda Dashboard**")
-    
-    st.markdown("### AI-Powered Insights for the Latest Trends")
-    
-    # User can ask AI questions
-    user_query = st.text_input("Ask AI any questions about unemployment data, trends, or predictions:")
-    
-    if user_query:
-        with st.spinner('CognitivessAI is thinking...'):
-            # Use Hugging Face pipeline to generate response
-            ai_response = hugging_face_model(user_query, max_length=100)[0]['generated_text']
-            st.markdown(f"**AI Response:** {ai_response}")
-    
-    # Tabs for Multiple Charts
-    tab1, tab2, tab3 = st.tabs(["📊 KPI Metrics", "📈 Employment Trends", "🗺️ Regional Insights"])
+with col2:
+    avg_travel_time = st.session_state.traffic_data['travel_time'].mean() if not st.session_state.traffic_data.empty else 0
+    st.metric("Avg Travel Time (min)", f"{avg_travel_time:.2f}")
 
-    # Tab 1: KPI Metrics
-    with tab1:
-        st.markdown("<div class='metric-container'>", unsafe_allow_html=True)
-        col1, col2, col3 = st.columns(3)
+with col3:
+    congestion_level = "High" if avg_vehicle_count > 50 else "Low"
+    st.metric("Congestion Level", congestion_level)
 
-        with col1:
-            st.markdown("""
-                <div class="metric-box">
-                    <img src="https://img.icons8.com/ios-filled/50/FFFFFF/employment.png" class="icon"/>
-                    <h3>Total Employed</h3>
-                    <p>85%</p>
-                </div>
-            """, unsafe_allow_html=True)
+# --- 2D Map of Kigali ---
+fig_map = go.Figure()
 
-        with col2:
-            st.markdown("""
-                <div class="metric-box">
-                    <img src="https://img.icons8.com/ios-filled/50/FFFFFF/exchange.png" class="icon"/>
-                    <h3>Total Exchange</h3>
-                    <p>45%</p>
-                </div>
-            """, unsafe_allow_html=True)
+# Define color and size based on event type
+marker_colors = {
+    'Traffic Jam': 'red',
+    'Accident': 'orange',
+    'Road Break': 'yellow',
+    'Congestion': 'green'
+}
 
-        with col3:
-            st.markdown("""
-                <div class="metric-box">
-                    <img src="https://img.icons8.com/ios-filled/50/FFFFFF/error.png" class="icon"/>
-                    <h3>Total Failures</h3>
-                    <p>15%</p>
-                </div>
-            """, unsafe_allow_html=True)
+# Add markers for each event type
+for i in range(len(st.session_state.event_data)):
+    event_type = st.session_state.event_data['event_type'].iloc[i]
+    fig_map.add_trace(go.Scattergeo(
+        lat=[st.session_state.event_data['latitude'].iloc[i]],
+        lon=[st.session_state.event_data['longitude'].iloc[i]],
+        mode='markers',
+        marker=dict(
+            size=10,
+            color=marker_colors.get(event_type, 'blue'),  # Default to blue if unknown
+            opacity=0.7
+        ),
+        text=f"{event_type} at {st.session_state.event_data['event_time'].iloc[i]}",
+        hoverinfo='text'
+    ))
 
-        st.markdown("</div>", unsafe_allow_html=True)
+# Map layout
+fig_map.update_layout(
+    geo=dict(
+        scope='africa',  # Focusing on Africa to show Kigali
+        projection_type='mercator',
+        showland=True,
+        landcolor='rgb(240, 240, 240)',
+        subunitwidth=1,
+        subunitcolor="rgb(217, 217, 217)",
+        showcountries=True,
+    ),
+    margin=dict(r=10, l=10, b=10, t=10),
+    title="Live Map of Kigali Traffic Events"
+)
 
-    # Tab 2: Employment Trends with Line Charts
-    with tab2:
-        st.markdown("### Monthly Success and Failure Rates")
-        num_months = st.slider("Select number of months to display", min_value=3, max_value=12, value=6)
-        displayed_data = simulated_data[simulated_data['Month'].isin(months[:num_months])]
+# Display the map
+st.plotly_chart(fig_map, use_container_width=True)
 
-        fig = px.line(displayed_data, x='Month', y=['Success Rate', 'Failure Rate'], markers=True)
-        fig.update_layout(
-            title="Success & Failure Rates Over Time",
-            plot_bgcolor='rgba(0,0,0,0)',
-            paper_bgcolor='rgba(0,0,0,0)',
-            font_color='white',
-            title_font_color="white"
-        )
-        st.plotly_chart(fig, use_container_width=True)
+# --- Real-Time Vehicle Count Chart ---
+st.subheader("📈 Real-Time Vehicle Count")
+line_fig = px.line(
+    st.session_state.traffic_data, x='timestamp', y='vehicle_count',
+    title="Vehicle Count Over Time", markers=True,
+    color_discrete_sequence=["rgb(52,152,219)"]
+)
+st.plotly_chart(line_fig, use_container_width=True)
 
-    # Tab 3: Regional Insights with Map
-    with tab3:
-        st.markdown("### Map of Unemployment by Region")
-        region_coordinates = {
-            'North': [1.9403, 29.8739],
-            'South': [2.2833, 30.4141],
-            'East': [1.9577, 30.4735],
-            'West': [1.5797, 29.3508],
-            'Central': [1.9456, 30.0586]
-        }
+# --- Prediction of Future Vehicle Counts ---
+st.subheader("🔮 Vehicle Count Prediction")
 
-        unemployment_map_data = simulated_data.groupby('Region').mean().reset_index()
-        unemployment_map_data['lat'] = unemployment_map_data['Region'].map(lambda x: region_coordinates[x][0])
-        unemployment_map_data['lon'] = unemployment_map_data['Region'].map(lambda x: region_coordinates[x][1])
+# Prepare data for prediction
+if not st.session_state.traffic_data.empty:
+    timestamps = np.arange(len(st.session_state.traffic_data)).reshape(-1, 1)
+    vehicle_counts = st.session_state.traffic_data['vehicle_count'].values
 
-        fig_map = px.scatter_mapbox(
-            unemployment_map_data, lat="lat", lon="lon", hover_name="Region", size="Unemployed", color="Region",
-            hover_data={"lat": False, "lon": False}, zoom=6, height=400
-        )
-        fig_map.update_layout(mapbox_style="open-street-map")
-        fig_map.update_layout(margin={"r":0,"t":0,"l":0,"b":0}, paper_bgcolor='rgba(0,0,0,0)', font_color='white')
-        st.plotly_chart(fig_map, use_container_width=True)
+    poly = PolynomialFeatures(degree=2)
+    timestamps_poly = poly.fit_transform(timestamps)
+    model = LinearRegression().fit(timestamps_poly, vehicle_counts)
 
-# Data Analysis Page with Dynamic Widgets and AI Summary
-elif page == "Data Analysis":
-    st.markdown("## 📊 Data Analysis Section")
+    # Predict future vehicle counts
+    future_timestamps = np.arange(len(timestamps), len(timestamps) + 10).reshape(-1, 1)
+    future_timestamps_poly = poly.transform(future_timestamps)
+    future_vehicle_counts = model.predict(future_timestamps_poly)
 
-    selected_region = st.selectbox("Select a Region", regions)
-    filtered_data = simulated_data[simulated_data['Region'] == selected_region]
-
-    st.markdown("### Youth Employment vs Unemployment by Region")
-    bubble_fig = px.scatter(
-        filtered_data, x='Youth Employed', y='Unemployed', size='Youth Employed', color='Month',
-        title=f"Youth Employed vs Unemployed in {selected_region}", hover_name="Month", size_max=60
+    # Prepare plot data
+    pred_fig = px.line(
+        x=np.concatenate([timestamps.flatten(), future_timestamps.flatten()]),
+        y=np.concatenate([vehicle_counts, future_vehicle_counts]),
+        labels={'x': 'Time', 'y': 'Vehicle Count'},
+        title="Predicted vs Observed Vehicle Counts"
     )
-    bubble_fig.update_layout(
-        plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)', font_color='white', title_font_color="white"
-    )
-    st.plotly_chart(bubble_fig, use_container_width=True)
+    pred_fig.add_scatter(x=timestamps.flatten(), y=vehicle_counts, mode='markers', name='Observed')
+    pred_fig.add_scatter(x=future_timestamps.flatten(), y=future_vehicle_counts, mode='lines', name='Predicted')
+    st.plotly_chart(pred_fig, use_container_width=True)
 
-    # AI-generated summary of data
-    st.markdown("### AI Summary of Data Insights")
-    data_summary = hugging_face_model(f"Summarize the unemployment and employment trends in {selected_region}", max_length=100)[0]['generated_text']
-    st.markdown(f"**AI's Summary:** {data_summary}")
+# --- Dynamic Travel Time Chart ---
+st.subheader("⏱️ Avg Travel Time per Route")
+avg_travel_time_fig = px.bar(
+    st.session_state.traffic_data.groupby("route")['travel_time'].mean().reset_index(),
+    x='route', y='travel_time',
+    title="Avg Travel Time per Route",
+    labels={'travel_time': 'Avg Travel Time (min)'},
+    color_discrete_sequence=["rgb(46,204,113)"]
+)
+st.plotly_chart(avg_travel_time_fig, use_container_width=True)
 
-# AI-Powered Insights Page
-elif page == "AI-Powered Insights":
-    st.markdown("## 🤖 AI-Powered Insights by CognitivessAI")
-    
-    st.markdown("### Ask Questions About the Dataset")
-    user_query = st.text_input("Ask CognitivessAI any questions about the dataset, trends, or predictions:")
-    
-    if user_query:
-        with st.spinner('CognitivessAI is analyzing...'):
-            ai_response = hugging_face_model(user_query, max_length=150)[0]['generated_text']
-            st.markdown(f"**AI's Response:** {ai_response}")
+# --- Suggested Routes ---
+st.sidebar.subheader("🚍 Suggested Routes")
+selected_route = st.sidebar.selectbox("Select Route for Suggestions", routes_df['route_short_name'])
+congested_routes = st.session_state.traffic_data[st.session_state.traffic_data['vehicle_count'] > 50]['route'].unique()
+suggestions = routes_df[~routes_df['route_short_name'].isin(congested_routes)]
 
-# Footer with Recommendations
-st.markdown("""
-    <div class='footer'>
-        <p>Dashboard designed and developed for data insights on youth unemployment.</p>
-        <p>Key Recommendations:</p>
-        <ul>
-            <li>Focus on improving job creation in regions with high unemployment.</li>
-            <li>Invest in skill development programs for the youth.</li>
-            <li>Encourage entrepreneurship to reduce reliance on formal employment.</li>
-        </ul>
-        <p>© 2024 Unemployment Insights | All rights reserved.</p>
-    </div>
-    """, unsafe_allow_html=True)
+st.sidebar.write(f"🛣️ **Alternate routes for {selected_route}:**")
+st.sidebar.table(suggestions[['route_short_name', 'route_long_name']])
+
+# --- Auto Refresh Logic ---
+time.sleep(1)
+st.experimental_rerun()
