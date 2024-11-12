@@ -5,18 +5,14 @@ from streamlit_option_menu import option_menu
 import pandas as pd
 import numpy as np
 import plotly.express as px
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_squared_error
+import requests
 import datetime
-import time
-import re
 import firebase_admin
 from firebase_admin import credentials, firestore, auth as firebase_auth
 from textblob import TextBlob
 import nltk
 
-# Download NLTK data
+# Download NLTK data (if not already downloaded)
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 
@@ -25,19 +21,7 @@ def initialize_firebase():
     if not firebase_admin._apps:
         try:
             # Use Streamlit secrets to store credentials securely
-            cred_info = {
-                "type": st.secrets["firebase"]["type"],
-                "project_id": st.secrets["firebase"]["project_id"],
-                "private_key_id": st.secrets["firebase"]["315c2f7e72dca93253e29f39546938736754abb7"], 
-               # "private_key": st.secrets["firebase"][""-----315c2f7e72dca93253e29f39546938736754abb7-----\n...-----END PRIVATE KEY-----\n""].replace('\\n', '\n'),
-                "client_email": st.secrets["firebase"]["firebase-adminsdk-ga5rt@ment-heath-ai.iam.gserviceaccount.com"],
-                "client_id": st.secrets["firebase"]["103021278198169092289"],
-                "auth_uri": st.secrets["firebase"]["https://accounts.google.com/o/oauth2/auth"],
-                "token_uri": st.secrets["firebase"]["https://oauth2.googleapis.com/token"],
-                "auth_provider_x509_cert_url": st.secrets["firebase"]["https://www.googleapis.com/oauth2/v1/certs"],
-                "client_x509_cert_url": st.secrets["firebase"]["https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-ga5rt%40ment-heath-ai.iam.gserviceaccount.com"],
-                "universe_domain": st.secrets["firebase"]["googleapis.com"]
-            }
+            cred_info = st.secrets["firebase"]
             cred = credentials.Certificate(cred_info)
             firebase_admin.initialize_app(cred)
         except Exception as e:
@@ -65,12 +49,20 @@ st.markdown("""
     padding: 0;
 }
 /* Sidebar */
-.stSidebar {
-    background-color: #fff;
+.css-1d391kg {  /* Adjusts the width of the sidebar */
+    width: 300px;
 }
+.css-1lcbmhc {  /* Adjusts the width of the main content */
+    margin-left: 300px;
+}
+/* Button styling */
 .stButton>button {
     color: white;
     background-color: #ff7f50;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    font-size: 18px;
 }
 /* Progress bar */
 .stProgress > div > div > div > div {
@@ -86,10 +78,6 @@ st.markdown("""
 .user-message {
     background-color: #DCF8C6;
     align-self: flex-end;
-}
-.professional-message {
-    background-color: #FFFFFF;
-    align-self: flex-start;
 }
 .assistant-message {
     background-color: #FFFFFF;
@@ -117,12 +105,13 @@ def set_language():
 
 def _(text):
     translations = {
+        # Add your translations here
         "Welcome to the Mental Health Dashboard": "Murakaza neza kuri Dashboard y'Ubuzima bwo mu Mutwe",
         "This dashboard provides insights into the mental health of Rwandan youth. Explore data visualizations, predictive modeling, and engage with our interactive chatbot.":
             "Iyi dashboard itanga ishusho y'ubuzima bwo mu mutwe bw'urubyiruko rw'u Rwanda. Reba ibigaragara mu mibare, gutekereza ku byashoboka, no gukoresha chatbot yacu.",
         "Navigate through the sidebar to explore different sections of the dashboard.":
             "Koresha urutonde ruri ku ruhande kugira ngo urebe ibice bitandukanye bya dashboard.",
-        "Gender Distribution": "Igendera",
+        "Gender Distribution": "Igitsina",
         "Age Distribution": "Ikigereranyo cy'Imyaka",
         "Regional Distribution": "Ikigereranyo cy'Intara",
         "Mental Health Metrics Over Time": "Ibipimo by'Ubuzima bwo mu Mutwe mu Gihe",
@@ -148,6 +137,47 @@ def _(text):
             "Muraho! Ndi **Menti**, umufasha wawe mu buzima bwo mu mutwe. Nigute nakugira inama uyu munsi?",
         "You": "Wowe",
         "Tip": "Inama",
+        "Main Menu": "Menyu Nyamukuru",
+        "Home": "Ahabanza",
+        "Data Visualization": "Kwerekana Imibare",
+        "Predictive Modeling": "Gukora Icyitegererezo",
+        "Chatbot": "Chatbot",
+        "Community Forum": "Urubuga rw'Abaturage",
+        "Contact Professionals": "Guhamagara Ababigize umwuga",
+        "Chat with Professional": "Vugana n'Umuhanga",
+        "Login/SignUp": "Injira/Iyandikishe",
+        "Login": "Injira",
+        "SignUp": "Iyandikishe",
+        "Menu": "Menyu",
+        "Email": "Imeli",
+        "Password": "Ijambo ry'Ibanga",
+        "Create a New Account": "Fungura Konti Nshya",
+        "Logged in as": "Winjiye nka",
+        "Logout": "Sohoka",
+        "Invalid credentials or user does not exist.": "Amakuru winjije si yo cyangwa umukoreshwa ntabaho.",
+        "Account created successfully! Please login.": "Konti yawe yashyizweho neza! Nyamuneka injira.",
+        "Error creating account": "Ikosa mu gushyiraho konti",
+        "Please login to access more features.": "Nyamuneka injira kugira ngo ubone ibindi bikorwa.",
+        "Username (anonymous)": "Izina (hatabayeho kumenyekana)",
+        "Share your thoughts or experiences": "Sangiza ibitekerezo cyangwa ubunararibonye bwawe",
+        "Post": "Ohereza",
+        "Your post has been shared!": "Ubutumwa bwawe bwashyizweho!",
+        "Recent Posts": "Ubutumwa Bwanyuma",
+        "at": "ku",
+        "Connect with others anonymously to share experiences and support each other.": "Hura n'abandi mu ibanga kugira ngo musangire ubunararibonye no gufashanya.",
+        "Chatting with": "Uri kuvugana na",
+        "Choose a professional to chat with": "Hitamo umuhanga wo kuganira na we",
+        "Please login to access the chat feature.": "Nyamuneka injira kugira ngo ubone igikorwa cyo kuganira.",
+        "Type your message here...": "Andika ubutumwa bwawe hano...",
+        "Send": "Ohereza",
+        "Contact a Professional": "Vugana n'Umuhanga",
+        "Here you can find contact information for mental health professionals and hospitals in Rwanda.": "Hano ushobora kubona amakuru yo kuvugana n'abahanga mu buzima bwo mu mutwe n'amavuriro mu Rwanda.",
+        "Location": "Aho aherereye",
+        "Phone Number": "Numero ya Telefone",
+        "Call": "Hamagara",
+        "Dialing": "Hamagara",
+        "Email": "Imeli",
+        "Opening email client for": "Ufunguye porogaramu ya imeli kuri",
         # Add more translations as needed
     }
     if st.session_state.get('language') == "Kinyarwanda":
@@ -160,22 +190,22 @@ def user_authentication():
     if 'user' not in st.session_state:
         st.session_state['user'] = None
 
-    menu = ["Home", "Login", "SignUp"]
-    choice = st.sidebar.selectbox("Menu", menu)
+    menu = [_("Home"), _("Login"), _("SignUp")]
+    choice = st.sidebar.selectbox(_("Menu"), menu)
 
-    if choice == "Home":
+    if choice == _("Home"):
         if st.session_state['user']:
-            st.sidebar.write(f"Logged in as: {st.session_state['user']['email']}")
-            if st.sidebar.button("Logout"):
+            st.sidebar.write(f"{_('Logged in as')}: {st.session_state['user']['email']}")
+            if st.sidebar.button(_("Logout")):
                 st.session_state['user'] = None
                 st.experimental_rerun()
         else:
-            st.sidebar.write("Please login to access more features.")
-    elif choice == "Login":
-        st.title("Login")
-        email = st.text_input("Email")
-        password = st.text_input("Password", type='password')
-        if st.button("Login"):
+            st.sidebar.write(_("Please login to access more features."))
+    elif choice == _("Login"):
+        st.title(_("Login"))
+        email = st.text_input(_("Email"))
+        password = st.text_input(_("Password"), type='password')
+        if st.button(_("Login")):
             try:
                 user = firebase_auth.get_user_by_email(email)
                 # Implement proper password verification in production
@@ -183,19 +213,19 @@ def user_authentication():
                 st.success("Logged in successfully!")
                 st.experimental_rerun()
             except Exception as e:
-                st.error("Invalid credentials or user does not exist.")
-    elif choice == "SignUp":
-        st.title("Create a New Account")
-        email = st.text_input("Email")
-        password = st.text_input("Password", type='password')
-        if st.button("Sign Up"):
+                st.error(_("Invalid credentials or user does not exist."))
+    elif choice == _("SignUp"):
+        st.title(_("Create a New Account"))
+        email = st.text_input(_("Email"))
+        password = st.text_input(_("Password"), type='password')
+        if st.button(_("SignUp")):
             try:
                 user = firebase_auth.create_user(email=email, password=password)
-                st.success("Account created successfully! Please login.")
+                st.success(_("Account created successfully! Please login."))
             except Exception as e:
-                st.error(f"Error creating account: {e}")
+                st.error(f"{_('Error creating account')}: {e}")
 
-# Function to simulate data
+# Function to simulate data (for visualization purposes)
 def simulate_data():
     np.random.seed(42)
     num_samples = 500
@@ -289,8 +319,8 @@ def data_visualization(data):
     )
     st.plotly_chart(fig, use_container_width=True)
 
-# Function for predictive modeling
-def predictive_modeling(data):
+# Function for predictive modeling (API Integration)
+def predictive_modeling():
     st.header("🤖 " + _("Predictive Modeling"))
 
     st.markdown("### " + _("Predicting Depression Scores"))
@@ -298,34 +328,7 @@ def predictive_modeling(data):
     Adjust the input parameters to predict the depression score.
     """))
 
-    # Prepare the data
-    features = ['Age', 'Social_Media_Usage', 'Physical_Activity', 'Sleep_Duration']
-    X = data[features]
-    y = data['Depression_Score']
-
-    # Split the data
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-
-    # Train the model
-    model = RandomForestRegressor(n_estimators=100, random_state=42)
-    model.fit(X_train, y_train)
-
-    # Feature importance
-    st.subheader(_("Feature Importance"))
-    importance = model.feature_importances_
-    feature_importance = pd.DataFrame({'Feature': features, 'Importance': importance})
-    fig = px.bar(feature_importance, x='Importance', y='Feature', orientation='h',
-                 color='Importance', color_continuous_scale='Viridis')
-    st.plotly_chart(fig, use_container_width=True)
-
-    # Model evaluation
-    st.subheader(_("Model Performance"))
-    y_pred = model.predict(X_test)
-    mse = mean_squared_error(y_test, y_pred)
-    st.write(f"{_('Mean Squared Error on Test Set')}: **{mse:.2f}**")
-
     # Prediction form
-    st.subheader(_("Make a Prediction"))
     with st.form(key='prediction_form'):
         col1, col2, col3, col4 = st.columns(4)
         with col1:
@@ -339,12 +342,24 @@ def predictive_modeling(data):
         submit_button = st.form_submit_button(label=_('Predict'))
 
     if submit_button:
-        input_features = np.array([[age, social_media, physical_activity, sleep_duration]])
-        prediction = model.predict(input_features)
-        st.success(f"{_('Predicted Depression Score')}: **{prediction[0]:.2f}**")
-        st.info(_("Note: Higher scores indicate higher levels of depression."))
+        # Call the Gradio API for prediction
+        gradio_predict_url = "https://your-gradio-app-url/gradio_predict_endpoint"  # Replace with your Gradio Predict API URL
+        payload = {
+            "data": [age, social_media, physical_activity, sleep_duration]
+        }
+        try:
+            response = requests.post(gradio_predict_url, json=payload)
+            response.raise_for_status()
+            result = response.json()
+            prediction = result["data"][0]
+            st.success(f"{_('Predicted Depression Score')}: **{prediction:.2f}**")
+            st.info(_("Note: Higher scores indicate higher levels of depression."))
+        except requests.exceptions.RequestException as e:
+            st.error(f"Error in API call: {e}")
+        except KeyError:
+            st.error("Unexpected response format from the prediction API.")
 
-# Function for the chatbot
+# Function for the chatbot (API Integration)
 def chatbot_interface():
     st.header("🗣️ " + _("Mental Health Chatbot"))
 
@@ -356,22 +371,21 @@ def chatbot_interface():
     # Chat interface
     user_input = st.text_input(_("You") + ":", "", key="input")
     if user_input:
-        # Sentiment Analysis
-        def analyze_sentiment(text):
-            text = re.sub(r'[^\w\s]', '', text)
-            analysis = TextBlob(text)
-            return analysis.sentiment.polarity
-
-        sentiment = analyze_sentiment(user_input)
-        if sentiment < -0.5:
-            response = _("I'm sorry to hear that you're feeling this way. Would you like to talk about it?")
-        elif sentiment < 0:
-            response = _("It seems you're not feeling well. I'm here to listen if you want to share.")
-        elif sentiment == 0:
-            response = _("Thank you for sharing. How else can I assist you?")
-        else:
-            response = _("I'm glad to hear that! Is there anything else you'd like to discuss?")
-        st.session_state.history.append({"user": user_input, "assistant": response})
+        # Call the Gradio API for chatbot response
+        gradio_chatbot_url = "https://your-gradio-app-url/gradio_chatbot_endpoint"  # Replace with your Gradio Chatbot API URL
+        payload = {
+            "data": [user_input]
+        }
+        try:
+            response = requests.post(gradio_chatbot_url, json=payload)
+            response.raise_for_status()
+            result = response.json()
+            assistant_response = result["data"][0]
+            st.session_state.history.append({"user": user_input, "assistant": assistant_response})
+        except requests.exceptions.RequestException as e:
+            st.error(f"Error in API call: {e}")
+        except KeyError:
+            st.error("Unexpected response format from the chatbot API.")
 
     # Display conversation history
     for chat in st.session_state.history:
@@ -405,61 +419,6 @@ def innovative_features():
     ]
     tip = np.random.choice(tips)
     st.sidebar.info(f"**{_('Tip')}:** {tip}")
-
-# Real-time Chat with Professionals
-def chat_with_professional():
-    st.header("💬 " + _("Chat with a Professional"))
-
-    if 'user' not in st.session_state or not st.session_state['user']:
-        st.warning(_("Please login to access the chat feature."))
-        return
-
-    # Simulated list of professionals online
-    professionals = [
-        {
-            "name": "Dr. Jean Mukiza",
-            "uid": "prof_jean",
-        },
-        {
-            "name": "Dr. Aline Uwase",
-            "uid": "prof_aline",
-        },
-    ]
-
-    # Select a professional to chat with
-    professional = st.selectbox(_("Choose a professional to chat with"), professionals, format_func=lambda x: x['name'])
-    chat_id = f"{st.session_state['user']['uid']}_{professional['uid']}"
-
-    st.write(f"{_('Chatting with')} **{professional['name']}**")
-
-    # Chat container
-    messages_ref = db.collection("chats").document(chat_id).collection("messages")
-    messages = messages_ref.order_by("timestamp").stream()
-    messages_list = []
-    for msg in messages:
-        messages_list.append(msg.to_dict())
-
-    # Display messages
-    chat_container = st.container()
-    with chat_container:
-        for msg in messages_list:
-            if msg['sender'] == st.session_state['user']['uid']:
-                st.markdown(f"<div class='chat-message user-message'>{msg['content']}</div>", unsafe_allow_html=True)
-            else:
-                st.markdown(f"<div class='chat-message professional-message'><strong>{professional['name']}:</strong> {msg['content']}</div>", unsafe_allow_html=True)
-
-    # Message input
-    message = st.text_input(_("Type your message here..."))
-    if st.button(_("Send")):
-        if message.strip() != "":
-            new_message = {
-                "sender": st.session_state['user']['uid'],
-                "receiver": professional['uid'],
-                "content": message,
-                "timestamp": datetime.datetime.utcnow()
-            }
-            messages_ref.add(new_message)
-            st.experimental_rerun()
 
 # Community Forum
 def community_forum():
@@ -530,6 +489,61 @@ def contact_professionals():
                 # Use mailto link or integrate with email service if needed
         st.write("---")
 
+# Real-time Chat with Professionals (Placeholder for future integration)
+def chat_with_professional():
+    st.header("💬 " + _("Chat with a Professional"))
+
+    if 'user' not in st.session_state or not st.session_state['user']:
+        st.warning(_("Please login to access the chat feature."))
+        return
+
+    # Simulated list of professionals online
+    professionals = [
+        {
+            "name": "Dr. Jean Mukiza",
+            "uid": "prof_jean",
+        },
+        {
+            "name": "Dr. Aline Uwase",
+            "uid": "prof_aline",
+        },
+    ]
+
+    # Select a professional to chat with
+    professional = st.selectbox(_("Choose a professional to chat with"), professionals, format_func=lambda x: x['name'])
+    chat_id = f"{st.session_state['user']['uid']}_{professional['uid']}"
+
+    st.write(f"{_('Chatting with')} **{professional['name']}**")
+
+    # Chat container
+    messages_ref = db.collection("chats").document(chat_id).collection("messages")
+    messages = messages_ref.order_by("timestamp").stream()
+    messages_list = []
+    for msg in messages:
+        messages_list.append(msg.to_dict())
+
+    # Display messages
+    chat_container = st.container()
+    with chat_container:
+        for msg in messages_list:
+            if msg['sender'] == st.session_state['user']['uid']:
+                st.markdown(f"<div class='chat-message user-message'>{msg['content']}</div>", unsafe_allow_html=True)
+            else:
+                st.markdown(f"<div class='chat-message professional-message'><strong>{professional['name']}:</strong> {msg['content']}</div>", unsafe_allow_html=True)
+
+    # Message input
+    message = st.text_input(_("Type your message here..."))
+    if st.button(_("Send")):
+        if message.strip() != "":
+            new_message = {
+                "sender": st.session_state['user']['uid'],
+                "receiver": professional['uid'],
+                "content": message,
+                "timestamp": datetime.datetime.utcnow()
+            }
+            messages_ref.add(new_message)
+            st.experimental_rerun()
+
 # Main function
 def main():
     set_language()
@@ -538,17 +552,17 @@ def main():
     # Sidebar navigation
     if 'user' in st.session_state and st.session_state['user']:
         options = [
-            "Home",
-            "Data Visualization",
-            "Predictive Modeling",
-            "Chatbot",
-            "Community Forum",
-            "Contact Professionals",
-            "Chat with Professional"
+            _("Home"),
+            _("Data Visualization"),
+            _("Predictive Modeling"),
+            _("Chatbot"),
+            _("Community Forum"),
+            _("Contact Professionals"),
+            _("Chat with Professional")
         ]
         icons = ["house", "bar-chart", "cpu", "chat-dots", "people", "telephone", "chat"]
     else:
-        options = ["Home", "Login/SignUp"]
+        options = [_("Home"), _("Login/SignUp")]
         icons = ["house", "person"]
 
     selected = option_menu(
@@ -567,23 +581,26 @@ def main():
 
     innovative_features()
 
-    data = simulate_data()
+    # Simulate data once to avoid regenerating it on every interaction
+    if 'data' not in st.session_state:
+        st.session_state['data'] = simulate_data()
+    data = st.session_state['data']
 
-    if selected == "Home":
+    if selected == _("Home"):
         home()
-    elif selected == "Data Visualization":
+    elif selected == _("Data Visualization"):
         data_visualization(data)
-    elif selected == "Predictive Modeling":
-        predictive_modeling(data)
-    elif selected == "Chatbot":
+    elif selected == _("Predictive Modeling"):
+        predictive_modeling()
+    elif selected == _("Chatbot"):
         chatbot_interface()
-    elif selected == "Community Forum":
+    elif selected == _("Community Forum"):
         community_forum()
-    elif selected == "Contact Professionals":
+    elif selected == _("Contact Professionals"):
         contact_professionals()
-    elif selected == "Chat with Professional":
+    elif selected == _("Chat with Professional"):
         chat_with_professional()
-    elif selected == "Login/SignUp":
+    elif selected == _("Login/SignUp"):
         user_authentication()
 
 if __name__ == '__main__':
