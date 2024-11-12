@@ -5,32 +5,16 @@ from streamlit_option_menu import option_menu
 import pandas as pd
 import numpy as np
 import plotly.express as px
+import plotly.graph_objects as go
 import requests
 import datetime
-import firebase_admin
-from firebase_admin import credentials, firestore, auth as firebase_auth
 from textblob import TextBlob
 import nltk
+from wordcloud import WordCloud
 
 # Download NLTK data (if not already downloaded)
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
-
-# Initialize Firebase Admin SDK
-#def initialize_firebase():
- #   if not firebase_admin._apps:
-       # try:
-            # Use Streamlit secrets to store credentials securely
-        #    cred_info = st.secrets["firebase"]
-         #   cred = credentials.Certificate(cred_info)
-          #  firebase_admin.initialize_app(cred)
-        #except Exception as e:
-         #   st.error(f"Failed to initialize Firebase: {e}")
-          #  st.stop()
-
-#initialize_firebase()
-
-#db = firestore.client()
 
 # Set page configuration
 st.set_page_config(
@@ -58,7 +42,7 @@ st.markdown("""
 /* Button styling */
 .stButton>button {
     color: white;
-    background-color: #ff7f50;
+    background-color: #FF6B6B;
     border-radius: 5px;
     height: 50px;
     width: 100%;
@@ -66,17 +50,18 @@ st.markdown("""
 }
 /* Progress bar */
 .stProgress > div > div > div > div {
-    background-color: #ff7f50;
+    background-color: #FF6B6B;
 }
 /* Chat messages */
 .chat-message {
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-bottom: 5px;
     max-width: 70%;
+    font-size: 16px;
 }
 .user-message {
-    background-color: #DCF8C6;
+    background-color: #D1F7C4;
     align-self: flex-end;
 }
 .assistant-message {
@@ -91,7 +76,39 @@ st.markdown("""
 }
 /* Headers */
 h1, h2, h3, h4 {
-    color: #333;
+    color: #2F4F4F;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+/* Sidebar Headers */
+.sidebar-header {
+    font-size: 20px;
+    color: #2F4F4F;
+    margin-bottom: 10px;
+}
+/* Tooltip styling */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 220px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above */
+    left: 50%;
+    margin-left: -110px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -178,52 +195,21 @@ def _(text):
         "Dialing": "Hamagara",
         "Email": "Imeli",
         "Opening email client for": "Ufunguye porogaramu ya imeli kuri",
+        "Sentiment Analysis": "Isesengura ry'Umubabaro",
+        "Sentiment Over Time": "Umubabaro mu Gihe",
+        "Word Cloud": "Ishusho y'Amagambo",
+        "Depression Trends": "Ibigenda Byerekeye Depression",
+        "Anxiety Trends": "Ibigenda Byerekeye Anxiety",
+        "Stress Trends": "Ibigenda Byerekeye Stress",
+        "Heatmap by Region": "Heatmap mu Ntara",
+        "Word Frequency in Posts": "Frequency y'Amagambo mu Butumwa",
+        "Interactive Charts": "Ishusho Zikora",
         # Add more translations as needed
     }
     if st.session_state.get('language') == "Kinyarwanda":
         return translations.get(text, text)
     else:
         return text
-
-# User Authentication
-def user_authentication():
-    if 'user' not in st.session_state:
-        st.session_state['user'] = None
-
-    menu = [_("Home"), _("Login"), _("SignUp")]
-    choice = st.sidebar.selectbox(_("Menu"), menu)
-
-    if choice == _("Home"):
-        if st.session_state['user']:
-            st.sidebar.write(f"{_('Logged in as')}: {st.session_state['user']['email']}")
-            if st.sidebar.button(_("Logout")):
-                st.session_state['user'] = None
-                st.experimental_rerun()
-        else:
-            st.sidebar.write(_("Please login to access more features."))
-    elif choice == _("Login"):
-        st.title(_("Login"))
-        email = st.text_input(_("Email"))
-        password = st.text_input(_("Password"), type='password')
-        if st.button(_("Login")):
-            try:
-                user = firebase_auth.get_user_by_email(email)
-                # Implement proper password verification in production
-                st.session_state['user'] = {"uid": user.uid, "email": email}
-                st.success("Logged in successfully!")
-                st.experimental_rerun()
-            except Exception as e:
-                st.error(_("Invalid credentials or user does not exist."))
-    elif choice == _("SignUp"):
-        st.title(_("Create a New Account"))
-        email = st.text_input(_("Email"))
-        password = st.text_input(_("Password"), type='password')
-        if st.button(_("SignUp")):
-            try:
-                user = firebase_auth.create_user(email=email, password=password)
-                st.success(_("Account created successfully! Please login."))
-            except Exception as e:
-                st.error(f"{_('Error creating account')}: {e}")
 
 # Function to simulate data (for visualization purposes)
 def simulate_data():
@@ -291,6 +277,8 @@ def data_visualization(data):
                      color_discrete_sequence=px.colors.qualitative.Set2)
         st.plotly_chart(fig, use_container_width=True)
 
+    st.markdown("---")
+
     st.subheader(_("Mental Health Metrics Over Time"))
     metrics = ['Depression_Score', 'Anxiety_Score', 'Stress_Level']
     selected_metrics = st.multiselect(_("Select metrics to display:"), metrics, default=metrics)
@@ -302,12 +290,16 @@ def data_visualization(data):
         )
         st.plotly_chart(fig, use_container_width=True)
 
+    st.markdown("---")
+
     st.subheader(_("Correlation Matrix"))
     corr_matrix = data[['Depression_Score', 'Anxiety_Score', 'Stress_Level',
                         'Social_Media_Usage', 'Physical_Activity', 'Sleep_Duration']].corr()
     fig = px.imshow(corr_matrix, text_auto=True, aspect="auto",
                     color_continuous_scale='RdBu_r', zmin=-1, zmax=1)
     st.plotly_chart(fig, use_container_width=True)
+
+    st.markdown("---")
 
     st.subheader(_("Scatter Plot Matrix"))
     fig = px.scatter_matrix(
@@ -318,6 +310,41 @@ def data_visualization(data):
         color_discrete_map={'Male': '#636EFA', 'Female': '#EF553B'}
     )
     st.plotly_chart(fig, use_container_width=True)
+
+    st.markdown("---")
+
+    # Additional Visualization: Sentiment Analysis Chart
+    st.subheader(_("Sentiment Analysis"))
+    # Simulate sentiment scores
+    sentiment_scores = np.random.uniform(-1, 1, num_samples)
+    data['Sentiment'] = sentiment_scores
+    fig = px.histogram(data, x='Sentiment', nbins=20, color_discrete_sequence=['#FFA15A'])
+    st.plotly_chart(fig, use_container_width=True)
+
+    st.markdown("---")
+
+    # Additional Visualization: Heatmap by Region
+    st.subheader(_("Heatmap by Region"))
+    region_metrics = data.groupby('Region').mean().reset_index()
+    fig = go.Figure(data=go.Heatmap(
+        z=region_metrics[['Depression_Score', 'Anxiety_Score', 'Stress_Level']].values,
+        x=['Depression Score', 'Anxiety Score', 'Stress Level'],
+        y=region_metrics['Region'],
+        colorscale='Viridis'
+    ))
+    fig.update_layout(height=400)
+    st.plotly_chart(fig, use_container_width=True)
+
+    st.markdown("---")
+
+    # Additional Visualization: Word Cloud from Forum Posts
+    st.subheader(_("Word Cloud from Forum Posts"))
+    # Simulate forum posts
+    words = " ".join(data['Region'].tolist())  # Replace with actual forum posts
+    wordcloud = WordCloud(width=800, height=400, background_color='white').generate(words)
+    fig_wc = px.imshow(wordcloud, template="plotly_white")
+    fig_wc.update_xaxes(showticklabels=False).update_yaxes(showticklabels=False)
+    st.plotly_chart(fig_wc, use_container_width=True)
 
 # Function for predictive modeling (API Integration)
 def predictive_modeling():
@@ -396,14 +423,14 @@ def chatbot_interface():
 def innovative_features():
     st.sidebar.markdown("---")
     st.sidebar.header("📚 " + _("Mental Health Resources"))
-    st.sidebar.markdown("""
-    - **Hotlines:**
-        - Rwanda Mental Health Hotline: **1234**
-    - **Online Resources:**
-        - [Ministry of Health Rwanda](https://www.moh.gov.rw)
-        - [WHO Mental Health](https://www.who.int/mental_health/en/)
-    """)
-
+    with st.sidebar.expander(_("Hotlines and Contacts"), expanded=True):
+        st.markdown("""
+        - **Hotlines:**
+            - Rwanda Mental Health Hotline: **1234**
+        - **Online Resources:**
+            - [Ministry of Health Rwanda](https://www.moh.gov.rw)
+            - [WHO Mental Health](https://www.who.int/mental_health/en/)
+        """)
     st.sidebar.header("💡 " + _("Daily Mental Health Tip"))
     tips = [
         _("Take a short walk to clear your mind."),
@@ -489,81 +516,20 @@ def contact_professionals():
                 # Use mailto link or integrate with email service if needed
         st.write("---")
 
-# Real-time Chat with Professionals (Placeholder for future integration)
-def chat_with_professional():
-    st.header("💬 " + _("Chat with a Professional"))
-
-    if 'user' not in st.session_state or not st.session_state['user']:
-        st.warning(_("Please login to access the chat feature."))
-        return
-
-    # Simulated list of professionals online
-    professionals = [
-        {
-            "name": "Dr. Jean Mukiza",
-            "uid": "prof_jean",
-        },
-        {
-            "name": "Dr. Aline Uwase",
-            "uid": "prof_aline",
-        },
-    ]
-
-    # Select a professional to chat with
-    professional = st.selectbox(_("Choose a professional to chat with"), professionals, format_func=lambda x: x['name'])
-    chat_id = f"{st.session_state['user']['uid']}_{professional['uid']}"
-
-    st.write(f"{_('Chatting with')} **{professional['name']}**")
-
-    # Chat container
-    messages_ref = db.collection("chats").document(chat_id).collection("messages")
-    messages = messages_ref.order_by("timestamp").stream()
-    messages_list = []
-    for msg in messages:
-        messages_list.append(msg.to_dict())
-
-    # Display messages
-    chat_container = st.container()
-    with chat_container:
-        for msg in messages_list:
-            if msg['sender'] == st.session_state['user']['uid']:
-                st.markdown(f"<div class='chat-message user-message'>{msg['content']}</div>", unsafe_allow_html=True)
-            else:
-                st.markdown(f"<div class='chat-message professional-message'><strong>{professional['name']}:</strong> {msg['content']}</div>", unsafe_allow_html=True)
-
-    # Message input
-    message = st.text_input(_("Type your message here..."))
-    if st.button(_("Send")):
-        if message.strip() != "":
-            new_message = {
-                "sender": st.session_state['user']['uid'],
-                "receiver": professional['uid'],
-                "content": message,
-                "timestamp": datetime.datetime.utcnow()
-            }
-            messages_ref.add(new_message)
-            st.experimental_rerun()
-
 # Main function
 def main():
     set_language()
-    user_authentication()
 
     # Sidebar navigation
-    if 'user' in st.session_state and st.session_state['user']:
-        options = [
-            _("Home"),
-            _("Data Visualization"),
-            _("Predictive Modeling"),
-            _("Chatbot"),
-            _("Community Forum"),
-            _("Contact Professionals"),
-            _("Chat with Professional")
-        ]
-        icons = ["house", "bar-chart", "cpu", "chat-dots", "people", "telephone", "chat"]
-    else:
-        options = [_("Home"), _("Login/SignUp")]
-        icons = ["house", "person"]
+    options = [
+        _("Home"),
+        _("Data Visualization"),
+        _("Predictive Modeling"),
+        _("Chatbot"),
+        _("Community Forum"),
+        _("Contact Professionals")
+    ]
+    icons = ["house", "bar-chart", "cpu", "chat-dots", "people", "telephone"]
 
     selected = option_menu(
         menu_title=_("Main Menu"),
@@ -573,9 +539,9 @@ def main():
         default_index=0,
         styles={
             "container": {"padding": "0!important", "background-color": "#f0f2f6"},
-            "icon": {"color": "#ff7f50", "font-size": "18px"},
-            "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
-            "nav-link-selected": {"background-color": "#ff7f50"},
+            "icon": {"color": "#FF6B6B", "font-size": "18px"},
+            "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#e0e0e0"},
+            "nav-link-selected": {"background-color": "#FF6B6B"},
         },
     )
 
@@ -598,10 +564,6 @@ def main():
         community_forum()
     elif selected == _("Contact Professionals"):
         contact_professionals()
-    elif selected == _("Chat with Professional"):
-        chat_with_professional()
-    elif selected == _("Login/SignUp"):
-        user_authentication()
 
 if __name__ == '__main__':
     main()
