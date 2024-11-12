@@ -17,20 +17,20 @@ nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 
 # Initialize Firebase Admin SDK
-def initialize_firebase():
-    if not firebase_admin._apps:
-        try:
+#def initialize_firebase():
+ #   if not firebase_admin._apps:
+       # try:
             # Use Streamlit secrets to store credentials securely
-            cred_info = st.secrets["firebase"]
-            cred = credentials.Certificate(cred_info)
-            firebase_admin.initialize_app(cred)
-        except Exception as e:
-            st.error(f"Failed to initialize Firebase: {e}")
-            st.stop()
+        #    cred_info = st.secrets["firebase"]
+         #   cred = credentials.Certificate(cred_info)
+          #  firebase_admin.initialize_app(cred)
+        #except Exception as e:
+         #   st.error(f"Failed to initialize Firebase: {e}")
+          #  st.stop()
 
-initialize_firebase()
+#initialize_firebase()
 
-db = firestore.client()
+#db = firestore.client()
 
 # Set page configuration
 st.set_page_config(
