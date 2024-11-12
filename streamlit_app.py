@@ -29,7 +29,7 @@ def initialize_firebase():
                 "type": st.secrets["firebase"]["type"],
                 "project_id": st.secrets["firebase"]["project_id"],
                 "private_key_id": st.secrets["firebase"]["315c2f7e72dca93253e29f39546938736754abb7"], 
-                "private_key": st.secrets["firebase"][""-----315c2f7e72dca93253e29f39546938736754abb7-----\n...-----END PRIVATE KEY-----\n""].replace('\\n', '\n'),
+               # "private_key": st.secrets["firebase"][""-----315c2f7e72dca93253e29f39546938736754abb7-----\n...-----END PRIVATE KEY-----\n""].replace('\\n', '\n'),
                 "client_email": st.secrets["firebase"]["firebase-adminsdk-ga5rt@ment-heath-ai.iam.gserviceaccount.com"],
                 "client_id": st.secrets["firebase"]["103021278198169092289"],
                 "auth_uri": st.secrets["firebase"]["https://accounts.google.com/o/oauth2/auth"],
