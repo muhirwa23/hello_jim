@@ -10,6 +10,9 @@ import datetime
 from textblob import TextBlob
 import nltk
 from wordcloud import WordCloud
+ import os
+from groq import Groq  # Ensure Groq is installed and imported
+import time
 
 # Download NLTK data (if not already downloaded)
 nltk.download('punkt')
@@ -179,32 +182,130 @@ def predictive_modeling():
         submit_button = st.form_submit_button(label=_('Predict'))
 
     if submit_button:
-        # Example predictive formula (replace with actual model integration if available)
+        # Example predictive 
         prediction = age * 0.2 + social_media * 0.1 - physical_activity * 0.3 + sleep_duration * 0.2
         st.success(f"{_('Predicted Depression Score')}: **{prediction:.2f}**")
         st.info(_("Note: Higher scores indicate higher levels of depression."))
 
-# Function for the chatbot interface
+# Set up the Groq API key securely
+os.environ["GROQ_API_KEY"] = "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"
+client = Groq(api_key=os.environ["GROQ_API_KEY"])
+
+# Function to generate text from Groq API
+def generate_text(prompt, max_tokens=100):
+    try:
+        chat_completion = client.chat.completions.create(
+            messages=[{"role": "user", "content": prompt}],
+            model="llama3-8b-8192",  
+            max_tokens=max_tokens,
+            temperature=0.7
+        )
+        return chat_completion.choices[0].message.content
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return "I'm having trouble connecting right now. Please try again later."
+
+# Enhanced Chatbot Interface with Mental Health Focus
 def chatbot_interface():
     st.header("🗣️ " + _("Mental Health Chatbot"))
 
-    st.write(_("Hello! I'm **Menti**, your mental health assistant. How can I help you today?"))
+    # Chatbot introduction
+    st.markdown("""
+    <div style="text-align: center;">
+        <h3>Hello! I'm <strong>Menti</strong>, your mental health assistant 🤖</h3>
+        <p>Feel free to share your thoughts, ask about mental health resources, or get tips for stress management.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Custom CSS for chatbot UI
+    st.markdown("""
+    <style>
+    .chat-container {
+        display: flex;
+        flex-direction: column;
+        max-height: 450px;
+        overflow-y: auto;
+        background-color: #f0f2f5;
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 20px;
+        border: 1px solid #ddd;
+    }
+    .user-message, .assistant-message {
+        padding: 12px 15px;
+        border-radius: 20px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        max-width: 75%;
+    }
+    .user-message {
+        background-color: #DCF8C6;
+        align-self: flex-end;
+        text-align: right;
+    }
+    .assistant-message {
+        background-color: #FFFFFF;
+        border: 1px solid #FF6B6B;
+        color: #333;
+        align-self: flex-start;
+        text-align: left;
+    }
+    .chat-input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    .send-button {
+        background-color: #FF6B6B;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .send-button:hover {
+        background-color: #FF4C4C;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
     if 'history' not in st.session_state:
         st.session_state['history'] = []
 
-    # Chat interface
-    user_input = st.text_input(_("You") + ":", "", key="input")
+    # Display chat history in chat bubble format
+    chat_html = '<div class="chat-container">'
+    for chat in st.session_state['history']:
+        user_html = f'<div class="user-message">{chat["user"]}</div>'
+        assistant_html = f'<div class="assistant-message">{chat["assistant"]}</div>'
+        chat_html += user_html + assistant_html
+    chat_html += '</div>'
+    st.markdown(chat_html, unsafe_allow_html=True)
+
+    # User input
+    user_input = st.text_input(_("You") + ":", "", key="input", placeholder="Type your message here...", label_visibility="collapsed")
+
+    # Process the user's input
     if user_input:
-        # Example response from a chatbot; replace with actual chatbot API if available
-        assistant_response = "I'm here to listen and provide guidance. What are you experiencing?"
-        st.session_state.history.append({"user": user_input, "assistant": assistant_response})
+        st.session_state['history'].append({"user": user_input, "assistant": "Menti is typing..."})
+        st.experimental_rerun()  # Temporarily display typing indicator
 
-    # Display conversation history
-    for chat in st.session_state.history:
-        st.markdown(f"<div class='chat-message user-message'><strong>{_('You')}:</strong> {chat['user']}</div>", unsafe_allow_html=True)
-        st.markdown(f"<div class='chat-message assistant-message'><strong>Menti:</strong> {chat['assistant']}</div>", unsafe_allow_html=True)
+        # Generate response from Groq API
+        assistant_response = generate_text(user_input)
+        
+        # Update chat history with actual response
+        st.session_state['history'][-1]["assistant"] = assistant_response
+        st.experimental_rerun()  # Refresh with updated response
 
+    # Display send button
+    st.markdown('<button class="send-button">Send</button>', unsafe_allow_html=True)
+
+
+# Function for the chatbot interface
 # Sidebar innovations and mental health resources
 def innovative_features():
     st.sidebar.markdown("---")
