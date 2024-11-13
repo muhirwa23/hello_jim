@@ -60,18 +60,21 @@ def _(text):
         return text
 
 # Load all provided datasets
-@st.cache
+import pandas as pd
+import streamlit as st
+
+# Load all provided datasets
+@st.cache_data  # Use st.cache_data instead of st.cache
 def load_data():
-    # Update these paths to your provided datasets
-    youth_health_data = pd.read_csv("youth_health_data.csv")  
-    mental_health_data = pd.read_csv("mental_health_indicators.csv")  
+    # Update these paths to match the exact file names
+    youth_health_data = pd.read_csv("youth_health_data_expanded (1).csv")  
+    mental_health_data = pd.read_csv("mental_health_indicators_rwa (1).csv")  
     dhs_data = pd.read_csv("dhs_data.csv")  
     general_population_data = pd.read_csv("general_population_data.csv")  
     mental_health_youth_data = pd.read_csv("mental_health_data_rwanda_youth.csv")  
     return youth_health_data, mental_health_data, dhs_data, general_population_data, mental_health_youth_data
-
+# Load the data
 youth_health_data, mental_health_data, dhs_data, general_population_data, mental_health_youth_data = load_data()
-
 # Function for the home page
 def home():
     st.title("🧠 " + _("Mental Health Dashboard for Rwandan Youth"))
