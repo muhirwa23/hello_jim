@@ -163,7 +163,7 @@ def data_visualization(youth_data, mental_data, dhs_data, gen_pop_data, mental_y
 def predictive_modeling():
     st.header("🤖 "
 def predictive_modeling():
-    st.header("🤖 " + _("Predictive Modeling"))
+    st.header("🤖 " + "Predictive Modeling")
 
     st.markdown("### " + _("Predicting Depression Scores"))
     st.markdown(_("Adjust the input parameters to predict the depression score."))
