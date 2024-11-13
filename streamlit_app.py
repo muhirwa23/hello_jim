@@ -63,11 +63,11 @@ def _(text):
 @st.cache
 def load_data():
     # Update these paths to your provided datasets
-    youth_health_data = pd.read_csv("/youth_health_data.csv")  
-    mental_health_data = pd.read_csv("/mental_health_indicators.csv")  
-    dhs_data = pd.read_csv("/dhs_data.csv")  
-    general_population_data = pd.read_csv("/general_population_data.csv")  
-    mental_health_youth_data = pd.read_csv("/mental_health_data_rwanda_youth.csv")  
+    youth_health_data = pd.read_csv("youth_health_data.csv")  
+    mental_health_data = pd.read_csv("mental_health_indicators.csv")  
+    dhs_data = pd.read_csv("dhs_data.csv")  
+    general_population_data = pd.read_csv("general_population_data.csv")  
+    mental_health_youth_data = pd.read_csv("mental_health_data_rwanda_youth.csv")  
     return youth_health_data, mental_health_data, dhs_data, general_population_data, mental_health_youth_data
 
 youth_health_data, mental_health_data, dhs_data, general_population_data, mental_health_youth_data = load_data()
