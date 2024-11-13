@@ -1,0 +1,3001 @@
+Age,Sex,District,School Attendance,Mental Health Indicator,Severity of Issue,Access to Mental Health Services,Parental Education Level,Economic Quintile
+15,Male,Western Province,Attending,No,Moderate,No,Primary,Lowest
+18,Male,Southern Province,Attending,No,Mild,Yes,No Education,Second
+17,Male,Eastern Province,Attending,No,Moderate,No,Primary,Second
+19,Male,Southern Province,Attending,No,Mild,No,Post-Secondary,Lowest
+19,Male,Eastern Province,Attending,No,Moderate,No,Secondary,Lowest
+13,Female,Kigali,Attending,Yes,Mild,Yes,Post-Secondary,Fourth
+15,Female,Southern Province,Attending,No,Mild,No,Primary,Fourth
+15,Male,Southern Province,Attending,Yes,Moderate,Yes,Secondary,Fourth
+17,Female,Northern Province,Attending,No,Severe,No,Primary,Highest
+14,Male,Western Province,Attending,No,Mild,Yes,No Education,Highest
+15,Female,Kigali,Attending,Yes,Moderate,Yes,Post-Secondary,Highest
+19,Female,Northern Province,Attending,No,Moderate,No,Post-Secondary,Highest
+16,Female,Kigali,Attending,No,Moderate,Yes,Primary,Middle
+17,Female,Northern Province,Attending,No,Mild,No,Post-Secondary,Fourth
+17,Male,Eastern Province,Attending,No,Severe,Yes,Secondary,Highest
+15,Male,Western Province,Not Attending,No,Mild,Yes,Secondary,Lowest
+16,Male,Southern Province,Not Attending,Yes,Mild,No,Primary,Fourth
+13,Female,Southern Province,Attending,Yes,Moderate,No,Post-Secondary,Lowest
+17,Female,Southern Province,Attending,No,Mild,No,Primary,Middle
+13,Male,Eastern Province,Attending,Yes,Moderate,No,Primary,Fourth
+14,Female,Western Province,Attending,No,Mild,No,Primary,Lowest
+17,Female,Western Province,Attending,No,Mild,No,Primary,Middle
+14,Male,Western Province,Not Attending,No,Moderate,Yes,Primary,Second
+14,Male,Southern Province,Attending,No,Moderate,No,Primary,Lowest
+13,Female,Western Province,Attending,No,Severe,No,Secondary,Middle
+13,Male,Kigali,Attending,No,Mild,No,Secondary,Fourth
+13,Female,Eastern Province,Attending,No,Severe,No,Primary,Fourth
+17,Female,Kigali,Attending,Yes,Mild,Yes,Primary,Lowest
+18,Female,Kigali,Attending,No,Mild,Yes,Primary,Lowest
+19,Female,Kigali,Attending,No,Severe,Yes,Primary,Middle
+18,Male,Southern Province,Not Attending,No,Mild,No,Primary,Middle
+13,Male,Kigali,Attending,No,Severe,Yes,Primary,Middle
+17,Male,Southern Province,Attending,No,Moderate,Yes,Post-Secondary,Fourth
+14,Male,Kigali,Attending,No,Moderate,No,Primary,Lowest
+17,Male,Northern Province,Attending,Yes,Moderate,Yes,Secondary,Highest
+17,Male,Southern Province,Not Attending,No,Mild,Yes,No Education,Fourth
+18,Male,Kigali,Attending,No,Moderate,No,Primary,Fourth
+19,Male,Kigali,Not Attending,No,Moderate,No,Post-Secondary,Highest
+13,Male,Northern Province,Attending,No,Severe,Yes,Primary,Middle
+14,Male,Southern Province,Attending,Yes,Severe,No,Primary,Highest
+15,Male,Eastern Province,Attending,No,Mild,Yes,Secondary,Highest
+14,Male,Northern Province,Attending,Yes,Moderate,Yes,Primary,Lowest
+19,Female,Kigali,Attending,Yes,Mild,No,Primary,Lowest
+17,Male,Kigali,Attending,Yes,Mild,No,Post-Secondary,Lowest
+17,Male,Kigali,Not Attending,No,Moderate,No,Primary,Fourth
+13,Male,Kigali,Attending,No,Moderate,Yes,Post-Secondary,Fourth
+17,Female,Northern Province,Attending,Yes,Mild,No,Primary,Middle
+14,Male,Southern Province,Attending,Yes,Mild,No,Primary,Middle
+13,Male,Western Province,Attending,No,Mild,No,Secondary,Highest
+16,Male,Kigali,Attending,No,Moderate,Yes,Secondary,Lowest
+16,Male,Kigali,Attending,Yes,Moderate,No,Post-Secondary,Second
+13,Female,Southern Province,Attending,No,Mild,No,Primary,Lowest
+15,Female,Eastern Province,Not Attending,Yes,Mild,Yes,Primary,Highest
+17,Male,Kigali,Attending,No,Severe,Yes,Secondary,Second
+18,Male,Kigali,Attending,No,Mild,No,Post-Secondary,Fourth
+19,Male,Southern Province,Attending,No,Mild,No,No Education,Fourth
+13,Female,Kigali,Attending,No,Severe,No,Secondary,Fourth
+19,Male,Eastern Province,Attending,No,Mild,No,Secondary,Fourth
+15,Male,Kigali,Attending,No,Mild,No,Primary,Highest
+18,Male,Southern Province,Not Attending,No,Severe,No,Secondary,Second
+15,Female,Southern Province,Attending,Yes,Mild,No,Primary,Highest
+14,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Middle
+15,Male,Southern Province,Attending,No,Mild,No,No Education,Middle
+14,Female,Western Province,Not Attending,No,Moderate,No,Secondary,Second
+19,Female,Southern Province,Attending,No,Moderate,No,Primary,Second
+13,Male,Western Province,Not Attending,No,Moderate,Yes,Primary,Middle
+14,Male,Kigali,Attending,No,Mild,No,Secondary,Second
+13,Male,Kigali,Attending,No,Moderate,No,Primary,Middle
+17,Male,Eastern Province,Attending,Yes,Moderate,No,Primary,Second
+17,Female,Northern Province,Attending,No,Moderate,No,Primary,Highest
+13,Female,Southern Province,Attending,No,Mild,Yes,Primary,Highest
+14,Male,Kigali,Attending,Yes,Mild,No,Secondary,Fourth
+18,Male,Kigali,Attending,No,Moderate,Yes,Post-Secondary,Middle
+19,Female,Northern Province,Attending,No,Mild,No,Primary,Fourth
+14,Female,Western Province,Attending,No,Moderate,No,No Education,Highest
+18,Male,Southern Province,Attending,Yes,Mild,Yes,Primary,Middle
+17,Male,Kigali,Not Attending,Yes,Mild,Yes,Post-Secondary,Lowest
+15,Female,Eastern Province,Attending,Yes,Mild,Yes,Secondary,Middle
+19,Male,Southern Province,Attending,Yes,Moderate,Yes,Primary,Lowest
+16,Male,Southern Province,Attending,No,Mild,Yes,Primary,Middle
+19,Male,Kigali,Not Attending,No,Mild,No,Primary,Highest
+14,Female,Kigali,Attending,No,Severe,Yes,Primary,Second
+19,Male,Southern Province,Not Attending,No,Mild,No,No Education,Fourth
+15,Male,Kigali,Attending,No,Severe,No,No Education,Fourth
+19,Female,Kigali,Attending,No,Severe,No,Primary,Lowest
+18,Male,Western Province,Attending,No,Moderate,No,Primary,Second
+15,Female,Southern Province,Attending,No,Mild,Yes,No Education,Lowest
+17,Female,Southern Province,Attending,No,Mild,No,Primary,Middle
+19,Male,Southern Province,Not Attending,No,Moderate,Yes,Primary,Fourth
+15,Female,Western Province,Attending,Yes,Mild,No,Primary,Lowest
+15,Female,Kigali,Attending,No,Severe,Yes,Primary,Fourth
+19,Male,Northern Province,Attending,Yes,Moderate,Yes,Primary,Second
+19,Male,Southern Province,Attending,No,Severe,Yes,Primary,Middle
+16,Male,Northern Province,Attending,No,Moderate,Yes,Post-Secondary,Highest
+19,Male,Kigali,Attending,Yes,Moderate,Yes,No Education,Middle
+15,Male,Kigali,Attending,No,Mild,No,Primary,Highest
+17,Female,Eastern Province,Not Attending,No,Mild,No,Primary,Middle
+16,Male,Southern Province,Attending,No,Severe,No,Primary,Lowest
+17,Female,Northern Province,Attending,No,Severe,No,Secondary,Highest
+16,Female,Kigali,Attending,No,Moderate,No,Primary,Second
+15,Male,Southern Province,Attending,No,Moderate,Yes,Secondary,Fourth
+15,Female,Kigali,Attending,No,Moderate,No,Primary,Lowest
+17,Female,Kigali,Attending,No,Mild,No,Secondary,Middle
+16,Male,Eastern Province,Attending,No,Mild,Yes,Secondary,Highest
+16,Female,Kigali,Attending,No,Mild,No,Primary,Middle
+15,Male,Western Province,Attending,Yes,Severe,No,Post-Secondary,Fourth
+15,Male,Kigali,Attending,Yes,Severe,Yes,Primary,Lowest
+15,Male,Western Province,Attending,No,Mild,No,No Education,Second
+17,Female,Kigali,Attending,Yes,Moderate,No,Primary,Highest
+17,Female,Southern Province,Attending,No,Moderate,No,Primary,Middle
+14,Female,Northern Province,Not Attending,No,Mild,Yes,Post-Secondary,Highest
+18,Female,Kigali,Attending,No,Mild,Yes,Post-Secondary,Lowest
+14,Male,Southern Province,Attending,Yes,Mild,No,Primary,Second
+14,Male,Southern Province,Attending,No,Moderate,Yes,Primary,Middle
+15,Female,Western Province,Attending,No,Mild,No,Primary,Fourth
+18,Male,Southern Province,Attending,No,Moderate,No,Secondary,Fourth
+16,Female,Eastern Province,Attending,No,Mild,No,Primary,Lowest
+17,Male,Eastern Province,Not Attending,No,Moderate,No,Primary,Fourth
+13,Female,Eastern Province,Attending,Yes,Moderate,Yes,Primary,Middle
+13,Female,Kigali,Attending,No,Moderate,No,Secondary,Second
+17,Male,Kigali,Attending,No,Mild,No,Secondary,Second
+14,Female,Southern Province,Attending,Yes,Mild,No,Post-Secondary,Middle
+15,Male,Western Province,Not Attending,No,Severe,No,Primary,Middle
+13,Female,Western Province,Attending,No,Mild,No,Secondary,Lowest
+17,Female,Eastern Province,Attending,Yes,Moderate,No,Secondary,Middle
+18,Female,Kigali,Not Attending,No,Moderate,Yes,Secondary,Middle
+17,Female,Kigali,Attending,No,Mild,Yes,Primary,Middle
+18,Female,Kigali,Attending,No,Mild,Yes,No Education,Fourth
+14,Female,Northern Province,Attending,No,Mild,Yes,Primary,Highest
+15,Female,Eastern Province,Attending,No,Moderate,No,Primary,Fourth
+17,Male,Eastern Province,Attending,Yes,Mild,Yes,Primary,Second
+19,Female,Western Province,Attending,No,Severe,No,Primary,Fourth
+13,Male,Kigali,Not Attending,No,Mild,Yes,Primary,Second
+18,Female,Kigali,Attending,No,Moderate,No,Secondary,Middle
+16,Male,Western Province,Attending,No,Mild,Yes,Post-Secondary,Lowest
+13,Male,Eastern Province,Attending,No,Mild,No,Secondary,Fourth
+14,Male,Southern Province,Attending,No,Moderate,Yes,Primary,Middle
+18,Male,Western Province,Attending,No,Mild,No,Primary,Highest
+18,Male,Eastern Province,Attending,No,Moderate,Yes,Post-Secondary,Highest
+19,Female,Western Province,Attending,No,Mild,No,Primary,Lowest
+19,Male,Western Province,Attending,No,Moderate,No,Primary,Second
+19,Male,Kigali,Attending,No,Severe,No,Secondary,Highest
+15,Female,Southern Province,Not Attending,No,Severe,No,No Education,Middle
+14,Male,Eastern Province,Attending,No,Moderate,Yes,Secondary,Middle
+15,Male,Kigali,Not Attending,No,Mild,No,Primary,Middle
+13,Female,Kigali,Attending,No,Moderate,Yes,Primary,Highest
+18,Male,Kigali,Attending,No,Moderate,No,Secondary,Highest
+18,Male,Kigali,Attending,No,Severe,Yes,Secondary,Fourth
+15,Male,Northern Province,Attending,No,Moderate,No,Post-Secondary,Highest
+14,Male,Kigali,Attending,No,Moderate,No,Secondary,Middle
+14,Female,Southern Province,Attending,Yes,Mild,No,Secondary,Second
+19,Male,Kigali,Attending,No,Severe,No,Post-Secondary,Lowest
+17,Female,Western Province,Attending,No,Moderate,Yes,Primary,Second
+13,Male,Western Province,Attending,Yes,Mild,Yes,Secondary,Second
+16,Male,Southern Province,Attending,No,Severe,Yes,Secondary,Fourth
+16,Female,Northern Province,Attending,No,Moderate,Yes,No Education,Highest
+14,Male,Northern Province,Attending,Yes,Mild,No,Secondary,Fourth
+14,Male,Kigali,Attending,No,Moderate,No,No Education,Highest
+19,Male,Kigali,Attending,Yes,Moderate,No,Primary,Second
+13,Male,Northern Province,Not Attending,Yes,Mild,No,Primary,Second
+18,Female,Kigali,Attending,No,Mild,No,Post-Secondary,Lowest
+19,Female,Western Province,Attending,No,Mild,Yes,Secondary,Fourth
+15,Female,Kigali,Attending,No,Mild,Yes,Secondary,Highest
+13,Female,Southern Province,Attending,No,Mild,No,Post-Secondary,Lowest
+16,Male,Southern Province,Attending,No,Mild,Yes,Secondary,Lowest
+16,Female,Kigali,Not Attending,No,Mild,Yes,No Education,Middle
+17,Male,Eastern Province,Attending,No,Mild,No,Secondary,Second
+15,Male,Eastern Province,Not Attending,No,Mild,Yes,Secondary,Fourth
+16,Female,Eastern Province,Attending,No,Mild,No,Secondary,Fourth
+14,Female,Eastern Province,Not Attending,Yes,Mild,No,Primary,Highest
+14,Male,Kigali,Attending,Yes,Mild,No,Primary,Second
+14,Male,Kigali,Attending,Yes,Mild,No,Post-Secondary,Highest
+19,Female,Kigali,Attending,No,Severe,No,Secondary,Second
+19,Male,Kigali,Attending,Yes,Mild,No,Secondary,Middle
+13,Female,Southern Province,Attending,No,Moderate,Yes,Secondary,Lowest
+17,Male,Southern Province,Attending,No,Mild,No,Primary,Second
+16,Male,Western Province,Attending,Yes,Mild,No,Primary,Fourth
+16,Female,Kigali,Attending,No,Severe,Yes,Secondary,Lowest
+16,Male,Southern Province,Attending,Yes,Mild,Yes,Secondary,Highest
+16,Female,Kigali,Attending,No,Severe,No,Primary,Fourth
+13,Male,Kigali,Not Attending,No,Severe,Yes,Primary,Lowest
+14,Female,Kigali,Attending,No,Moderate,No,Primary,Middle
+13,Female,Northern Province,Attending,Yes,Severe,No,Primary,Second
+13,Female,Northern Province,Attending,No,Moderate,No,Primary,Fourth
+14,Female,Northern Province,Attending,Yes,Severe,No,Primary,Fourth
+13,Male,Kigali,Not Attending,No,Moderate,No,Primary,Second
+14,Male,Eastern Province,Attending,No,Moderate,Yes,Post-Secondary,Second
+17,Female,Western Province,Attending,No,Moderate,Yes,Secondary,Lowest
+14,Female,Kigali,Attending,No,Mild,Yes,Post-Secondary,Highest
+14,Female,Eastern Province,Attending,Yes,Severe,No,No Education,Fourth
+15,Male,Southern Province,Attending,No,Moderate,No,Post-Secondary,Highest
+14,Female,Eastern Province,Attending,Yes,Moderate,Yes,Secondary,Middle
+16,Male,Western Province,Not Attending,No,Moderate,No,No Education,Second
+19,Male,Western Province,Attending,No,Moderate,Yes,Primary,Fourth
+17,Male,Western Province,Attending,No,Severe,No,Secondary,Middle
+14,Male,Kigali,Not Attending,No,Severe,No,Primary,Lowest
+17,Female,Kigali,Attending,No,Moderate,Yes,Primary,Lowest
+14,Male,Southern Province,Attending,No,Severe,Yes,Secondary,Second
+18,Male,Northern Province,Not Attending,Yes,Severe,No,Primary,Lowest
+18,Male,Eastern Province,Attending,No,Mild,Yes,Secondary,Lowest
+16,Female,Northern Province,Attending,Yes,Mild,Yes,Secondary,Fourth
+15,Male,Southern Province,Attending,No,Mild,No,Secondary,Lowest
+17,Female,Southern Province,Attending,No,Severe,Yes,Secondary,Middle
+18,Female,Kigali,Attending,No,Severe,No,Secondary,Highest
+16,Female,Kigali,Attending,No,Mild,Yes,Primary,Fourth
+17,Male,Eastern Province,Attending,No,Moderate,No,Secondary,Middle
+17,Male,Western Province,Attending,No,Mild,Yes,Primary,Second
+16,Female,Western Province,Attending,No,Severe,No,Post-Secondary,Lowest
+17,Male,Northern Province,Attending,Yes,Severe,No,Primary,Second
+18,Male,Western Province,Attending,No,Moderate,No,Post-Secondary,Highest
+17,Male,Eastern Province,Attending,No,Moderate,No,Primary,Fourth
+16,Male,Kigali,Attending,Yes,Severe,No,Secondary,Lowest
+13,Male,Western Province,Attending,No,Severe,Yes,Primary,Second
+15,Female,Southern Province,Attending,No,Mild,No,Secondary,Second
+19,Male,Kigali,Attending,No,Moderate,No,Primary,Second
+14,Female,Southern Province,Attending,Yes,Mild,No,Secondary,Lowest
+17,Male,Southern Province,Not Attending,No,Moderate,Yes,Primary,Middle
+17,Male,Kigali,Attending,Yes,Mild,No,Primary,Lowest
+17,Male,Kigali,Attending,No,Moderate,Yes,No Education,Highest
+15,Female,Western Province,Attending,No,Severe,No,Primary,Second
+18,Male,Kigali,Attending,No,Severe,No,Post-Secondary,Middle
+19,Male,Northern Province,Attending,No,Moderate,No,Primary,Second
+19,Female,Western Province,Attending,No,Severe,No,No Education,Fourth
+14,Male,Western Province,Attending,No,Moderate,Yes,Primary,Second
+15,Female,Kigali,Not Attending,No,Mild,No,Primary,Highest
+16,Female,Southern Province,Attending,No,Severe,No,Secondary,Highest
+15,Female,Kigali,Attending,Yes,Moderate,Yes,No Education,Middle
+15,Male,Northern Province,Attending,No,Moderate,No,No Education,Fourth
+14,Male,Kigali,Attending,Yes,Severe,Yes,Secondary,Middle
+15,Male,Eastern Province,Not Attending,Yes,Mild,No,Primary,Highest
+13,Male,Western Province,Not Attending,Yes,Mild,Yes,Secondary,Highest
+14,Female,Kigali,Attending,No,Moderate,No,Primary,Fourth
+15,Female,Western Province,Attending,No,Moderate,No,Primary,Middle
+16,Male,Kigali,Attending,No,Severe,No,Secondary,Highest
+13,Male,Western Province,Attending,No,Mild,No,Post-Secondary,Second
+16,Female,Western Province,Not Attending,No,Mild,No,Primary,Second
+16,Female,Western Province,Attending,No,Mild,Yes,No Education,Lowest
+19,Male,Southern Province,Attending,Yes,Moderate,No,Primary,Lowest
+19,Male,Eastern Province,Attending,No,Severe,No,Primary,Fourth
+19,Female,Western Province,Attending,No,Moderate,No,Primary,Highest
+17,Male,Kigali,Attending,No,Mild,Yes,Secondary,Lowest
+17,Male,Eastern Province,Attending,No,Mild,No,Post-Secondary,Fourth
+16,Male,Southern Province,Attending,No,Severe,Yes,Secondary,Middle
+18,Female,Northern Province,Not Attending,Yes,Mild,No,Primary,Lowest
+17,Male,Kigali,Attending,No,Mild,No,Secondary,Lowest
+18,Female,Western Province,Not Attending,Yes,Moderate,No,Secondary,Second
+19,Male,Kigali,Attending,Yes,Moderate,No,Primary,Middle
+19,Female,Kigali,Not Attending,No,Mild,No,Primary,Fourth
+14,Male,Western Province,Attending,No,Mild,No,Secondary,Middle
+16,Female,Northern Province,Not Attending,No,Severe,No,Primary,Fourth
+14,Female,Kigali,Attending,No,Moderate,No,Primary,Second
+14,Female,Eastern Province,Attending,No,Mild,No,Primary,Fourth
+18,Male,Kigali,Not Attending,Yes,Mild,No,Primary,Second
+16,Male,Southern Province,Attending,No,Mild,No,Primary,Second
+17,Female,Western Province,Attending,Yes,Mild,Yes,Secondary,Lowest
+18,Male,Western Province,Not Attending,Yes,Mild,No,Primary,Middle
+16,Male,Eastern Province,Attending,No,Mild,Yes,No Education,Middle
+17,Female,Northern Province,Attending,No,Moderate,No,Secondary,Lowest
+16,Female,Southern Province,Attending,No,Severe,No,Post-Secondary,Second
+17,Male,Southern Province,Not Attending,No,Mild,Yes,Post-Secondary,Second
+19,Female,Western Province,Attending,No,Mild,No,Secondary,Middle
+18,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Second
+13,Male,Eastern Province,Attending,No,Mild,Yes,Primary,Middle
+14,Female,Kigali,Attending,Yes,Mild,No,Primary,Fourth
+15,Female,Southern Province,Attending,No,Moderate,No,Primary,Middle
+14,Male,Northern Province,Attending,No,Severe,No,Primary,Highest
+14,Male,Western Province,Attending,Yes,Mild,No,No Education,Fourth
+19,Male,Eastern Province,Attending,Yes,Mild,Yes,Primary,Fourth
+19,Female,Kigali,Attending,No,Mild,Yes,Primary,Lowest
+17,Female,Northern Province,Attending,No,Moderate,No,Primary,Middle
+17,Female,Kigali,Not Attending,No,Mild,Yes,Primary,Highest
+13,Male,Northern Province,Not Attending,No,Severe,No,Primary,Fourth
+17,Male,Western Province,Attending,No,Severe,Yes,Primary,Fourth
+16,Female,Eastern Province,Attending,No,Moderate,Yes,Primary,Fourth
+15,Female,Kigali,Attending,No,Mild,Yes,Secondary,Middle
+18,Female,Western Province,Attending,No,Severe,Yes,Primary,Highest
+14,Male,Eastern Province,Attending,No,Mild,No,Secondary,Second
+17,Male,Kigali,Not Attending,No,Severe,Yes,No Education,Middle
+19,Female,Southern Province,Attending,No,Severe,Yes,Secondary,Lowest
+18,Female,Southern Province,Not Attending,Yes,Mild,No,Primary,Second
+16,Male,Southern Province,Attending,No,Mild,Yes,No Education,Middle
+18,Male,Western Province,Not Attending,No,Mild,No,Post-Secondary,Middle
+17,Male,Southern Province,Attending,No,Severe,Yes,Primary,Middle
+14,Male,Northern Province,Attending,No,Moderate,No,Primary,Fourth
+18,Female,Northern Province,Attending,No,Moderate,No,No Education,Second
+17,Female,Eastern Province,Not Attending,Yes,Mild,No,Secondary,Highest
+17,Male,Eastern Province,Attending,Yes,Severe,No,Secondary,Highest
+18,Female,Western Province,Attending,No,Mild,No,Primary,Middle
+17,Female,Eastern Province,Attending,No,Mild,No,Secondary,Fourth
+15,Male,Kigali,Attending,No,Mild,Yes,Secondary,Lowest
+17,Male,Kigali,Not Attending,Yes,Moderate,No,Post-Secondary,Middle
+17,Female,Kigali,Attending,Yes,Moderate,No,Primary,Second
+18,Male,Northern Province,Attending,No,Mild,No,Secondary,Middle
+18,Male,Southern Province,Attending,No,Mild,Yes,Primary,Second
+14,Female,Eastern Province,Not Attending,No,Mild,Yes,Primary,Second
+18,Male,Southern Province,Attending,No,Mild,Yes,Primary,Fourth
+14,Female,Northern Province,Not Attending,No,Mild,Yes,Primary,Highest
+13,Male,Eastern Province,Attending,Yes,Mild,Yes,Primary,Highest
+14,Male,Eastern Province,Not Attending,No,Mild,No,Secondary,Middle
+16,Male,Northern Province,Attending,Yes,Mild,No,Primary,Second
+18,Female,Eastern Province,Attending,No,Severe,No,Primary,Second
+17,Female,Northern Province,Attending,No,Severe,Yes,No Education,Fourth
+16,Female,Northern Province,Attending,No,Moderate,Yes,Secondary,Lowest
+15,Female,Western Province,Not Attending,No,Severe,Yes,Primary,Lowest
+13,Male,Western Province,Attending,Yes,Mild,Yes,Primary,Lowest
+18,Female,Southern Province,Not Attending,Yes,Moderate,No,No Education,Second
+18,Male,Eastern Province,Not Attending,No,Mild,No,Primary,Second
+14,Female,Southern Province,Attending,Yes,Moderate,Yes,Secondary,Lowest
+17,Male,Kigali,Attending,No,Mild,No,Secondary,Highest
+16,Male,Eastern Province,Attending,No,Mild,Yes,Post-Secondary,Lowest
+16,Male,Southern Province,Attending,Yes,Moderate,No,Secondary,Middle
+17,Female,Kigali,Attending,No,Severe,No,Secondary,Lowest
+18,Female,Kigali,Attending,No,Moderate,Yes,Secondary,Fourth
+14,Female,Western Province,Attending,Yes,Moderate,Yes,Primary,Fourth
+18,Female,Kigali,Attending,Yes,Severe,Yes,Primary,Lowest
+19,Male,Northern Province,Attending,No,Mild,Yes,Primary,Highest
+19,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Highest
+14,Male,Western Province,Attending,No,Mild,No,Primary,Fourth
+17,Male,Western Province,Attending,No,Moderate,No,Primary,Middle
+14,Female,Western Province,Attending,No,Mild,No,Secondary,Lowest
+18,Male,Eastern Province,Attending,No,Severe,Yes,Primary,Fourth
+15,Female,Southern Province,Attending,No,Severe,No,Post-Secondary,Middle
+19,Male,Southern Province,Not Attending,No,Mild,Yes,Primary,Fourth
+13,Female,Kigali,Attending,No,Moderate,No,Secondary,Middle
+16,Male,Western Province,Attending,No,Mild,No,Primary,Second
+13,Female,Western Province,Not Attending,No,Moderate,Yes,Secondary,Fourth
+18,Female,Southern Province,Attending,No,Severe,Yes,Secondary,Middle
+13,Male,Kigali,Not Attending,No,Severe,No,Secondary,Second
+19,Female,Kigali,Attending,No,Mild,Yes,Primary,Middle
+19,Female,Southern Province,Attending,No,Moderate,Yes,Primary,Lowest
+17,Female,Western Province,Attending,No,Severe,Yes,Secondary,Second
+16,Male,Kigali,Attending,No,Mild,Yes,Primary,Middle
+14,Male,Southern Province,Attending,No,Moderate,Yes,Primary,Second
+15,Female,Western Province,Attending,No,Severe,No,Primary,Middle
+16,Female,Southern Province,Attending,Yes,Severe,Yes,Primary,Middle
+17,Female,Southern Province,Attending,No,Mild,No,Primary,Highest
+14,Male,Southern Province,Attending,No,Moderate,Yes,Primary,Middle
+16,Female,Kigali,Not Attending,No,Moderate,Yes,Secondary,Second
+16,Female,Southern Province,Attending,No,Severe,Yes,Primary,Fourth
+14,Male,Eastern Province,Attending,No,Moderate,No,Primary,Second
+19,Male,Western Province,Attending,No,Moderate,No,Secondary,Middle
+16,Female,Southern Province,Attending,No,Severe,Yes,Secondary,Lowest
+19,Female,Kigali,Attending,Yes,Mild,No,No Education,Highest
+18,Female,Northern Province,Attending,No,Severe,No,Primary,Lowest
+15,Male,Southern Province,Attending,No,Mild,No,Primary,Fourth
+15,Male,Kigali,Attending,No,Mild,No,Secondary,Middle
+18,Female,Western Province,Attending,Yes,Severe,Yes,Primary,Second
+18,Female,Southern Province,Attending,Yes,Moderate,Yes,Primary,Lowest
+15,Female,Kigali,Not Attending,Yes,Severe,No,Post-Secondary,Middle
+16,Male,Eastern Province,Not Attending,No,Moderate,No,Post-Secondary,Second
+13,Female,Eastern Province,Not Attending,No,Mild,No,Primary,Fourth
+14,Male,Kigali,Attending,Yes,Mild,Yes,Secondary,Middle
+19,Male,Western Province,Attending,No,Mild,Yes,No Education,Lowest
+13,Male,Kigali,Attending,No,Mild,No,Secondary,Second
+16,Female,Kigali,Attending,No,Mild,Yes,Post-Secondary,Fourth
+17,Female,Northern Province,Not Attending,No,Moderate,No,Primary,Middle
+19,Male,Southern Province,Attending,Yes,Moderate,No,Primary,Lowest
+18,Female,Southern Province,Attending,No,Moderate,No,Primary,Lowest
+14,Male,Kigali,Not Attending,No,Mild,Yes,Secondary,Lowest
+19,Female,Eastern Province,Attending,No,Mild,No,Secondary,Lowest
+13,Male,Southern Province,Attending,Yes,Moderate,Yes,Secondary,Second
+16,Female,Kigali,Not Attending,No,Mild,Yes,Secondary,Highest
+13,Male,Kigali,Attending,No,Moderate,No,Secondary,Middle
+16,Male,Northern Province,Not Attending,Yes,Moderate,No,No Education,Middle
+13,Male,Kigali,Attending,No,Moderate,No,Secondary,Second
+19,Male,Western Province,Attending,No,Moderate,Yes,No Education,Second
+15,Female,Eastern Province,Not Attending,Yes,Moderate,Yes,Primary,Second
+15,Female,Eastern Province,Not Attending,No,Mild,No,Primary,Second
+14,Male,Southern Province,Not Attending,Yes,Mild,Yes,Primary,Middle
+13,Male,Northern Province,Not Attending,No,Moderate,Yes,No Education,Highest
+13,Female,Western Province,Not Attending,No,Severe,Yes,Secondary,Fourth
+18,Female,Northern Province,Attending,No,Moderate,No,Primary,Fourth
+16,Female,Kigali,Attending,Yes,Severe,No,Post-Secondary,Middle
+13,Male,Kigali,Attending,No,Mild,No,Secondary,Middle
+14,Female,Kigali,Attending,No,Mild,Yes,Primary,Highest
+15,Female,Eastern Province,Attending,Yes,Severe,No,Post-Secondary,Second
+17,Female,Kigali,Attending,No,Moderate,No,Primary,Middle
+17,Male,Southern Province,Attending,Yes,Mild,Yes,Primary,Highest
+16,Male,Kigali,Attending,No,Mild,Yes,Primary,Fourth
+15,Female,Kigali,Attending,No,Severe,No,Secondary,Fourth
+15,Male,Northern Province,Attending,No,Mild,Yes,Primary,Highest
+16,Female,Northern Province,Attending,No,Severe,No,Secondary,Middle
+15,Female,Southern Province,Not Attending,No,Severe,No,Primary,Lowest
+13,Male,Northern Province,Not Attending,No,Severe,No,Primary,Fourth
+14,Male,Kigali,Attending,No,Mild,Yes,No Education,Second
+14,Male,Kigali,Attending,No,Severe,Yes,Post-Secondary,Highest
+13,Female,Eastern Province,Attending,No,Severe,Yes,No Education,Second
+14,Male,Southern Province,Attending,No,Moderate,No,Post-Secondary,Highest
+17,Male,Southern Province,Attending,No,Moderate,No,Primary,Second
+14,Male,Western Province,Attending,No,Moderate,No,Secondary,Middle
+13,Male,Eastern Province,Attending,No,Moderate,Yes,Primary,Second
+13,Male,Kigali,Attending,No,Severe,No,Primary,Fourth
+16,Male,Northern Province,Not Attending,Yes,Mild,Yes,Primary,Middle
+16,Female,Eastern Province,Attending,No,Severe,No,Primary,Fourth
+19,Female,Northern Province,Not Attending,No,Moderate,Yes,Secondary,Lowest
+17,Male,Kigali,Attending,No,Severe,No,No Education,Lowest
+18,Female,Southern Province,Attending,Yes,Mild,Yes,Post-Secondary,Second
+17,Female,Kigali,Attending,Yes,Severe,Yes,Primary,Highest
+13,Female,Southern Province,Attending,Yes,Moderate,Yes,No Education,Highest
+16,Male,Eastern Province,Attending,No,Mild,No,Primary,Lowest
+17,Male,Kigali,Attending,No,Mild,No,Primary,Lowest
+16,Female,Eastern Province,Not Attending,No,Mild,No,Primary,Lowest
+17,Male,Southern Province,Not Attending,No,Moderate,No,No Education,Lowest
+14,Male,Western Province,Attending,No,Mild,No,Primary,Highest
+19,Female,Western Province,Attending,No,Moderate,No,Primary,Fourth
+15,Female,Southern Province,Attending,No,Mild,Yes,Secondary,Highest
+18,Male,Southern Province,Attending,No,Mild,Yes,Secondary,Middle
+14,Male,Northern Province,Attending,No,Mild,No,Primary,Second
+17,Male,Southern Province,Attending,No,Mild,No,Post-Secondary,Second
+17,Male,Southern Province,Attending,Yes,Mild,No,Secondary,Middle
+14,Female,Western Province,Not Attending,Yes,Moderate,No,Secondary,Fourth
+18,Female,Kigali,Attending,No,Mild,Yes,Secondary,Fourth
+19,Female,Northern Province,Attending,No,Mild,Yes,Secondary,Middle
+13,Male,Kigali,Not Attending,No,Severe,Yes,Secondary,Lowest
+13,Male,Western Province,Attending,Yes,Moderate,Yes,Primary,Fourth
+15,Female,Kigali,Attending,No,Mild,No,Secondary,Lowest
+17,Male,Northern Province,Not Attending,No,Mild,Yes,Secondary,Highest
+18,Female,Southern Province,Not Attending,Yes,Mild,Yes,Primary,Lowest
+13,Female,Southern Province,Not Attending,No,Severe,No,Secondary,Fourth
+17,Female,Western Province,Attending,No,Moderate,Yes,Primary,Second
+16,Male,Kigali,Attending,No,Mild,No,Secondary,Middle
+13,Male,Northern Province,Attending,No,Mild,Yes,Secondary,Middle
+15,Female,Western Province,Attending,No,Mild,Yes,Primary,Second
+17,Male,Kigali,Attending,No,Mild,No,Primary,Lowest
+13,Female,Eastern Province,Not Attending,No,Moderate,No,Secondary,Middle
+13,Male,Kigali,Attending,No,Moderate,Yes,Primary,Lowest
+17,Male,Northern Province,Attending,No,Moderate,No,Primary,Fourth
+13,Female,Kigali,Attending,No,Mild,Yes,Primary,Fourth
+19,Male,Eastern Province,Attending,No,Moderate,No,Primary,Second
+13,Female,Eastern Province,Attending,Yes,Moderate,No,Secondary,Fourth
+14,Male,Southern Province,Attending,Yes,Severe,No,Secondary,Fourth
+16,Male,Western Province,Attending,Yes,Severe,No,Secondary,Fourth
+14,Female,Southern Province,Attending,No,Moderate,Yes,Secondary,Fourth
+14,Female,Northern Province,Not Attending,No,Severe,No,Primary,Middle
+14,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Second
+15,Female,Western Province,Attending,No,Mild,Yes,No Education,Highest
+18,Female,Kigali,Attending,No,Mild,Yes,Secondary,Middle
+15,Female,Northern Province,Attending,No,Moderate,No,Post-Secondary,Second
+18,Female,Kigali,Attending,Yes,Mild,Yes,Primary,Fourth
+19,Male,Western Province,Attending,Yes,Mild,No,Secondary,Highest
+17,Female,Northern Province,Attending,No,Mild,No,Primary,Lowest
+13,Male,Kigali,Attending,Yes,Severe,No,Secondary,Highest
+19,Female,Northern Province,Attending,No,Mild,No,Secondary,Fourth
+15,Male,Eastern Province,Attending,No,Mild,Yes,Secondary,Fourth
+14,Female,Eastern Province,Attending,No,Moderate,No,Primary,Second
+18,Female,Northern Province,Not Attending,No,Mild,No,Secondary,Highest
+13,Female,Kigali,Not Attending,No,Moderate,No,Post-Secondary,Highest
+14,Male,Western Province,Not Attending,No,Moderate,No,Secondary,Middle
+17,Male,Southern Province,Attending,No,Moderate,Yes,Primary,Fourth
+14,Female,Western Province,Attending,Yes,Moderate,No,No Education,Fourth
+19,Female,Western Province,Attending,No,Mild,Yes,Secondary,Second
+15,Male,Southern Province,Not Attending,No,Mild,No,Primary,Fourth
+14,Male,Northern Province,Attending,Yes,Severe,Yes,Primary,Fourth
+17,Male,Western Province,Attending,Yes,Severe,Yes,Primary,Fourth
+14,Female,Southern Province,Attending,No,Severe,Yes,Primary,Second
+16,Female,Southern Province,Not Attending,Yes,Mild,No,Primary,Highest
+18,Male,Eastern Province,Attending,No,Mild,Yes,Post-Secondary,Fourth
+15,Female,Northern Province,Attending,No,Mild,No,Secondary,Middle
+19,Female,Northern Province,Attending,Yes,Severe,Yes,Primary,Second
+13,Female,Southern Province,Attending,No,Mild,Yes,No Education,Highest
+13,Female,Kigali,Attending,No,Mild,No,Secondary,Lowest
+16,Female,Eastern Province,Not Attending,No,Moderate,Yes,Primary,Second
+18,Female,Northern Province,Attending,No,Moderate,Yes,Primary,Highest
+17,Female,Northern Province,Attending,No,Mild,Yes,Post-Secondary,Fourth
+14,Female,Southern Province,Attending,No,Severe,No,Post-Secondary,Lowest
+18,Female,Kigali,Attending,No,Severe,No,Primary,Highest
+15,Male,Southern Province,Not Attending,No,Severe,No,Secondary,Highest
+17,Female,Southern Province,Attending,No,Mild,Yes,Secondary,Lowest
+13,Female,Southern Province,Attending,Yes,Mild,No,Secondary,Fourth
+18,Female,Northern Province,Attending,Yes,Mild,Yes,Secondary,Fourth
+19,Male,Eastern Province,Not Attending,No,Mild,No,Primary,Highest
+17,Female,Northern Province,Attending,No,Mild,No,Primary,Highest
+15,Male,Southern Province,Attending,No,Moderate,No,Primary,Fourth
+16,Male,Eastern Province,Attending,Yes,Severe,No,No Education,Fourth
+17,Female,Kigali,Not Attending,No,Mild,No,Primary,Lowest
+16,Female,Southern Province,Attending,Yes,Moderate,No,Primary,Lowest
+14,Male,Kigali,Attending,No,Mild,Yes,Secondary,Fourth
+15,Female,Southern Province,Attending,No,Mild,No,Secondary,Lowest
+16,Female,Southern Province,Attending,No,Mild,No,Primary,Highest
+17,Male,Kigali,Attending,No,Mild,Yes,Primary,Second
+16,Female,Northern Province,Attending,No,Moderate,No,Secondary,Fourth
+19,Male,Western Province,Attending,No,Moderate,No,Primary,Second
+15,Female,Kigali,Attending,No,Moderate,No,Primary,Middle
+17,Female,Eastern Province,Attending,No,Moderate,Yes,Secondary,Fourth
+19,Female,Western Province,Attending,No,Moderate,No,Primary,Second
+19,Male,Western Province,Attending,Yes,Mild,No,Primary,Lowest
+17,Male,Kigali,Attending,No,Severe,No,Primary,Middle
+15,Male,Kigali,Attending,Yes,Mild,No,Primary,Highest
+17,Female,Southern Province,Not Attending,No,Severe,No,Primary,Highest
+19,Female,Kigali,Attending,No,Moderate,Yes,No Education,Second
+13,Female,Northern Province,Attending,Yes,Moderate,Yes,Primary,Lowest
+16,Female,Southern Province,Attending,No,Moderate,No,Secondary,Middle
+14,Male,Kigali,Attending,No,Moderate,No,Primary,Lowest
+15,Female,Western Province,Attending,No,Severe,Yes,Post-Secondary,Second
+16,Male,Southern Province,Attending,No,Mild,No,No Education,Middle
+15,Female,Northern Province,Attending,Yes,Severe,No,Secondary,Highest
+15,Male,Southern Province,Attending,No,Severe,No,Primary,Lowest
+18,Female,Southern Province,Not Attending,No,Moderate,No,Primary,Second
+16,Male,Western Province,Attending,Yes,Moderate,Yes,Primary,Lowest
+17,Male,Eastern Province,Not Attending,No,Mild,Yes,Primary,Fourth
+18,Female,Northern Province,Attending,No,Mild,Yes,Secondary,Fourth
+13,Female,Kigali,Attending,Yes,Mild,Yes,Secondary,Lowest
+13,Female,Eastern Province,Attending,Yes,Severe,No,Primary,Highest
+18,Male,Eastern Province,Attending,No,Moderate,No,Secondary,Lowest
+17,Female,Eastern Province,Attending,No,Mild,No,No Education,Second
+13,Female,Southern Province,Attending,No,Mild,Yes,Primary,Second
+16,Male,Western Province,Attending,No,Moderate,No,Post-Secondary,Lowest
+15,Female,Southern Province,Attending,No,Mild,No,No Education,Lowest
+17,Female,Western Province,Attending,No,Mild,No,Secondary,Highest
+16,Male,Western Province,Attending,No,Severe,Yes,Primary,Second
+16,Male,Kigali,Attending,No,Moderate,Yes,Primary,Middle
+16,Female,Western Province,Attending,No,Mild,No,Post-Secondary,Highest
+19,Female,Eastern Province,Not Attending,No,Moderate,No,Secondary,Highest
+13,Male,Kigali,Attending,No,Mild,Yes,Secondary,Fourth
+17,Female,Northern Province,Attending,Yes,Mild,Yes,Secondary,Lowest
+19,Female,Kigali,Attending,No,Severe,Yes,Primary,Fourth
+16,Female,Southern Province,Not Attending,No,Mild,No,Primary,Second
+19,Male,Eastern Province,Attending,Yes,Mild,No,Primary,Middle
+18,Female,Eastern Province,Not Attending,No,Mild,No,Primary,Highest
+17,Female,Eastern Province,Attending,No,Moderate,No,Primary,Middle
+18,Female,Southern Province,Attending,No,Moderate,No,Primary,Fourth
+16,Male,Southern Province,Not Attending,No,Mild,No,Primary,Second
+15,Female,Kigali,Not Attending,No,Moderate,No,Primary,Fourth
+19,Female,Northern Province,Attending,No,Moderate,No,Post-Secondary,Highest
+16,Male,Eastern Province,Attending,No,Mild,Yes,Secondary,Fourth
+15,Male,Northern Province,Attending,No,Moderate,No,No Education,Middle
+14,Male,Northern Province,Not Attending,No,Mild,Yes,Primary,Middle
+17,Male,Kigali,Attending,No,Moderate,No,Primary,Lowest
+17,Male,Kigali,Attending,No,Severe,No,Post-Secondary,Second
+14,Female,Southern Province,Attending,No,Mild,No,Primary,Fourth
+19,Female,Kigali,Attending,No,Severe,Yes,Primary,Middle
+18,Male,Eastern Province,Attending,No,Severe,No,Primary,Second
+15,Female,Western Province,Attending,No,Moderate,Yes,Secondary,Fourth
+15,Female,Western Province,Attending,No,Moderate,Yes,Secondary,Middle
+19,Female,Southern Province,Attending,No,Mild,No,Primary,Fourth
+15,Male,Western Province,Attending,Yes,Mild,No,Primary,Fourth
+19,Male,Southern Province,Attending,No,Severe,Yes,Primary,Highest
+14,Female,Kigali,Attending,No,Mild,Yes,Secondary,Fourth
+14,Female,Kigali,Attending,No,Moderate,No,Secondary,Fourth
+13,Male,Northern Province,Not Attending,No,Mild,Yes,Primary,Second
+17,Female,Kigali,Attending,Yes,Mild,No,Secondary,Highest
+16,Male,Eastern Province,Attending,No,Mild,No,Primary,Second
+16,Female,Western Province,Attending,No,Moderate,Yes,Secondary,Lowest
+15,Male,Kigali,Attending,No,Mild,No,Primary,Lowest
+18,Male,Kigali,Not Attending,No,Moderate,No,Secondary,Fourth
+16,Male,Western Province,Attending,No,Mild,No,Post-Secondary,Highest
+15,Male,Western Province,Attending,Yes,Severe,No,Primary,Middle
+17,Male,Northern Province,Attending,No,Moderate,No,Primary,Lowest
+19,Female,Southern Province,Attending,No,Mild,Yes,Primary,Lowest
+14,Female,Kigali,Not Attending,No,Moderate,Yes,No Education,Second
+16,Female,Southern Province,Attending,No,Moderate,Yes,Secondary,Fourth
+19,Male,Eastern Province,Attending,Yes,Severe,No,Primary,Middle
+18,Female,Kigali,Attending,No,Mild,Yes,Primary,Middle
+14,Male,Eastern Province,Attending,No,Mild,No,Primary,Lowest
+16,Female,Western Province,Attending,No,Mild,No,Primary,Highest
+14,Male,Kigali,Attending,Yes,Mild,No,Primary,Second
+14,Female,Southern Province,Not Attending,Yes,Severe,No,Post-Secondary,Lowest
+16,Female,Western Province,Attending,No,Moderate,No,No Education,Lowest
+13,Female,Eastern Province,Attending,No,Moderate,No,Secondary,Middle
+13,Male,Eastern Province,Attending,No,Mild,Yes,Primary,Fourth
+19,Female,Southern Province,Attending,No,Mild,No,Primary,Fourth
+18,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Lowest
+14,Male,Western Province,Attending,No,Mild,Yes,Secondary,Fourth
+14,Female,Southern Province,Attending,No,Mild,No,Primary,Lowest
+14,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Fourth
+19,Male,Kigali,Not Attending,No,Moderate,No,Post-Secondary,Highest
+17,Male,Kigali,Not Attending,No,Moderate,No,Primary,Fourth
+19,Male,Kigali,Attending,No,Mild,No,Secondary,Highest
+16,Male,Western Province,Attending,No,Moderate,No,Secondary,Highest
+17,Female,Western Province,Attending,No,Mild,No,Post-Secondary,Fourth
+14,Male,Western Province,Not Attending,No,Moderate,Yes,Secondary,Middle
+18,Male,Kigali,Attending,Yes,Mild,No,Post-Secondary,Highest
+16,Female,Western Province,Not Attending,No,Severe,No,Secondary,Lowest
+16,Male,Southern Province,Attending,No,Severe,Yes,Secondary,Highest
+19,Female,Western Province,Attending,No,Moderate,Yes,No Education,Second
+16,Female,Western Province,Attending,No,Moderate,Yes,Primary,Middle
+19,Female,Kigali,Attending,No,Mild,No,Secondary,Lowest
+18,Female,Western Province,Attending,Yes,Mild,No,Primary,Lowest
+14,Male,Northern Province,Attending,Yes,Mild,No,Primary,Middle
+14,Male,Western Province,Attending,No,Mild,No,Secondary,Highest
+15,Female,Southern Province,Attending,No,Mild,Yes,Primary,Lowest
+13,Male,Eastern Province,Not Attending,No,Mild,No,Post-Secondary,Highest
+17,Female,Southern Province,Attending,No,Mild,Yes,Primary,Fourth
+14,Male,Kigali,Not Attending,No,Mild,No,Primary,Middle
+18,Male,Northern Province,Attending,No,Mild,No,Secondary,Highest
+13,Male,Northern Province,Attending,No,Moderate,No,Primary,Highest
+15,Female,Northern Province,Attending,Yes,Severe,No,Primary,Second
+13,Male,Northern Province,Attending,No,Mild,No,Secondary,Second
+16,Male,Kigali,Attending,No,Moderate,No,Primary,Lowest
+13,Male,Kigali,Attending,No,Mild,No,Primary,Fourth
+16,Female,Western Province,Attending,Yes,Mild,No,No Education,Second
+17,Male,Kigali,Attending,No,Moderate,Yes,Primary,Lowest
+19,Female,Kigali,Attending,No,Mild,Yes,No Education,Lowest
+17,Female,Southern Province,Attending,No,Mild,No,Secondary,Highest
+18,Female,Western Province,Attending,No,Moderate,Yes,Primary,Second
+16,Male,Eastern Province,Attending,Yes,Severe,No,Post-Secondary,Lowest
+18,Male,Eastern Province,Attending,No,Moderate,No,Primary,Fourth
+19,Female,Kigali,Attending,Yes,Mild,No,Primary,Lowest
+19,Male,Kigali,Attending,No,Mild,No,Primary,Highest
+18,Male,Kigali,Not Attending,No,Severe,No,Primary,Highest
+13,Female,Kigali,Attending,No,Moderate,No,Post-Secondary,Middle
+19,Male,Southern Province,Attending,No,Mild,No,Primary,Middle
+17,Female,Kigali,Attending,Yes,Moderate,No,Secondary,Second
+17,Male,Northern Province,Attending,No,Mild,No,Primary,Second
+18,Female,Western Province,Attending,No,Mild,No,Primary,Highest
+18,Female,Kigali,Attending,No,Mild,No,Secondary,Lowest
+15,Female,Western Province,Attending,No,Severe,Yes,Primary,Second
+17,Female,Southern Province,Attending,No,Moderate,No,No Education,Fourth
+14,Female,Southern Province,Attending,No,Mild,No,Secondary,Lowest
+16,Male,Southern Province,Attending,No,Severe,Yes,Secondary,Lowest
+15,Male,Eastern Province,Attending,No,Severe,No,Post-Secondary,Fourth
+14,Female,Kigali,Attending,Yes,Severe,No,Primary,Middle
+15,Female,Kigali,Attending,No,Mild,Yes,Primary,Middle
+17,Male,Northern Province,Attending,No,Severe,No,Primary,Lowest
+15,Female,Kigali,Not Attending,No,Moderate,No,Primary,Second
+19,Male,Eastern Province,Attending,No,Mild,Yes,Secondary,Highest
+14,Female,Kigali,Not Attending,No,Mild,No,Secondary,Second
+17,Female,Western Province,Attending,No,Mild,No,Secondary,Lowest
+16,Female,Kigali,Attending,No,Mild,Yes,Secondary,Second
+17,Male,Kigali,Attending,No,Mild,No,Primary,Second
+15,Male,Kigali,Attending,No,Mild,No,Secondary,Middle
+19,Male,Northern Province,Not Attending,No,Mild,No,Secondary,Fourth
+13,Male,Eastern Province,Attending,No,Moderate,Yes,Secondary,Fourth
+19,Male,Kigali,Attending,No,Moderate,No,Primary,Second
+14,Female,Western Province,Attending,Yes,Moderate,Yes,Primary,Lowest
+13,Male,Western Province,Not Attending,Yes,Severe,No,Secondary,Lowest
+19,Male,Northern Province,Attending,No,Mild,No,Post-Secondary,Highest
+14,Male,Southern Province,Attending,No,Moderate,No,Secondary,Fourth
+13,Male,Northern Province,Attending,Yes,Mild,No,No Education,Lowest
+19,Female,Southern Province,Attending,No,Mild,Yes,Post-Secondary,Middle
+18,Male,Western Province,Attending,No,Severe,No,Post-Secondary,Fourth
+15,Male,Southern Province,Attending,Yes,Moderate,Yes,Secondary,Fourth
+16,Male,Northern Province,Attending,No,Mild,Yes,No Education,Second
+17,Female,Kigali,Attending,No,Severe,No,Secondary,Middle
+16,Female,Western Province,Attending,No,Moderate,No,Secondary,Lowest
+13,Male,Kigali,Attending,Yes,Mild,Yes,Primary,Lowest
+13,Female,Western Province,Attending,Yes,Mild,No,Primary,Second
+16,Female,Southern Province,Not Attending,No,Severe,No,Primary,Lowest
+18,Female,Kigali,Not Attending,No,Mild,No,Secondary,Middle
+14,Male,Kigali,Attending,No,Moderate,No,Primary,Fourth
+19,Male,Eastern Province,Attending,No,Moderate,Yes,Primary,Second
+14,Male,Western Province,Attending,No,Mild,Yes,No Education,Highest
+19,Female,Eastern Province,Attending,No,Moderate,No,Primary,Fourth
+16,Female,Kigali,Not Attending,No,Mild,Yes,Secondary,Fourth
+13,Male,Western Province,Not Attending,No,Mild,No,Primary,Middle
+13,Female,Kigali,Attending,No,Severe,Yes,Primary,Lowest
+14,Female,Southern Province,Attending,No,Mild,Yes,Secondary,Highest
+13,Male,Northern Province,Attending,No,Moderate,Yes,Secondary,Highest
+14,Male,Southern Province,Attending,No,Mild,Yes,Secondary,Second
+19,Female,Kigali,Attending,No,Moderate,No,Primary,Lowest
+17,Female,Western Province,Attending,No,Moderate,No,Post-Secondary,Lowest
+18,Male,Western Province,Not Attending,No,Mild,Yes,Secondary,Middle
+13,Female,Kigali,Attending,No,Severe,Yes,Primary,Highest
+15,Female,Southern Province,Attending,No,Mild,No,Secondary,Highest
+15,Female,Southern Province,Attending,Yes,Mild,No,No Education,Second
+18,Male,Northern Province,Attending,Yes,Mild,No,Primary,Middle
+18,Female,Southern Province,Attending,No,Moderate,No,Primary,Fourth
+18,Female,Southern Province,Attending,No,Severe,No,Post-Secondary,Highest
+14,Male,Eastern Province,Attending,Yes,Moderate,Yes,Primary,Lowest
+14,Male,Western Province,Attending,No,Mild,Yes,Primary,Lowest
+19,Female,Southern Province,Attending,No,Severe,No,Primary,Second
+13,Female,Kigali,Not Attending,Yes,Mild,No,Secondary,Second
+15,Female,Eastern Province,Attending,No,Severe,No,Primary,Highest
+13,Female,Kigali,Attending,No,Mild,No,Secondary,Lowest
+19,Male,Kigali,Attending,No,Mild,Yes,Primary,Middle
+16,Female,Northern Province,Attending,No,Moderate,No,Primary,Highest
+16,Female,Western Province,Not Attending,No,Moderate,Yes,Primary,Fourth
+16,Male,Western Province,Attending,No,Moderate,No,Secondary,Middle
+16,Female,Southern Province,Attending,No,Severe,No,Secondary,Highest
+18,Female,Western Province,Attending,No,Mild,Yes,Secondary,Highest
+18,Male,Southern Province,Attending,No,Severe,Yes,Secondary,Lowest
+15,Male,Eastern Province,Attending,No,Moderate,Yes,Secondary,Fourth
+17,Female,Southern Province,Attending,Yes,Severe,No,Primary,Lowest
+16,Male,Eastern Province,Not Attending,Yes,Severe,Yes,Secondary,Lowest
+13,Female,Kigali,Attending,No,Mild,No,Primary,Lowest
+17,Male,Western Province,Not Attending,Yes,Severe,Yes,Primary,Lowest
+15,Male,Kigali,Attending,No,Mild,No,Secondary,Fourth
+19,Male,Southern Province,Not Attending,No,Mild,Yes,Primary,Highest
+14,Female,Western Province,Attending,No,Moderate,No,Secondary,Fourth
+18,Female,Southern Province,Not Attending,No,Severe,No,Primary,Second
+15,Male,Southern Province,Attending,Yes,Mild,Yes,Primary,Middle
+17,Female,Kigali,Attending,No,Mild,No,Post-Secondary,Fourth
+17,Female,Northern Province,Attending,No,Moderate,No,Post-Secondary,Fourth
+19,Female,Kigali,Attending,No,Moderate,No,No Education,Fourth
+13,Male,Southern Province,Attending,No,Severe,No,Primary,Highest
+19,Female,Kigali,Attending,No,Mild,No,Primary,Second
+17,Male,Kigali,Not Attending,Yes,Severe,No,Primary,Fourth
+14,Female,Kigali,Not Attending,Yes,Mild,No,Primary,Highest
+17,Male,Southern Province,Attending,No,Mild,Yes,Primary,Second
+13,Male,Eastern Province,Not Attending,Yes,Moderate,Yes,Primary,Lowest
+18,Male,Eastern Province,Attending,No,Mild,No,Post-Secondary,Middle
+19,Male,Western Province,Attending,No,Severe,No,Post-Secondary,Middle
+15,Female,Kigali,Not Attending,No,Mild,No,Primary,Fourth
+17,Female,Kigali,Attending,Yes,Mild,No,No Education,Lowest
+17,Male,Western Province,Attending,No,Mild,No,Primary,Fourth
+16,Male,Northern Province,Attending,Yes,Moderate,No,Primary,Fourth
+16,Female,Western Province,Attending,No,Moderate,No,Secondary,Middle
+14,Male,Southern Province,Attending,No,Mild,No,Secondary,Highest
+17,Male,Western Province,Attending,Yes,Mild,No,No Education,Second
+17,Female,Kigali,Attending,No,Severe,Yes,No Education,Highest
+14,Female,Northern Province,Attending,No,Moderate,Yes,Secondary,Fourth
+14,Female,Western Province,Attending,No,Mild,No,Primary,Fourth
+16,Male,Western Province,Attending,No,Mild,No,Primary,Highest
+17,Female,Northern Province,Attending,No,Severe,No,Secondary,Lowest
+17,Female,Northern Province,Attending,Yes,Mild,Yes,Secondary,Fourth
+19,Male,Northern Province,Attending,No,Mild,Yes,Primary,Middle
+16,Female,Kigali,Attending,No,Severe,No,Primary,Lowest
+17,Female,Northern Province,Attending,No,Mild,No,Primary,Second
+15,Male,Southern Province,Attending,No,Severe,No,Secondary,Second
+14,Male,Southern Province,Attending,No,Severe,Yes,Primary,Highest
+13,Male,Western Province,Attending,No,Moderate,No,Secondary,Lowest
+13,Female,Western Province,Attending,No,Moderate,No,Secondary,Lowest
+13,Female,Kigali,Not Attending,No,Severe,Yes,Secondary,Highest
+16,Female,Southern Province,Attending,Yes,Mild,No,Secondary,Lowest
+17,Male,Southern Province,Attending,Yes,Mild,No,Primary,Fourth
+19,Male,Kigali,Not Attending,No,Moderate,No,Primary,Second
+14,Female,Western Province,Attending,No,Moderate,No,Secondary,Middle
+17,Female,Western Province,Attending,Yes,Mild,Yes,Secondary,Middle
+13,Female,Eastern Province,Attending,No,Severe,No,Secondary,Lowest
+13,Male,Southern Province,Attending,No,Mild,Yes,Primary,Highest
+13,Male,Southern Province,Attending,Yes,Moderate,Yes,Primary,Second
+14,Female,Northern Province,Attending,No,Mild,Yes,Primary,Middle
+16,Female,Western Province,Attending,Yes,Mild,No,Post-Secondary,Middle
+17,Female,Kigali,Attending,No,Mild,No,No Education,Middle
+13,Male,Kigali,Attending,No,Mild,Yes,Secondary,Second
+14,Male,Eastern Province,Attending,No,Moderate,No,No Education,Lowest
+16,Male,Eastern Province,Attending,No,Moderate,No,No Education,Highest
+17,Male,Kigali,Attending,No,Mild,Yes,Secondary,Highest
+18,Male,Western Province,Not Attending,No,Mild,Yes,Secondary,Highest
+15,Male,Western Province,Attending,Yes,Moderate,Yes,Primary,Middle
+13,Female,Northern Province,Attending,No,Moderate,No,No Education,Lowest
+17,Female,Western Province,Attending,No,Severe,Yes,Secondary,Fourth
+15,Female,Kigali,Attending,No,Mild,No,Post-Secondary,Second
+14,Female,Eastern Province,Attending,No,Moderate,Yes,Primary,Fourth
+15,Male,Kigali,Attending,No,Mild,No,Primary,Highest
+13,Female,Eastern Province,Attending,Yes,Moderate,No,Primary,Highest
+13,Female,Northern Province,Attending,No,Mild,No,Primary,Lowest
+15,Female,Western Province,Attending,No,Severe,No,Primary,Fourth
+17,Male,Eastern Province,Attending,No,Moderate,No,Primary,Lowest
+14,Female,Kigali,Attending,No,Mild,No,Post-Secondary,Lowest
+15,Male,Eastern Province,Attending,No,Mild,Yes,Primary,Lowest
+16,Female,Eastern Province,Not Attending,Yes,Mild,Yes,Post-Secondary,Second
+13,Female,Western Province,Attending,Yes,Moderate,No,Primary,Highest
+15,Male,Southern Province,Attending,No,Severe,Yes,Primary,Middle
+17,Male,Northern Province,Attending,No,Mild,No,Secondary,Fourth
+15,Male,Kigali,Attending,No,Severe,Yes,Primary,Fourth
+19,Male,Kigali,Attending,No,Moderate,Yes,Primary,Lowest
+14,Male,Southern Province,Not Attending,Yes,Mild,No,Primary,Highest
+15,Female,Kigali,Not Attending,No,Mild,Yes,Secondary,Lowest
+17,Female,Kigali,Attending,No,Moderate,Yes,No Education,Fourth
+16,Male,Kigali,Attending,Yes,Moderate,No,Primary,Fourth
+17,Male,Kigali,Not Attending,No,Mild,Yes,Post-Secondary,Middle
+17,Female,Kigali,Attending,No,Moderate,No,Primary,Highest
+19,Female,Kigali,Not Attending,No,Mild,No,Primary,Lowest
+14,Male,Kigali,Attending,No,Mild,No,Primary,Middle
+17,Female,Western Province,Attending,No,Mild,No,Primary,Middle
+16,Female,Eastern Province,Attending,Yes,Mild,No,Primary,Middle
+13,Male,Kigali,Attending,Yes,Mild,Yes,No Education,Second
+16,Male,Western Province,Attending,No,Severe,No,Primary,Middle
+14,Male,Northern Province,Attending,No,Mild,No,Secondary,Lowest
+15,Male,Kigali,Attending,Yes,Mild,Yes,Primary,Fourth
+19,Male,Southern Province,Attending,No,Moderate,Yes,Secondary,Second
+14,Male,Kigali,Attending,No,Mild,No,Primary,Fourth
+17,Female,Kigali,Attending,Yes,Mild,No,Primary,Middle
+18,Male,Kigali,Attending,No,Moderate,No,Secondary,Lowest
+19,Male,Southern Province,Attending,Yes,Severe,No,Primary,Middle
+15,Female,Western Province,Attending,No,Mild,No,Primary,Lowest
+17,Male,Western Province,Not Attending,No,Moderate,Yes,No Education,Highest
+14,Female,Southern Province,Not Attending,No,Mild,Yes,Primary,Lowest
+14,Male,Eastern Province,Attending,No,Severe,Yes,Secondary,Middle
+15,Male,Eastern Province,Attending,No,Mild,Yes,Secondary,Highest
+13,Female,Eastern Province,Attending,Yes,Moderate,No,Secondary,Fourth
+13,Female,Northern Province,Attending,No,Severe,Yes,Secondary,Middle
+16,Female,Kigali,Attending,No,Mild,No,Secondary,Fourth
+13,Male,Southern Province,Attending,No,Mild,Yes,Primary,Highest
+17,Female,Kigali,Attending,Yes,Mild,No,Primary,Fourth
+16,Male,Kigali,Attending,No,Mild,Yes,Primary,Lowest
+15,Female,Eastern Province,Attending,Yes,Mild,No,No Education,Lowest
+15,Male,Kigali,Not Attending,No,Mild,Yes,Primary,Second
+13,Male,Kigali,Attending,No,Mild,Yes,Secondary,Second
+18,Female,Northern Province,Attending,No,Mild,No,Primary,Fourth
+17,Male,Western Province,Not Attending,No,Mild,Yes,Secondary,Second
+14,Male,Kigali,Attending,No,Mild,Yes,Secondary,Middle
+18,Female,Southern Province,Not Attending,No,Mild,No,Secondary,Fourth
+14,Male,Kigali,Not Attending,No,Mild,Yes,Post-Secondary,Highest
+15,Female,Kigali,Attending,Yes,Moderate,Yes,Primary,Lowest
+19,Female,Southern Province,Attending,No,Moderate,Yes,Secondary,Second
+17,Male,Eastern Province,Not Attending,No,Mild,No,Primary,Middle
+19,Female,Kigali,Not Attending,No,Moderate,Yes,Primary,Middle
+14,Male,Western Province,Not Attending,No,Severe,Yes,Secondary,Middle
+16,Female,Western Province,Attending,No,Mild,Yes,Primary,Lowest
+15,Male,Southern Province,Attending,No,Mild,Yes,Secondary,Lowest
+13,Male,Kigali,Attending,Yes,Severe,Yes,Secondary,Middle
+13,Female,Southern Province,Attending,Yes,Mild,Yes,Primary,Highest
+19,Male,Northern Province,Attending,No,Moderate,Yes,Secondary,Lowest
+18,Female,Kigali,Attending,No,Severe,No,Primary,Fourth
+18,Female,Southern Province,Attending,No,Moderate,No,Secondary,Lowest
+13,Male,Western Province,Attending,No,Moderate,Yes,Post-Secondary,Lowest
+14,Male,Kigali,Attending,No,Severe,Yes,Primary,Second
+14,Female,Southern Province,Attending,No,Severe,No,Primary,Second
+13,Male,Eastern Province,Attending,Yes,Mild,No,Primary,Fourth
+14,Male,Northern Province,Attending,No,Moderate,Yes,Post-Secondary,Lowest
+13,Male,Southern Province,Attending,No,Moderate,Yes,Primary,Second
+15,Male,Southern Province,Not Attending,No,Mild,No,Primary,Highest
+14,Female,Kigali,Attending,No,Mild,No,Primary,Second
+18,Male,Kigali,Not Attending,No,Mild,Yes,Primary,Second
+13,Male,Western Province,Not Attending,No,Moderate,Yes,Primary,Second
+18,Male,Kigali,Attending,No,Mild,Yes,Primary,Lowest
+16,Female,Western Province,Attending,Yes,Mild,Yes,Primary,Highest
+13,Female,Kigali,Attending,No,Mild,Yes,Primary,Fourth
+19,Male,Northern Province,Attending,No,Mild,Yes,No Education,Fourth
+19,Male,Southern Province,Not Attending,No,Mild,No,Primary,Second
+16,Female,Western Province,Attending,No,Severe,No,Secondary,Lowest
+19,Female,Kigali,Attending,Yes,Mild,No,Secondary,Fourth
+13,Female,Southern Province,Attending,No,Severe,Yes,Primary,Middle
+19,Male,Eastern Province,Attending,No,Mild,No,Secondary,Second
+13,Female,Southern Province,Attending,Yes,Mild,No,Primary,Fourth
+16,Female,Kigali,Attending,No,Mild,No,Secondary,Lowest
+17,Male,Southern Province,Attending,Yes,Mild,No,No Education,Fourth
+15,Female,Southern Province,Attending,Yes,Moderate,No,Primary,Fourth
+19,Male,Southern Province,Not Attending,No,Moderate,No,Secondary,Middle
+18,Male,Northern Province,Attending,Yes,Severe,Yes,Post-Secondary,Highest
+16,Female,Western Province,Not Attending,No,Moderate,Yes,Primary,Fourth
+17,Female,Western Province,Not Attending,No,Mild,No,Primary,Second
+15,Male,Kigali,Attending,No,Mild,No,Primary,Lowest
+18,Female,Northern Province,Attending,No,Moderate,Yes,Primary,Fourth
+13,Female,Southern Province,Attending,No,Mild,No,Secondary,Second
+16,Female,Kigali,Attending,Yes,Moderate,No,Primary,Fourth
+16,Female,Western Province,Attending,No,Severe,No,Secondary,Middle
+17,Female,Kigali,Not Attending,No,Mild,No,Secondary,Lowest
+19,Male,Kigali,Attending,No,Severe,Yes,Primary,Highest
+15,Female,Western Province,Not Attending,No,Mild,No,Primary,Middle
+19,Female,Kigali,Not Attending,No,Mild,No,Secondary,Second
+13,Female,Eastern Province,Attending,No,Mild,Yes,Secondary,Lowest
+13,Female,Western Province,Attending,No,Mild,No,Primary,Second
+18,Female,Western Province,Attending,No,Mild,No,Primary,Highest
+18,Female,Kigali,Attending,No,Mild,No,Primary,Second
+18,Male,Kigali,Attending,Yes,Mild,No,Secondary,Highest
+13,Female,Kigali,Attending,No,Mild,No,Primary,Highest
+17,Female,Western Province,Attending,No,Mild,No,Primary,Fourth
+19,Male,Eastern Province,Attending,No,Mild,Yes,Secondary,Highest
+15,Male,Western Province,Not Attending,No,Severe,Yes,Primary,Second
+15,Male,Kigali,Attending,No,Mild,Yes,Secondary,Lowest
+18,Female,Southern Province,Attending,No,Mild,No,No Education,Second
+13,Female,Eastern Province,Not Attending,No,Mild,No,Secondary,Highest
+14,Female,Western Province,Attending,No,Mild,No,Post-Secondary,Lowest
+19,Female,Southern Province,Attending,No,Severe,Yes,Secondary,Lowest
+16,Female,Northern Province,Not Attending,No,Moderate,Yes,Secondary,Second
+19,Male,Western Province,Attending,Yes,Mild,Yes,Primary,Highest
+18,Male,Eastern Province,Attending,No,Severe,No,Primary,Highest
+18,Male,Kigali,Attending,No,Mild,Yes,Primary,Middle
+16,Male,Kigali,Attending,No,Moderate,No,Secondary,Fourth
+14,Male,Kigali,Attending,Yes,Severe,No,Primary,Second
+19,Female,Western Province,Attending,No,Moderate,No,Primary,Middle
+14,Male,Kigali,Attending,Yes,Moderate,Yes,Primary,Fourth
+16,Male,Kigali,Attending,No,Severe,No,Secondary,Fourth
+14,Male,Eastern Province,Attending,Yes,Severe,No,Post-Secondary,Highest
+17,Female,Kigali,Attending,No,Mild,No,Secondary,Fourth
+18,Male,Eastern Province,Attending,No,Mild,Yes,Primary,Highest
+13,Female,Kigali,Attending,No,Moderate,No,Primary,Middle
+17,Female,Kigali,Not Attending,No,Severe,Yes,Primary,Highest
+18,Female,Eastern Province,Attending,No,Severe,No,Primary,Highest
+13,Female,Southern Province,Attending,Yes,Mild,No,Primary,Fourth
+17,Male,Southern Province,Not Attending,No,Moderate,No,Secondary,Second
+13,Female,Western Province,Attending,Yes,Mild,Yes,Primary,Fourth
+18,Female,Kigali,Not Attending,Yes,Severe,Yes,Primary,Lowest
+15,Male,Southern Province,Attending,No,Mild,No,Primary,Highest
+17,Female,Eastern Province,Attending,No,Severe,Yes,Secondary,Fourth
+15,Male,Kigali,Attending,No,Moderate,Yes,Primary,Second
+13,Female,Kigali,Not Attending,No,Moderate,No,Post-Secondary,Fourth
+16,Female,Kigali,Attending,No,Severe,No,Secondary,Fourth
+16,Male,Kigali,Attending,Yes,Mild,Yes,Primary,Middle
+13,Male,Kigali,Attending,Yes,Mild,No,No Education,Fourth
+13,Female,Northern Province,Attending,No,Moderate,No,Primary,Fourth
+18,Male,Western Province,Attending,No,Mild,No,Primary,Highest
+15,Female,Kigali,Attending,No,Severe,Yes,Primary,Lowest
+14,Female,Southern Province,Attending,No,Moderate,Yes,Post-Secondary,Second
+13,Female,Eastern Province,Attending,No,Severe,No,Post-Secondary,Lowest
+13,Female,Eastern Province,Attending,No,Mild,No,Primary,Middle
+17,Male,Kigali,Attending,No,Mild,No,Primary,Middle
+19,Female,Northern Province,Attending,Yes,Mild,No,Primary,Highest
+19,Male,Kigali,Not Attending,No,Mild,No,Primary,Lowest
+16,Male,Southern Province,Attending,No,Mild,No,Primary,Second
+17,Female,Northern Province,Attending,No,Moderate,Yes,Secondary,Second
+14,Female,Western Province,Attending,No,Mild,No,Primary,Middle
+19,Male,Kigali,Attending,No,Mild,Yes,Secondary,Second
+13,Female,Southern Province,Attending,No,Severe,Yes,Secondary,Middle
+16,Male,Southern Province,Not Attending,No,Moderate,No,Primary,Middle
+13,Male,Southern Province,Not Attending,No,Mild,Yes,Secondary,Middle
+13,Male,Southern Province,Attending,No,Mild,Yes,Secondary,Lowest
+15,Female,Kigali,Attending,No,Severe,No,Primary,Highest
+13,Male,Kigali,Attending,No,Mild,No,Secondary,Middle
+17,Male,Kigali,Not Attending,Yes,Mild,Yes,Secondary,Fourth
+18,Male,Western Province,Attending,Yes,Mild,No,Primary,Second
+19,Female,Northern Province,Attending,No,Mild,No,Secondary,Highest
+18,Male,Northern Province,Not Attending,No,Moderate,No,No Education,Lowest
+14,Male,Northern Province,Attending,No,Mild,Yes,Primary,Middle
+17,Female,Western Province,Attending,No,Severe,Yes,Primary,Lowest
+19,Male,Northern Province,Attending,Yes,Mild,No,Primary,Lowest
+16,Female,Southern Province,Attending,Yes,Mild,No,No Education,Middle
+17,Male,Kigali,Attending,No,Mild,Yes,Secondary,Lowest
+13,Female,Western Province,Attending,No,Mild,Yes,Primary,Lowest
+13,Male,Eastern Province,Not Attending,No,Moderate,Yes,No Education,Lowest
+14,Female,Southern Province,Not Attending,No,Severe,No,Primary,Highest
+13,Male,Northern Province,Attending,No,Moderate,No,Secondary,Middle
+14,Male,Northern Province,Not Attending,No,Moderate,No,Post-Secondary,Fourth
+14,Female,Western Province,Not Attending,No,Severe,No,Primary,Lowest
+19,Male,Western Province,Attending,Yes,Severe,Yes,Post-Secondary,Fourth
+18,Male,Southern Province,Not Attending,No,Mild,No,Post-Secondary,Lowest
+14,Male,Kigali,Attending,No,Moderate,No,Secondary,Middle
+13,Male,Northern Province,Not Attending,Yes,Moderate,Yes,Primary,Second
+18,Male,Eastern Province,Attending,Yes,Moderate,No,Primary,Lowest
+14,Male,Western Province,Attending,Yes,Mild,No,Primary,Lowest
+14,Male,Eastern Province,Not Attending,No,Mild,No,No Education,Fourth
+13,Male,Kigali,Attending,No,Severe,Yes,Secondary,Highest
+14,Female,Eastern Province,Attending,Yes,Moderate,No,Secondary,Highest
+16,Female,Kigali,Attending,No,Mild,Yes,No Education,Lowest
+16,Male,Southern Province,Not Attending,No,Mild,Yes,Primary,Highest
+14,Female,Kigali,Attending,No,Mild,No,Primary,Highest
+15,Male,Kigali,Not Attending,Yes,Mild,No,Secondary,Middle
+16,Male,Southern Province,Attending,No,Mild,Yes,Secondary,Highest
+15,Female,Eastern Province,Attending,Yes,Moderate,No,No Education,Second
+19,Female,Southern Province,Not Attending,No,Moderate,No,Primary,Lowest
+13,Male,Northern Province,Not Attending,No,Mild,Yes,Secondary,Middle
+14,Female,Eastern Province,Attending,No,Mild,No,Primary,Lowest
+13,Female,Western Province,Attending,No,Mild,No,Secondary,Middle
+14,Male,Northern Province,Attending,No,Moderate,Yes,Primary,Fourth
+14,Male,Southern Province,Attending,No,Mild,Yes,Secondary,Second
+15,Female,Northern Province,Attending,No,Moderate,Yes,Primary,Lowest
+14,Female,Southern Province,Attending,No,Mild,Yes,Primary,Fourth
+13,Female,Eastern Province,Attending,Yes,Severe,No,Post-Secondary,Middle
+13,Male,Southern Province,Attending,No,Severe,No,Secondary,Highest
+13,Female,Kigali,Attending,Yes,Mild,Yes,Secondary,Highest
+13,Male,Eastern Province,Attending,Yes,Mild,No,Post-Secondary,Second
+15,Female,Kigali,Attending,Yes,Moderate,No,Secondary,Lowest
+14,Male,Kigali,Attending,Yes,Severe,Yes,Secondary,Lowest
+17,Male,Western Province,Not Attending,No,Moderate,Yes,Primary,Lowest
+17,Female,Kigali,Attending,No,Mild,No,Post-Secondary,Second
+15,Female,Kigali,Attending,No,Severe,No,Primary,Highest
+16,Female,Southern Province,Attending,Yes,Mild,Yes,Primary,Lowest
+15,Male,Western Province,Attending,Yes,Mild,No,Primary,Middle
+16,Male,Northern Province,Attending,Yes,Mild,Yes,No Education,Fourth
+16,Female,Eastern Province,Attending,No,Moderate,Yes,Primary,Middle
+16,Male,Kigali,Not Attending,No,Severe,No,Primary,Highest
+16,Male,Kigali,Attending,No,Mild,No,Primary,Highest
+19,Male,Western Province,Attending,No,Severe,No,Secondary,Fourth
+18,Female,Southern Province,Attending,No,Mild,No,Secondary,Highest
+19,Male,Western Province,Attending,Yes,Severe,No,Primary,Lowest
+17,Male,Southern Province,Attending,No,Mild,No,No Education,Highest
+17,Female,Kigali,Attending,No,Mild,Yes,No Education,Highest
+17,Female,Northern Province,Attending,No,Moderate,No,Primary,Middle
+19,Female,Southern Province,Attending,Yes,Moderate,No,Primary,Lowest
+16,Male,Southern Province,Attending,No,Mild,No,Secondary,Highest
+15,Female,Western Province,Attending,No,Severe,No,Secondary,Lowest
+16,Male,Southern Province,Attending,No,Severe,No,Primary,Fourth
+15,Male,Western Province,Attending,No,Severe,Yes,Primary,Fourth
+14,Male,Eastern Province,Attending,No,Mild,Yes,Primary,Lowest
+13,Female,Western Province,Not Attending,No,Mild,No,Primary,Middle
+13,Male,Kigali,Not Attending,No,Moderate,Yes,Primary,Second
+13,Male,Northern Province,Not Attending,No,Mild,Yes,Post-Secondary,Lowest
+13,Male,Eastern Province,Not Attending,Yes,Mild,No,Secondary,Fourth
+13,Female,Western Province,Attending,No,Severe,Yes,Secondary,Second
+17,Female,Kigali,Attending,No,Mild,Yes,Primary,Lowest
+18,Male,Northern Province,Attending,No,Mild,Yes,Primary,Second
+18,Female,Northern Province,Attending,No,Moderate,Yes,Primary,Lowest
+16,Female,Kigali,Attending,Yes,Severe,Yes,Primary,Lowest
+15,Female,Kigali,Attending,Yes,Severe,Yes,Secondary,Highest
+15,Female,Kigali,Attending,Yes,Moderate,No,Secondary,Highest
+18,Female,Kigali,Attending,Yes,Mild,Yes,No Education,Fourth
+16,Female,Northern Province,Attending,No,Mild,Yes,Primary,Fourth
+19,Female,Western Province,Attending,No,Severe,Yes,Primary,Lowest
+19,Male,Northern Province,Attending,No,Mild,Yes,No Education,Middle
+16,Male,Western Province,Not Attending,No,Mild,Yes,Primary,Highest
+19,Male,Eastern Province,Attending,No,Mild,Yes,Primary,Middle
+15,Male,Kigali,Not Attending,No,Mild,Yes,Primary,Highest
+13,Female,Southern Province,Attending,No,Mild,No,Primary,Fourth
+18,Male,Kigali,Attending,No,Moderate,No,Secondary,Lowest
+19,Male,Eastern Province,Attending,No,Severe,No,Primary,Highest
+17,Female,Western Province,Attending,No,Mild,No,Secondary,Fourth
+14,Female,Kigali,Attending,No,Mild,Yes,Primary,Middle
+16,Male,Southern Province,Attending,No,Severe,No,Primary,Middle
+17,Male,Western Province,Attending,No,Mild,Yes,Primary,Highest
+17,Male,Kigali,Not Attending,No,Mild,Yes,Secondary,Middle
+14,Female,Western Province,Attending,Yes,Mild,No,Secondary,Second
+18,Female,Southern Province,Attending,No,Moderate,Yes,Secondary,Highest
+17,Female,Northern Province,Attending,No,Mild,No,Post-Secondary,Middle
+19,Male,Western Province,Attending,No,Mild,No,Primary,Lowest
+16,Male,Southern Province,Attending,No,Severe,Yes,Post-Secondary,Middle
+14,Male,Eastern Province,Not Attending,No,Mild,No,Secondary,Second
+16,Female,Southern Province,Attending,Yes,Mild,Yes,Post-Secondary,Lowest
+16,Male,Kigali,Attending,No,Moderate,Yes,Secondary,Highest
+17,Male,Northern Province,Attending,No,Mild,Yes,Post-Secondary,Fourth
+19,Female,Western Province,Attending,No,Severe,Yes,Primary,Fourth
+14,Male,Southern Province,Attending,No,Moderate,No,Secondary,Highest
+19,Female,Eastern Province,Not Attending,No,Mild,Yes,Primary,Highest
+18,Female,Western Province,Attending,No,Severe,Yes,Secondary,Second
+17,Female,Eastern Province,Attending,Yes,Moderate,No,Post-Secondary,Highest
+18,Male,Kigali,Attending,No,Mild,No,Secondary,Highest
+16,Male,Eastern Province,Attending,Yes,Moderate,Yes,Primary,Second
+18,Female,Kigali,Not Attending,No,Mild,Yes,Secondary,Second
+19,Male,Eastern Province,Attending,Yes,Mild,No,Primary,Fourth
+18,Male,Kigali,Attending,No,Mild,No,Secondary,Middle
+17,Female,Southern Province,Attending,No,Mild,No,No Education,Second
+19,Female,Western Province,Attending,No,Mild,Yes,Primary,Middle
+17,Female,Western Province,Attending,No,Mild,No,Secondary,Lowest
+13,Male,Western Province,Not Attending,No,Mild,No,Secondary,Lowest
+18,Male,Western Province,Attending,Yes,Moderate,Yes,Primary,Lowest
+19,Female,Southern Province,Attending,No,Mild,No,Primary,Fourth
+19,Female,Kigali,Attending,No,Severe,Yes,Primary,Fourth
+15,Female,Kigali,Attending,No,Mild,No,Primary,Middle
+14,Female,Southern Province,Not Attending,No,Moderate,No,Secondary,Highest
+15,Female,Southern Province,Attending,No,Moderate,Yes,No Education,Second
+19,Female,Kigali,Not Attending,Yes,Mild,No,Secondary,Lowest
+17,Male,Southern Province,Attending,Yes,Severe,No,Secondary,Fourth
+14,Male,Northern Province,Attending,No,Severe,Yes,No Education,Middle
+14,Female,Western Province,Not Attending,No,Severe,No,Primary,Second
+19,Female,Kigali,Attending,No,Moderate,Yes,Secondary,Lowest
+16,Male,Kigali,Attending,Yes,Mild,Yes,Post-Secondary,Middle
+14,Male,Western Province,Attending,No,Mild,No,No Education,Middle
+13,Female,Kigali,Attending,No,Mild,No,No Education,Lowest
+16,Male,Eastern Province,Attending,No,Severe,No,Primary,Lowest
+19,Female,Southern Province,Attending,No,Moderate,No,Secondary,Second
+15,Male,Southern Province,Attending,Yes,Mild,No,Primary,Highest
+13,Male,Southern Province,Not Attending,Yes,Mild,No,Primary,Highest
+17,Male,Eastern Province,Attending,Yes,Moderate,Yes,No Education,Middle
+15,Male,Eastern Province,Not Attending,Yes,Mild,No,Secondary,Fourth
+14,Female,Kigali,Attending,No,Mild,No,Secondary,Second
+17,Male,Kigali,Attending,No,Severe,No,Post-Secondary,Fourth
+15,Male,Southern Province,Not Attending,No,Mild,No,Secondary,Fourth
+19,Male,Northern Province,Not Attending,No,Mild,No,Secondary,Middle
+18,Female,Kigali,Not Attending,No,Mild,No,No Education,Second
+15,Female,Northern Province,Not Attending,No,Mild,Yes,Primary,Middle
+14,Male,Kigali,Attending,No,Severe,No,Primary,Lowest
+13,Female,Kigali,Attending,No,Severe,Yes,Secondary,Lowest
+16,Female,Northern Province,Attending,Yes,Mild,No,Primary,Second
+19,Male,Kigali,Not Attending,No,Moderate,Yes,Post-Secondary,Second
+19,Male,Kigali,Attending,Yes,Mild,No,Primary,Fourth
+15,Female,Kigali,Attending,No,Mild,Yes,Primary,Middle
+14,Male,Eastern Province,Attending,No,Severe,No,Secondary,Second
+19,Male,Eastern Province,Attending,Yes,Mild,Yes,Secondary,Highest
+16,Female,Northern Province,Attending,No,Moderate,No,Primary,Second
+15,Male,Eastern Province,Attending,Yes,Mild,No,Secondary,Lowest
+16,Female,Northern Province,Attending,No,Mild,Yes,Primary,Fourth
+14,Male,Eastern Province,Attending,No,Moderate,No,Secondary,Second
+14,Female,Northern Province,Attending,Yes,Moderate,No,Secondary,Lowest
+19,Female,Eastern Province,Attending,No,Severe,No,Primary,Lowest
+19,Male,Kigali,Not Attending,No,Moderate,No,Primary,Second
+15,Female,Northern Province,Attending,No,Moderate,No,Secondary,Second
+19,Female,Southern Province,Attending,Yes,Moderate,No,Primary,Highest
+19,Male,Kigali,Attending,No,Severe,No,Secondary,Fourth
+16,Male,Northern Province,Attending,No,Mild,Yes,Post-Secondary,Fourth
+15,Female,Northern Province,Not Attending,Yes,Severe,No,Primary,Fourth
+13,Male,Southern Province,Not Attending,No,Moderate,No,Post-Secondary,Highest
+17,Female,Kigali,Attending,No,Mild,No,Secondary,Highest
+15,Male,Kigali,Attending,No,Mild,Yes,Primary,Highest
+17,Male,Western Province,Attending,No,Moderate,No,Primary,Middle
+19,Female,Eastern Province,Attending,No,Moderate,No,Secondary,Lowest
+13,Male,Kigali,Attending,No,Mild,No,No Education,Lowest
+17,Male,Kigali,Attending,No,Moderate,No,Primary,Middle
+14,Female,Kigali,Attending,Yes,Mild,No,Primary,Highest
+16,Female,Eastern Province,Attending,Yes,Moderate,No,No Education,Highest
+13,Female,Kigali,Not Attending,No,Moderate,Yes,Secondary,Lowest
+13,Female,Northern Province,Attending,No,Mild,Yes,No Education,Highest
+13,Female,Kigali,Attending,No,Severe,Yes,Primary,Second
+13,Female,Northern Province,Attending,No,Mild,No,Post-Secondary,Middle
+15,Male,Southern Province,Attending,No,Mild,No,Primary,Middle
+13,Male,Western Province,Attending,No,Mild,Yes,Primary,Lowest
+14,Female,Western Province,Attending,No,Mild,No,Primary,Middle
+14,Female,Western Province,Attending,No,Mild,No,No Education,Lowest
+19,Female,Southern Province,Attending,No,Mild,No,Primary,Highest
+13,Male,Western Province,Attending,No,Severe,Yes,Primary,Second
+17,Male,Western Province,Attending,No,Moderate,No,Primary,Fourth
+15,Female,Kigali,Attending,No,Moderate,No,Secondary,Middle
+18,Female,Western Province,Attending,No,Mild,No,Primary,Fourth
+18,Male,Southern Province,Attending,No,Mild,No,No Education,Second
+15,Male,Kigali,Attending,No,Moderate,Yes,Secondary,Middle
+16,Male,Kigali,Attending,No,Mild,No,No Education,Second
+13,Female,Western Province,Attending,No,Moderate,No,Primary,Second
+19,Female,Kigali,Attending,No,Moderate,Yes,Secondary,Second
+14,Female,Kigali,Not Attending,Yes,Moderate,No,Post-Secondary,Middle
+17,Male,Western Province,Attending,No,Mild,No,Primary,Second
+19,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Fourth
+17,Male,Western Province,Attending,No,Severe,Yes,Primary,Middle
+14,Male,Kigali,Attending,Yes,Mild,Yes,Primary,Second
+18,Female,Western Province,Attending,Yes,Severe,Yes,Primary,Middle
+19,Female,Southern Province,Attending,No,Mild,No,Secondary,Lowest
+15,Male,Kigali,Attending,No,Mild,Yes,Post-Secondary,Highest
+15,Male,Kigali,Attending,Yes,Moderate,No,Primary,Lowest
+17,Female,Southern Province,Attending,No,Mild,No,Secondary,Highest
+17,Male,Northern Province,Attending,No,Mild,No,Primary,Fourth
+13,Male,Western Province,Attending,No,Moderate,No,Secondary,Second
+13,Female,Kigali,Attending,No,Mild,Yes,Primary,Fourth
+19,Female,Kigali,Attending,Yes,Severe,No,Secondary,Second
+14,Male,Kigali,Attending,No,Mild,No,Primary,Lowest
+15,Female,Eastern Province,Attending,No,Moderate,No,Primary,Lowest
+13,Male,Southern Province,Attending,No,Moderate,Yes,Primary,Lowest
+13,Male,Kigali,Attending,No,Mild,No,Secondary,Fourth
+13,Female,Kigali,Attending,Yes,Mild,No,Primary,Middle
+15,Female,Western Province,Attending,No,Moderate,Yes,Primary,Lowest
+17,Female,Northern Province,Attending,No,Mild,No,Primary,Second
+16,Female,Western Province,Attending,No,Severe,Yes,Secondary,Middle
+14,Female,Northern Province,Attending,No,Severe,No,Primary,Second
+18,Female,Southern Province,Attending,No,Moderate,No,Primary,Highest
+15,Female,Western Province,Attending,Yes,Mild,No,Primary,Lowest
+14,Male,Eastern Province,Attending,Yes,Moderate,No,Primary,Highest
+17,Female,Southern Province,Attending,Yes,Mild,No,No Education,Fourth
+15,Male,Kigali,Attending,No,Moderate,No,Secondary,Highest
+17,Male,Eastern Province,Attending,No,Moderate,Yes,Post-Secondary,Fourth
+19,Male,Eastern Province,Attending,No,Mild,Yes,Primary,Fourth
+15,Female,Eastern Province,Attending,Yes,Mild,Yes,Secondary,Fourth
+15,Male,Kigali,Not Attending,No,Mild,No,Primary,Second
+18,Female,Northern Province,Attending,Yes,Mild,No,Primary,Lowest
+19,Male,Southern Province,Attending,No,Moderate,No,Post-Secondary,Middle
+16,Male,Kigali,Attending,No,Mild,No,Secondary,Lowest
+14,Male,Southern Province,Attending,Yes,Mild,No,Primary,Fourth
+16,Female,Western Province,Not Attending,No,Mild,No,Primary,Lowest
+17,Female,Southern Province,Attending,No,Mild,Yes,Primary,Lowest
+18,Male,Eastern Province,Attending,No,Mild,No,Primary,Second
+17,Female,Western Province,Attending,Yes,Moderate,Yes,Primary,Fourth
+14,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Middle
+18,Female,Eastern Province,Not Attending,Yes,Moderate,Yes,Primary,Fourth
+17,Female,Kigali,Not Attending,No,Mild,Yes,Primary,Fourth
+13,Male,Southern Province,Attending,No,Mild,No,Secondary,Middle
+19,Female,Western Province,Not Attending,No,Severe,No,Primary,Middle
+19,Male,Kigali,Not Attending,Yes,Mild,No,Primary,Lowest
+19,Female,Southern Province,Not Attending,No,Mild,Yes,Primary,Fourth
+19,Female,Western Province,Attending,No,Moderate,No,Post-Secondary,Middle
+13,Female,Eastern Province,Attending,No,Mild,Yes,Post-Secondary,Highest
+18,Male,Southern Province,Attending,No,Severe,No,No Education,Middle
+18,Male,Kigali,Attending,No,Severe,No,Primary,Lowest
+13,Male,Northern Province,Attending,No,Mild,No,Post-Secondary,Middle
+17,Male,Western Province,Not Attending,No,Moderate,No,Secondary,Fourth
+16,Male,Kigali,Attending,No,Mild,No,Primary,Middle
+15,Female,Southern Province,Attending,No,Mild,No,Primary,Middle
+16,Male,Southern Province,Attending,No,Mild,No,Primary,Second
+13,Male,Southern Province,Not Attending,Yes,Mild,No,No Education,Fourth
+19,Male,Northern Province,Not Attending,No,Severe,Yes,Primary,Fourth
+16,Female,Northern Province,Attending,No,Severe,No,Primary,Highest
+18,Female,Southern Province,Attending,No,Severe,No,Secondary,Highest
+18,Male,Northern Province,Attending,No,Mild,Yes,Primary,Fourth
+17,Female,Southern Province,Attending,No,Moderate,No,Post-Secondary,Lowest
+16,Female,Kigali,Not Attending,Yes,Mild,No,Primary,Lowest
+16,Male,Western Province,Attending,Yes,Mild,Yes,Primary,Lowest
+18,Male,Northern Province,Attending,No,Moderate,No,No Education,Second
+16,Female,Kigali,Attending,No,Mild,Yes,Primary,Second
+17,Male,Eastern Province,Attending,Yes,Moderate,Yes,No Education,Highest
+13,Female,Eastern Province,Attending,No,Moderate,No,Primary,Lowest
+18,Male,Eastern Province,Attending,No,Mild,No,Post-Secondary,Middle
+15,Female,Kigali,Attending,Yes,Mild,Yes,Primary,Second
+19,Male,Kigali,Not Attending,No,Mild,No,Primary,Lowest
+19,Male,Southern Province,Attending,No,Severe,No,Primary,Highest
+13,Male,Eastern Province,Attending,Yes,Severe,Yes,Primary,Lowest
+19,Female,Kigali,Attending,No,Moderate,No,Primary,Fourth
+16,Female,Northern Province,Attending,No,Mild,No,Primary,Highest
+19,Female,Western Province,Attending,Yes,Mild,No,Primary,Middle
+16,Female,Northern Province,Attending,No,Mild,No,Primary,Middle
+15,Male,Kigali,Attending,No,Severe,Yes,Post-Secondary,Second
+18,Female,Western Province,Attending,No,Severe,No,Primary,Highest
+13,Male,Southern Province,Attending,Yes,Moderate,Yes,Primary,Lowest
+18,Male,Kigali,Attending,No,Severe,Yes,Primary,Second
+17,Female,Northern Province,Not Attending,No,Moderate,Yes,Primary,Fourth
+14,Male,Southern Province,Not Attending,Yes,Moderate,No,Primary,Second
+15,Male,Western Province,Attending,No,Mild,Yes,No Education,Fourth
+15,Male,Kigali,Attending,No,Moderate,Yes,Primary,Lowest
+14,Male,Western Province,Attending,Yes,Severe,Yes,Primary,Second
+19,Male,Western Province,Not Attending,No,Mild,Yes,Primary,Middle
+14,Male,Western Province,Attending,No,Moderate,No,Post-Secondary,Second
+15,Male,Western Province,Attending,No,Mild,No,Primary,Middle
+13,Male,Kigali,Attending,No,Mild,No,No Education,Highest
+13,Female,Kigali,Attending,No,Moderate,Yes,Secondary,Middle
+17,Female,Western Province,Attending,No,Moderate,No,No Education,Middle
+18,Female,Western Province,Attending,No,Mild,No,Secondary,Fourth
+18,Female,Kigali,Attending,No,Severe,Yes,Primary,Highest
+17,Male,Kigali,Not Attending,No,Mild,Yes,Primary,Second
+19,Female,Southern Province,Attending,No,Severe,No,Primary,Fourth
+16,Male,Southern Province,Attending,Yes,Severe,No,Secondary,Lowest
+16,Male,Northern Province,Attending,No,Mild,No,Primary,Fourth
+19,Female,Kigali,Attending,No,Moderate,No,Primary,Lowest
+17,Male,Kigali,Attending,No,Mild,Yes,Primary,Second
+17,Male,Southern Province,Attending,No,Mild,Yes,No Education,Second
+15,Female,Western Province,Not Attending,No,Mild,No,Primary,Fourth
+18,Male,Kigali,Attending,No,Mild,Yes,Secondary,Middle
+18,Female,Kigali,Attending,No,Mild,Yes,Secondary,Second
+16,Female,Northern Province,Not Attending,No,Severe,No,Secondary,Highest
+16,Male,Kigali,Attending,Yes,Mild,No,Post-Secondary,Middle
+18,Female,Kigali,Not Attending,No,Mild,No,No Education,Middle
+14,Female,Southern Province,Attending,No,Mild,Yes,Post-Secondary,Lowest
+18,Female,Southern Province,Attending,Yes,Severe,No,Post-Secondary,Fourth
+15,Male,Western Province,Attending,No,Mild,Yes,Primary,Highest
+17,Male,Northern Province,Not Attending,Yes,Severe,Yes,Primary,Second
+13,Male,Kigali,Attending,No,Mild,Yes,Primary,Fourth
+19,Male,Kigali,Attending,No,Severe,No,Primary,Middle
+18,Male,Northern Province,Attending,Yes,Mild,Yes,Primary,Middle
+13,Female,Kigali,Attending,No,Moderate,No,Primary,Lowest
+16,Male,Kigali,Attending,No,Severe,No,Primary,Lowest
+15,Female,Kigali,Attending,No,Mild,No,Secondary,Highest
+18,Male,Eastern Province,Attending,No,Mild,No,Primary,Lowest
+15,Male,Kigali,Attending,No,Mild,No,No Education,Middle
+17,Male,Southern Province,Attending,Yes,Mild,No,Secondary,Fourth
+13,Male,Kigali,Not Attending,Yes,Mild,No,Primary,Middle
+15,Female,Eastern Province,Attending,No,Mild,No,No Education,Middle
+16,Male,Eastern Province,Not Attending,Yes,Mild,No,No Education,Lowest
+19,Male,Southern Province,Attending,No,Mild,No,Secondary,Lowest
+15,Female,Northern Province,Attending,No,Mild,Yes,Secondary,Middle
+15,Female,Eastern Province,Attending,Yes,Mild,Yes,Post-Secondary,Highest
+18,Female,Kigali,Attending,No,Mild,No,Secondary,Highest
+17,Male,Western Province,Attending,No,Mild,Yes,No Education,Fourth
+17,Male,Southern Province,Attending,No,Moderate,Yes,Primary,Second
+17,Female,Southern Province,Attending,Yes,Mild,No,Primary,Middle
+16,Female,Northern Province,Attending,Yes,Mild,Yes,Secondary,Middle
+17,Female,Kigali,Not Attending,No,Severe,Yes,No Education,Second
+18,Male,Western Province,Not Attending,No,Severe,No,Secondary,Middle
+15,Female,Eastern Province,Attending,No,Moderate,Yes,Primary,Highest
+14,Male,Kigali,Attending,No,Severe,Yes,Primary,Second
+14,Male,Eastern Province,Attending,No,Severe,Yes,Primary,Middle
+13,Male,Kigali,Attending,Yes,Severe,No,Primary,Middle
+15,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Lowest
+19,Female,Western Province,Attending,Yes,Moderate,No,Primary,Middle
+16,Female,Eastern Province,Attending,No,Severe,No,Primary,Second
+16,Female,Eastern Province,Attending,No,Mild,No,Primary,Middle
+13,Female,Kigali,Attending,No,Moderate,Yes,Primary,Highest
+17,Female,Kigali,Not Attending,No,Mild,Yes,Post-Secondary,Middle
+18,Male,Kigali,Attending,No,Moderate,No,Primary,Fourth
+18,Male,Northern Province,Not Attending,No,Mild,Yes,Secondary,Middle
+16,Female,Northern Province,Attending,No,Severe,Yes,Secondary,Second
+13,Male,Northern Province,Attending,No,Moderate,No,Primary,Highest
+16,Female,Northern Province,Attending,No,Mild,Yes,Secondary,Middle
+18,Female,Kigali,Not Attending,No,Moderate,Yes,No Education,Middle
+14,Male,Northern Province,Attending,No,Mild,Yes,Post-Secondary,Second
+19,Male,Kigali,Attending,No,Moderate,Yes,No Education,Fourth
+15,Female,Kigali,Attending,No,Moderate,Yes,Primary,Middle
+13,Male,Western Province,Attending,Yes,Mild,No,Secondary,Second
+16,Male,Eastern Province,Attending,Yes,Mild,Yes,Secondary,Fourth
+19,Male,Eastern Province,Not Attending,No,Moderate,Yes,Secondary,Highest
+14,Male,Kigali,Attending,Yes,Mild,Yes,Secondary,Lowest
+14,Female,Southern Province,Attending,No,Mild,No,Secondary,Second
+18,Male,Kigali,Attending,No,Moderate,Yes,Secondary,Middle
+14,Male,Southern Province,Attending,No,Moderate,Yes,No Education,Second
+18,Male,Southern Province,Attending,No,Mild,Yes,Primary,Highest
+14,Male,Kigali,Not Attending,Yes,Mild,Yes,Primary,Second
+17,Female,Eastern Province,Attending,No,Mild,No,No Education,Lowest
+17,Female,Southern Province,Attending,No,Moderate,No,No Education,Middle
+14,Female,Kigali,Not Attending,No,Mild,Yes,Primary,Fourth
+18,Female,Kigali,Attending,No,Mild,No,Primary,Lowest
+15,Female,Southern Province,Attending,No,Mild,No,Post-Secondary,Lowest
+18,Male,Southern Province,Attending,Yes,Moderate,Yes,Primary,Lowest
+19,Male,Southern Province,Attending,No,Mild,No,Secondary,Second
+16,Female,Southern Province,Attending,Yes,Moderate,Yes,Secondary,Highest
+13,Female,Southern Province,Attending,No,Mild,No,Primary,Middle
+16,Female,Western Province,Attending,No,Mild,Yes,Secondary,Middle
+14,Male,Western Province,Attending,No,Moderate,No,Primary,Highest
+18,Female,Kigali,Attending,No,Moderate,No,Primary,Lowest
+15,Female,Kigali,Attending,No,Moderate,Yes,Primary,Second
+18,Male,Southern Province,Attending,No,Severe,No,Secondary,Highest
+14,Male,Western Province,Attending,No,Moderate,Yes,Primary,Fourth
+15,Male,Kigali,Attending,Yes,Severe,No,Secondary,Middle
+18,Female,Western Province,Attending,No,Mild,No,Primary,Lowest
+19,Female,Eastern Province,Attending,No,Mild,No,Secondary,Lowest
+14,Female,Northern Province,Attending,No,Mild,No,Primary,Middle
+16,Female,Kigali,Attending,No,Mild,No,Primary,Middle
+17,Female,Southern Province,Attending,No,Severe,No,Primary,Middle
+14,Male,Western Province,Attending,No,Mild,No,Primary,Fourth
+15,Male,Kigali,Not Attending,No,Mild,No,Secondary,Middle
+14,Male,Eastern Province,Attending,No,Mild,Yes,Secondary,Lowest
+18,Female,Northern Province,Attending,No,Moderate,No,Primary,Second
+18,Female,Western Province,Attending,No,Severe,No,Primary,Fourth
+16,Female,Northern Province,Attending,No,Severe,No,No Education,Middle
+19,Male,Northern Province,Attending,Yes,Severe,Yes,Primary,Middle
+18,Male,Northern Province,Not Attending,No,Moderate,No,Post-Secondary,Middle
+14,Female,Kigali,Not Attending,No,Mild,No,Secondary,Middle
+15,Male,Northern Province,Attending,No,Mild,No,Secondary,Lowest
+15,Male,Western Province,Attending,Yes,Mild,Yes,Secondary,Highest
+13,Female,Kigali,Attending,Yes,Severe,No,Secondary,Highest
+16,Female,Kigali,Attending,Yes,Mild,No,No Education,Lowest
+18,Male,Kigali,Not Attending,No,Mild,No,No Education,Fourth
+18,Female,Kigali,Attending,No,Severe,Yes,Post-Secondary,Highest
+18,Male,Kigali,Not Attending,Yes,Moderate,No,Primary,Second
+16,Male,Southern Province,Attending,No,Severe,Yes,Primary,Lowest
+13,Male,Northern Province,Attending,No,Severe,Yes,Primary,Second
+18,Male,Northern Province,Attending,No,Mild,No,Secondary,Fourth
+16,Female,Southern Province,Attending,No,Mild,No,Secondary,Fourth
+16,Female,Northern Province,Attending,No,Severe,Yes,Secondary,Middle
+19,Male,Southern Province,Attending,Yes,Mild,No,Secondary,Highest
+19,Female,Kigali,Attending,No,Severe,Yes,Primary,Middle
+13,Male,Eastern Province,Not Attending,No,Mild,No,Primary,Lowest
+16,Male,Eastern Province,Attending,No,Mild,No,Primary,Fourth
+13,Female,Southern Province,Not Attending,No,Mild,Yes,Secondary,Lowest
+19,Female,Eastern Province,Attending,No,Mild,No,Primary,Middle
+15,Female,Northern Province,Attending,No,Moderate,No,Secondary,Second
+13,Male,Southern Province,Attending,No,Mild,No,Primary,Lowest
+18,Female,Eastern Province,Attending,No,Severe,Yes,Primary,Middle
+18,Male,Northern Province,Attending,Yes,Severe,No,Secondary,Lowest
+15,Male,Kigali,Attending,No,Mild,No,Secondary,Lowest
+18,Male,Southern Province,Attending,Yes,Moderate,Yes,Primary,Highest
+14,Male,Eastern Province,Attending,Yes,Mild,No,Primary,Middle
+17,Male,Western Province,Not Attending,No,Moderate,Yes,Primary,Lowest
+19,Male,Kigali,Attending,No,Moderate,No,Secondary,Second
+14,Male,Eastern Province,Not Attending,Yes,Moderate,Yes,No Education,Lowest
+15,Male,Southern Province,Attending,Yes,Severe,No,Primary,Fourth
+16,Female,Kigali,Attending,No,Severe,Yes,Post-Secondary,Fourth
+19,Female,Eastern Province,Not Attending,No,Severe,No,Primary,Lowest
+13,Male,Eastern Province,Not Attending,No,Mild,No,Secondary,Highest
+15,Male,Eastern Province,Not Attending,Yes,Mild,No,Secondary,Second
+14,Male,Southern Province,Attending,No,Mild,Yes,No Education,Highest
+13,Female,Eastern Province,Attending,No,Severe,Yes,Secondary,Lowest
+14,Female,Southern Province,Not Attending,No,Severe,No,Primary,Lowest
+15,Male,Southern Province,Attending,No,Mild,Yes,Primary,Second
+14,Female,Kigali,Not Attending,No,Mild,Yes,Post-Secondary,Second
+16,Male,Kigali,Attending,No,Severe,Yes,Secondary,Second
+14,Male,Kigali,Attending,No,Moderate,No,Primary,Middle
+15,Male,Eastern Province,Attending,No,Mild,Yes,No Education,Lowest
+17,Male,Eastern Province,Attending,No,Mild,No,Secondary,Middle
+19,Male,Southern Province,Attending,No,Mild,No,Secondary,Fourth
+13,Female,Northern Province,Attending,No,Moderate,No,Secondary,Middle
+16,Male,Eastern Province,Not Attending,No,Mild,No,Secondary,Second
+15,Male,Southern Province,Attending,No,Mild,No,Primary,Lowest
+16,Male,Southern Province,Attending,No,Moderate,No,Primary,Middle
+17,Female,Eastern Province,Attending,No,Mild,No,Secondary,Fourth
+14,Female,Kigali,Attending,No,Mild,Yes,Secondary,Lowest
+16,Female,Northern Province,Attending,No,Moderate,Yes,Primary,Middle
+13,Female,Kigali,Attending,No,Mild,No,Primary,Middle
+14,Male,Southern Province,Attending,No,Mild,No,Secondary,Highest
+19,Male,Southern Province,Attending,No,Severe,No,Secondary,Middle
+13,Male,Southern Province,Not Attending,No,Mild,No,Primary,Fourth
+15,Female,Kigali,Attending,No,Moderate,No,Secondary,Fourth
+13,Male,Eastern Province,Attending,Yes,Mild,Yes,Primary,Second
+13,Female,Northern Province,Attending,No,Severe,No,Secondary,Highest
+18,Female,Kigali,Not Attending,No,Moderate,Yes,Post-Secondary,Middle
+14,Male,Western Province,Attending,No,Mild,No,No Education,Middle
+13,Male,Southern Province,Attending,No,Severe,Yes,Secondary,Lowest
+15,Female,Western Province,Not Attending,No,Moderate,No,Secondary,Lowest
+15,Male,Kigali,Attending,No,Moderate,Yes,No Education,Middle
+17,Male,Southern Province,Attending,Yes,Moderate,No,Primary,Fourth
+15,Female,Eastern Province,Not Attending,No,Mild,Yes,Primary,Fourth
+14,Female,Southern Province,Not Attending,No,Mild,No,Post-Secondary,Second
+16,Male,Southern Province,Attending,Yes,Moderate,Yes,Primary,Fourth
+15,Male,Northern Province,Attending,No,Moderate,Yes,Primary,Highest
+19,Female,Kigali,Attending,No,Mild,Yes,Primary,Middle
+18,Female,Western Province,Attending,No,Severe,No,Primary,Second
+19,Female,Kigali,Attending,No,Severe,Yes,Primary,Fourth
+18,Male,Southern Province,Attending,Yes,Mild,No,Primary,Fourth
+17,Female,Southern Province,Attending,No,Moderate,Yes,Post-Secondary,Middle
+19,Male,Eastern Province,Attending,Yes,Moderate,No,Secondary,Fourth
+19,Female,Kigali,Attending,No,Mild,No,No Education,Fourth
+17,Male,Kigali,Attending,No,Mild,Yes,Primary,Highest
+13,Female,Kigali,Attending,No,Severe,No,Secondary,Second
+14,Female,Kigali,Attending,Yes,Mild,No,Primary,Lowest
+17,Male,Western Province,Attending,Yes,Mild,No,Primary,Highest
+15,Male,Northern Province,Attending,No,Severe,No,Primary,Lowest
+15,Male,Western Province,Not Attending,No,Mild,Yes,Secondary,Lowest
+15,Male,Southern Province,Attending,Yes,Mild,Yes,Secondary,Second
+19,Female,Eastern Province,Attending,Yes,Mild,No,Secondary,Fourth
+18,Female,Western Province,Not Attending,No,Moderate,No,Primary,Second
+14,Male,Western Province,Attending,No,Severe,No,Primary,Highest
+17,Female,Southern Province,Attending,No,Mild,No,Primary,Highest
+19,Male,Western Province,Attending,No,Mild,No,Post-Secondary,Fourth
+15,Female,Western Province,Attending,No,Severe,Yes,Primary,Second
+17,Female,Kigali,Not Attending,No,Mild,Yes,No Education,Middle
+15,Female,Northern Province,Attending,No,Mild,No,Secondary,Fourth
+18,Female,Western Province,Attending,No,Severe,No,No Education,Highest
+15,Male,Southern Province,Attending,No,Severe,Yes,Primary,Fourth
+17,Male,Eastern Province,Not Attending,No,Mild,Yes,Primary,Second
+14,Male,Eastern Province,Attending,No,Severe,Yes,Post-Secondary,Highest
+16,Female,Northern Province,Attending,No,Severe,No,Secondary,Highest
+17,Male,Northern Province,Attending,No,Mild,Yes,Secondary,Fourth
+17,Male,Northern Province,Not Attending,No,Severe,Yes,Primary,Middle
+14,Female,Kigali,Attending,No,Severe,No,No Education,Middle
+18,Female,Southern Province,Attending,No,Mild,No,Secondary,Middle
+17,Male,Western Province,Attending,Yes,Mild,No,Primary,Second
+13,Female,Western Province,Attending,Yes,Mild,Yes,Primary,Second
+18,Female,Northern Province,Attending,No,Severe,Yes,No Education,Lowest
+15,Female,Kigali,Attending,Yes,Mild,No,Primary,Lowest
+14,Male,Eastern Province,Not Attending,No,Mild,No,No Education,Lowest
+19,Female,Southern Province,Attending,No,Mild,Yes,Secondary,Fourth
+19,Female,Northern Province,Attending,Yes,Mild,No,Primary,Middle
+15,Male,Kigali,Attending,No,Moderate,Yes,Primary,Middle
+15,Female,Northern Province,Attending,No,Moderate,No,Secondary,Lowest
+13,Male,Northern Province,Attending,No,Moderate,No,No Education,Middle
+14,Female,Northern Province,Not Attending,Yes,Mild,Yes,Primary,Lowest
+19,Male,Southern Province,Not Attending,No,Moderate,No,Primary,Fourth
+14,Male,Kigali,Attending,No,Moderate,No,Post-Secondary,Highest
+18,Male,Southern Province,Attending,Yes,Mild,No,Primary,Lowest
+14,Female,Western Province,Attending,No,Mild,No,Primary,Highest
+14,Male,Northern Province,Attending,No,Moderate,No,Primary,Fourth
+13,Male,Western Province,Not Attending,Yes,Moderate,Yes,No Education,Fourth
+14,Male,Eastern Province,Attending,Yes,Mild,Yes,Primary,Middle
+19,Male,Southern Province,Not Attending,No,Moderate,Yes,Primary,Middle
+13,Male,Western Province,Attending,No,Mild,Yes,Primary,Second
+16,Male,Kigali,Attending,No,Moderate,No,Primary,Second
+18,Female,Southern Province,Attending,No,Mild,Yes,Secondary,Middle
+19,Female,Southern Province,Attending,No,Moderate,Yes,No Education,Second
+19,Male,Eastern Province,Attending,No,Mild,No,Primary,Second
+18,Male,Kigali,Attending,No,Mild,No,Post-Secondary,Highest
+15,Female,Southern Province,Attending,No,Moderate,No,Primary,Second
+15,Female,Western Province,Attending,No,Moderate,No,Secondary,Fourth
+17,Female,Kigali,Attending,No,Moderate,No,Secondary,Highest
+16,Male,Northern Province,Not Attending,No,Mild,Yes,Secondary,Second
+17,Female,Northern Province,Attending,No,Moderate,No,Primary,Lowest
+15,Male,Western Province,Attending,No,Severe,No,Secondary,Fourth
+19,Male,Eastern Province,Attending,Yes,Moderate,No,Primary,Second
+15,Male,Northern Province,Attending,No,Severe,No,No Education,Lowest
+13,Female,Southern Province,Not Attending,Yes,Mild,No,Primary,Lowest
+15,Female,Eastern Province,Attending,No,Mild,No,Primary,Second
+15,Male,Southern Province,Attending,No,Mild,No,Post-Secondary,Second
+13,Male,Northern Province,Attending,No,Mild,No,Primary,Second
+18,Male,Kigali,Attending,Yes,Mild,No,No Education,Middle
+18,Female,Kigali,Not Attending,No,Mild,Yes,No Education,Fourth
+13,Female,Western Province,Attending,No,Moderate,No,Secondary,Second
+14,Female,Northern Province,Not Attending,No,Severe,Yes,Secondary,Middle
+17,Male,Northern Province,Attending,No,Mild,Yes,Secondary,Fourth
+13,Male,Kigali,Attending,No,Mild,Yes,Primary,Highest
+19,Female,Western Province,Attending,Yes,Moderate,No,Primary,Highest
+14,Female,Kigali,Attending,No,Mild,No,Secondary,Fourth
+19,Female,Southern Province,Attending,No,Mild,No,No Education,Middle
+17,Male,Kigali,Not Attending,No,Moderate,No,Primary,Middle
+15,Female,Kigali,Attending,No,Moderate,No,Primary,Second
+13,Female,Northern Province,Not Attending,Yes,Moderate,No,Primary,Lowest
+17,Male,Kigali,Attending,No,Severe,Yes,Primary,Highest
+13,Female,Western Province,Attending,No,Moderate,Yes,No Education,Second
+18,Male,Eastern Province,Attending,No,Moderate,Yes,Secondary,Fourth
+18,Male,Kigali,Not Attending,No,Mild,No,Primary,Middle
+19,Female,Northern Province,Attending,No,Mild,No,Post-Secondary,Fourth
+13,Female,Northern Province,Attending,No,Mild,Yes,Primary,Lowest
+14,Male,Southern Province,Attending,No,Moderate,No,Primary,Lowest
+19,Male,Northern Province,Not Attending,No,Moderate,Yes,Primary,Middle
+14,Female,Southern Province,Attending,No,Moderate,Yes,Secondary,Highest
+17,Female,Southern Province,Attending,No,Moderate,Yes,Primary,Highest
+16,Male,Southern Province,Attending,No,Moderate,Yes,Primary,Lowest
+14,Male,Southern Province,Attending,No,Mild,Yes,Primary,Fourth
+14,Male,Kigali,Attending,No,Mild,Yes,Primary,Highest
+18,Female,Western Province,Attending,No,Mild,No,Primary,Highest
+13,Male,Northern Province,Not Attending,No,Mild,No,Primary,Second
+13,Male,Kigali,Attending,No,Moderate,Yes,Primary,Second
+14,Male,Eastern Province,Attending,Yes,Mild,Yes,Primary,Second
+16,Male,Kigali,Attending,No,Mild,No,Post-Secondary,Middle
+15,Male,Kigali,Attending,No,Moderate,No,No Education,Highest
+19,Female,Kigali,Attending,Yes,Severe,No,Primary,Second
+19,Male,Kigali,Attending,No,Mild,No,Secondary,Second
+13,Female,Eastern Province,Not Attending,No,Mild,No,Primary,Middle
+16,Male,Western Province,Not Attending,No,Mild,No,Primary,Fourth
+18,Female,Kigali,Attending,No,Mild,No,No Education,Middle
+13,Female,Western Province,Attending,No,Severe,Yes,Post-Secondary,Lowest
+16,Male,Southern Province,Attending,Yes,Moderate,No,Primary,Fourth
+17,Male,Western Province,Attending,No,Moderate,Yes,Secondary,Second
+17,Female,Southern Province,Attending,No,Moderate,Yes,Primary,Second
+13,Female,Western Province,Attending,Yes,Moderate,No,Post-Secondary,Second
+13,Female,Kigali,Not Attending,No,Mild,No,Post-Secondary,Lowest
+18,Male,Western Province,Attending,No,Moderate,No,Primary,Lowest
+13,Male,Eastern Province,Attending,No,Mild,No,Post-Secondary,Lowest
+13,Male,Eastern Province,Attending,Yes,Severe,No,Primary,Highest
+13,Male,Eastern Province,Attending,No,Severe,No,Primary,Lowest
+18,Male,Northern Province,Attending,No,Moderate,No,Primary,Fourth
+17,Male,Western Province,Attending,Yes,Severe,Yes,Secondary,Fourth
+13,Female,Southern Province,Attending,Yes,Mild,No,Secondary,Fourth
+19,Male,Western Province,Not Attending,No,Mild,No,No Education,Highest
+16,Male,Eastern Province,Attending,No,Severe,No,Primary,Fourth
+16,Female,Western Province,Attending,No,Mild,No,Primary,Second
+14,Female,Southern Province,Not Attending,Yes,Moderate,No,Primary,Highest
+19,Female,Kigali,Not Attending,No,Mild,No,No Education,Highest
+16,Male,Kigali,Attending,No,Mild,No,Secondary,Highest
+16,Male,Kigali,Attending,No,Mild,Yes,Primary,Fourth
+16,Male,Northern Province,Attending,Yes,Mild,Yes,Secondary,Second
+19,Female,Kigali,Attending,Yes,Moderate,No,Primary,Lowest
+19,Male,Western Province,Attending,Yes,Moderate,No,Primary,Highest
+18,Female,Northern Province,Attending,No,Moderate,Yes,Primary,Highest
+15,Female,Kigali,Attending,No,Moderate,Yes,Secondary,Second
+17,Male,Eastern Province,Not Attending,No,Mild,No,Primary,Highest
+18,Male,Eastern Province,Not Attending,No,Moderate,Yes,Primary,Middle
+14,Female,Southern Province,Attending,No,Mild,No,Primary,Lowest
+16,Male,Eastern Province,Attending,No,Mild,Yes,Primary,Lowest
+14,Male,Eastern Province,Attending,Yes,Moderate,No,Post-Secondary,Lowest
+16,Male,Eastern Province,Attending,No,Mild,Yes,Secondary,Lowest
+18,Female,Western Province,Not Attending,No,Severe,No,Secondary,Second
+18,Female,Western Province,Attending,No,Mild,Yes,Secondary,Second
+16,Female,Northern Province,Attending,No,Moderate,Yes,Secondary,Lowest
+13,Female,Kigali,Not Attending,No,Severe,No,Primary,Middle
+17,Male,Western Province,Attending,No,Moderate,No,Primary,Lowest
+18,Male,Kigali,Attending,No,Mild,No,Secondary,Second
+19,Female,Northern Province,Attending,No,Severe,No,Primary,Second
+13,Female,Kigali,Attending,Yes,Moderate,Yes,Primary,Fourth
+15,Male,Kigali,Attending,No,Moderate,Yes,Primary,Highest
+18,Female,Kigali,Attending,No,Moderate,Yes,Primary,Middle
+18,Female,Kigali,Attending,No,Mild,Yes,Secondary,Fourth
+19,Female,Eastern Province,Attending,No,Mild,No,Secondary,Middle
+16,Male,Northern Province,Attending,No,Mild,No,Secondary,Lowest
+15,Female,Kigali,Attending,No,Mild,No,Primary,Highest
+19,Male,Kigali,Attending,Yes,Mild,Yes,Primary,Middle
+14,Male,Western Province,Attending,Yes,Mild,No,No Education,Middle
+16,Male,Kigali,Attending,No,Moderate,No,No Education,Second
+18,Female,Kigali,Attending,No,Mild,No,Primary,Highest
+13,Female,Western Province,Attending,No,Severe,No,Secondary,Highest
+14,Female,Kigali,Not Attending,No,Severe,No,Secondary,Lowest
+16,Male,Kigali,Not Attending,No,Mild,No,Secondary,Highest
+17,Male,Northern Province,Attending,Yes,Mild,No,Primary,Highest
+16,Male,Kigali,Attending,No,Moderate,No,Secondary,Second
+13,Male,Northern Province,Attending,No,Severe,Yes,Post-Secondary,Middle
+15,Female,Southern Province,Attending,Yes,Moderate,No,Primary,Second
+14,Male,Southern Province,Attending,No,Mild,Yes,Primary,Lowest
+14,Male,Southern Province,Not Attending,No,Mild,No,Primary,Lowest
+18,Female,Kigali,Attending,No,Moderate,No,Secondary,Lowest
+18,Male,Western Province,Attending,No,Moderate,Yes,Primary,Lowest
+18,Female,Eastern Province,Attending,No,Mild,No,No Education,Highest
+18,Female,Kigali,Attending,Yes,Mild,No,Primary,Middle
+18,Female,Western Province,Attending,No,Mild,Yes,Post-Secondary,Lowest
+17,Female,Kigali,Attending,No,Severe,Yes,Primary,Highest
+17,Female,Southern Province,Attending,No,Mild,No,Primary,Middle
+17,Male,Northern Province,Attending,No,Moderate,No,Post-Secondary,Middle
+17,Female,Kigali,Attending,Yes,Mild,No,Primary,Fourth
+13,Female,Northern Province,Attending,No,Mild,No,No Education,Second
+13,Male,Northern Province,Not Attending,Yes,Mild,Yes,No Education,Middle
+14,Male,Southern Province,Attending,Yes,Severe,No,No Education,Fourth
+16,Male,Southern Province,Not Attending,No,Mild,Yes,Primary,Lowest
+18,Female,Kigali,Attending,No,Severe,No,Primary,Second
+14,Male,Western Province,Not Attending,No,Mild,No,Primary,Middle
+14,Male,Southern Province,Attending,No,Mild,Yes,Primary,Middle
+18,Male,Kigali,Attending,No,Severe,No,Secondary,Lowest
+13,Male,Southern Province,Not Attending,No,Moderate,No,Secondary,Highest
+16,Female,Western Province,Not Attending,No,Moderate,No,Primary,Fourth
+14,Male,Kigali,Attending,No,Severe,Yes,Primary,Lowest
+17,Male,Western Province,Attending,No,Mild,No,Secondary,Fourth
+16,Male,Western Province,Not Attending,Yes,Moderate,Yes,Primary,Second
+13,Female,Northern Province,Attending,No,Severe,Yes,Primary,Fourth
+17,Male,Southern Province,Attending,No,Mild,No,Secondary,Second
+16,Female,Northern Province,Attending,No,Severe,Yes,Primary,Second
+18,Female,Southern Province,Attending,No,Mild,No,Primary,Fourth
+13,Male,Eastern Province,Attending,Yes,Severe,No,Post-Secondary,Lowest
+18,Male,Southern Province,Attending,No,Severe,No,Primary,Fourth
+13,Female,Eastern Province,Not Attending,Yes,Mild,No,Secondary,Highest
+14,Male,Western Province,Attending,No,Mild,Yes,Primary,Second
+14,Female,Western Province,Attending,No,Mild,No,Primary,Highest
+18,Male,Southern Province,Attending,No,Mild,Yes,Secondary,Middle
+18,Male,Eastern Province,Attending,No,Mild,Yes,Secondary,Fourth
+16,Male,Northern Province,Attending,No,Moderate,No,No Education,Highest
+14,Male,Western Province,Not Attending,Yes,Mild,Yes,No Education,Middle
+15,Female,Western Province,Attending,No,Mild,Yes,Secondary,Second
+16,Female,Kigali,Attending,Yes,Mild,No,Secondary,Lowest
+15,Male,Kigali,Attending,No,Mild,No,Secondary,Fourth
+17,Female,Western Province,Attending,No,Mild,No,Primary,Middle
+13,Male,Western Province,Attending,No,Mild,Yes,Secondary,Highest
+17,Female,Kigali,Not Attending,Yes,Mild,Yes,Primary,Highest
+19,Female,Kigali,Attending,Yes,Mild,No,Primary,Highest
+17,Female,Eastern Province,Attending,No,Mild,No,Primary,Lowest
+15,Male,Western Province,Attending,No,Moderate,Yes,No Education,Lowest
+14,Male,Western Province,Attending,No,Severe,Yes,No Education,Fourth
+18,Female,Eastern Province,Not Attending,Yes,Moderate,No,Primary,Highest
+14,Female,Northern Province,Attending,No,Mild,No,Secondary,Lowest
+18,Female,Kigali,Attending,Yes,Moderate,No,Primary,Fourth
+16,Male,Kigali,Attending,No,Severe,No,Primary,Lowest
+16,Female,Southern Province,Attending,No,Mild,No,Primary,Lowest
+16,Female,Kigali,Attending,No,Moderate,No,No Education,Middle
+19,Female,Kigali,Attending,No,Moderate,No,Secondary,Second
+13,Female,Western Province,Attending,No,Mild,No,No Education,Highest
+19,Female,Southern Province,Not Attending,No,Moderate,No,Secondary,Middle
+18,Female,Eastern Province,Attending,Yes,Mild,No,Secondary,Fourth
+18,Male,Eastern Province,Not Attending,No,Mild,Yes,Primary,Second
+17,Female,Northern Province,Attending,No,Mild,Yes,Primary,Second
+14,Male,Western Province,Attending,No,Moderate,Yes,Secondary,Lowest
+19,Female,Kigali,Attending,No,Mild,Yes,Primary,Middle
+14,Male,Southern Province,Not Attending,Yes,Mild,No,Secondary,Lowest
+13,Female,Western Province,Attending,No,Severe,No,Post-Secondary,Highest
+18,Male,Southern Province,Not Attending,No,Mild,Yes,Secondary,Fourth
+18,Female,Southern Province,Attending,No,Mild,No,Primary,Second
+13,Male,Northern Province,Not Attending,No,Mild,Yes,Primary,Highest
+19,Female,Kigali,Attending,No,Severe,Yes,Primary,Fourth
+15,Female,Western Province,Attending,No,Mild,Yes,Secondary,Fourth
+19,Female,Eastern Province,Attending,No,Mild,No,Primary,Middle
+15,Female,Kigali,Attending,No,Severe,Yes,Primary,Fourth
+19,Male,Southern Province,Attending,Yes,Moderate,No,Post-Secondary,Fourth
+17,Male,Western Province,Attending,Yes,Mild,No,Secondary,Lowest
+14,Male,Western Province,Attending,Yes,Severe,No,Primary,Fourth
+16,Male,Eastern Province,Attending,No,Mild,No,Secondary,Lowest
+16,Female,Western Province,Not Attending,No,Moderate,No,Primary,Fourth
+14,Male,Kigali,Attending,No,Mild,No,Primary,Second
+14,Female,Southern Province,Attending,No,Severe,No,Primary,Highest
+16,Male,Kigali,Attending,No,Mild,No,Secondary,Highest
+19,Female,Kigali,Attending,Yes,Severe,No,Primary,Highest
+15,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Middle
+13,Female,Kigali,Attending,No,Moderate,No,Primary,Fourth
+14,Female,Eastern Province,Attending,No,Mild,No,Primary,Second
+13,Male,Western Province,Attending,Yes,Severe,No,Primary,Highest
+14,Female,Kigali,Not Attending,No,Mild,Yes,Secondary,Fourth
+14,Male,Western Province,Attending,Yes,Mild,No,Secondary,Second
+14,Male,Northern Province,Attending,Yes,Moderate,No,Secondary,Highest
+17,Female,Northern Province,Not Attending,No,Moderate,Yes,Post-Secondary,Fourth
+14,Female,Eastern Province,Attending,Yes,Severe,No,Post-Secondary,Second
+17,Male,Kigali,Attending,Yes,Moderate,No,Primary,Middle
+18,Male,Northern Province,Attending,No,Moderate,Yes,No Education,Fourth
+17,Female,Kigali,Attending,No,Mild,No,Secondary,Middle
+19,Female,Kigali,Not Attending,No,Moderate,No,Secondary,Fourth
+13,Female,Western Province,Attending,No,Moderate,No,Primary,Middle
+18,Male,Southern Province,Not Attending,No,Moderate,No,No Education,Fourth
+15,Male,Northern Province,Attending,Yes,Moderate,Yes,Secondary,Second
+16,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Middle
+18,Female,Western Province,Not Attending,No,Mild,No,Secondary,Fourth
+13,Female,Northern Province,Attending,Yes,Mild,Yes,Secondary,Middle
+18,Female,Kigali,Attending,No,Mild,No,Secondary,Second
+18,Male,Eastern Province,Not Attending,No,Severe,Yes,Secondary,Middle
+19,Female,Southern Province,Not Attending,Yes,Moderate,No,Post-Secondary,Lowest
+17,Male,Kigali,Not Attending,No,Severe,No,Primary,Second
+19,Male,Southern Province,Attending,Yes,Moderate,No,Primary,Highest
+14,Female,Northern Province,Attending,No,Severe,No,Primary,Fourth
+16,Male,Kigali,Attending,Yes,Mild,No,Primary,Fourth
+14,Female,Kigali,Attending,No,Moderate,No,Primary,Highest
+19,Female,Southern Province,Attending,No,Mild,No,Primary,Second
+17,Male,Kigali,Attending,No,Mild,No,Primary,Second
+18,Male,Western Province,Attending,No,Moderate,Yes,Primary,Middle
+19,Female,Northern Province,Attending,No,Severe,No,Primary,Fourth
+19,Female,Southern Province,Not Attending,Yes,Mild,No,Secondary,Middle
+17,Female,Western Province,Attending,No,Mild,No,Secondary,Middle
+18,Male,Kigali,Attending,No,Severe,No,Primary,Lowest
+15,Male,Southern Province,Attending,No,Mild,No,Primary,Fourth
+14,Female,Southern Province,Attending,No,Severe,No,No Education,Highest
+19,Male,Western Province,Attending,No,Moderate,No,No Education,Fourth
+18,Female,Western Province,Attending,Yes,Severe,No,Primary,Fourth
+15,Female,Kigali,Attending,Yes,Moderate,No,Primary,Fourth
+16,Female,Kigali,Attending,No,Severe,No,Primary,Middle
+14,Male,Northern Province,Attending,No,Mild,Yes,Primary,Second
+19,Female,Eastern Province,Not Attending,No,Mild,Yes,Primary,Lowest
+18,Male,Western Province,Attending,No,Mild,No,Post-Secondary,Lowest
+18,Male,Western Province,Attending,No,Moderate,No,Secondary,Second
+15,Male,Eastern Province,Attending,No,Mild,No,Secondary,Second
+14,Male,Southern Province,Attending,Yes,Mild,Yes,Primary,Highest
+18,Male,Kigali,Attending,No,Severe,No,Primary,Second
+17,Female,Western Province,Attending,No,Mild,No,Primary,Highest
+14,Female,Northern Province,Attending,No,Mild,No,Primary,Second
+17,Male,Western Province,Attending,No,Mild,No,Secondary,Second
+13,Female,Southern Province,Attending,Yes,Moderate,Yes,Primary,Lowest
+15,Male,Western Province,Attending,Yes,Moderate,No,Primary,Fourth
+16,Male,Kigali,Attending,No,Severe,Yes,No Education,Lowest
+15,Female,Southern Province,Attending,No,Mild,No,Primary,Middle
+16,Female,Western Province,Not Attending,Yes,Mild,No,Secondary,Second
+15,Female,Eastern Province,Attending,Yes,Severe,No,Secondary,Highest
+15,Female,Kigali,Attending,No,Mild,Yes,Secondary,Lowest
+19,Female,Kigali,Attending,Yes,Mild,No,Primary,Fourth
+16,Female,Kigali,Attending,No,Severe,No,Post-Secondary,Second
+16,Male,Northern Province,Attending,Yes,Mild,No,Primary,Fourth
+13,Female,Eastern Province,Not Attending,No,Moderate,Yes,Secondary,Middle
+13,Male,Eastern Province,Not Attending,No,Mild,Yes,Primary,Second
+18,Female,Western Province,Attending,No,Severe,Yes,Primary,Middle
+17,Female,Kigali,Attending,Yes,Moderate,No,Secondary,Middle
+13,Female,Western Province,Not Attending,Yes,Moderate,Yes,Primary,Middle
+14,Female,Western Province,Attending,Yes,Moderate,No,Secondary,Fourth
+17,Male,Western Province,Not Attending,No,Mild,No,Primary,Lowest
+14,Female,Northern Province,Attending,No,Mild,Yes,Primary,Middle
+16,Male,Western Province,Not Attending,No,Moderate,No,Post-Secondary,Middle
+19,Female,Southern Province,Attending,No,Mild,Yes,Primary,Middle
+14,Female,Western Province,Attending,Yes,Mild,No,Primary,Lowest
+16,Male,Eastern Province,Not Attending,Yes,Severe,No,Primary,Middle
+14,Female,Western Province,Attending,No,Moderate,No,Secondary,Lowest
+17,Female,Southern Province,Attending,No,Mild,No,No Education,Middle
+16,Female,Kigali,Attending,No,Mild,No,Secondary,Highest
+17,Male,Kigali,Attending,No,Moderate,No,Secondary,Middle
+17,Male,Kigali,Attending,No,Mild,Yes,Primary,Fourth
+13,Female,Northern Province,Attending,Yes,Moderate,No,Secondary,Lowest
+18,Male,Eastern Province,Attending,No,Severe,Yes,Primary,Second
+18,Male,Southern Province,Attending,No,Moderate,Yes,No Education,Second
+16,Male,Eastern Province,Not Attending,No,Mild,Yes,Post-Secondary,Second
+18,Male,Kigali,Attending,Yes,Mild,No,Secondary,Fourth
+14,Male,Southern Province,Attending,Yes,Mild,No,Primary,Second
+18,Female,Western Province,Not Attending,Yes,Severe,No,Secondary,Lowest
+16,Male,Kigali,Attending,No,Severe,Yes,Primary,Second
+18,Female,Kigali,Not Attending,No,Mild,Yes,Primary,Middle
+18,Female,Southern Province,Attending,No,Moderate,No,Primary,Highest
+13,Male,Western Province,Attending,Yes,Severe,Yes,Secondary,Highest
+17,Male,Western Province,Attending,No,Mild,Yes,Secondary,Highest
+15,Male,Northern Province,Attending,No,Moderate,No,No Education,Lowest
+15,Male,Southern Province,Attending,No,Moderate,No,Secondary,Fourth
+17,Male,Kigali,Not Attending,Yes,Mild,Yes,Primary,Highest
+19,Male,Western Province,Attending,No,Mild,No,Primary,Middle
+14,Female,Eastern Province,Attending,No,Mild,No,Primary,Highest
+15,Male,Kigali,Attending,Yes,Mild,Yes,Primary,Highest
+19,Female,Western Province,Attending,No,Severe,Yes,Primary,Lowest
+14,Female,Kigali,Attending,No,Mild,No,Primary,Second
+13,Male,Eastern Province,Attending,No,Mild,No,No Education,Highest
+13,Male,Western Province,Not Attending,Yes,Mild,Yes,Primary,Lowest
+16,Male,Kigali,Not Attending,No,Mild,Yes,Primary,Lowest
+13,Male,Eastern Province,Attending,No,Moderate,Yes,No Education,Lowest
+17,Male,Kigali,Not Attending,Yes,Moderate,Yes,No Education,Lowest
+18,Male,Western Province,Attending,No,Moderate,No,Secondary,Highest
+18,Male,Western Province,Not Attending,No,Severe,No,Secondary,Fourth
+19,Female,Southern Province,Attending,No,Mild,Yes,Primary,Highest
+16,Male,Western Province,Attending,Yes,Mild,No,Secondary,Lowest
+14,Male,Eastern Province,Attending,Yes,Moderate,No,Secondary,Middle
+15,Female,Western Province,Attending,No,Moderate,No,No Education,Highest
+13,Male,Eastern Province,Attending,No,Moderate,No,No Education,Fourth
+16,Female,Western Province,Attending,No,Moderate,Yes,Primary,Middle
+13,Female,Kigali,Attending,No,Mild,No,No Education,Middle
+19,Female,Northern Province,Attending,No,Mild,Yes,Primary,Middle
+18,Male,Northern Province,Not Attending,No,Mild,No,Secondary,Second
+19,Male,Eastern Province,Attending,Yes,Mild,No,Secondary,Highest
+18,Male,Kigali,Attending,Yes,Mild,No,No Education,Highest
+16,Female,Western Province,Attending,No,Mild,No,Post-Secondary,Middle
+18,Female,Western Province,Attending,No,Moderate,No,Primary,Highest
+18,Male,Kigali,Attending,No,Mild,Yes,Post-Secondary,Middle
+19,Male,Kigali,Attending,No,Severe,No,Primary,Fourth
+19,Male,Kigali,Attending,No,Moderate,Yes,Primary,Highest
+19,Female,Kigali,Attending,No,Mild,No,Primary,Middle
+15,Male,Northern Province,Not Attending,No,Mild,No,Primary,Second
+14,Male,Kigali,Not Attending,No,Mild,No,No Education,Highest
+17,Male,Northern Province,Not Attending,Yes,Severe,No,Primary,Highest
+15,Male,Western Province,Not Attending,No,Moderate,Yes,Primary,Second
+18,Male,Western Province,Attending,Yes,Mild,Yes,Primary,Highest
+13,Male,Southern Province,Attending,Yes,Mild,Yes,Primary,Second
+19,Male,Eastern Province,Attending,No,Mild,No,Primary,Lowest
+19,Female,Southern Province,Attending,No,Severe,Yes,Post-Secondary,Fourth
+16,Female,Northern Province,Attending,No,Moderate,No,Secondary,Highest
+15,Male,Kigali,Attending,No,Moderate,Yes,No Education,Highest
+14,Male,Northern Province,Not Attending,No,Moderate,No,No Education,Fourth
+14,Male,Kigali,Not Attending,No,Moderate,No,Primary,Lowest
+17,Female,Kigali,Not Attending,No,Mild,Yes,Primary,Middle
+18,Male,Kigali,Attending,No,Mild,Yes,Secondary,Highest
+13,Male,Western Province,Attending,Yes,Mild,No,No Education,Highest
+15,Male,Northern Province,Attending,No,Mild,No,Secondary,Highest
+17,Male,Northern Province,Attending,No,Mild,Yes,Primary,Second
+13,Male,Kigali,Attending,No,Severe,Yes,Primary,Middle
+16,Female,Southern Province,Attending,No,Mild,Yes,Primary,Second
+16,Female,Western Province,Attending,No,Mild,Yes,Primary,Highest
+19,Male,Western Province,Not Attending,No,Mild,No,Secondary,Highest
+19,Male,Northern Province,Attending,Yes,Moderate,No,Primary,Second
+17,Male,Kigali,Attending,Yes,Mild,No,Primary,Middle
+19,Male,Northern Province,Attending,No,Mild,No,Primary,Fourth
+13,Female,Southern Province,Attending,No,Mild,Yes,Post-Secondary,Fourth
+17,Male,Eastern Province,Attending,No,Moderate,Yes,No Education,Fourth
+18,Female,Northern Province,Attending,No,Severe,No,Secondary,Highest
+15,Female,Kigali,Attending,No,Mild,No,Post-Secondary,Highest
+19,Male,Northern Province,Attending,No,Mild,No,Secondary,Fourth
+16,Male,Eastern Province,Not Attending,No,Mild,No,No Education,Second
+14,Female,Kigali,Attending,No,Mild,No,Primary,Highest
+19,Female,Kigali,Attending,No,Mild,No,No Education,Highest
+16,Female,Southern Province,Attending,Yes,Severe,No,Secondary,Lowest
+13,Female,Southern Province,Attending,Yes,Mild,No,Primary,Lowest
+14,Female,Kigali,Attending,No,Severe,No,Primary,Second
+19,Male,Southern Province,Attending,No,Severe,Yes,Secondary,Middle
+13,Female,Kigali,Not Attending,Yes,Severe,No,Primary,Fourth
+17,Female,Southern Province,Attending,No,Mild,Yes,Primary,Fourth
+14,Male,Eastern Province,Not Attending,Yes,Mild,Yes,Primary,Highest
+17,Female,Kigali,Attending,Yes,Mild,No,Primary,Fourth
+18,Male,Eastern Province,Attending,No,Moderate,Yes,Secondary,Second
+16,Female,Southern Province,Attending,No,Moderate,No,Primary,Highest
+17,Female,Southern Province,Not Attending,No,Moderate,No,No Education,Middle
+13,Female,Kigali,Attending,No,Severe,Yes,Primary,Middle
+19,Female,Southern Province,Not Attending,Yes,Moderate,Yes,Secondary,Lowest
+17,Male,Western Province,Attending,No,Mild,No,Post-Secondary,Highest
+19,Female,Kigali,Attending,Yes,Mild,No,Secondary,Lowest
+18,Female,Kigali,Attending,No,Mild,No,Primary,Middle
+15,Male,Southern Province,Attending,Yes,Mild,No,Primary,Highest
+19,Male,Southern Province,Not Attending,No,Mild,No,Primary,Middle
+14,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Second
+17,Male,Kigali,Not Attending,No,Severe,Yes,Primary,Second
+14,Female,Northern Province,Attending,No,Moderate,No,No Education,Second
+13,Female,Southern Province,Attending,No,Severe,No,No Education,Fourth
+17,Male,Kigali,Not Attending,No,Mild,No,Secondary,Fourth
+13,Female,Kigali,Attending,No,Mild,No,Primary,Fourth
+19,Male,Northern Province,Attending,No,Severe,Yes,Primary,Second
+13,Female,Kigali,Not Attending,Yes,Severe,No,Secondary,Middle
+17,Male,Kigali,Attending,No,Moderate,No,No Education,Highest
+13,Male,Kigali,Attending,No,Mild,No,Secondary,Highest
+19,Female,Northern Province,Not Attending,No,Severe,No,Primary,Middle
+17,Male,Northern Province,Not Attending,No,Mild,No,Primary,Middle
+15,Female,Eastern Province,Attending,No,Mild,Yes,Post-Secondary,Middle
+14,Male,Western Province,Not Attending,No,Mild,No,Post-Secondary,Lowest
+13,Female,Kigali,Not Attending,No,Moderate,No,Primary,Fourth
+14,Female,Kigali,Attending,Yes,Mild,Yes,Secondary,Fourth
+13,Female,Kigali,Attending,No,Mild,Yes,Primary,Lowest
+15,Female,Eastern Province,Attending,No,Mild,Yes,Post-Secondary,Second
+17,Female,Western Province,Not Attending,No,Mild,Yes,Primary,Lowest
+15,Male,Eastern Province,Attending,No,Mild,No,Secondary,Highest
+14,Male,Southern Province,Attending,Yes,Mild,No,Primary,Lowest
+13,Female,Western Province,Attending,Yes,Severe,Yes,Secondary,Lowest
+18,Male,Kigali,Attending,No,Severe,Yes,Secondary,Highest
+14,Female,Western Province,Attending,No,Moderate,Yes,Post-Secondary,Middle
+14,Female,Eastern Province,Attending,Yes,Severe,Yes,Primary,Highest
+16,Female,Kigali,Attending,No,Severe,No,Secondary,Highest
+15,Female,Eastern Province,Attending,Yes,Mild,No,Primary,Lowest
+13,Male,Western Province,Not Attending,Yes,Moderate,No,Primary,Middle
+14,Male,Western Province,Attending,No,Mild,No,Post-Secondary,Middle
+14,Male,Northern Province,Attending,No,Moderate,Yes,Primary,Fourth
+14,Male,Southern Province,Attending,No,Severe,No,Secondary,Lowest
+15,Female,Kigali,Attending,No,Mild,Yes,Primary,Highest
+14,Male,Kigali,Attending,No,Mild,No,Primary,Highest
+16,Female,Kigali,Not Attending,No,Mild,No,Secondary,Highest
+19,Female,Southern Province,Attending,No,Mild,No,Primary,Fourth
+17,Female,Kigali,Attending,No,Moderate,Yes,No Education,Lowest
+19,Female,Southern Province,Not Attending,No,Mild,No,Primary,Highest
+18,Female,Eastern Province,Attending,No,Mild,No,No Education,Second
+14,Female,Kigali,Not Attending,No,Mild,Yes,Secondary,Second
+18,Male,Northern Province,Attending,No,Severe,No,Primary,Highest
+18,Female,Kigali,Not Attending,No,Moderate,Yes,Primary,Highest
+16,Male,Kigali,Not Attending,Yes,Moderate,No,Primary,Lowest
+19,Male,Southern Province,Attending,No,Severe,Yes,Post-Secondary,Middle
+17,Male,Kigali,Not Attending,No,Mild,No,Primary,Highest
+18,Male,Western Province,Not Attending,No,Mild,Yes,Primary,Highest
+16,Female,Kigali,Not Attending,No,Mild,No,Secondary,Highest
+13,Male,Southern Province,Attending,No,Moderate,Yes,Post-Secondary,Highest
+15,Female,Western Province,Attending,Yes,Severe,Yes,Primary,Fourth
+14,Male,Southern Province,Attending,No,Moderate,Yes,Secondary,Highest
+19,Male,Western Province,Attending,No,Severe,Yes,Post-Secondary,Highest
+15,Male,Northern Province,Not Attending,No,Moderate,No,Primary,Middle
+18,Male,Western Province,Attending,No,Severe,No,Secondary,Fourth
+17,Male,Western Province,Attending,No,Mild,No,Primary,Middle
+16,Male,Eastern Province,Attending,No,Moderate,Yes,Primary,Highest
+15,Male,Northern Province,Attending,Yes,Mild,Yes,Primary,Fourth
+19,Female,Southern Province,Attending,No,Mild,Yes,Secondary,Fourth
+14,Male,Northern Province,Attending,No,Mild,No,Secondary,Highest
+16,Male,Kigali,Attending,No,Mild,No,Secondary,Lowest
+17,Female,Northern Province,Attending,Yes,Moderate,No,Primary,Middle
+19,Female,Eastern Province,Attending,No,Moderate,Yes,Primary,Middle
+16,Female,Kigali,Not Attending,Yes,Moderate,No,Primary,Fourth
+16,Female,Northern Province,Not Attending,No,Mild,No,Secondary,Middle
+17,Female,Western Province,Attending,Yes,Mild,No,Primary,Fourth
+16,Male,Western Province,Attending,No,Moderate,No,Secondary,Second
+17,Female,Western Province,Attending,No,Mild,Yes,Primary,Second
+19,Female,Western Province,Attending,No,Mild,Yes,Secondary,Lowest
+19,Female,Eastern Province,Attending,Yes,Mild,No,Primary,Lowest
+18,Male,Eastern Province,Attending,No,Moderate,No,No Education,Highest
+13,Female,Kigali,Attending,No,Moderate,No,Primary,Middle
+14,Male,Kigali,Attending,No,Mild,No,Secondary,Lowest
+18,Female,Kigali,Attending,Yes,Mild,No,Primary,Fourth
+13,Female,Western Province,Not Attending,No,Severe,No,Post-Secondary,Middle
+16,Female,Western Province,Attending,No,Moderate,Yes,Secondary,Middle
+19,Female,Southern Province,Attending,No,Mild,No,Primary,Second
+19,Female,Kigali,Not Attending,Yes,Mild,Yes,No Education,Highest
+18,Female,Western Province,Attending,No,Mild,No,Secondary,Fourth
+16,Male,Kigali,Attending,No,Moderate,Yes,Primary,Highest
+15,Male,Northern Province,Attending,No,Mild,No,Primary,Lowest
+16,Male,Northern Province,Not Attending,No,Mild,Yes,Secondary,Lowest
+13,Male,Southern Province,Not Attending,No,Mild,No,Primary,Second
+18,Male,Western Province,Attending,No,Mild,No,Secondary,Second
+17,Female,Kigali,Attending,No,Moderate,No,Post-Secondary,Highest
+18,Female,Kigali,Attending,Yes,Severe,No,Post-Secondary,Middle
+13,Female,Kigali,Attending,No,Moderate,Yes,No Education,Second
+16,Female,Northern Province,Attending,No,Mild,No,Primary,Second
+17,Female,Kigali,Attending,No,Mild,No,Primary,Fourth
+19,Female,Southern Province,Attending,No,Moderate,No,Secondary,Middle
+13,Female,Kigali,Attending,Yes,Moderate,No,No Education,Middle
+15,Male,Kigali,Attending,No,Mild,No,Primary,Highest
+15,Male,Eastern Province,Not Attending,No,Mild,Yes,Primary,Lowest
+19,Female,Southern Province,Attending,No,Mild,Yes,Post-Secondary,Highest
+18,Female,Southern Province,Attending,Yes,Moderate,No,Primary,Highest
+18,Male,Eastern Province,Attending,No,Mild,No,No Education,Lowest
+17,Female,Kigali,Attending,Yes,Moderate,No,Primary,Second
+16,Female,Northern Province,Attending,No,Moderate,No,Primary,Fourth
+16,Female,Kigali,Not Attending,No,Severe,No,Post-Secondary,Lowest
+17,Male,Kigali,Attending,No,Severe,Yes,Secondary,Fourth
+17,Female,Kigali,Attending,Yes,Mild,No,Primary,Middle
+15,Female,Kigali,Attending,Yes,Moderate,Yes,Primary,Highest
+19,Female,Eastern Province,Not Attending,No,Moderate,No,Secondary,Highest
+17,Male,Western Province,Attending,No,Moderate,No,Primary,Middle
+13,Male,Western Province,Attending,Yes,Severe,No,Primary,Highest
+18,Female,Southern Province,Attending,No,Severe,Yes,Primary,Second
+17,Female,Southern Province,Attending,Yes,Mild,No,Primary,Middle
+15,Female,Western Province,Attending,No,Mild,No,Primary,Middle
+18,Male,Southern Province,Attending,No,Mild,No,Primary,Lowest
+16,Female,Kigali,Not Attending,No,Mild,No,Secondary,Fourth
+13,Male,Southern Province,Attending,Yes,Mild,Yes,Secondary,Middle
+15,Male,Southern Province,Not Attending,Yes,Mild,No,Primary,Lowest
+17,Female,Kigali,Not Attending,No,Mild,Yes,Primary,Highest
+18,Male,Western Province,Attending,No,Mild,No,Primary,Fourth
+16,Female,Kigali,Not Attending,No,Moderate,Yes,Secondary,Fourth
+18,Male,Kigali,Attending,No,Mild,No,No Education,Highest
+18,Female,Western Province,Attending,No,Mild,No,No Education,Second
+18,Male,Eastern Province,Attending,No,Moderate,No,Secondary,Second
+15,Female,Northern Province,Attending,No,Moderate,Yes,Primary,Lowest
+15,Male,Northern Province,Attending,No,Severe,Yes,No Education,Fourth
+15,Male,Kigali,Attending,No,Mild,No,No Education,Lowest
+17,Female,Western Province,Attending,No,Severe,Yes,Secondary,Second
+13,Female,Southern Province,Not Attending,No,Mild,Yes,No Education,Middle
+16,Female,Kigali,Attending,No,Mild,Yes,Primary,Highest
+14,Male,Western Province,Attending,No,Mild,No,Post-Secondary,Highest
+17,Female,Eastern Province,Attending,Yes,Mild,Yes,Post-Secondary,Lowest
+14,Male,Kigali,Attending,No,Mild,No,No Education,Middle
+13,Female,Kigali,Attending,Yes,Mild,No,Post-Secondary,Second
+16,Male,Western Province,Not Attending,No,Severe,Yes,Secondary,Fourth
+19,Male,Western Province,Attending,No,Mild,No,Primary,Middle
+17,Male,Kigali,Attending,Yes,Moderate,No,Primary,Lowest
+16,Male,Eastern Province,Attending,No,Moderate,Yes,Primary,Lowest
+15,Male,Northern Province,Attending,No,Mild,Yes,Post-Secondary,Highest
+18,Male,Eastern Province,Attending,No,Severe,No,Primary,Middle
+14,Male,Kigali,Attending,No,Mild,No,Secondary,Fourth
+17,Male,Southern Province,Not Attending,No,Mild,Yes,Primary,Middle
+18,Female,Western Province,Attending,No,Mild,Yes,Secondary,Second
+13,Male,Western Province,Not Attending,Yes,Moderate,Yes,Primary,Highest
+16,Male,Eastern Province,Attending,No,Moderate,No,Primary,Middle
+16,Female,Kigali,Attending,No,Mild,No,Primary,Lowest
+13,Male,Eastern Province,Attending,Yes,Moderate,No,No Education,Fourth
+17,Female,Northern Province,Attending,No,Mild,Yes,Primary,Fourth
+15,Female,Southern Province,Attending,Yes,Mild,No,Secondary,Fourth
+19,Female,Eastern Province,Attending,No,Moderate,No,No Education,Lowest
+15,Female,Western Province,Not Attending,No,Moderate,No,Secondary,Lowest
+18,Female,Northern Province,Attending,Yes,Mild,Yes,Primary,Middle
+19,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Second
+16,Male,Southern Province,Attending,Yes,Moderate,Yes,Primary,Second
+13,Male,Kigali,Attending,No,Moderate,No,Secondary,Fourth
+15,Female,Eastern Province,Attending,No,Severe,Yes,Primary,Middle
+19,Female,Eastern Province,Attending,No,Mild,No,Post-Secondary,Fourth
+13,Male,Northern Province,Attending,No,Severe,No,No Education,Fourth
+14,Male,Northern Province,Attending,Yes,Severe,No,Primary,Second
+15,Male,Kigali,Not Attending,No,Mild,No,Primary,Middle
+17,Female,Western Province,Attending,No,Mild,No,Secondary,Fourth
+16,Female,Kigali,Attending,No,Severe,Yes,Primary,Lowest
+19,Female,Southern Province,Attending,Yes,Moderate,Yes,Secondary,Middle
+17,Female,Eastern Province,Attending,No,Moderate,Yes,Primary,Second
+16,Female,Southern Province,Attending,No,Mild,Yes,Secondary,Lowest
+18,Female,Western Province,Attending,No,Mild,No,Primary,Second
+13,Female,Western Province,Not Attending,Yes,Moderate,Yes,Secondary,Middle
+17,Female,Northern Province,Attending,No,Mild,Yes,Post-Secondary,Highest
+19,Male,Kigali,Not Attending,No,Severe,No,Primary,Highest
+14,Female,Kigali,Not Attending,No,Mild,Yes,Primary,Second
+15,Male,Eastern Province,Attending,No,Mild,No,Secondary,Fourth
+13,Male,Western Province,Attending,No,Severe,No,Primary,Middle
+14,Male,Western Province,Attending,Yes,Mild,No,Secondary,Lowest
+19,Male,Kigali,Attending,No,Mild,Yes,Primary,Second
+16,Female,Western Province,Attending,Yes,Mild,Yes,Primary,Second
+14,Female,Western Province,Attending,No,Mild,No,Primary,Fourth
+18,Male,Eastern Province,Attending,Yes,Severe,No,Primary,Fourth
+19,Male,Kigali,Attending,No,Mild,Yes,Secondary,Middle
+14,Male,Northern Province,Attending,No,Severe,No,Post-Secondary,Second
+13,Male,Northern Province,Attending,No,Severe,No,No Education,Lowest
+13,Male,Eastern Province,Attending,No,Severe,No,Primary,Lowest
+18,Female,Kigali,Attending,No,Moderate,Yes,Secondary,Middle
+13,Male,Eastern Province,Attending,Yes,Severe,Yes,Primary,Fourth
+16,Female,Kigali,Attending,No,Mild,Yes,Primary,Fourth
+17,Female,Kigali,Not Attending,No,Mild,Yes,No Education,Highest
+13,Male,Western Province,Not Attending,Yes,Moderate,No,Secondary,Highest
+15,Female,Kigali,Attending,No,Moderate,Yes,Secondary,Middle
+17,Female,Eastern Province,Not Attending,No,Moderate,No,Secondary,Lowest
+16,Female,Southern Province,Not Attending,Yes,Mild,Yes,Post-Secondary,Fourth
+18,Male,Western Province,Not Attending,No,Mild,Yes,Secondary,Highest
+13,Female,Western Province,Attending,No,Moderate,No,No Education,Middle
+19,Female,Southern Province,Attending,No,Moderate,No,Secondary,Highest
+19,Female,Kigali,Attending,No,Mild,Yes,Primary,Fourth
+19,Female,Kigali,Attending,Yes,Moderate,No,Primary,Second
+14,Female,Kigali,Attending,Yes,Mild,No,Primary,Middle
+13,Male,Eastern Province,Attending,Yes,Severe,No,Primary,Second
+18,Female,Western Province,Not Attending,Yes,Moderate,Yes,Post-Secondary,Second
+17,Male,Kigali,Attending,No,Moderate,Yes,Primary,Highest
+16,Female,Eastern Province,Attending,No,Moderate,Yes,Secondary,Second
+19,Male,Western Province,Attending,No,Mild,No,Primary,Highest
+18,Male,Northern Province,Attending,No,Moderate,Yes,Post-Secondary,Middle
+18,Male,Western Province,Attending,Yes,Mild,No,Primary,Lowest
+18,Female,Northern Province,Attending,No,Severe,No,Primary,Second
+14,Female,Northern Province,Attending,No,Mild,No,Primary,Fourth
+19,Female,Western Province,Attending,No,Moderate,Yes,Post-Secondary,Middle
+19,Female,Kigali,Attending,No,Mild,Yes,Primary,Highest
+18,Male,Western Province,Not Attending,No,Moderate,No,Primary,Middle
+16,Male,Western Province,Not Attending,No,Severe,No,Secondary,Middle
+16,Male,Western Province,Attending,No,Moderate,No,Post-Secondary,Highest
+17,Male,Kigali,Attending,No,Moderate,No,Secondary,Middle
+16,Female,Western Province,Attending,Yes,Mild,No,Primary,Second
+15,Male,Kigali,Attending,No,Severe,No,Secondary,Lowest
+14,Male,Kigali,Attending,No,Moderate,Yes,Secondary,Second
+13,Male,Eastern Province,Attending,No,Mild,No,Primary,Highest
+14,Female,Kigali,Attending,No,Mild,Yes,Primary,Highest
+16,Male,Northern Province,Attending,Yes,Mild,No,Primary,Middle
+19,Male,Southern Province,Attending,No,Severe,Yes,Primary,Second
+15,Female,Western Province,Not Attending,No,Moderate,Yes,Secondary,Lowest
+13,Female,Western Province,Attending,No,Severe,Yes,Secondary,Highest
+14,Female,Northern Province,Attending,Yes,Moderate,Yes,Primary,Highest
+18,Female,Western Province,Attending,Yes,Mild,Yes,Primary,Lowest
+18,Male,Kigali,Attending,Yes,Moderate,No,Primary,Lowest
+17,Female,Southern Province,Attending,Yes,Moderate,No,Post-Secondary,Fourth
+16,Male,Eastern Province,Not Attending,No,Moderate,Yes,Primary,Middle
+18,Female,Eastern Province,Attending,No,Moderate,No,Secondary,Second
+14,Male,Southern Province,Attending,No,Severe,Yes,Post-Secondary,Highest
+15,Male,Western Province,Not Attending,Yes,Moderate,No,Primary,Lowest
+15,Female,Kigali,Attending,No,Mild,No,Secondary,Second
+16,Female,Northern Province,Not Attending,No,Moderate,Yes,Post-Secondary,Middle
+13,Female,Southern Province,Attending,Yes,Moderate,No,Secondary,Fourth
+17,Female,Kigali,Attending,Yes,Mild,No,Post-Secondary,Middle
+14,Male,Western Province,Not Attending,Yes,Mild,Yes,Post-Secondary,Fourth
+18,Female,Kigali,Attending,No,Mild,Yes,Secondary,Highest
+15,Female,Northern Province,Attending,No,Mild,Yes,Secondary,Fourth
+15,Female,Western Province,Attending,No,Mild,No,Post-Secondary,Highest
+19,Male,Kigali,Attending,No,Mild,No,Primary,Highest
+14,Female,Kigali,Attending,No,Mild,No,Secondary,Fourth
+19,Female,Western Province,Attending,No,Mild,No,No Education,Middle
+13,Male,Western Province,Attending,No,Moderate,Yes,Secondary,Second
+16,Female,Northern Province,Not Attending,No,Moderate,Yes,Primary,Fourth
+14,Female,Western Province,Attending,Yes,Moderate,No,Secondary,Middle
+18,Male,Eastern Province,Attending,No,Moderate,Yes,Secondary,Lowest
+13,Female,Eastern Province,Attending,No,Moderate,No,No Education,Lowest
+18,Male,Eastern Province,Attending,No,Moderate,No,Primary,Fourth
+16,Male,Western Province,Attending,No,Mild,Yes,Post-Secondary,Highest
+18,Female,Western Province,Attending,No,Mild,No,Secondary,Second
+13,Female,Kigali,Not Attending,No,Mild,No,Secondary,Lowest
+19,Female,Northern Province,Attending,No,Moderate,No,Primary,Fourth
+13,Female,Kigali,Attending,No,Moderate,Yes,Secondary,Lowest
+19,Female,Southern Province,Not Attending,No,Severe,Yes,Primary,Lowest
+15,Female,Western Province,Attending,Yes,Severe,Yes,Primary,Highest
+17,Female,Eastern Province,Attending,Yes,Mild,No,No Education,Middle
+17,Male,Southern Province,Attending,No,Mild,Yes,No Education,Highest
+15,Female,Kigali,Attending,No,Moderate,Yes,Primary,Lowest
+17,Female,Southern Province,Attending,Yes,Mild,Yes,Secondary,Middle
+17,Male,Western Province,Attending,No,Mild,No,Post-Secondary,Middle
+18,Male,Kigali,Not Attending,Yes,Mild,No,Primary,Fourth
+15,Male,Western Province,Attending,No,Moderate,No,Primary,Lowest
+13,Female,Western Province,Not Attending,No,Moderate,Yes,Secondary,Middle
+18,Male,Southern Province,Attending,No,Moderate,Yes,Secondary,Middle
+16,Male,Kigali,Attending,Yes,Moderate,Yes,Primary,Second
+14,Female,Southern Province,Not Attending,No,Severe,No,Primary,Middle
+15,Female,Southern Province,Attending,Yes,Mild,Yes,No Education,Fourth
+16,Male,Kigali,Attending,No,Severe,No,Primary,Highest
+19,Female,Eastern Province,Attending,Yes,Moderate,No,Primary,Fourth
+17,Female,Southern Province,Attending,No,Mild,No,No Education,Fourth
+16,Female,Western Province,Attending,No,Mild,Yes,Primary,Middle
+17,Female,Southern Province,Attending,Yes,Moderate,No,Primary,Fourth
+17,Male,Western Province,Attending,No,Severe,No,No Education,Fourth
+14,Male,Western Province,Attending,No,Moderate,No,Primary,Middle
+16,Female,Western Province,Attending,No,Moderate,No,Secondary,Middle
+16,Male,Eastern Province,Attending,Yes,Moderate,Yes,No Education,Highest
+18,Male,Kigali,Attending,No,Moderate,No,Primary,Second
+18,Female,Kigali,Attending,No,Moderate,No,Post-Secondary,Second
+19,Female,Southern Province,Not Attending,No,Mild,Yes,Secondary,Fourth
+18,Male,Southern Province,Attending,No,Severe,No,Primary,Fourth
+15,Male,Southern Province,Attending,Yes,Moderate,No,No Education,Lowest
+17,Female,Southern Province,Attending,No,Mild,No,Primary,Highest
+13,Female,Northern Province,Attending,No,Moderate,No,Secondary,Lowest
+13,Female,Kigali,Attending,No,Moderate,No,Secondary,Highest
+13,Female,Eastern Province,Attending,Yes,Mild,No,Primary,Fourth
+18,Male,Kigali,Attending,No,Moderate,No,Primary,Highest
+16,Male,Southern Province,Attending,No,Moderate,No,Primary,Lowest
+18,Female,Kigali,Attending,No,Moderate,No,Post-Secondary,Lowest
+15,Female,Eastern Province,Attending,Yes,Mild,Yes,Primary,Fourth
+16,Male,Eastern Province,Attending,No,Moderate,No,Secondary,Middle
+19,Female,Kigali,Not Attending,No,Mild,Yes,Primary,Middle
+17,Female,Eastern Province,Attending,Yes,Severe,No,Primary,Second
+14,Male,Northern Province,Attending,No,Mild,Yes,Primary,Second
+18,Female,Kigali,Attending,No,Severe,Yes,Primary,Second
+13,Female,Southern Province,Attending,Yes,Mild,Yes,Primary,Middle
+14,Female,Western Province,Attending,No,Mild,No,Primary,Lowest
+13,Male,Eastern Province,Attending,No,Moderate,No,Primary,Highest
+17,Female,Kigali,Attending,No,Mild,No,No Education,Second
+16,Male,Kigali,Attending,No,Moderate,Yes,Primary,Fourth
+15,Female,Eastern Province,Attending,No,Severe,No,Post-Secondary,Lowest
+17,Male,Western Province,Attending,No,Mild,No,Primary,Highest
+15,Male,Western Province,Attending,Yes,Mild,Yes,Post-Secondary,Lowest
+18,Male,Southern Province,Attending,Yes,Moderate,No,Secondary,Lowest
+18,Male,Western Province,Attending,Yes,Moderate,No,Secondary,Middle
+14,Female,Eastern Province,Attending,Yes,Severe,Yes,Primary,Highest
+18,Female,Northern Province,Attending,No,Mild,No,No Education,Second
+16,Male,Kigali,Attending,Yes,Moderate,No,Primary,Middle
+13,Male,Southern Province,Attending,Yes,Mild,Yes,Primary,Lowest
+17,Female,Eastern Province,Attending,No,Severe,Yes,Primary,Fourth
+14,Female,Kigali,Attending,No,Mild,Yes,Primary,Second
+16,Male,Northern Province,Attending,No,Mild,No,No Education,Lowest
+19,Male,Eastern Province,Attending,No,Mild,Yes,Secondary,Highest
+13,Male,Kigali,Attending,No,Moderate,No,Primary,Second
+19,Male,Kigali,Attending,No,Mild,No,Secondary,Highest
+16,Male,Kigali,Not Attending,No,Mild,No,Primary,Highest
+17,Male,Western Province,Not Attending,Yes,Moderate,Yes,Primary,Middle
+18,Male,Northern Province,Attending,Yes,Mild,No,Secondary,Highest
+17,Male,Kigali,Attending,Yes,Moderate,No,Secondary,Middle
+15,Male,Northern Province,Attending,No,Moderate,Yes,Secondary,Lowest
+18,Male,Southern Province,Attending,No,Moderate,Yes,Primary,Second
+14,Male,Northern Province,Not Attending,No,Severe,No,Primary,Highest
+13,Male,Eastern Province,Attending,No,Mild,No,Secondary,Highest
+14,Male,Southern Province,Attending,No,Mild,Yes,Post-Secondary,Second
+17,Male,Western Province,Attending,No,Mild,No,Primary,Fourth
+15,Female,Eastern Province,Attending,No,Moderate,No,Primary,Fourth
+18,Male,Eastern Province,Not Attending,No,Moderate,Yes,Post-Secondary,Highest
+17,Male,Southern Province,Attending,No,Moderate,No,Primary,Middle
+13,Male,Northern Province,Attending,No,Moderate,No,Primary,Second
+19,Female,Western Province,Attending,No,Severe,No,Primary,Second
+17,Male,Kigali,Not Attending,No,Moderate,No,Post-Secondary,Fourth
+13,Female,Southern Province,Attending,Yes,Severe,Yes,No Education,Lowest
+14,Male,Western Province,Attending,No,Moderate,Yes,Secondary,Fourth
+14,Female,Kigali,Attending,Yes,Moderate,Yes,Primary,Fourth
+14,Female,Kigali,Not Attending,Yes,Moderate,Yes,Post-Secondary,Second
+14,Female,Kigali,Not Attending,Yes,Moderate,Yes,Post-Secondary,Second
+18,Female,Western Province,Not Attending,Yes,Mild,No,Primary,Fourth
+17,Male,Kigali,Not Attending,Yes,Severe,Yes,Primary,Second
+16,Male,Kigali,Attending,No,Severe,No,Secondary,Fourth
+18,Male,Southern Province,Attending,No,Severe,No,Primary,Second
+15,Male,Northern Province,Attending,No,Severe,No,Primary,Fourth
+16,Female,Southern Province,Attending,No,Mild,Yes,Primary,Middle
+17,Male,Northern Province,Attending,No,Severe,No,Primary,Highest
+19,Male,Southern Province,Not Attending,No,Severe,Yes,Secondary,Highest
+19,Female,Kigali,Attending,Yes,Mild,No,Primary,Lowest
+13,Female,Northern Province,Not Attending,No,Moderate,No,Primary,Second
+14,Female,Northern Province,Attending,No,Severe,Yes,Post-Secondary,Fourth
+17,Male,Kigali,Attending,Yes,Severe,No,No Education,Fourth
+13,Female,Eastern Province,Attending,No,Mild,No,Secondary,Middle
+15,Female,Northern Province,Attending,No,Moderate,No,Post-Secondary,Fourth
+15,Female,Northern Province,Attending,Yes,Mild,No,No Education,Middle
+17,Female,Southern Province,Attending,No,Severe,Yes,Primary,Second
+19,Male,Southern Province,Attending,No,Moderate,No,Secondary,Middle
+14,Female,Northern Province,Attending,No,Mild,Yes,Secondary,Fourth
+18,Female,Western Province,Attending,No,Mild,No,Primary,Second
+18,Male,Southern Province,Not Attending,No,Moderate,No,Secondary,Fourth
+15,Male,Western Province,Attending,No,Mild,No,Secondary,Second
+14,Female,Eastern Province,Not Attending,No,Mild,No,Primary,Middle
+14,Male,Northern Province,Attending,No,Mild,Yes,Secondary,Middle
+16,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Middle
+18,Female,Kigali,Attending,No,Moderate,Yes,Secondary,Fourth
+17,Male,Southern Province,Attending,No,Mild,Yes,Primary,Second
+13,Male,Western Province,Attending,No,Severe,Yes,Primary,Fourth
+16,Female,Kigali,Attending,Yes,Severe,No,Secondary,Lowest
+14,Female,Western Province,Attending,No,Severe,Yes,Primary,Lowest
+17,Female,Northern Province,Attending,No,Severe,No,Post-Secondary,Lowest
+19,Female,Southern Province,Attending,No,Mild,No,Primary,Fourth
+18,Female,Kigali,Attending,No,Severe,No,Post-Secondary,Lowest
+17,Female,Northern Province,Attending,No,Mild,No,Primary,Fourth
+15,Male,Kigali,Attending,No,Moderate,Yes,Primary,Second
+16,Female,Northern Province,Attending,No,Moderate,Yes,No Education,Fourth
+17,Male,Kigali,Attending,No,Mild,Yes,Secondary,Second
+17,Male,Kigali,Attending,No,Mild,Yes,Primary,Middle
+13,Male,Kigali,Attending,No,Mild,No,Secondary,Highest
+14,Female,Northern Province,Attending,No,Mild,No,Primary,Middle
+19,Female,Southern Province,Not Attending,No,Mild,Yes,Primary,Lowest
+13,Female,Southern Province,Attending,No,Moderate,Yes,Primary,Second
+18,Female,Eastern Province,Attending,No,Severe,Yes,Primary,Fourth
+18,Female,Kigali,Attending,No,Mild,Yes,Primary,Lowest
+14,Female,Western Province,Attending,No,Moderate,Yes,Secondary,Middle
+19,Male,Kigali,Attending,Yes,Severe,No,Primary,Lowest
+16,Female,Western Province,Attending,Yes,Mild,No,Post-Secondary,Highest
+18,Male,Western Province,Attending,No,Moderate,No,Primary,Fourth
+16,Female,Western Province,Attending,Yes,Mild,Yes,Primary,Highest
+15,Female,Southern Province,Attending,No,Moderate,Yes,Primary,Highest
+17,Female,Western Province,Attending,Yes,Moderate,No,Primary,Highest
+16,Female,Southern Province,Attending,No,Mild,Yes,Primary,Middle
+15,Male,Western Province,Attending,Yes,Mild,No,Primary,Fourth
+16,Male,Western Province,Attending,No,Mild,Yes,Primary,Middle
+13,Male,Western Province,Attending,No,Mild,Yes,Primary,Fourth
+17,Female,Western Province,Attending,No,Severe,Yes,Primary,Highest
+15,Female,Southern Province,Attending,No,Moderate,Yes,Post-Secondary,Fourth
+16,Female,Southern Province,Attending,No,Moderate,Yes,Secondary,Middle
+19,Male,Western Province,Attending,No,Mild,No,Primary,Lowest
+14,Male,Southern Province,Attending,No,Mild,No,Secondary,Fourth
+17,Female,Western Province,Attending,No,Mild,No,No Education,Second
+17,Male,Western Province,Attending,No,Severe,No,Primary,Fourth
+14,Male,Kigali,Attending,Yes,Mild,Yes,Primary,Fourth
+15,Female,Northern Province,Attending,No,Mild,Yes,Post-Secondary,Fourth
+17,Male,Kigali,Attending,No,Mild,No,Post-Secondary,Highest
+18,Female,Southern Province,Attending,No,Mild,No,Primary,Fourth
+15,Male,Northern Province,Attending,Yes,Severe,Yes,Secondary,Fourth
+13,Female,Western Province,Attending,No,Mild,Yes,Primary,Lowest
+19,Female,Kigali,Attending,No,Moderate,No,Primary,Highest
+19,Female,Western Province,Not Attending,No,Severe,No,Secondary,Lowest
+17,Female,Western Province,Attending,Yes,Moderate,No,Primary,Highest
+19,Female,Western Province,Attending,No,Severe,No,Secondary,Middle
+19,Female,Southern Province,Not Attending,No,Mild,Yes,Primary,Lowest
+15,Female,Eastern Province,Not Attending,No,Moderate,No,Secondary,Second
+17,Male,Northern Province,Attending,No,Mild,No,Secondary,Second
+13,Female,Kigali,Attending,Yes,Severe,Yes,Primary,Middle
+17,Female,Southern Province,Attending,No,Severe,No,Secondary,Lowest
+13,Male,Western Province,Attending,No,Severe,No,Secondary,Middle
+13,Female,Western Province,Attending,No,Severe,Yes,Post-Secondary,Fourth
+14,Female,Eastern Province,Attending,No,Moderate,No,Primary,Highest
+19,Female,Kigali,Attending,No,Moderate,No,Secondary,Second
+17,Female,Southern Province,Not Attending,No,Mild,Yes,No Education,Second
+18,Male,Kigali,Attending,Yes,Mild,No,Primary,Second
+14,Female,Kigali,Attending,No,Mild,Yes,No Education,Second
+15,Male,Eastern Province,Not Attending,No,Mild,No,Primary,Highest
+17,Female,Eastern Province,Not Attending,No,Severe,No,Primary,Fourth
+17,Male,Southern Province,Attending,Yes,Mild,Yes,Secondary,Middle
+19,Male,Eastern Province,Attending,Yes,Moderate,Yes,Secondary,Highest
+13,Male,Eastern Province,Not Attending,No,Mild,Yes,Post-Secondary,Lowest
+17,Female,Northern Province,Attending,No,Severe,Yes,No Education,Highest
+16,Female,Western Province,Attending,No,Moderate,No,Post-Secondary,Lowest
+14,Female,Southern Province,Attending,No,Moderate,No,Primary,Highest
+13,Male,Eastern Province,Not Attending,No,Mild,Yes,Primary,Fourth
+13,Female,Kigali,Not Attending,No,Mild,Yes,Primary,Highest
+18,Female,Kigali,Attending,No,Moderate,No,Secondary,Fourth
+18,Female,Southern Province,Attending,Yes,Moderate,Yes,Secondary,Lowest
+15,Male,Northern Province,Attending,No,Mild,Yes,Primary,Middle
+17,Female,Western Province,Attending,Yes,Mild,Yes,Primary,Lowest
+15,Male,Northern Province,Not Attending,Yes,Moderate,No,Secondary,Fourth
+17,Female,Northern Province,Not Attending,Yes,Severe,No,Primary,Lowest
+13,Female,Southern Province,Attending,No,Severe,No,Primary,Highest
+13,Female,Eastern Province,Attending,No,Severe,No,Secondary,Highest
+18,Male,Eastern Province,Attending,No,Moderate,No,Primary,Middle
+16,Male,Kigali,Attending,No,Mild,Yes,Secondary,Lowest
+19,Male,Northern Province,Attending,No,Mild,No,Post-Secondary,Second
+16,Female,Kigali,Attending,No,Mild,No,Secondary,Middle
+15,Male,Southern Province,Not Attending,Yes,Severe,Yes,Secondary,Lowest
+14,Male,Southern Province,Attending,No,Moderate,No,Primary,Fourth
+17,Male,Western Province,Not Attending,No,Mild,No,Primary,Fourth
+15,Female,Eastern Province,Attending,No,Severe,No,Secondary,Second
+16,Male,Kigali,Attending,No,Mild,Yes,Primary,Second
+13,Female,Western Province,Not Attending,No,Severe,Yes,Primary,Lowest
+19,Male,Kigali,Attending,Yes,Mild,No,Secondary,Lowest
+13,Male,Eastern Province,Attending,No,Moderate,No,Primary,Highest
+13,Female,Eastern Province,Attending,Yes,Severe,No,Secondary,Lowest
+15,Male,Northern Province,Attending,Yes,Mild,Yes,Primary,Fourth
+19,Female,Eastern Province,Attending,No,Moderate,No,No Education,Second
+16,Male,Northern Province,Attending,No,Moderate,No,Secondary,Fourth
+17,Male,Southern Province,Attending,No,Moderate,Yes,Primary,Second
+15,Male,Southern Province,Not Attending,No,Mild,Yes,Primary,Second
+18,Female,Northern Province,Attending,Yes,Mild,No,Primary,Middle
+17,Female,Western Province,Attending,Yes,Moderate,No,Primary,Fourth
+18,Male,Northern Province,Not Attending,No,Severe,Yes,Primary,Fourth
+19,Female,Northern Province,Attending,No,Severe,No,Primary,Highest
+17,Male,Eastern Province,Attending,No,Moderate,Yes,Primary,Fourth
+17,Male,Western Province,Attending,No,Mild,Yes,Primary,Second
+13,Male,Northern Province,Attending,No,Mild,Yes,Primary,Middle
+13,Female,Kigali,Attending,No,Mild,Yes,No Education,Second
+13,Female,Eastern Province,Attending,No,Severe,No,Post-Secondary,Highest
+17,Female,Eastern Province,Not Attending,No,Moderate,No,Primary,Second
+16,Female,Northern Province,Attending,No,Moderate,Yes,Primary,Lowest
+18,Female,Eastern Province,Attending,Yes,Moderate,Yes,Primary,Lowest
+13,Female,Northern Province,Attending,Yes,Severe,No,Primary,Middle
+17,Female,Western Province,Not Attending,No,Mild,No,Primary,Middle
+16,Female,Western Province,Attending,No,Moderate,Yes,Post-Secondary,Middle
+18,Male,Southern Province,Attending,Yes,Moderate,Yes,Secondary,Middle
+13,Male,Southern Province,Not Attending,No,Mild,No,Post-Secondary,Middle
+19,Male,Kigali,Attending,No,Severe,No,Secondary,Second
+14,Male,Northern Province,Not Attending,No,Mild,No,Primary,Second
+16,Female,Kigali,Attending,No,Mild,No,Secondary,Fourth
+16,Male,Western Province,Not Attending,No,Moderate,Yes,Secondary,Highest
+14,Male,Western Province,Attending,No,Mild,No,Secondary,Highest
+19,Male,Southern Province,Not Attending,Yes,Mild,Yes,Primary,Lowest
+15,Male,Eastern Province,Not Attending,No,Severe,No,Primary,Second
+18,Male,Northern Province,Attending,No,Severe,Yes,Primary,Second
+16,Female,Northern Province,Attending,No,Moderate,No,Primary,Second
+18,Female,Western Province,Attending,No,Mild,No,Post-Secondary,Lowest
+16,Male,Western Province,Attending,No,Severe,No,Post-Secondary,Lowest
+14,Male,Northern Province,Attending,No,Severe,Yes,Primary,Highest
+19,Female,Kigali,Attending,No,Mild,Yes,Primary,Lowest
+18,Male,Western Province,Attending,No,Moderate,No,Primary,Middle
+16,Male,Western Province,Attending,Yes,Severe,No,Primary,Lowest
+18,Female,Northern Province,Attending,No,Mild,Yes,Primary,Highest
+16,Male,Eastern Province,Attending,No,Mild,No,Secondary,Lowest
+14,Male,Eastern Province,Attending,No,Moderate,No,No Education,Fourth
+15,Female,Western Province,Not Attending,Yes,Severe,No,Post-Secondary,Middle
+16,Female,Western Province,Not Attending,No,Severe,No,Primary,Fourth
+17,Female,Southern Province,Attending,No,Mild,Yes,Primary,Second
+15,Male,Western Province,Attending,No,Moderate,No,Post-Secondary,Highest
+17,Female,Western Province,Attending,Yes,Mild,No,Primary,Highest
+19,Male,Kigali,Attending,No,Moderate,No,No Education,Lowest
+14,Male,Northern Province,Attending,No,Moderate,No,Secondary,Second
+14,Male,Northern Province,Attending,No,Mild,No,Primary,Middle
+16,Male,Kigali,Not Attending,Yes,Mild,No,Primary,Lowest
+13,Female,Western Province,Attending,No,Moderate,No,Secondary,Second
+13,Female,Eastern Province,Not Attending,Yes,Mild,No,Secondary,Lowest
+17,Male,Northern Province,Attending,Yes,Mild,Yes,Primary,Fourth
+18,Male,Western Province,Attending,No,Moderate,Yes,No Education,Lowest
+15,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Lowest
+19,Male,Kigali,Attending,No,Moderate,Yes,Secondary,Lowest
+13,Female,Northern Province,Not Attending,No,Severe,No,Primary,Middle
+18,Female,Western Province,Attending,No,Moderate,Yes,Primary,Highest
+13,Female,Kigali,Not Attending,No,Severe,Yes,Secondary,Middle
+18,Male,Western Province,Attending,No,Mild,Yes,Primary,Lowest
+18,Male,Kigali,Attending,No,Mild,Yes,Primary,Fourth
+14,Female,Western Province,Attending,No,Severe,No,Secondary,Highest
+14,Female,Western Province,Attending,No,Mild,No,Primary,Lowest
+19,Male,Kigali,Attending,No,Moderate,No,Secondary,Second
+16,Female,Kigali,Attending,Yes,Mild,No,Secondary,Middle
+15,Female,Southern Province,Not Attending,Yes,Mild,Yes,Primary,Second
+15,Male,Kigali,Attending,No,Mild,No,Secondary,Middle
+15,Female,Western Province,Attending,No,Severe,No,No Education,Lowest
+14,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Middle
+15,Male,Western Province,Attending,No,Mild,Yes,Primary,Lowest
+13,Female,Eastern Province,Attending,No,Severe,No,Post-Secondary,Second
+14,Female,Northern Province,Attending,No,Severe,Yes,No Education,Fourth
+16,Male,Kigali,Attending,Yes,Severe,No,Primary,Lowest
+19,Male,Kigali,Attending,No,Mild,Yes,No Education,Middle
+19,Male,Kigali,Attending,No,Moderate,No,Primary,Highest
+19,Male,Southern Province,Attending,No,Severe,No,Post-Secondary,Second
+14,Female,Eastern Province,Attending,Yes,Moderate,No,No Education,Fourth
+13,Female,Northern Province,Attending,No,Severe,No,No Education,Lowest
+17,Female,Northern Province,Not Attending,No,Moderate,Yes,Primary,Highest
+16,Female,Western Province,Not Attending,Yes,Mild,No,Primary,Middle
+14,Male,Southern Province,Not Attending,No,Mild,No,Secondary,Fourth
+15,Female,Kigali,Attending,Yes,Moderate,Yes,Primary,Middle
+13,Female,Kigali,Attending,Yes,Severe,Yes,No Education,Highest
+18,Male,Northern Province,Not Attending,No,Moderate,No,Primary,Highest
+15,Male,Eastern Province,Attending,No,Mild,Yes,Secondary,Highest
+18,Male,Northern Province,Attending,No,Mild,No,No Education,Fourth
+16,Male,Western Province,Attending,No,Moderate,Yes,Primary,Second
+18,Male,Kigali,Attending,Yes,Mild,No,Secondary,Fourth
+18,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Fourth
+13,Male,Kigali,Attending,No,Moderate,No,Primary,Fourth
+16,Male,Kigali,Attending,No,Moderate,No,Secondary,Highest
+13,Male,Kigali,Attending,Yes,Moderate,No,Primary,Middle
+18,Male,Kigali,Attending,No,Mild,No,Primary,Lowest
+14,Male,Kigali,Attending,No,Moderate,No,Post-Secondary,Second
+16,Male,Kigali,Attending,No,Mild,No,Primary,Lowest
+16,Female,Western Province,Not Attending,No,Severe,No,Primary,Highest
+16,Female,Eastern Province,Attending,Yes,Mild,No,No Education,Second
+16,Female,Northern Province,Attending,Yes,Moderate,No,Secondary,Fourth
+15,Female,Eastern Province,Attending,No,Severe,No,Secondary,Second
+17,Female,Kigali,Attending,No,Mild,No,Post-Secondary,Lowest
+14,Male,Western Province,Attending,Yes,Moderate,Yes,Primary,Highest
+16,Female,Northern Province,Attending,No,Severe,No,No Education,Second
+17,Male,Western Province,Attending,No,Mild,No,Secondary,Lowest
+18,Male,Northern Province,Attending,No,Moderate,No,Primary,Highest
+16,Female,Kigali,Attending,No,Severe,No,Secondary,Second
+15,Male,Western Province,Attending,No,Severe,No,Post-Secondary,Middle
+19,Male,Kigali,Not Attending,Yes,Severe,No,Secondary,Middle
+14,Female,Northern Province,Attending,No,Mild,Yes,Primary,Highest
+17,Female,Southern Province,Attending,No,Severe,Yes,Primary,Middle
+15,Male,Southern Province,Not Attending,No,Mild,No,Primary,Middle
+14,Male,Southern Province,Attending,No,Mild,No,Secondary,Middle
+15,Female,Kigali,Attending,Yes,Severe,No,Secondary,Lowest
+13,Male,Kigali,Attending,No,Mild,Yes,Secondary,Middle
+17,Male,Eastern Province,Attending,No,Mild,Yes,Primary,Middle
+13,Male,Eastern Province,Attending,No,Moderate,No,Primary,Second
+17,Male,Kigali,Attending,No,Moderate,No,Primary,Second
+16,Male,Northern Province,Attending,No,Moderate,No,Secondary,Lowest
+18,Female,Northern Province,Not Attending,No,Moderate,No,Secondary,Fourth
+13,Male,Western Province,Attending,No,Moderate,Yes,Primary,Fourth
+14,Female,Eastern Province,Attending,Yes,Mild,No,Secondary,Second
+17,Female,Kigali,Attending,Yes,Severe,No,Primary,Highest
+17,Female,Southern Province,Attending,No,Mild,No,Secondary,Middle
+18,Male,Western Province,Attending,No,Mild,No,Primary,Middle
+16,Male,Western Province,Attending,No,Mild,Yes,Primary,Middle
+18,Female,Eastern Province,Attending,No,Mild,No,Primary,Highest
+18,Male,Western Province,Attending,No,Mild,No,No Education,Middle
+14,Male,Western Province,Attending,No,Severe,Yes,Primary,Fourth
+19,Male,Eastern Province,Attending,No,Mild,No,Primary,Lowest
+15,Male,Southern Province,Attending,Yes,Mild,No,Secondary,Middle
+15,Male,Northern Province,Attending,No,Mild,Yes,Secondary,Second
+15,Female,Northern Province,Attending,Yes,Mild,Yes,Primary,Middle
+15,Male,Northern Province,Attending,No,Severe,Yes,Primary,Highest
+16,Male,Kigali,Attending,No,Severe,No,Primary,Lowest
+17,Female,Kigali,Not Attending,No,Mild,Yes,Primary,Middle
+16,Female,Eastern Province,Not Attending,Yes,Moderate,Yes,Primary,Highest
+19,Female,Northern Province,Attending,No,Mild,No,Secondary,Second
+14,Female,Northern Province,Attending,No,Mild,No,Post-Secondary,Fourth
+15,Male,Northern Province,Attending,No,Mild,No,Secondary,Middle
+13,Male,Northern Province,Attending,No,Moderate,No,Primary,Second
+14,Female,Southern Province,Not Attending,Yes,Moderate,Yes,Primary,Fourth
+13,Male,Western Province,Not Attending,No,Mild,No,Secondary,Highest
+19,Female,Northern Province,Not Attending,No,Mild,Yes,Primary,Second
+18,Male,Kigali,Attending,No,Mild,Yes,Primary,Middle
+13,Female,Kigali,Attending,Yes,Moderate,No,Primary,Fourth
+16,Female,Western Province,Attending,No,Severe,No,Post-Secondary,Middle
+15,Male,Kigali,Attending,Yes,Moderate,Yes,Primary,Highest
+18,Female,Western Province,Attending,No,Moderate,No,Post-Secondary,Fourth
+16,Male,Northern Province,Attending,Yes,Mild,No,Primary,Second
+16,Male,Southern Province,Attending,Yes,Mild,No,Secondary,Fourth
+16,Female,Western Province,Not Attending,No,Moderate,Yes,Primary,Fourth
+16,Male,Kigali,Attending,Yes,Moderate,No,Post-Secondary,Middle
+19,Male,Southern Province,Attending,No,Severe,No,Primary,Fourth
+19,Female,Kigali,Attending,No,Mild,Yes,Primary,Second
+18,Male,Kigali,Not Attending,Yes,Mild,No,Post-Secondary,Highest
+16,Male,Eastern Province,Not Attending,No,Mild,No,Secondary,Lowest
+17,Male,Southern Province,Attending,No,Mild,No,Primary,Highest
+19,Female,Eastern Province,Not Attending,No,Mild,Yes,Post-Secondary,Highest
+14,Female,Western Province,Not Attending,Yes,Mild,No,Primary,Fourth
+15,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Highest
+19,Male,Western Province,Attending,No,Moderate,Yes,Secondary,Highest
+13,Female,Western Province,Not Attending,Yes,Mild,No,Primary,Highest
+17,Female,Northern Province,Attending,No,Mild,No,Primary,Second
+16,Male,Western Province,Attending,No,Mild,No,No Education,Lowest
+18,Male,Southern Province,Not Attending,Yes,Mild,Yes,Primary,Middle
+18,Male,Western Province,Attending,No,Moderate,Yes,Primary,Fourth
+14,Female,Western Province,Attending,Yes,Moderate,No,Primary,Second
+18,Male,Eastern Province,Attending,No,Severe,Yes,Primary,Lowest
+14,Male,Kigali,Attending,No,Mild,No,Primary,Middle
+19,Male,Kigali,Attending,Yes,Severe,No,Primary,Second
+19,Female,Kigali,Attending,No,Mild,Yes,Primary,Middle
+14,Female,Eastern Province,Attending,No,Mild,No,No Education,Second
+18,Female,Western Province,Attending,Yes,Mild,No,No Education,Fourth
+14,Male,Northern Province,Attending,Yes,Moderate,No,Primary,Middle
+18,Female,Eastern Province,Not Attending,No,Mild,No,Secondary,Lowest
+14,Female,Kigali,Attending,No,Severe,Yes,Primary,Middle
+13,Male,Southern Province,Attending,Yes,Mild,Yes,Secondary,Middle
+17,Male,Western Province,Attending,No,Moderate,No,Primary,Lowest
+15,Male,Western Province,Attending,No,Severe,Yes,Primary,Second
+18,Male,Southern Province,Attending,No,Moderate,No,Primary,Highest
+18,Female,Kigali,Attending,Yes,Mild,No,Primary,Highest
+17,Male,Eastern Province,Attending,No,Moderate,Yes,Primary,Lowest
+15,Male,Western Province,Not Attending,No,Mild,No,Secondary,Lowest
+13,Male,Kigali,Attending,No,Mild,Yes,Post-Secondary,Middle
+16,Female,Western Province,Attending,No,Mild,No,Primary,Middle
+14,Male,Kigali,Attending,No,Mild,Yes,Primary,Lowest
+19,Male,Kigali,Attending,No,Mild,No,Post-Secondary,Highest
+13,Male,Southern Province,Not Attending,No,Mild,No,Primary,Middle
+17,Male,Kigali,Not Attending,No,Moderate,No,Secondary,Second
+16,Female,Southern Province,Not Attending,No,Moderate,Yes,Primary,Highest
+19,Male,Kigali,Attending,No,Moderate,No,Primary,Second
+14,Male,Western Province,Attending,No,Moderate,No,Primary,Highest
+19,Male,Western Province,Attending,No,Mild,Yes,Secondary,Middle
+16,Female,Kigali,Attending,Yes,Moderate,Yes,Primary,Highest
+13,Male,Northern Province,Attending,Yes,Severe,Yes,No Education,Lowest
+14,Female,Western Province,Attending,No,Severe,No,Secondary,Lowest
+17,Female,Northern Province,Attending,Yes,Severe,Yes,Primary,Second
+15,Female,Southern Province,Attending,No,Mild,No,Secondary,Lowest
+18,Male,Western Province,Attending,No,Severe,No,Primary,Second
+19,Male,Southern Province,Attending,Yes,Mild,No,No Education,Fourth
+15,Male,Western Province,Attending,No,Mild,No,No Education,Middle
+18,Female,Southern Province,Attending,No,Moderate,No,Primary,Highest
+13,Female,Kigali,Attending,No,Moderate,No,No Education,Fourth
+17,Female,Northern Province,Attending,Yes,Mild,No,Secondary,Fourth
+15,Female,Northern Province,Attending,Yes,Moderate,No,Secondary,Middle
+16,Female,Eastern Province,Attending,Yes,Mild,No,Secondary,Second
+15,Female,Kigali,Attending,No,Severe,No,Primary,Lowest
+19,Male,Western Province,Not Attending,No,Moderate,Yes,Post-Secondary,Middle
+19,Female,Northern Province,Attending,No,Moderate,No,Primary,Highest
+14,Male,Southern Province,Attending,Yes,Mild,No,Secondary,Lowest
+15,Female,Northern Province,Attending,No,Mild,Yes,Secondary,Second
+19,Male,Western Province,Attending,Yes,Mild,Yes,Primary,Middle
+18,Female,Western Province,Attending,Yes,Moderate,No,Secondary,Highest
+16,Female,Western Province,Attending,No,Severe,No,Primary,Highest
+16,Male,Southern Province,Attending,Yes,Mild,No,Primary,Middle
+14,Female,Southern Province,Not Attending,No,Moderate,No,Secondary,Second
+13,Male,Kigali,Attending,Yes,Moderate,Yes,Primary,Lowest
+14,Male,Eastern Province,Attending,Yes,Severe,Yes,Primary,Fourth
+17,Male,Kigali,Not Attending,Yes,Moderate,Yes,No Education,Lowest
+16,Female,Northern Province,Attending,No,Mild,No,Primary,Highest
+19,Male,Eastern Province,Attending,No,Mild,No,Post-Secondary,Second
+15,Male,Eastern Province,Attending,No,Severe,Yes,Secondary,Middle
+15,Male,Kigali,Not Attending,Yes,Mild,No,Primary,Fourth
+16,Female,Southern Province,Attending,No,Moderate,No,Primary,Middle
+16,Female,Western Province,Attending,Yes,Severe,No,Secondary,Second
+14,Male,Southern Province,Not Attending,Yes,Mild,No,Primary,Lowest
+13,Female,Northern Province,Attending,No,Moderate,Yes,Post-Secondary,Highest
+15,Female,Northern Province,Attending,No,Mild,No,Post-Secondary,Highest
+14,Female,Northern Province,Attending,Yes,Mild,No,Primary,Lowest
+19,Female,Southern Province,Attending,No,Mild,No,Secondary,Lowest
+14,Female,Northern Province,Attending,No,Mild,No,Primary,Middle
+16,Female,Western Province,Attending,No,Moderate,No,Secondary,Second
+15,Male,Northern Province,Attending,Yes,Moderate,No,Primary,Lowest
+14,Male,Northern Province,Attending,No,Moderate,Yes,Primary,Middle
+14,Female,Northern Province,Not Attending,No,Moderate,Yes,Secondary,Second
+13,Male,Eastern Province,Attending,Yes,Mild,No,Primary,Fourth
+14,Female,Kigali,Not Attending,No,Mild,Yes,Primary,Second
+17,Male,Kigali,Not Attending,No,Mild,No,Secondary,Fourth
+19,Female,Northern Province,Attending,No,Mild,No,No Education,Lowest
+17,Male,Kigali,Attending,No,Mild,No,Secondary,Middle
+15,Female,Kigali,Attending,No,Moderate,Yes,Primary,Second
+19,Female,Kigali,Attending,No,Moderate,Yes,No Education,Middle
+13,Female,Kigali,Not Attending,Yes,Moderate,No,Primary,Middle
+16,Male,Kigali,Attending,Yes,Moderate,Yes,Primary,Second
+17,Female,Kigali,Not Attending,No,Moderate,No,Primary,Middle
+18,Male,Kigali,Attending,No,Severe,Yes,No Education,Second
+14,Male,Kigali,Attending,No,Severe,No,Secondary,Highest
+18,Female,Northern Province,Attending,No,Moderate,No,Primary,Fourth
+18,Female,Northern Province,Attending,No,Mild,No,Secondary,Fourth
+14,Male,Kigali,Attending,Yes,Moderate,No,Secondary,Second
+18,Female,Eastern Province,Attending,Yes,Mild,No,Secondary,Highest
+15,Male,Kigali,Attending,No,Mild,No,Primary,Highest
+16,Female,Southern Province,Attending,No,Mild,Yes,Secondary,Second
+19,Female,Kigali,Attending,No,Moderate,Yes,Post-Secondary,Highest
+13,Male,Western Province,Attending,No,Moderate,No,Primary,Lowest
+19,Female,Kigali,Attending,No,Mild,Yes,Secondary,Highest
+14,Male,Western Province,Attending,No,Mild,No,Primary,Lowest
+16,Male,Kigali,Attending,Yes,Moderate,No,Primary,Lowest
+19,Male,Eastern Province,Attending,No,Mild,Yes,Primary,Lowest
+14,Male,Northern Province,Attending,Yes,Moderate,No,No Education,Middle
+16,Male,Kigali,Not Attending,No,Moderate,No,Secondary,Fourth
+14,Female,Western Province,Not Attending,No,Moderate,No,Primary,Fourth
+15,Male,Southern Province,Attending,No,Mild,Yes,Primary,Middle
+18,Male,Western Province,Not Attending,No,Mild,Yes,Post-Secondary,Second
+17,Female,Southern Province,Not Attending,Yes,Mild,Yes,Post-Secondary,Middle
+14,Female,Western Province,Attending,No,Mild,No,Secondary,Fourth
+19,Male,Southern Province,Attending,Yes,Mild,No,Primary,Middle
+15,Female,Eastern Province,Attending,No,Mild,No,Primary,Lowest
+15,Female,Eastern Province,Not Attending,No,Severe,Yes,Primary,Lowest
+13,Female,Kigali,Attending,No,Mild,No,Primary,Second
+19,Female,Northern Province,Not Attending,No,Mild,Yes,Primary,Lowest
+18,Male,Northern Province,Attending,No,Moderate,No,Post-Secondary,Fourth
+16,Female,Eastern Province,Attending,No,Moderate,No,Primary,Middle
+16,Female,Kigali,Not Attending,No,Moderate,No,Post-Secondary,Fourth
+15,Female,Western Province,Attending,No,Mild,Yes,Primary,Highest
+17,Female,Western Province,Attending,Yes,Mild,No,Secondary,Second
+13,Male,Kigali,Attending,No,Mild,No,Post-Secondary,Fourth
+15,Male,Northern Province,Attending,No,Severe,No,Primary,Middle
+16,Female,Northern Province,Attending,Yes,Mild,No,Secondary,Fourth
+13,Male,Eastern Province,Attending,No,Mild,Yes,Secondary,Lowest
+15,Female,Southern Province,Attending,No,Mild,No,Primary,Lowest
+15,Female,Kigali,Attending,No,Mild,No,Secondary,Highest
+13,Male,Eastern Province,Attending,Yes,Mild,No,Primary,Lowest
+19,Male,Kigali,Not Attending,Yes,Mild,No,Primary,Fourth
+15,Male,Southern Province,Attending,No,Mild,No,Secondary,Highest
+18,Male,Southern Province,Attending,No,Moderate,No,Post-Secondary,Middle
+17,Female,Kigali,Attending,No,Mild,No,Primary,Second
+17,Female,Southern Province,Attending,No,Mild,No,Secondary,Fourth
+19,Female,Northern Province,Attending,Yes,Mild,Yes,Primary,Lowest
+14,Male,Kigali,Not Attending,No,Mild,No,Primary,Middle
+15,Female,Northern Province,Attending,No,Mild,No,Primary,Fourth
+15,Female,Southern Province,Attending,No,Severe,No,Secondary,Lowest
+16,Male,Kigali,Not Attending,No,Moderate,No,Post-Secondary,Highest
+19,Female,Southern Province,Attending,No,Mild,No,Primary,Highest
+13,Female,Kigali,Not Attending,No,Mild,Yes,Primary,Fourth
+14,Female,Southern Province,Attending,No,Moderate,No,Primary,Highest
+16,Female,Western Province,Attending,No,Severe,Yes,Primary,Fourth
+15,Female,Eastern Province,Attending,Yes,Mild,No,Primary,Fourth
+15,Female,Kigali,Attending,No,Moderate,Yes,No Education,Second
+16,Female,Kigali,Attending,No,Severe,No,Secondary,Lowest
+16,Female,Kigali,Not Attending,Yes,Mild,No,Primary,Fourth
+16,Male,Eastern Province,Attending,No,Severe,No,Primary,Highest
+19,Male,Southern Province,Attending,No,Moderate,No,Secondary,Highest
+18,Male,Kigali,Attending,No,Moderate,Yes,Primary,Lowest
+17,Male,Western Province,Attending,Yes,Moderate,No,Primary,Fourth
+14,Female,Western Province,Attending,No,Severe,Yes,Primary,Lowest
+19,Female,Eastern Province,Attending,No,Severe,No,Primary,Lowest
+18,Male,Eastern Province,Attending,No,Moderate,No,Secondary,Highest
+17,Female,Northern Province,Attending,Yes,Mild,Yes,Primary,Middle
+17,Female,Southern Province,Attending,Yes,Moderate,No,Secondary,Highest
+17,Female,Southern Province,Attending,No,Severe,No,Primary,Second
+18,Female,Northern Province,Attending,No,Mild,Yes,Secondary,Highest
+16,Female,Northern Province,Attending,No,Mild,No,No Education,Fourth
+19,Male,Western Province,Attending,Yes,Mild,No,Secondary,Lowest
+16,Female,Eastern Province,Not Attending,No,Mild,No,Post-Secondary,Highest
+13,Female,Kigali,Attending,No,Moderate,No,No Education,Fourth
+14,Male,Eastern Province,Attending,No,Moderate,Yes,Secondary,Second
+13,Male,Eastern Province,Attending,No,Severe,Yes,Post-Secondary,Middle
+13,Female,Kigali,Attending,No,Mild,No,Secondary,Fourth
+15,Female,Kigali,Attending,No,Mild,No,Primary,Lowest
+17,Female,Kigali,Attending,No,Moderate,No,Primary,Middle
+14,Male,Southern Province,Attending,No,Severe,No,Primary,Middle
+13,Female,Kigali,Attending,No,Moderate,No,Primary,Highest
+14,Female,Kigali,Attending,No,Severe,Yes,No Education,Highest
+14,Male,Eastern Province,Attending,No,Mild,Yes,Primary,Highest
+16,Female,Southern Province,Attending,Yes,Mild,No,Primary,Lowest
+15,Male,Southern Province,Attending,No,Mild,Yes,Secondary,Fourth
+19,Male,Eastern Province,Attending,No,Mild,No,Primary,Highest
+14,Male,Northern Province,Attending,No,Moderate,No,Secondary,Fourth
+15,Female,Western Province,Not Attending,Yes,Moderate,No,Primary,Highest
+13,Female,Southern Province,Not Attending,Yes,Severe,No,Post-Secondary,Highest
+19,Male,Northern Province,Attending,No,Severe,Yes,Primary,Fourth
+16,Female,Kigali,Attending,Yes,Severe,No,Primary,Middle
+16,Female,Southern Province,Attending,No,Mild,Yes,Secondary,Highest
+17,Female,Northern Province,Attending,Yes,Moderate,No,Primary,Lowest
+18,Male,Northern Province,Attending,Yes,Moderate,No,Secondary,Highest
+18,Female,Northern Province,Not Attending,No,Moderate,Yes,Secondary,Highest
+18,Male,Southern Province,Attending,No,Moderate,Yes,Secondary,Fourth
+17,Male,Northern Province,Attending,No,Mild,No,Post-Secondary,Fourth
+15,Female,Eastern Province,Attending,Yes,Mild,No,Primary,Middle
+18,Male,Western Province,Not Attending,No,Severe,No,Secondary,Middle
+15,Female,Kigali,Attending,No,Mild,No,Secondary,Fourth
+15,Female,Southern Province,Attending,Yes,Mild,No,Secondary,Middle
+16,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Lowest
+18,Female,Western Province,Not Attending,No,Moderate,Yes,Primary,Fourth
+19,Male,Southern Province,Not Attending,No,Moderate,No,Primary,Second
+19,Female,Kigali,Attending,No,Severe,No,No Education,Middle
+13,Male,Kigali,Attending,No,Severe,No,No Education,Middle
+19,Male,Southern Province,Attending,No,Mild,Yes,Primary,Lowest
+16,Male,Kigali,Attending,Yes,Moderate,Yes,Secondary,Highest
+16,Female,Kigali,Attending,No,Moderate,Yes,No Education,Highest
+19,Male,Western Province,Attending,No,Mild,No,Secondary,Fourth
+17,Male,Eastern Province,Attending,No,Mild,No,Primary,Middle
+17,Female,Kigali,Not Attending,No,Moderate,No,Primary,Middle
+17,Male,Northern Province,Attending,No,Moderate,Yes,Secondary,Lowest
+19,Male,Southern Province,Attending,No,Mild,No,Post-Secondary,Highest
+19,Male,Kigali,Attending,Yes,Moderate,Yes,Primary,Middle
+17,Female,Northern Province,Attending,No,Severe,Yes,Primary,Fourth
+19,Female,Western Province,Attending,No,Moderate,Yes,Secondary,Middle
+13,Male,Eastern Province,Attending,No,Moderate,No,Secondary,Lowest
+16,Female,Eastern Province,Attending,No,Moderate,No,Secondary,Fourth
+16,Female,Southern Province,Attending,Yes,Mild,No,Primary,Highest
+19,Male,Western Province,Attending,Yes,Mild,No,Secondary,Fourth
+19,Female,Eastern Province,Attending,Yes,Mild,No,Secondary,Second
+15,Female,Kigali,Attending,No,Mild,No,Secondary,Second
+16,Male,Western Province,Attending,Yes,Moderate,Yes,No Education,Middle
+18,Male,Western Province,Not Attending,Yes,Mild,No,Post-Secondary,Highest
+18,Female,Western Province,Not Attending,No,Severe,No,Post-Secondary,Fourth
+14,Female,Northern Province,Not Attending,Yes,Moderate,Yes,Post-Secondary,Middle
+19,Male,Northern Province,Attending,Yes,Mild,No,Post-Secondary,Lowest
+17,Female,Western Province,Attending,No,Mild,Yes,Post-Secondary,Highest
+13,Male,Kigali,Attending,No,Mild,No,Primary,Second
+16,Female,Eastern Province,Attending,No,Moderate,No,Primary,Fourth
+13,Female,Southern Province,Attending,No,Moderate,Yes,Secondary,Highest
+13,Male,Northern Province,Attending,No,Mild,Yes,Primary,Fourth
+17,Male,Southern Province,Attending,No,Severe,Yes,Secondary,Highest
+13,Female,Eastern Province,Attending,No,Mild,Yes,Secondary,Fourth
+18,Male,Western Province,Attending,No,Severe,Yes,Primary,Lowest
+14,Female,Northern Province,Attending,Yes,Severe,No,No Education,Highest
+16,Male,Kigali,Attending,No,Severe,No,Secondary,Middle
+19,Male,Kigali,Attending,No,Severe,Yes,No Education,Second
+19,Female,Kigali,Attending,No,Severe,Yes,Primary,Lowest
+14,Female,Western Province,Attending,No,Mild,No,Primary,Second
+14,Male,Western Province,Attending,Yes,Severe,Yes,No Education,Fourth
+16,Female,Northern Province,Attending,No,Mild,No,Primary,Middle
+16,Male,Western Province,Attending,No,Mild,Yes,No Education,Highest
+17,Female,Eastern Province,Attending,Yes,Mild,Yes,No Education,Highest
+17,Male,Western Province,Not Attending,No,Severe,No,Secondary,Second
+17,Male,Southern Province,Attending,No,Severe,No,Secondary,Second
+16,Male,Western Province,Attending,Yes,Moderate,Yes,Secondary,Lowest
+19,Female,Eastern Province,Attending,Yes,Mild,No,Primary,Lowest
+16,Female,Western Province,Attending,No,Mild,No,Post-Secondary,Middle
+19,Male,Eastern Province,Attending,No,Mild,No,Secondary,Highest
+19,Female,Kigali,Attending,No,Mild,No,Primary,Fourth
+18,Female,Southern Province,Attending,No,Mild,No,Secondary,Lowest
+13,Female,Southern Province,Attending,Yes,Mild,Yes,Primary,Highest
+14,Male,Southern Province,Attending,No,Mild,Yes,Primary,Lowest
+18,Female,Western Province,Attending,Yes,Moderate,No,Primary,Middle
+19,Male,Eastern Province,Attending,No,Moderate,No,Post-Secondary,Middle
+17,Female,Northern Province,Attending,No,Moderate,Yes,Primary,Fourth
+18,Female,Kigali,Attending,No,Moderate,No,Primary,Middle
+18,Male,Kigali,Attending,No,Moderate,No,Primary,Fourth
+13,Female,Kigali,Attending,No,Mild,No,Secondary,Fourth
+14,Female,Kigali,Attending,Yes,Severe,Yes,Primary,Lowest
+13,Female,Eastern Province,Attending,No,Severe,Yes,Secondary,Fourth
+15,Female,Eastern Province,Attending,No,Mild,No,Primary,Middle
+18,Female,Southern Province,Not Attending,Yes,Moderate,No,Post-Secondary,Highest
+16,Female,Southern Province,Attending,No,Moderate,No,Secondary,Middle
+18,Female,Northern Province,Attending,Yes,Mild,Yes,Post-Secondary,Second
+19,Male,Kigali,Attending,No,Mild,Yes,Primary,Second
+17,Female,Kigali,Attending,No,Mild,Yes,No Education,Lowest
+19,Male,Kigali,Attending,No,Mild,No,Primary,Fourth
+14,Male,Southern Province,Attending,No,Moderate,No,Primary,Middle
+13,Male,Eastern Province,Attending,No,Moderate,Yes,Primary,Fourth
+18,Male,Eastern Province,Attending,Yes,Moderate,No,Primary,Lowest
+17,Male,Northern Province,Attending,No,Mild,No,Primary,Highest
+16,Male,Kigali,Attending,Yes,Severe,Yes,No Education,Lowest
+17,Male,Northern Province,Attending,Yes,Moderate,No,Primary,Highest
+19,Male,Southern Province,Attending,Yes,Mild,No,Primary,Fourth
+16,Male,Northern Province,Not Attending,No,Mild,No,Primary,Highest
+16,Male,Southern Province,Not Attending,No,Severe,Yes,Primary,Highest
+13,Female,Northern Province,Attending,Yes,Mild,No,Secondary,Highest
+17,Male,Western Province,Attending,No,Mild,No,Secondary,Second
+15,Male,Southern Province,Attending,No,Severe,No,Primary,Middle
+16,Female,Western Province,Attending,Yes,Severe,No,Post-Secondary,Fourth
+17,Male,Southern Province,Attending,No,Mild,No,Primary,Second
+14,Female,Kigali,Not Attending,Yes,Severe,No,Secondary,Highest
+13,Female,Southern Province,Attending,No,Mild,Yes,Primary,Second
+18,Male,Eastern Province,Attending,No,Moderate,Yes,Secondary,Middle
+17,Female,Kigali,Attending,No,Mild,No,Secondary,Middle
+19,Male,Western Province,Attending,No,Mild,Yes,No Education,Highest
+13,Female,Eastern Province,Attending,No,Moderate,Yes,No Education,Highest
+15,Male,Kigali,Attending,No,Mild,No,Primary,Second
+17,Female,Southern Province,Attending,No,Severe,No,Primary,Middle
+14,Female,Kigali,Attending,Yes,Mild,No,Primary,Lowest
+16,Male,Western Province,Not Attending,No,Mild,No,Primary,Second
+17,Male,Southern Province,Not Attending,Yes,Mild,Yes,Primary,Lowest
+19,Male,Southern Province,Attending,Yes,Mild,No,Secondary,Highest
+15,Male,Kigali,Attending,Yes,Mild,Yes,Secondary,Second
+14,Female,Eastern Province,Attending,No,Mild,Yes,Primary,Second
+17,Female,Eastern Province,Attending,No,Mild,Yes,Secondary,Second
+18,Male,Eastern Province,Attending,No,Severe,Yes,Primary,Second
+15,Female,Kigali,Attending,No,Mild,No,Primary,Highest
+17,Male,Western Province,Attending,No,Mild,No,Secondary,Fourth
+17,Male,Western Province,Attending,No,Severe,No,Secondary,Fourth
+15,Male,Northern Province,Attending,No,Severe,Yes,Post-Secondary,Highest
+14,Female,Northern Province,Attending,No,Moderate,No,Primary,Lowest
+17,Female,Northern Province,Attending,Yes,Mild,Yes,Secondary,Highest
+18,Female,Northern Province,Attending,No,Mild,No,Secondary,Highest
+17,Female,Eastern Province,Not Attending,No,Mild,Yes,No Education,Second
+18,Male,Kigali,Not Attending,Yes,Mild,No,Secondary,Lowest
+17,Male,Kigali,Attending,No,Severe,Yes,Secondary,Middle
+15,Male,Kigali,Not Attending,No,Mild,No,Post-Secondary,Fourth
+16,Female,Eastern Province,Attending,Yes,Mild,Yes,Primary,Highest
+15,Male,Northern Province,Not Attending,No,Mild,Yes,Primary,Second
+17,Male,Northern Province,Not Attending,No,Severe,No,Primary,Fourth
+19,Male,Kigali,Attending,Yes,Mild,No,Post-Secondary,Lowest
+14,Female,Kigali,Attending,No,Severe,Yes,Primary,Highest
+14,Female,Kigali,Attending,No,Mild,No,Secondary,Highest
+13,Male,Eastern Province,Attending,No,Mild,No,Secondary,Middle
+18,Female,Kigali,Attending,No,Mild,No,Primary,Second
+19,Female,Kigali,Attending,No,Mild,No,Primary,Second
+17,Female,Northern Province,Attending,No,Moderate,No,Primary,Lowest
+16,Male,Southern Province,Attending,No,Mild,No,Primary,Middle
+16,Male,Kigali,Attending,No,Mild,No,Primary,Highest
+17,Female,Kigali,Attending,Yes,Severe,No,Primary,Second
+13,Female,Kigali,Attending,No,Mild,No,Primary,Highest
+14,Female,Eastern Province,Attending,Yes,Mild,No,Secondary,Highest
+13,Male,Kigali,Not Attending,Yes,Mild,No,Primary,Middle
+15,Male,Eastern Province,Attending,No,Mild,No,Primary,Second
+15,Male,Kigali,Attending,Yes,Mild,No,Primary,Highest
+18,Male,Eastern Province,Attending,No,Severe,No,Secondary,Fourth
+15,Male,Eastern Province,Attending,Yes,Severe,No,Secondary,Middle
+18,Female,Kigali,Attending,No,Mild,No,Primary,Middle
+16,Male,Northern Province,Attending,No,Severe,No,Secondary,Middle
+17,Female,Eastern Province,Attending,No,Mild,No,Primary,Second
+17,Female,Kigali,Attending,No,Severe,No,Primary,Second
+16,Male,Kigali,Attending,No,Moderate,No,No Education,Middle
+18,Female,Kigali,Attending,No,Moderate,No,Secondary,Middle
+18,Female,Northern Province,Attending,No,Moderate,Yes,Primary,Lowest
+16,Female,Northern Province,Not Attending,No,Mild,No,Primary,Middle
+19,Female,Kigali,Attending,No,Mild,No,Secondary,Second
+17,Male,Western Province,Attending,Yes,Moderate,No,Secondary,Highest
+15,Male,Kigali,Attending,Yes,Mild,No,Primary,Middle
+18,Male,Kigali,Attending,No,Mild,Yes,Primary,Middle
+18,Male,Kigali,Not Attending,No,Severe,Yes,Primary,Lowest
+17,Male,Western Province,Attending,No,Mild,Yes,No Education,Highest
+14,Female,Southern Province,Not Attending,Yes,Mild,No,Secondary,Fourth
+19,Female,Kigali,Not Attending,No,Severe,Yes,Secondary,Second
+17,Female,Eastern Province,Not Attending,No,Severe,No,Secondary,Highest
+13,Male,Northern Province,Attending,No,Mild,Yes,Primary,Second
+16,Female,Western Province,Attending,No,Moderate,No,Secondary,Lowest
+14,Male,Kigali,Attending,No,Mild,Yes,Primary,Fourth
+15,Female,Southern Province,Attending,No,Moderate,No,Secondary,Highest
+19,Male,Northern Province,Attending,No,Mild,Yes,Primary,Lowest
+19,Female,Southern Province,Not Attending,Yes,Mild,Yes,Secondary,Lowest
+13,Female,Kigali,Attending,Yes,Severe,Yes,Primary,Highest
+16,Male,Kigali,Not Attending,No,Severe,Yes,Primary,Lowest
+14,Male,Western Province,Attending,Yes,Severe,Yes,Primary,Highest
+13,Male,Kigali,Attending,Yes,Severe,Yes,Primary,Middle
+15,Female,Eastern Province,Attending,No,Moderate,Yes,Primary,Middle
+17,Female,Kigali,Attending,No,Moderate,Yes,Primary,Second
+13,Female,Kigali,Attending,No,Mild,No,Primary,Highest
+16,Male,Southern Province,Attending,Yes,Severe,No,Secondary,Lowest
+14,Male,Southern Province,Attending,Yes,Mild,No,Primary,Highest
+13,Female,Western Province,Attending,No,Mild,No,Post-Secondary,Middle
+16,Male,Eastern Province,Attending,No,Mild,No,Primary,Middle
+18,Male,Kigali,Attending,Yes,Moderate,No,Primary,Highest
+19,Female,Kigali,Not Attending,No,Moderate,No,Secondary,Highest
+15,Male,Kigali,Attending,Yes,Mild,Yes,Secondary,Highest
+18,Female,Eastern Province,Not Attending,Yes,Severe,No,No Education,Fourth
+15,Female,Eastern Province,Attending,No,Severe,No,Primary,Second
+15,Male,Kigali,Attending,Yes,Severe,No,Primary,Fourth
+19,Male,Kigali,Attending,No,Mild,Yes,Post-Secondary,Middle
+15,Male,Southern Province,Attending,No,Severe,No,Primary,Fourth
+17,Female,Western Province,Attending,No,Mild,No,Primary,Second
+15,Male,Kigali,Attending,No,Mild,No,Primary,Middle
+18,Male,Southern Province,Attending,No,Mild,No,Secondary,Lowest
+13,Female,Western Province,Attending,No,Severe,No,Primary,Second
+19,Male,Northern Province,Attending,No,Mild,Yes,Primary,Second
+18,Male,Kigali,Not Attending,Yes,Mild,No,Primary,Second
+15,Male,Kigali,Attending,No,Severe,Yes,Primary,Second
+17,Male,Kigali,Not Attending,Yes,Moderate,No,Primary,Lowest
+15,Female,Northern Province,Not Attending,Yes,Mild,No,No Education,Second
+13,Male,Eastern Province,Attending,No,Moderate,Yes,Primary,Middle
+19,Male,Southern Province,Attending,No,Mild,Yes,No Education,Lowest
+19,Female,Southern Province,Not Attending,No,Mild,No,Secondary,Highest
+13,Female,Southern Province,Attending,No,Mild,No,Primary,Lowest
+16,Male,Kigali,Attending,No,Mild,No,Primary,Middle
+18,Male,Southern Province,Attending,No,Severe,No,Post-Secondary,Middle
+18,Male,Western Province,Attending,No,Moderate,Yes,Post-Secondary,Fourth
+17,Female,Northern Province,Attending,No,Moderate,Yes,Primary,Lowest
+17,Female,Kigali,Attending,No,Severe,No,Primary,Fourth
+19,Male,Western Province,Attending,No,Moderate,No,Secondary,Second
+19,Male,Northern Province,Attending,No,Severe,Yes,Post-Secondary,Fourth
+14,Female,Southern Province,Attending,No,Mild,No,No Education,Second
+15,Female,Kigali,Attending,No,Mild,No,Primary,Second
+14,Male,Kigali,Attending,No,Severe,Yes,Post-Secondary,Middle
+13,Male,Western Province,Attending,No,Severe,Yes,Post-Secondary,Second
+19,Female,Southern Province,Attending,Yes,Mild,No,Primary,Fourth
+15,Male,Southern Province,Attending,No,Mild,Yes,Secondary,Second
+18,Male,Western Province,Attending,No,Mild,No,Post-Secondary,Second
+19,Male,Kigali,Attending,Yes,Mild,No,Secondary,Second
+19,Female,Eastern Province,Not Attending,No,Mild,No,Secondary,Lowest
+14,Male,Kigali,Attending,No,Moderate,No,Secondary,Highest
+16,Female,Western Province,Attending,No,Mild,Yes,Primary,Middle
+14,Female,Kigali,Attending,No,Severe,No,No Education,Fourth
+17,Male,Western Province,Attending,No,Mild,No,Primary,Second
+16,Female,Western Province,Attending,No,Mild,No,Primary,Highest
+19,Male,Kigali,Attending,No,Mild,No,Primary,Second
+13,Female,Southern Province,Not Attending,No,Severe,No,Primary,Second
+14,Female,Western Province,Attending,No,Moderate,No,No Education,Second
+18,Male,Eastern Province,Attending,No,Severe,Yes,Primary,Second
+17,Male,Kigali,Attending,No,Moderate,No,Post-Secondary,Lowest
+19,Female,Southern Province,Attending,No,Mild,No,Primary,Lowest
+19,Female,Southern Province,Attending,No,Moderate,No,Primary,Lowest
+16,Female,Northern Province,Not Attending,No,Mild,No,Primary,Lowest
+17,Male,Eastern Province,Attending,No,Mild,No,Primary,Middle
+14,Female,Eastern Province,Not Attending,No,Mild,No,Post-Secondary,Lowest
+14,Male,Northern Province,Attending,No,Moderate,Yes,Post-Secondary,Middle
+19,Female,Western Province,Attending,No,Mild,Yes,Primary,Highest
+13,Female,Kigali,Attending,Yes,Mild,Yes,Primary,Lowest
+13,Male,Southern Province,Attending,Yes,Severe,No,Post-Secondary,Highest
+17,Male,Western Province,Attending,No,Mild,No,No Education,Highest
+18,Female,Northern Province,Attending,No,Mild,No,Secondary,Highest
+19,Female,Kigali,Attending,No,Moderate,No,No Education,Middle
+16,Male,Northern Province,Attending,Yes,Mild,Yes,No Education,Highest
+15,Female,Northern Province,Attending,No,Severe,No,Primary,Middle
+13,Female,Southern Province,Not Attending,Yes,Moderate,No,Secondary,Highest
+15,Female,Western Province,Attending,No,Mild,No,Post-Secondary,Fourth
+16,Male,Southern Province,Attending,No,Mild,Yes,Secondary,Highest
+17,Male,Northern Province,Attending,No,Mild,No,Primary,Highest
+13,Male,Western Province,Attending,No,Mild,No,Post-Secondary,Highest
+15,Female,Kigali,Attending,No,Moderate,No,Post-Secondary,Fourth
+19,Male,Eastern Province,Attending,No,Moderate,Yes,Post-Secondary,Lowest
+14,Female,Kigali,Attending,No,Moderate,Yes,Primary,Fourth
+13,Male,Kigali,Not Attending,Yes,Mild,No,Secondary,Second
+15,Female,Southern Province,Attending,No,Moderate,Yes,Secondary,Lowest
+17,Male,Northern Province,Attending,No,Mild,No,Primary,Middle
+15,Female,Southern Province,Attending,No,Severe,No,Primary,Highest
+16,Male,Kigali,Attending,No,Mild,No,Primary,Lowest
+16,Male,Eastern Province,Attending,No,Mild,Yes,Secondary,Lowest
+18,Male,Kigali,Attending,No,Mild,Yes,Primary,Fourth
+15,Female,Kigali,Attending,No,Moderate,No,Primary,Lowest
+18,Female,Southern Province,Attending,No,Moderate,No,Primary,Second
+13,Male,Western Province,Attending,No,Mild,No,Secondary,Fourth
+15,Male,Western Province,Attending,No,Mild,Yes,Post-Secondary,Lowest
+16,Male,Kigali,Not Attending,Yes,Mild,Yes,No Education,Highest
+19,Male,Western Province,Attending,No,Mild,Yes,Secondary,Lowest
+18,Female,Western Province,Attending,No,Mild,Yes,Primary,Fourth
+16,Male,Kigali,Attending,Yes,Moderate,No,Post-Secondary,Highest
+13,Female,Western Province,Attending,No,Moderate,No,Primary,Second
+16,Female,Western Province,Attending,No,Severe,Yes,Secondary,Middle
+17,Female,Kigali,Attending,No,Mild,Yes,Secondary,Lowest
+18,Female,Southern Province,Attending,No,Moderate,Yes,Secondary,Fourth
+14,Male,Kigali,Attending,No,Moderate,Yes,Post-Secondary,Highest
+19,Male,Northern Province,Attending,No,Moderate,Yes,Post-Secondary,Highest
+15,Female,Western Province,Attending,Yes,Mild,Yes,Primary,Lowest
+19,Male,Western Province,Attending,Yes,Mild,No,Primary,Highest
+19,Female,Kigali,Not Attending,No,Moderate,No,Primary,Middle
+15,Male,Western Province,Attending,No,Mild,No,Primary,Highest
+17,Female,Western Province,Attending,No,Severe,No,Primary,Middle
+13,Male,Northern Province,Attending,No,Mild,No,Secondary,Second
+14,Female,Eastern Province,Attending,Yes,Mild,Yes,Post-Secondary,Highest
+18,Female,Western Province,Attending,No,Moderate,No,Primary,Lowest
+18,Female,Kigali,Attending,No,Severe,No,Primary,Fourth
+18,Male,Northern Province,Attending,No,Mild,Yes,Primary,Highest
+14,Female,Kigali,Not Attending,No,Severe,Yes,Primary,Fourth
+13,Male,Western Province,Attending,Yes,Severe,No,No Education,Lowest
+16,Female,Northern Province,Not Attending,No,Mild,Yes,Secondary,Second
+18,Female,Eastern Province,Attending,No,Mild,No,Post-Secondary,Second
+18,Male,Kigali,Attending,No,Moderate,Yes,Primary,Highest
+13,Male,Kigali,Attending,Yes,Moderate,No,Primary,Middle
+16,Female,Southern Province,Attending,No,Mild,No,Post-Secondary,Middle
+14,Female,Western Province,Not Attending,Yes,Mild,Yes,Secondary,Highest
+18,Female,Southern Province,Attending,Yes,Severe,Yes,Primary,Lowest
+14,Male,Kigali,Not Attending,No,Moderate,No,Primary,Second
+13,Male,Kigali,Attending,No,Mild,Yes,Primary,Fourth
+14,Female,Kigali,Attending,Yes,Severe,Yes,Secondary,Second
+16,Female,Western Province,Attending,Yes,Moderate,No,No Education,Middle
+18,Male,Southern Province,Attending,No,Moderate,No,Post-Secondary,Highest
+16,Male,Kigali,Attending,Yes,Mild,No,Primary,Lowest
+13,Male,Kigali,Attending,No,Moderate,Yes,Secondary,Lowest
+15,Male,Kigali,Attending,No,Mild,Yes,Primary,Highest
+18,Male,Northern Province,Attending,No,Mild,No,Secondary,Highest
+14,Female,Southern Province,Attending,No,Severe,No,Primary,Second
+18,Male,Southern Province,Attending,Yes,Severe,No,Post-Secondary,Second
+16,Female,Northern Province,Attending,No,Moderate,Yes,Primary,Lowest
+19,Female,Eastern Province,Not Attending,No,Mild,No,Primary,Second
+17,Female,Kigali,Attending,No,Mild,No,Secondary,Lowest
+17,Male,Southern Province,Attending,No,Severe,Yes,No Education,Fourth
+16,Female,Kigali,Attending,Yes,Moderate,No,Secondary,Middle
+18,Male,Southern Province,Attending,No,Moderate,No,Secondary,Middle
+17,Female,Northern Province,Attending,No,Moderate,Yes,Primary,Middle
+13,Female,Southern Province,Attending,No,Mild,No,Primary,Fourth
+17,Female,Kigali,Attending,No,Severe,No,Secondary,Fourth
+13,Female,Eastern Province,Attending,No,Severe,No,No Education,Highest
+14,Female,Eastern Province,Attending,Yes,Moderate,Yes,Primary,Lowest
+19,Male,Southern Province,Attending,Yes,Moderate,No,Secondary,Highest
+15,Male,Western Province,Attending,No,Moderate,No,Post-Secondary,Lowest
+19,Male,Kigali,Attending,No,Mild,Yes,Post-Secondary,Second
+18,Female,Eastern Province,Not Attending,No,Mild,Yes,Post-Secondary,Highest
+15,Female,Kigali,Attending,Yes,Severe,No,Primary,Fourth
+15,Male,Western Province,Attending,No,Moderate,No,Primary,Highest
+16,Female,Kigali,Attending,Yes,Mild,No,Primary,Middle
+16,Male,Western Province,Attending,No,Mild,Yes,Primary,Second
+18,Female,Western Province,Not Attending,No,Mild,Yes,Secondary,Highest
+14,Female,Southern Province,Not Attending,No,Mild,Yes,Secondary,Lowest
+13,Female,Kigali,Attending,No,Mild,No,Primary,Fourth
+19,Male,Western Province,Attending,No,Mild,No,Primary,Highest
+18,Female,Kigali,Attending,No,Moderate,Yes,Primary,Highest
+17,Male,Southern Province,Attending,No,Mild,No,Primary,Fourth
+13,Male,Kigali,Attending,No,Moderate,No,Primary,Fourth
+14,Male,Southern Province,Attending,No,Mild,No,Primary,Highest
+15,Male,Eastern Province,Attending,Yes,Mild,No,Primary,Middle
+17,Female,Kigali,Not Attending,No,Mild,Yes,Post-Secondary,Second
+17,Male,Kigali,Attending,Yes,Moderate,Yes,Primary,Highest
+19,Male,Northern Province,Attending,No,Moderate,No,No Education,Fourth
+19,Female,Kigali,Attending,No,Severe,Yes,Primary,Highest
+19,Male,Kigali,Attending,Yes,Mild,Yes,Primary,Highest
+17,Female,Northern Province,Attending,Yes,Mild,Yes,No Education,Middle
+16,Male,Western Province,Attending,No,Moderate,No,Secondary,Second
+15,Male,Kigali,Not Attending,Yes,Moderate,Yes,Primary,Highest
+19,Female,Southern Province,Not Attending,Yes,Mild,Yes,Primary,Second
+14,Male,Western Province,Not Attending,No,Moderate,No,Secondary,Lowest
+19,Female,Kigali,Attending,No,Mild,Yes,Secondary,Second
+14,Male,Eastern Province,Attending,No,Moderate,Yes,Secondary,Highest
+19,Male,Eastern Province,Attending,No,Mild,No,Secondary,Second
+14,Male,Western Province,Attending,No,Moderate,No,Secondary,Highest
+17,Female,Kigali,Attending,Yes,Mild,No,Secondary,Middle
+15,Female,Eastern Province,Not Attending,No,Moderate,No,Primary,Fourth
+14,Male,Western Province,Not Attending,Yes,Moderate,No,Primary,Highest
+15,Female,Kigali,Attending,No,Moderate,No,Secondary,Lowest
+19,Female,Kigali,Attending,Yes,Mild,No,Primary,Lowest
+17,Male,Eastern Province,Attending,No,Mild,No,Primary,Second
+15,Female,Kigali,Attending,Yes,Mild,Yes,Primary,Fourth
+18,Male,Kigali,Not Attending,No,Severe,No,Secondary,Highest
+17,Male,Southern Province,Attending,No,Mild,Yes,Primary,Fourth
+19,Female,Northern Province,Attending,No,Moderate,Yes,Secondary,Lowest
+16,Female,Western Province,Attending,No,Mild,No,Primary,Highest
+14,Female,Eastern Province,Attending,No,Mild,No,No Education,Second
+18,Female,Kigali,Attending,Yes,Mild,No,Secondary,Lowest
+15,Male,Kigali,Attending,No,Mild,No,Primary,Second
+14,Male,Southern Province,Attending,No,Moderate,Yes,Primary,Middle
+19,Male,Kigali,Not Attending,Yes,Moderate,Yes,Secondary,Lowest
+15,Male,Kigali,Attending,No,Moderate,Yes,Primary,Second
+14,Male,Kigali,Attending,No,Severe,No,Primary,Highest
+14,Female,Western Province,Attending,Yes,Moderate,Yes,Primary,Fourth
+13,Male,Southern Province,Not Attending,No,Moderate,No,Primary,Fourth
+14,Female,Northern Province,Not Attending,No,Severe,Yes,Post-Secondary,Fourth
+18,Male,Southern Province,Not Attending,No,Mild,No,No Education,Highest
+17,Female,Kigali,Attending,Yes,Mild,No,Primary,Middle
+16,Male,Kigali,Attending,No,Mild,No,Primary,Middle
+19,Female,Kigali,Attending,Yes,Mild,No,Primary,Second
+16,Female,Kigali,Attending,Yes,Mild,Yes,No Education,Highest
+15,Female,Kigali,Attending,No,Severe,No,Secondary,Highest
+19,Female,Eastern Province,Not Attending,No,Severe,No,Primary,Middle
+16,Male,Kigali,Attending,No,Mild,Yes,Primary,Lowest
+13,Male,Western Province,Attending,Yes,Mild,No,Post-Secondary,Second
+17,Male,Eastern Province,Not Attending,No,Severe,No,Primary,Lowest
+13,Female,Kigali,Attending,No,Mild,No,Post-Secondary,Lowest
+19,Male,Kigali,Attending,No,Mild,Yes,Primary,Middle
+13,Male,Southern Province,Attending,No,Severe,Yes,Secondary,Fourth
+19,Male,Kigali,Attending,Yes,Moderate,No,Primary,Lowest
+16,Male,Kigali,Attending,Yes,Moderate,No,Post-Secondary,Lowest
+16,Female,Southern Province,Not Attending,No,Severe,Yes,Secondary,Fourth
+15,Male,Kigali,Attending,No,Moderate,No,Primary,Lowest
+15,Male,Southern Province,Attending,No,Moderate,No,Post-Secondary,Second
+13,Male,Western Province,Attending,Yes,Moderate,Yes,Primary,Fourth
+19,Male,Southern Province,Attending,No,Moderate,No,Primary,Highest
+18,Male,Kigali,Attending,No,Severe,No,Post-Secondary,Middle
+16,Male,Kigali,Attending,No,Mild,No,Primary,Second
+17,Female,Western Province,Attending,No,Mild,No,Secondary,Fourth
+13,Female,Western Province,Attending,No,Moderate,No,Post-Secondary,Lowest
+18,Female,Eastern Province,Not Attending,No,Mild,No,Secondary,Lowest
+13,Male,Southern Province,Attending,No,Mild,No,Post-Secondary,Middle
+13,Female,Kigali,Attending,No,Moderate,Yes,No Education,Middle
+17,Female,Kigali,Not Attending,No,Mild,Yes,Secondary,Lowest
+15,Male,Eastern Province,Attending,No,Mild,No,Primary,Fourth
+14,Male,Southern Province,Attending,Yes,Moderate,Yes,Primary,Middle
+17,Male,Western Province,Not Attending,Yes,Mild,Yes,Primary,Second
+13,Male,Southern Province,Attending,No,Moderate,No,Post-Secondary,Fourth
+13,Female,Southern Province,Not Attending,Yes,Mild,No,Secondary,Fourth
+14,Male,Eastern Province,Attending,No,Mild,No,Post-Secondary,Fourth
+18,Male,Kigali,Not Attending,Yes,Moderate,No,No Education,Middle
+14,Male,Northern Province,Attending,No,Mild,Yes,Secondary,Middle
+17,Female,Kigali,Attending,No,Mild,Yes,Secondary,Highest
+15,Male,Eastern Province,Attending,Yes,Mild,Yes,Secondary,Lowest
+16,Female,Southern Province,Attending,No,Severe,No,No Education,Fourth
+19,Male,Southern Province,Attending,No,Mild,No,Primary,Highest
+14,Female,Eastern Province,Attending,No,Mild,No,Primary,Second
+13,Female,Western Province,Attending,No,Moderate,Yes,Primary,Middle
+16,Female,Northern Province,Attending,No,Mild,No,Secondary,Fourth
+16,Female,Eastern Province,Attending,No,Mild,No,Primary,Fourth
+19,Male,Southern Province,Attending,No,Mild,Yes,No Education,Middle
+16,Female,Kigali,Attending,No,Moderate,No,Primary,Lowest
+16,Female,Western Province,Attending,No,Severe,Yes,Primary,Highest
+18,Female,Kigali,Attending,No,Mild,Yes,Primary,Lowest
+14,Female,Eastern Province,Attending,No,Mild,No,Primary,Highest
+18,Female,Western Province,Attending,Yes,Moderate,Yes,Primary,Highest
+19,Female,Kigali,Not Attending,No,Mild,No,Primary,Middle
+16,Female,Kigali,Not Attending,No,Severe,Yes,Post-Secondary,Second
+13,Female,Western Province,Attending,No,Moderate,No,Secondary,Highest
+16,Male,Eastern Province,Attending,No,Mild,Yes,Primary,Fourth
+13,Male,Kigali,Attending,Yes,Mild,No,Secondary,Fourth
+17,Female,Eastern Province,Attending,No,Mild,No,Post-Secondary,Lowest
+15,Male,Northern Province,Attending,Yes,Mild,No,Secondary,Highest
+15,Male,Northern Province,Attending,No,Mild,No,Primary,Middle
+14,Male,Kigali,Attending,No,Mild,No,Primary,Middle
+15,Male,Western Province,Attending,No,Mild,No,Secondary,Lowest
+18,Female,Kigali,Not Attending,No,Mild,Yes,Secondary,Highest
+14,Male,Western Province,Attending,No,Mild,Yes,Secondary,Highest
+18,Female,Eastern Province,Attending,No,Severe,No,Primary,Middle
+15,Female,Northern Province,Attending,Yes,Moderate,Yes,Primary,Lowest
+13,Female,Eastern Province,Attending,No,Mild,No,No Education,Highest
+19,Male,Eastern Province,Attending,No,Mild,No,Secondary,Second
+13,Female,Western Province,Not Attending,No,Mild,No,Primary,Fourth
+14,Female,Northern Province,Not Attending,No,Mild,No,No Education,Middle
+18,Female,Northern Province,Attending,No,Moderate,Yes,Primary,Fourth
+14,Male,Kigali,Attending,No,Mild,No,Primary,Lowest
+15,Female,Northern Province,Attending,Yes,Moderate,Yes,No Education,Fourth
+14,Female,Southern Province,Attending,Yes,Mild,Yes,Secondary,Highest
+13,Male,Western Province,Not Attending,No,Moderate,No,Secondary,Middle
+18,Female,Southern Province,Attending,No,Mild,Yes,Primary,Middle
+19,Female,Western Province,Attending,No,Moderate,No,Post-Secondary,Highest
+13,Male,Western Province,Attending,No,Severe,No,Secondary,Lowest
+18,Female,Southern Province,Not Attending,No,Mild,No,Primary,Fourth
+14,Female,Southern Province,Not Attending,No,Moderate,No,Primary,Lowest
+18,Male,Northern Province,Attending,No,Mild,No,Primary,Fourth
+13,Male,Southern Province,Not Attending,No,Mild,No,Post-Secondary,Fourth
+17,Female,Kigali,Not Attending,No,Moderate,No,Secondary,Middle
+14,Male,Southern Province,Attending,No,Severe,Yes,Primary,Middle
+18,Male,Western Province,Attending,No,Mild,No,Secondary,Second
+14,Male,Western Province,Not Attending,Yes,Mild,Yes,Primary,Second
+15,Male,Northern Province,Attending,No,Mild,Yes,Secondary,Fourth
+19,Male,Northern Province,Attending,No,Moderate,Yes,Secondary,Highest
+15,Male,Western Province,Attending,No,Mild,No,Primary,Middle
+17,Male,Northern Province,Attending,Yes,Mild,No,Primary,Second
+13,Female,Kigali,Attending,No,Mild,No,Secondary,Second
+16,Female,Southern Province,Attending,No,Severe,No,Post-Secondary,Middle
+13,Female,Northern Province,Attending,No,Mild,Yes,Primary,Lowest
+19,Male,Southern Province,Attending,No,Moderate,Yes,Primary,Fourth
+17,Male,Western Province,Attending,No,Mild,No,Primary,Middle
+14,Male,Western Province,Attending,No,Mild,No,Primary,Lowest
+19,Female,Northern Province,Attending,No,Moderate,No,Primary,Fourth
+15,Female,Southern Province,Attending,No,Moderate,No,Primary,Highest
+14,Female,Kigali,Not Attending,Yes,Mild,No,Primary,Lowest
+17,Male,Kigali,Attending,No,Severe,Yes,Primary,Lowest
+18,Male,Kigali,Attending,Yes,Moderate,No,Post-Secondary,Fourth
+16,Male,Southern Province,Attending,No,Mild,No,Secondary,Second
+14,Female,Eastern Province,Attending,Yes,Mild,No,Post-Secondary,Highest
+13,Female,Northern Province,Not Attending,No,Moderate,Yes,Primary,Second
+18,Male,Kigali,Attending,No,Moderate,No,Primary,Second
+14,Male,Kigali,Attending,Yes,Mild,Yes,Primary,Fourth
+19,Female,Southern Province,Attending,Yes,Moderate,No,Post-Secondary,Second
+17,Female,Southern Province,Attending,No,Moderate,No,Secondary,Fourth
+16,Female,Southern Province,Attending,Yes,Moderate,No,Primary,Highest
+19,Male,Northern Province,Attending,No,Moderate,No,Primary,Highest
+14,Male,Eastern Province,Attending,No,Mild,No,Primary,Highest
+14,Male,Kigali,Attending,No,Moderate,No,Primary,Middle
+17,Female,Southern Province,Attending,No,Mild,No,Secondary,Middle
+13,Male,Eastern Province,Not Attending,No,Mild,Yes,Secondary,Second
+19,Male,Southern Province,Attending,No,Moderate,No,Primary,Lowest
+15,Female,Eastern Province,Attending,Yes,Severe,No,Primary,Second
+14,Male,Eastern Province,Attending,Yes,Moderate,Yes,Primary,Highest
+18,Male,Northern Province,Attending,No,Mild,No,Secondary,Middle
+19,Female,Kigali,Attending,No,Mild,No,Post-Secondary,Middle
+14,Male,Eastern Province,Not Attending,No,Mild,Yes,Primary,Highest
+16,Female,Northern Province,Attending,No,Moderate,No,Primary,Middle
+14,Male,Kigali,Attending,No,Moderate,No,Secondary,Second
+19,Female,Eastern Province,Not Attending,No,Moderate,No,No Education,Lowest
+17,Female,Western Province,Attending,Yes,Mild,Yes,No Education,Second
+19,Female,Western Province,Attending,No,Mild,No,Secondary,Second
+15,Female,Northern Province,Not Attending,No,Moderate,No,Primary,Highest
+16,Female,Western Province,Not Attending,No,Mild,No,Primary,Middle
+19,Male,Kigali,Attending,No,Mild,No,Secondary,Lowest
+13,Male,Western Province,Not Attending,Yes,Mild,Yes,Primary,Fourth
+15,Female,Southern Province,Attending,No,Moderate,No,Primary,Fourth
+13,Female,Southern Province,Attending,Yes,Mild,No,Primary,Highest
