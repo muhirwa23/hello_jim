@@ -8,6 +8,5 @@ firebase-admin
 textblob
 nltk
 WordCloud
-os
 Groq
 time 
