@@ -235,7 +235,7 @@ if 'Date' in mental_youth_data.columns and 'Depression_Score' in mental_youth_da
             )
             st.plotly_chart(fig, use_container_width=True)
 
-    st.markdown("---")
+ st.markdown("---")
 
     # Regional Distribution of Depression Scores - DHS Data
 if 'Region' in dhs_data.columns and 'Depression_Score' in dhs_data.columns:
