@@ -272,7 +272,7 @@ def simulate_data():
 
 # Predictive Modeling Function
 def predictive_modeling():
-    st.header("🤖 " + _("Predictive Modeling"))
+    st.header(" " + _("Predictive Modeling"))
     st.markdown(_("### Predict your Depression Score"))
 
     # User input form
@@ -477,7 +477,7 @@ def data_visualization(data):
 
 # Chatbot Interface
 def chatbot_interface():
-    st.header("🧠 " + _("Mental Health Chatbot"))
+    st.header(" " + _("Mental Health Chatbot"))
 
     st.write(_("Hello! I'm **Menti**, your mental health assistant. How can I help you today?"))
 
@@ -487,7 +487,7 @@ def chatbot_interface():
     # Chat interface
     user_input = st.text_input(_("You") + ":", "", key="input")
     if user_input:
-        # Simulate chatbot response using TextBlob for sentiment analysis
+        #  chatbot response using TextBlob for sentiment analysis
         blob = TextBlob(user_input)
         sentiment = blob.sentiment.polarity
         if sentiment > 0.1:
@@ -729,13 +729,13 @@ def main():
         contact_professionals()
     elif selected == _("Sentiment Analysis"):
         sentiment_analysis()
-    elif selected == _("Analytics"):
-        st.header(_("Analytics"))
-        st.markdown(_("This section can include advanced analytics features such as predictive modeling insights, trend analysis, and more."))
+   # elif selected == _("Analytics"):
+      #  st.header(_("Analytics"))
+      #  st.markdown(_("This section can include advanced analytics features such as predictive modeling insights, trend analysis, and more."))
         # Placeholder for future analytics features
-    elif selected == _("Settings"):
-        st.header(_("Settings"))
-        st.markdown(_("Customize your dashboard settings here."))
+    #elif selected == _("Settings"):
+      #  st.header(_("Settings"))
+    #    st.markdown(_("Customize your dashboard settings here."))
         # Placeholder for future settings features
 
 if __name__ == '__main__':
