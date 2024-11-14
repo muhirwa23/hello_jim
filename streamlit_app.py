@@ -158,7 +158,7 @@ def data_visualization(youth_data, mental_data, dhs_data, gen_pop_data, mental_y
 
 # Function for predictive modeling (API Integration)
 def predictive_modeling():
-    st.header("🤖 "
+    st.header("🤖 ")
 def predictive_modeling():
     st.header("🤖 " + _("Predictive Modeling"))
 
