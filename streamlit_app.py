@@ -204,7 +204,7 @@ def data_visualization(youth_data, mental_data, dhs_data, gen_pop_data, mental_y
         with st.container():
             st.subheader(_("Depression Score by Gender"))
             gender_counts = youth_data.groupby('Gender')['Depression_Score'].mean().reset_index()
-            fig            fig = px.bar(
+             fig = px.bar(
                 gender_counts, 
                 x='Gender', 
                 y='Depression_Score', 
