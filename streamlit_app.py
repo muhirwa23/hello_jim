@@ -176,9 +176,7 @@ def data_visualization(youth_data, mental_data, dhs_data, gen_pop_data, mental_y
                     paper_bgcolor="rgba(0,0,0,0)"
                 )
                 st.plotly_chart(fig, use_container_width=True)
-
-    st.markdown("---")
-
+        st.markdown("---")
     # Correlation Heatmap - Mental Health Data
     if {'Depression_Score', 'Anxiety_Score', 'Stress_Level'}.issubset(mental_data.columns):
         with st.container():
@@ -211,7 +209,7 @@ def data_visualization(youth_data, mental_data, dhs_data, gen_pop_data, mental_y
                 title=_("Average Depression Score by Gender"),
                 template="presentation"
             )
-            fig.update_layout(
+        fig.update_layout(
                 margin=dict(l=10, r=10, t=50, b=10),
                 paper_bgcolor="rgba(0,0,0,0)"
             )
