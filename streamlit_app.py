@@ -387,76 +387,101 @@ def predictive_modeling():
             st.error("Unexpected response format from the prediction API.")
 
 # Function for the chatbot (API Integration)
-# Set your Groq API key securely (replace with your actual Groq API key)
-api_key = "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"
-os.environ["GROQ_API_KEY"] = api_key  # Store it as an environment variable
+# streamlit_app.py
 
-# Initialize Groq client using the stored API key
-client = Groq(api_key=os.environ["GROQ_API_KEY"])
+import streamlit as st
+import os
+from groq import Groq
 
-# Function to generate text using Groq's LLM
-def generate_text(prompt, max_tokens=100):
-    try:
-        # Send a prompt to Groq's Llama-based model
-        chat_completion = client.chat.completions.create(
-            messages=[{"role": "user", "content": prompt}],
-            model="llama3-8b-8192",  # Llama model to generate responses
-            max_tokens=max_tokens,
-            temperature=1  # Controls randomness
-        )
-        return chat_completion.choices[0].message.content  # Return the generated response
-    except Exception as e:
-        print(f"An error occurred: {e}")
-        if "Invalid API Key" in str(e):
-            print("Please check that you've entered your API key correctly.")
-        return None
+# Set Streamlit page configuration
+st.set_page_config(
+    page_title="Groq-Powered Chatbot",
+    page_icon="🤖",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+)
 
-# Streamlit Layout
-st.set_page_config(page_title="Groq-Powered Chatbot", page_icon="🤖", layout="wide")
+# Title and Description
+st.title("🤖 Groq-Powered Chatbot")
+st.markdown("""
+Welcome to the **Groq-powered chatbot**. 
+Interact with the assistant by typing your questions below.
+""")
 
-# Title and introduction
-st.title("Groq-Powered Chatbot")
-st.write("Welcome to the **Groq-powered chatbot**. Type your questions below and interact with the assistant.")
-
-# Create session state for storing chat history
+# Initialize session state for chat history
 if "history" not in st.session_state:
     st.session_state.history = []
 
-# Input box for user interaction
-user_input = st.text_input("You: ", "", placeholder="Type your question here...")
+# Retrieve Groq API key from secrets
+api_key = st.secrets["GROQ_API_KEY"]
+
+# Initialize Groq client
+client = Groq(api_key=api_key)
+
+def generate_text(prompt, max_tokens=150):
+    """Generates a response from Groq's LLM based on the user prompt."""
+    try:
+        chat_completion = client.chat.completions.create(
+            messages=[{"role": "user", "content": prompt}],
+            model="llama3-8b-8192",  # Specify the desired model
+            max_tokens=max_tokens,
+            temperature=0.7,  # Adjust for creativity
+        )
+        return chat_completion.choices[0].message.content.strip()
+    except Exception as e:
+        st.error(f"An error occurred: {e}")
+        return "I'm sorry, something went wrong. Please try again later."
+
+# Sidebar (Optional for additional settings or information)
+with st.sidebar:
+    st.markdown("## About")
+    st.markdown("""
+    This chatbot is powered by Groq's advanced language model. 
+    Ask any questions and receive intelligent responses.
+    """)
+
+# User Input
+user_input = st.text_input("🧑 You:", "", placeholder="Type your message here...", key="input")
 
 if user_input:
-    # Generate a response from Groq using the user's input
+    # Display user's message
+    st.session_state.history.append({"user": user_input, "assistant": None})
+    
+    # Generate assistant's response
     assistant_response = generate_text(user_input)
     
-    # Store the user input and assistant response in the chat history
-    st.session_state.history.append({"user": user_input, "assistant": assistant_response})
+    # Update the latest entry with the assistant's response
+    st.session_state.history[-1]["assistant"] = assistant_response
 
-# Display chat history in a professional layout
+    # Clear the input box after sending
+    st.experimental_rerun()
+
+# Display Chat History
 if st.session_state.history:
     for chat in st.session_state.history:
-        # Display user input
-        st.markdown(f"**You:** {chat['user']}")
-        # Display assistant's response
-        st.markdown(f"**Assistant:** {chat['assistant']}")
+        # User Message
+        st.markdown(f"**🧑 You:** {chat['user']}")
+        # Assistant Response
+        if chat['assistant']:
+            st.markdown(f"**🤖 Assistant:** {chat['assistant']}")
+        st.markdown("---")
 
-# Add styling for the conversation (optional for improved appearance)
+# Styling (Optional for enhanced UI)
 st.markdown("""
     <style>
-        .css-1v0mbdo {
-            font-family: 'Arial', sans-serif;
-        }
-        .stTextInput>div>div>input {
+        /* Customize text input box */
+        .stTextInput > div > div > input {
             border-radius: 15px;
-            padding: 12px;
+            padding: 10px;
             font-size: 16px;
-            border: 1px solid #ccc;
         }
-        .stMarkdown>p {
+        /* Customize markdown text */
+        .stMarkdown {
             font-size: 18px;
         }
     </style>
-""", unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
+
 
 # Innovative features in the sidebar
 def innovative_features():
