@@ -127,38 +127,181 @@ def home():
     st.markdown(_("Navigate through the sidebar to explore different sections of the dashboard."))
 
 # Enhanced Data Visualization Section
+
+    # Regional Depression Scores - DHS Data
+   # Enhanced Data Visualization with Tableau-Style Widgets and Separate Containers
 def data_visualization(youth_data, mental_data, dhs_data, gen_pop_data, mental_youth_data):
     st.header("📊 " + _("Data Visualization"))
-    
-    # Gender Distribution - Youth Health Data
-    if 'Gender' in youth_data.columns:
-        st.subheader(_("Gender Distribution"))
-        gender_counts = youth_data['Gender'].value_counts()
-        fig = px.pie(names=gender_counts.index, values=gender_counts.values, color=gender_counts.index, hole=0.5)
-        fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-        st.plotly_chart(fig, use_container_width=True)
 
     # Age Distribution - General Population Data
     if 'Age' in gen_pop_data.columns:
-        st.subheader(_("Age Distribution - General Population"))
-        fig = px.histogram(gen_pop_data, x='Age', nbins=20, title=_("Age Distribution of General Population"))
-        fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-        st.plotly_chart(fig, use_container_width=True)
+        with st.container():
+            st.subheader(_("Age Distribution - General Population"))
+            fig = px.histogram(
+                gen_pop_data, 
+                x='Age', 
+                nbins=20, 
+                title=_("Age Distribution of General Population"),
+                template="presentation"
+            )
+            fig.update_layout(
+                margin=dict(l=10, r=10, t=50, b=10),
+                paper_bgcolor="rgba(0,0,0,0)"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+    
+    st.markdown("---")
 
-    # Correlation Matrix - Mental Health Data
+    # Depression and Anxiety Distribution - Mental Health Data
+    if 'Depression_Score' in mental_data.columns and 'Anxiety_Score' in mental_data.columns:
+        with st.container():
+            st.subheader(_("Distribution of Depression and Anxiety Scores"))
+            fig_dep = px.histogram(
+                mental_data, 
+                x='Depression_Score', 
+                nbins=20, 
+                marginal="rug", 
+                title=_("Depression Score Distribution"),
+                template="presentation"
+            )
+            fig_anx = px.histogram(
+                mental_data, 
+                x='Anxiety_Score', 
+                nbins=20, 
+                marginal="rug", 
+                title=_("Anxiety Score Distribution"),
+                template="presentation"
+            )
+            # Correctly close the blocks with `with col3:` and other widgets.
+            for fig in [fig_dep, fig_anx]:
+                fig.update_layout(
+                    margin=dict(l=10, r=10, t=50, b=10),
+                    paper_bgcolor="rgba(0,0,0,0)"
+                )
+                st.plotly_chart(fig, use_container_width=True)
+
+    st.markdown("---")
+
+    # Correlation Heatmap - Mental Health Data
     if {'Depression_Score', 'Anxiety_Score', 'Stress_Level'}.issubset(mental_data.columns):
-        st.subheader(_("Correlation Between Mental Health Metrics"))
-        corr_data = mental_data[['Depression_Score', 'Anxiety_Score', 'Stress_Level']].corr()
-        fig = px.imshow(corr_data, text_auto=True, aspect="auto", title=_("Correlation Heatmap"))
-        fig.update_layout(margin=dict(l=10, r=10, t=50, b=10))
-        st.plotly_chart(fig, use_container_width=True)
+        with st.container():
+            st.subheader(_("Correlation Between Mental Health Metrics"))
+            corr_data = mental_data[['Depression_Score', 'Anxiety_Score', 'Stress_Level']].corr()
+            fig = px.imshow(
+                corr_data, 
+                text_auto=True, 
+                aspect="auto", 
+                title=_("Correlation Heatmap of Mental Health Metrics"),
+                template="presentation"
+            )
+            fig.update_layout(
+                margin=dict(l=10, r=10, t=50, b=10),
+                paper_bgcolor="rgba(0,0,0,0)"
+            )
+            st.plotly_chart(fig, use_container_width=True)
 
-    # Regional Depression Scores - DHS Data
+    st.markdown("---")
+
+    # Gender-Based Depression Score - Youth Data
+    if 'Gender' in youth_data.columns and 'Depression_Score' in youth_data.columns:
+        with st.container():
+            st.subheader(_("Depression Score by Gender"))
+            gender_counts = youth_data.groupby('Gender')['Depression_Score'].mean().reset_index()
+            fig = px.bar(
+                gender_counts, 
+                x='Gender', 
+                y='Depression_Score', 
+                title=_("Average Depression Score by Gender"),
+                template="presentation"
+            )
+            fig.update_layout(
+                margin=dict(l=10, r=10, t=50, b=10),
+                paper_bgcolor="rgba(0,0,0,0)"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+    st.markdown("---")
+
+    # Time Series of Depression Score - Mental Health Youth Data
+    if 'Date' in mental_youth_data.columns and 'Depression_Score' in mental_youth_data.columns:
+        with st.container():
+            st.subheader(_("Time Series of Depression Scores"))
+            fig = px.line(
+                mental_youth_data, 
+                x='Date', 
+                y='Depression_Score', 
+                title=_("Depression Score Over Time"),
+                template="presentation"
+            )
+            fig.update_layout(
+                margin=dict(l=10, r=10, t=50, b=10),
+                paper_bgcolor="rgba(0,0,0,0)"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+    st.markdown("---")
+
+    # Regional Distribution of Depression Scores - DHS Data
     if 'Region' in dhs_data.columns and 'Depression_Score' in dhs_data.columns:
-        st.subheader(_("Regional Distribution of Depression Scores"))
-        region_data = dhs_data.groupby('Region')['Depression_Score'].mean().reset_index()
-        fig = px.choropleth(region_data, locations="Region", color="Depression_Score", hover_name="Region", color_continuous_scale="Blues")
-        st.plotly_chart(fig, use_container_width=True)
+        with st.container():
+            st.subheader(_("Regional Distribution of Depression Scores"))
+            region_data = dhs_data.groupby('Region')['Depression_Score'].mean().reset_index()
+            fig = px.choropleth(
+                region_data,
+                locations="Region",
+                color="Depression_Score",
+                hover_name="Region",
+                color_continuous_scale="Blues",
+                title=_("Average Depression Score by Region"),
+                locationmode="country names",
+                template="presentation"
+            )
+            fig.update_geos(fitbounds="locations", visible=False)
+            fig.update_layout(
+                margin=dict(l=10, r=10, t=50, b=10),
+                paper_bgcolor="rgba(0,0,0,0)"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+    st.markdown("---")
+
+    # Box Plot Analysis - DHS Data
+    if 'Region' in dhs_data.columns and 'Anxiety_Score' in dhs_data.columns:
+        with st.container():
+            st.subheader(_("Box Plot Analysis of Anxiety Scores by Region"))
+            fig = px.box(
+                dhs_data, 
+                x="Region", 
+                y="Anxiety_Score", 
+                title=_("Box Plot of Anxiety Scores by Region"),
+                template="presentation"
+            )
+            fig.update_layout(
+                margin=dict(l=10, r=10, t=50, b=10),
+                paper_bgcolor="rgba(0,0,0,0)"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
+    st.markdown("---")
+
+    # Sunburst Chart - Hierarchical Demographics in Mental Health Youth Data
+    if {'Region', 'Gender', 'Age', 'Depression_Score'}.issubset(mental_youth_data.columns):
+        with st.container():
+            st.subheader(_("Hierarchical Demographics Analysis"))
+            fig = px.sunburst(
+                mental_youth_data,
+                path=['Region', 'Gender', 'Age'],
+                values='Depression_Score',
+                title=_("Hierarchical Sunburst of Depression Scores by Region, Gender, and Age"),
+                color='Depression_Score',
+                template="presentation"
+            )
+            fig.update_layout(
+                margin=dict(l=10, r=10, t=50, b=10),
+                paper_bgcolor="rgba(0,0,0,0)"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+
 
 # Predictive Modeling Section (with Models)
 def predictive_modeling():
