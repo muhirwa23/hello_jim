@@ -127,9 +127,6 @@ def home():
     st.markdown(_("Navigate through the sidebar to explore different sections of the dashboard."))
 
 # Enhanced Data Visualization Section
-
-    # Regional Depression Scores - DHS Data
-   # Enhanced Data Visualization with Tableau-Style Widgets and Separate Containers
 def data_visualization(youth_data, mental_data, dhs_data, gen_pop_data, mental_youth_data):
     st.header("📊 " + _("Data Visualization"))
 
@@ -207,7 +204,7 @@ def data_visualization(youth_data, mental_data, dhs_data, gen_pop_data, mental_y
         with st.container():
             st.subheader(_("Depression Score by Gender"))
             gender_counts = youth_data.groupby('Gender')['Depression_Score'].mean().reset_index()
-            fig = px.bar(
+            fig            fig = px.bar(
                 gender_counts, 
                 x='Gender', 
                 y='Depression_Score', 
@@ -302,8 +299,7 @@ def data_visualization(youth_data, mental_data, dhs_data, gen_pop_data, mental_y
             )
             st.plotly_chart(fig, use_container_width=True)
 
-
-# Predictive Modeling Section (with Models)
+# Predictive Modeling Section (with Multiple Models)
 def predictive_modeling():
     st.header("🤖 " + _("Predictive Modeling"))
     
@@ -313,7 +309,7 @@ def predictive_modeling():
         with col1:
             age = st.slider(_("Age"), min_value=15, max_value=25, value=20)
         with col2:
-            social_media = st.slider(_("Social Media Usage (hours/day)"),
+            social_media = st.slider(_("Social Media Usage (hours/day)"), min_value=0, max_value=12, value=3)
         with col3:
             physical_activity = st.slider(_("Physical Activity (hours/week)"), min_value=0, max_value=14, value=4)
         sleep_duration = st.slider(_("Sleep Duration (hours/night)"), min_value=4, max_value=12, value=7)
@@ -322,7 +318,7 @@ def predictive_modeling():
         st.markdown("#### " + _("Model Parameters"))
         model_choice = st.selectbox(
             _("Select Model"),
-            options=["Random Forest", "Support Vector Machine", "Logistic Regression"]
+            options=["Random Forest", "Support Vector Machine", "Logistic Regression", "K-Nearest Neighbors"]
         )
         confidence_threshold = st.slider(_("Confidence Threshold"), 0.5, 1.0, 0.7)
         include_probability = st.checkbox(_("Include Probability in Output"))
@@ -338,9 +334,12 @@ def predictive_modeling():
         elif model_choice == "Support Vector Machine":
             prediction = age * 0.3 + social_media * 0.1 - physical_activity * 0.25 + sleep_duration * 0.25
             model_name = "Support Vector Machine"
-        else:
+        elif model_choice == "Logistic Regression":
             prediction = age * 0.2 + social_media * 0.1 - physical_activity * 0.3 + sleep_duration * 0.4
             model_name = "Logistic Regression"
+        else:  # K-Nearest Neighbors
+            prediction = age * 0.3 + social_media * 0.2 - physical_activity * 0.2 + sleep_duration * 0.1
+            model_name = "K-Nearest Neighbors"
         
         # Display prediction and additional details
         st.success(f"{_('Predicted Score')}: **{prediction:.2f}**")
@@ -426,7 +425,7 @@ def chatbot_interface():
         color: white;
         padding: 10px 20px;
         border: none;
-        border-radius: 20px;
+        border-radius: 20px
         font-size: 16px;
         cursor: pointer;
         margin-top: 10px;
@@ -538,7 +537,6 @@ def contact_professionals():
     # Display professionals in a table with contact options
     for prof in professionals:
         st.subheader(prof["name"])
-        col1
         col1, col2 = st.columns([1, 3])
         with col1:
             st.write(f"**{_('Location')}:** {prof['location']}")
@@ -605,3 +603,4 @@ def main():
 # Run the Streamlit app
 if __name__ == '__main__':
     main()
+
