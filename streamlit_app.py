@@ -56,14 +56,18 @@ def _(text):
     else:
         return text
 
-# Load real data provided
+# Load all provided datasets
 @st.cache
 def load_data():
-    youth_health_data = pd.read_csv("path_to_youth_health_data.csv")  # Replace with actual path
-    mental_health_data = pd.read_csv("path_to_mental_health_indicators.csv")  # Replace with actual path
-    return youth_health_data, mental_health_data
+    # Update these paths to your provided datasets
+    youth_health_data = pd.read_csv("path_to_youth_health_data.csv")  
+    mental_health_data = pd.read_csv("path_to_mental_health_indicators.csv")  
+    dhs_data = pd.read_csv("path_to_dhs_data.csv")  
+    general_population_data = pd.read_csv("path_to_general_population_data.csv")  
+    mental_health_youth_data = pd.read_csv("path_to_mental_health_data_rwanda_youth.csv")  
+    return youth_health_data, mental_health_data, dhs_data, general_population_data, mental_health_youth_data
 
-youth_health_data, mental_health_data = load_data()
+youth_health_data, mental_health_data, dhs_data, general_population_data, mental_health_youth_data = load_data()
 
 # Function for the home page
 def home():
@@ -73,11 +77,11 @@ def home():
     st.image("https://www.who.int/images/default-source/mca/mca-covid-image-hi-res.jpg", use_column_width=True)
     st.markdown(_("Navigate through the sidebar to explore different sections of the dashboard."))
 
-# Function for data visualization using real data
-def data_visualization(youth_data, mental_data):
+# Function for combined data visualization
+def data_visualization(youth_data, mental_data, dhs_data, gen_pop_data, mental_youth_data):
     st.header("📊 " + _("Data Visualization"))
 
-    # Gender Distribution (Pie Chart)
+    # Gender Distribution across Datasets
     col1, col2, col3 = st.columns(3)
     with col1:
         st.markdown("#### " + _("Gender Distribution"))
@@ -86,65 +90,61 @@ def data_visualization(youth_data, mental_data):
         fig.update_traces(textinfo='percent+label')
         st.plotly_chart(fig, use_container_width=True)
 
-    # Age Distribution (Histogram)
+    # Age Distribution (Histogram) using general population data
     with col2:
         st.markdown("#### " + _("Age Distribution"))
-        fig = px.histogram(youth_data, x='Age', nbins=10)
+        fig = px.histogram(gen_pop_data, x='Age', nbins=10)
         st.plotly_chart(fig, use_container_width=True)
 
-    # Regional Distribution (Bar Chart)
+    # Depression and Anxiety Rates from Mental Health Indicators Dataset
     with col3:
-        st.markdown("#### " + _("Regional Distribution"))
-        region_counts = youth_data['Region'].value_counts().reset_index()
-        region_counts.columns = ['Region', 'Count']
-        fig = px.bar(region_counts, x='Region', y='Count')
+        st.markdown("#### " + _("Mental Health Indicators"))
+        fig = px.histogram(mental_data, x='Depression_Score', color='Anxiety_Score', marginal="rug")
         st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("---")
 
-    # Interactive Time-Series Analysis
+    # Time-Series Analysis
     st.subheader(_("Mental Health Metrics Over Time"))
     metrics = ['Depression_Score', 'Anxiety_Score', 'Stress_Level']
     selected_metrics = st.multiselect(_("Select metrics to display:"), metrics, default=metrics)
     if selected_metrics:
-        fig = px.line(mental_data, x='Date', y=selected_metrics, labels={'value': _('Score'), 'variable': _('Metric')})
+        fig = px.line(mental_youth_data, x='Date', y=selected_metrics, labels={'value': _('Score'), 'variable': _('Metric')})
         fig.update_layout(title=_("Time Series of Selected Mental Health Metrics"), xaxis_title="Date", yaxis_title="Score")
         st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("---")
 
-    # Geospatial Analysis with Interactive Map
-    st.subheader(_("Geospatial Analysis by Region"))
-    if 'Region' in youth_data.columns:
-        region_data = youth_data.groupby('Region').mean().reset_index()
-        region_data['Region'] = region_data['Region'].astype(str)
-        fig = px.choropleth(
-            region_data,
-            locations="Region",
-            color="Depression_Score",
-            hover_name="Region",
-            color_continuous_scale="Viridis",
-            locationmode="country names"
-        )
-        fig.update_geos(fitbounds="locations", visible=False)
-        fig.update_layout(title_text=_("Depression Score by Region"))
-        st.plotly_chart(fig, use_container_width=True)
-
-    st.markdown("---")
-
-    # Demographic Breakdown by Gender and Region (Bar Chart)
-    st.subheader(_("Demographic Breakdown by Gender and Region"))
-    demographic_data = youth_data.groupby(['Gender', 'Region']).mean().reset_index()
-    fig = px.bar(demographic_data, x="Region", y="Depression_Score", color="Gender", barmode="group")
-    fig.update_layout(title=_("Average Depression Score by Gender and Region"), xaxis_title="Region", yaxis_title="Depression Score")
+    # Regional Analysis of DHS Data
+    st.subheader(_("Regional Analysis of Mental Health Metrics"))
+    region_data = dhs_data.groupby('Region').mean().reset_index()
+    fig = px.choropleth(
+        region_data,
+        locations="Region",
+        color="Depression_Score",
+        hover_name="Region",
+        color_continuous_scale="Viridis",
+        locationmode="country names"
+    )
+    fig.update_geos(fitbounds="locations", visible=False)
+    fig.update_layout(title_text=_("Depression Score by Region"))
     st.plotly_chart(fig, use_container_width=True)
 
     st.markdown("---")
 
-    # Box Plot for Outlier Analysis
-    st.subheader(_("Box Plot Analysis for Outliers"))
-    metric_for_boxplot = st.selectbox(_("Select a metric to view outliers:"), ['Depression_Score', 'Anxiety_Score', 'Stress_Level'])
-    fig = px.box(youth_data, x="Region", y=metric_for_boxplot, color="Region")
+    # Demographic Breakdown by Age and Gender
+    st.subheader(_("Demographic Breakdown by Age and Gender"))
+    demographic_data = youth_data.groupby(['Gender', 'Age']).mean().reset_index()
+    fig = px.bar(demographic_data, x="Age", y="Depression_Score", color="Gender", barmode="group")
+    fig.update_layout(title=_("Average Depression Score by Age and Gender"), xaxis_title="Age", yaxis_title="Depression Score")
+    st.plotly_chart(fig, use_container_width=True)
+
+    st.markdown("---")
+
+    # Box Plot Analysis for DHS Data
+    st.subheader(_("Box Plot Analysis for DHS Data"))
+    metric_for_boxplot = st.selectbox(_("Select a metric to view outliers:"), ['Depression_Score', 'Anxiety_Score'])
+    fig = px.box(dhs_data, x="Region", y=metric_for_boxplot, color="Region")
     fig.update_layout(title=f"{_('Box Plot of')} {metric_for_boxplot} {_('by Region')}", yaxis_title=metric_for_boxplot)
     st.plotly_chart(fig, use_container_width=True)
 
@@ -152,11 +152,13 @@ def data_visualization(youth_data, mental_data):
 
     # Sunburst Diagram for Hierarchical Demographics
     st.subheader(_("Hierarchical Demographic Analysis"))
-    fig = px.sunburst(youth_data, path=['Region', 'Gender', 'Age'], values='Depression_Score', color='Depression_Score')
+    fig = px.sunburst(mental_youth_data, path=['Region', 'Gender', 'Age'], values='Depression_Score', color='Depression_Score')
     fig.update_layout(title=_("Sunburst Diagram of Demographic Breakdown by Region, Gender, and Age"))
     st.plotly_chart(fig, use_container_width=True)
 
 # Function for predictive modeling (API Integration)
+def predictive_modeling():
+    st.header("🤖 "
 def predictive_modeling():
     st.header("🤖 " + _("Predictive Modeling"))
 
@@ -173,8 +175,7 @@ def predictive_modeling():
         with col3:
             physical_activity = st.slider(_("Physical Activity (hours/week)"), min_value=0, max_value=14, value=4)
         with col4:
-            sleep_duration = st.slider(_("Sleep Duration (
-        sleep_duration = st.slider(_("Sleep Duration (hours/night)"), min_value=4, max_value=12, value=7)
+            sleep_duration = st.slider(_("Sleep Duration (hours/night)"), min_value=4, max_value=12, value=7)
         submit_button = st.form_submit_button(label=_('Predict'))
 
     if submit_button:
@@ -246,7 +247,7 @@ def community_forum():
         submit_post = st.form_submit_button(label=_('Post'))
 
     if submit_post and post_content:
-        st.session_state.forum_posts.append({"username": username, "content": post_content, "time": datetime.datetime.now()})
+        st.session_state['forum_posts'].append({"username": username, "content": post_content, "time": datetime.datetime.now()})
         st.success(_("Your post has been shared!"))
 
     st.subheader(_("Recent Posts"))
@@ -331,15 +332,15 @@ def main():
 
     # Load data if not loaded already
     if 'data' not in st.session_state:
-        youth_data, mental_data = load_data()
-        st.session_state['data'] = youth_data, mental_data
-    youth_data, mental_data = st.session_state['data']
+        youth_data, mental_data, dhs_data, gen_pop_data, mental_youth_data = load_data()
+        st.session_state['data'] = youth_data, mental_data, dhs_data, gen_pop_data, mental_youth_data
+    youth_data, mental_data, dhs_data, gen_pop_data, mental_youth_data = st.session_state['data']
 
     # Handle navigation selection
     if selected == _("Home"):
         home()
     elif selected == _("Data Visualization"):
-        data_visualization(youth_data, mental_data)
+        data_visualization(youth_data, mental_data, dhs_data, gen_pop_data, mental_youth_data)
     elif selected == _("Predictive Modeling"):
         predictive_modeling()
     elif selected == _("Chatbot"):
