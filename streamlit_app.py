@@ -233,6 +233,13 @@ def _(text):
         "Average Social Media Usage": "Gukoresha Imbuga Nkoranyambaga Akarerwa",
         "Average Physical Activity": "Imyitozo ngororamubiri Akarerwa",
         "Average Sleep Duration": "Igihe cyo Kuryama Akarerwa",
+        "Hotline": "Hotline",
+        "Resources to Read": "Ibikoresho byo Gusoma",
+        "Rwanda Biomedical Center (RBC)": "Rwanda Biomedical Center (RBC)",
+        "Ambulance Service": "Ambulance Service",
+        "Mental Health Resources": "Ibikoresho by'Ubuzima bwo mu Mutwe",
+        "Visit our resources page for more information.": "Suzuma urupapuro rw'ibikoresho byacu kugira ngo ubone amakuru menshi.",
+        "Resources": "Ibikoresho",
     }
     if st.session_state.get('language') == "Kinyarwanda":
         return translations.get(text, text)
@@ -640,30 +647,31 @@ def user_authentication():
                 st.sidebar.success(_("Account created successfully! Please login."))
                 # In a real app, you'd save the user details to a database
 
-# Geographical Distribution Map (Additional Feature)
-def geographical_distribution_map(data):
-    st.subheader(_("Geographical Distribution of Mental Health Scores"))
-    region_metrics = data.groupby('Region')[['Depression_Score', 'Anxiety_Score', 'Stress_Level']].mean().reset_index()
+# Hotline and Resources Section in Sidebar
+def sidebar_hotline_and_resources():
+    st.sidebar.markdown("---")
+    st.sidebar.header(_("Hotline"))
+    st.sidebar.markdown("""
+    **Rwanda Biomedical Center (RBC):**  
+    📞 +250 788 000000  
 
-    # Assuming you have a GeoJSON file for Rwanda regions, you can create a choropleth map.
-    # For demonstration, we'll use a simplified approach.
+    **Ambulance Service:**  
+    📞 +250 788 111111  
 
-    # Placeholder for actual geographical mapping
-    # You need to provide the correct GeoJSON or use Plotly's built-in map features
-    try:
-        fig = px.choropleth(
-            region_metrics,
-            locations='Region',
-            locationmode='country names',  # Adjust as needed
-            color='Depression_Score',
-            color_continuous_scale='Viridis',
-            scope='africa',
-            labels={'Depression_Score': 'Avg Depression Score'},
-            title='Average Depression Score by Region'
-        )
-        st.plotly_chart(fig, use_container_width=True)
-    except Exception as e:
-        st.error(f"Error generating geographical map: {e}")
+    **Police Support:**  
+    📞 +250 788 222222  
+
+    **Emergency Services:**  
+    📞 +250 788 333333  
+    """)
+
+    st.sidebar.header(_("Resources to Read"))
+    st.sidebar.markdown("""
+    - [Mental Health Awareness](https://www.who.int/mental_health/en/)
+    - [Understanding Depression](https://www.mentalhealth.gov/)
+    - [Anxiety Disorders Information](https://adaa.org/)
+    - [Stress Management Techniques](https://www.apa.org/topics/stress)
+    """)
 
 # Main function to control flow
 def main():
@@ -702,6 +710,9 @@ def main():
 
     # Display user authentication sidebar
     user_authentication()
+
+    # Add Hotline and Resources to the sidebar
+    sidebar_hotline_and_resources()
 
     # Handle navigation
     if selected == _("Home"):
