@@ -297,7 +297,7 @@ def predictive_modeling():
 
 # Home page design with Hierarchical Demographic Analysis chart
 def home(data):
-    st.title("🧠 " + _("Mental Health Dashboard for Rwandan Youth"))
+    st.title("" + _("Mental Health Dashboard for Rwandan Youth"))
     st.markdown("### " + _("Welcome to the Mental Health Dashboard"))
     st.markdown(_("This dashboard provides insights into the mental health of Rwandan youth. Explore data visualizations, predictive modeling, and engage with our interactive chatbot."))
 
