@@ -258,9 +258,7 @@ if 'Region' in dhs_data.columns and 'Depression_Score' in dhs_data.columns:
                 paper_bgcolor="rgba(0,0,0,0)"
             )
             st.plotly_chart(fig, use_container_width=True)
-
     st.markdown("---")
-
     # Box Plot Analysis - DHS Data
 if 'Region' in dhs_data.columns and 'Anxiety_Score' in dhs_data.columns:
         with st.container():
