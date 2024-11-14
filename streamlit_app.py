@@ -313,7 +313,7 @@ def home(data):
     st.markdown("Display key statistics about the dataset to provide a quick overview.")
     summary = data.describe().T
     summary['median'] = data.median()
-    st.dataframe(summary[['mean', 'median', 'std', 'min', 'max']].round(2))
+    st.dataframe(summary[['mean', 'std', 'min', 'max']].round(2))
 
     # Key Performance Indicators (KPIs)
     st.subheader("🚀 " + _("Key Performance Indicators"))
