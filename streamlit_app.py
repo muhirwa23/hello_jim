@@ -387,37 +387,76 @@ def predictive_modeling():
             st.error("Unexpected response format from the prediction API.")
 
 # Function for the chatbot (API Integration)
-def chatbot_interface():
-    st.header("🗣️ " + _("Mental Health Chatbot"))
+# Set your Groq API key securely (replace with your actual Groq API key)
+api_key = "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"
+os.environ["GROQ_API_KEY"] = api_key  # Store it as an environment variable
 
-    st.write(_("Hello! I'm **Menti**, your mental health assistant. How can I help you today?"))
+# Initialize Groq client using the stored API key
+client = Groq(api_key=os.environ["GROQ_API_KEY"])
 
-    if 'history' not in st.session_state:
-        st.session_state['history'] = []
+# Function to generate text using Groq's LLM
+def generate_text(prompt, max_tokens=100):
+    try:
+        # Send a prompt to Groq's Llama-based model
+        chat_completion = client.chat.completions.create(
+            messages=[{"role": "user", "content": prompt}],
+            model="llama3-8b-8192",  # Llama model to generate responses
+            max_tokens=max_tokens,
+            temperature=1  # Controls randomness
+        )
+        return chat_completion.choices[0].message.content  # Return the generated response
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        if "Invalid API Key" in str(e):
+            print("Please check that you've entered your API key correctly.")
+        return None
 
-    # Chat interface
-    user_input = st.text_input(_("You") + ":", "", key="input")
-    if user_input:
-        # Call the Gradio API for chatbot response
-        gradio_chatbot_url = "https://your-gradio-app-url/gradio_chatbot_endpoint"  # Replace with your Gradio Chatbot API URL
-        payload = {
-            "data": [user_input]
-        }
-        try:
-            response = requests.post(gradio_chatbot_url, json=payload)
-            response.raise_for_status()
-            result = response.json()
-            assistant_response = result["data"][0]
-            st.session_state.history.append({"user": user_input, "assistant": assistant_response})
-        except requests.exceptions.RequestException as e:
-            st.error(f"Error in API call: {e}")
-        except KeyError:
-            st.error("Unexpected response format from the chatbot API.")
+# Streamlit Layout
+st.set_page_config(page_title="Groq-Powered Chatbot", page_icon="🤖", layout="wide")
 
-    # Display conversation history
+# Title and introduction
+st.title("Groq-Powered Chatbot")
+st.write("Welcome to the **Groq-powered chatbot**. Type your questions below and interact with the assistant.")
+
+# Create session state for storing chat history
+if "history" not in st.session_state:
+    st.session_state.history = []
+
+# Input box for user interaction
+user_input = st.text_input("You: ", "", placeholder="Type your question here...")
+
+if user_input:
+    # Generate a response from Groq using the user's input
+    assistant_response = generate_text(user_input)
+    
+    # Store the user input and assistant response in the chat history
+    st.session_state.history.append({"user": user_input, "assistant": assistant_response})
+
+# Display chat history in a professional layout
+if st.session_state.history:
     for chat in st.session_state.history:
-        st.markdown(f"<div class='chat-message user-message'><strong>{_('You')}:</strong> {chat['user']}</div>", unsafe_allow_html=True)
-        st.markdown(f"<div class='chat-message assistant-message'><strong>Menti:</strong> {chat['assistant']}</div>", unsafe_allow_html=True)
+        # Display user input
+        st.markdown(f"**You:** {chat['user']}")
+        # Display assistant's response
+        st.markdown(f"**Assistant:** {chat['assistant']}")
+
+# Add styling for the conversation (optional for improved appearance)
+st.markdown("""
+    <style>
+        .css-1v0mbdo {
+            font-family: 'Arial', sans-serif;
+        }
+        .stTextInput>div>div>input {
+            border-radius: 15px;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+        .stMarkdown>p {
+            font-size: 18px;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 # Innovative features in the sidebar
 def innovative_features():
