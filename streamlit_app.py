@@ -244,12 +244,12 @@ def home():
     """)
 
 # Function for data visualization
+# Function for data visualization
 def data_visualization(data):
     st.header("📊 " + _("Data Visualization"))
 
     st.subheader(_("Demographics Overview"))
     col1, col2, col3 = st.columns(3)
-
     with col1:
         st.markdown("#### " + _("Gender Distribution"))
         gender_counts = data['Gender'].value_counts()
@@ -262,12 +262,10 @@ def data_visualization(data):
         )
         fig.update_traces(textinfo='percent+label')
         st.plotly_chart(fig, use_container_width=True)
-
     with col2:
         st.markdown("#### " + _("Age Distribution"))
         fig = px.histogram(data, x='Age', nbins=10, color_discrete_sequence=['#00CC96'])
         st.plotly_chart(fig, use_container_width=True)
-
     with col3:
         st.markdown("#### " + _("Regional Distribution"))
         region_counts = data['Region'].value_counts().reset_index()
@@ -275,9 +273,7 @@ def data_visualization(data):
         fig = px.bar(region_counts, x='Region', y='Count', color='Region',
                      color_discrete_sequence=px.colors.qualitative.Set2)
         st.plotly_chart(fig, use_container_width=True)
-
-    st.markdown("---")
-
+    st.markdown("---")                
     st.subheader(_("Mental Health Metrics Over Time"))
     metrics = ['Depression_Score', 'Anxiety_Score', 'Stress_Level']
     selected_metrics = st.multiselect(_("Select metrics to display:"), metrics, default=metrics)
