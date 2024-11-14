@@ -242,22 +242,6 @@ def home():
     st.markdown(_("""
     **Navigate through the sidebar to explore different sections of the dashboard.**
     """)
-if {'Region', 'Gender', 'Age', 'Depression_Score'}.issubset(mental_youth_data.columns):
-    with st.container():
-        st.subheader(_("Hierarchical Demographics Analysis"))
-        fig = px.sunburst(
-            mental_youth_data,
-            path=['Region', 'Gender', 'Age'],
-            values='Depression_Score',
-            title=_("Hierarchical Sunburst of Depression Scores by Region, Gender, and Age"),
-            color='Depression_Score',
-            template="presentation"
-        )
-        fig.update_layout(
-            margin=dict(l=10, r=10, t=50, b=10),
-            paper_bgcolor="rgba(0,0,0,0)"
-        )
-        st.plotly_chart(fig, use_container_width=True)
 
 # Function for data visualization
 def data_visualization(data):
