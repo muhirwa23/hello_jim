@@ -237,6 +237,31 @@ def simulate_data():
         data[score] = data[score].clip(0, 100)
     return data
 
+# Predictive Modeling Function
+def predictive_modeling():
+    st.header("🤖 " + _("Predictive Modeling"))
+    st.markdown(_("### Predict your Depression Score"))
+
+    # User input form
+    with st.form(key='prediction_form'):
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+            age = st.slider(_("Age"), min_value=15, max_value=25, value=20)
+        with col2:
+            social_media = st.slider(_("Social Media Usage (hours/day)"), min_value=0, max_value=12, value=3)
+        with col3:
+            physical_activity = st.slider(_("Physical Activity (hours/week)"), min_value=0, max_value=14, value=4)
+        with col4:
+            sleep_duration = st.slider(_("Sleep Duration (hours/night)"), min_value=4, max_value=12, value=7)
+        submit_button = st.form_submit_button(label=_('Predict'))
+
+    if submit_button:
+        # Simple model for prediction (linear approximation)
+        depression_score = (age * 0.3) + (social_media * 0.5) - (physical_activity * 0.2) + (sleep_duration * 0.4)
+        depression_score = np.clip(depression_score, 0, 100)  # Ensures the score stays within 0-100 range
+        st.success(f"{_('Predicted Depression Score')}: **{depression_score:.2f}**")
+        st.info(_("Note: Higher scores indicate higher levels of depression."))
+
 # Home page design with Hierarchical Demographic Analysis chart
 def home(data):
     st.title("🧠 " + _("Mental Health Dashboard for Rwandan Youth"))
@@ -279,6 +304,13 @@ def data_visualization(data):
     fig.update_layout(height=400)
     st.plotly_chart(fig, use_container_width=True)
 
+    # Boxplot for Stress Levels
+    st.subheader(_("Stress Level Distribution"))
+    fig = px.box(data, y='Stress_Level', color='Gender', 
+                 title="Stress Levels by Gender", 
+                 labels={"Stress_Level": "Stress Level", "Gender": "Gender"})
+    st.plotly_chart(fig, use_container_width=True)
+
 # Chatbot Interface
 def chatbot_interface():
     st.header("🧠 " + _("Mental Health Chatbot"))
@@ -308,9 +340,10 @@ def main():
     options = [
         _("Home"),
         _("Data Visualization"),
+        _("Predictive Modeling"),
         _("Chatbot"),
     ]
-    icons = ["house", "bar-chart", "chat-dots"]
+    icons = ["house", "bar-chart", "cpu", "chat-dots"]
 
     selected = option_menu(
         menu_title=_("Main Menu"),
@@ -335,6 +368,8 @@ def main():
         home(data)
     elif selected == _("Data Visualization"):
         data_visualization(data)
+    elif selected == _("Predictive Modeling"):
+        predictive_modeling()
     elif selected == _("Chatbot"):
         chatbot_interface()
 
