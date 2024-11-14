@@ -198,7 +198,8 @@ def data_visualization(youth_data, mental_data, dhs_data, gen_pop_data, mental_y
     st.markdown("---")
 
    # Gender-Based Depression Score - Youth Data
-   if 'Gender' in youth_data.columns and 'Depression_Score' in youth_data.columns:
+    # Gender-Based Depression Score - Youth Data
+if 'Gender' in youth_data.columns and 'Depression_Score' in youth_data.columns:
     with st.container():
         st.subheader(_("Depression Score by Gender"))
         gender_counts = youth_data.groupby('Gender')['Depression_Score'].mean().reset_index()
@@ -218,7 +219,7 @@ def data_visualization(youth_data, mental_data, dhs_data, gen_pop_data, mental_y
 st.markdown("---")
 
     # Time Series of Depression Score - Mental Health Youth Data
-    if 'Date' in mental_youth_data.columns and 'Depression_Score' in mental_youth_data.columns:
+if 'Date' in mental_youth_data.columns and 'Depression_Score' in mental_youth_data.columns:
         with st.container():
             st.subheader(_("Time Series of Depression Scores"))
             fig = px.line(
@@ -237,7 +238,7 @@ st.markdown("---")
     st.markdown("---")
 
     # Regional Distribution of Depression Scores - DHS Data
-    if 'Region' in dhs_data.columns and 'Depression_Score' in dhs_data.columns:
+if 'Region' in dhs_data.columns and 'Depression_Score' in dhs_data.columns:
         with st.container():
             st.subheader(_("Regional Distribution of Depression Scores"))
             region_data = dhs_data.groupby('Region')['Depression_Score'].mean().reset_index()
@@ -261,7 +262,7 @@ st.markdown("---")
     st.markdown("---")
 
     # Box Plot Analysis - DHS Data
-    if 'Region' in dhs_data.columns and 'Anxiety_Score' in dhs_data.columns:
+if 'Region' in dhs_data.columns and 'Anxiety_Score' in dhs_data.columns:
         with st.container():
             st.subheader(_("Box Plot Analysis of Anxiety Scores by Region"))
             fig = px.box(
@@ -280,7 +281,7 @@ st.markdown("---")
     st.markdown("---")
 
     # Sunburst Chart - Hierarchical Demographics in Mental Health Youth Data
-    if {'Region', 'Gender', 'Age', 'Depression_Score'}.issubset(mental_youth_data.columns):
+if {'Region', 'Gender', 'Age', 'Depression_Score'}.issubset(mental_youth_data.columns):
         with st.container():
             st.subheader(_("Hierarchical Demographics Analysis"))
             fig = px.sunburst(
