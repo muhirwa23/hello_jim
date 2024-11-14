@@ -9,4 +9,5 @@ textblob
 nltk
 WordCloud
 Groq
+streamlit-option-menu
 
