@@ -237,57 +237,26 @@ def simulate_data():
         data[score] = data[score].clip(0, 100)
     return data
 
-# Home page design with a pie chart overview
+# Home page design with Hierarchical Demographic Analysis chart
 def home(data):
     st.title("🧠 " + _("Mental Health Dashboard for Rwandan Youth"))
     st.markdown("### " + _("Welcome to the Mental Health Dashboard"))
     st.markdown(_("This dashboard provides insights into the mental health of Rwandan youth. Explore data visualizations, predictive modeling, and engage with our interactive chatbot."))
-    
-    # Overview pie chart on home page
-    st.subheader(_("Overview"))
-    gender_counts = data['Gender'].value_counts()
-    fig = px.pie(
-        names=gender_counts.index,
-        values=gender_counts.values,
-        color=gender_counts.index,
-        color_discrete_map={'Male': '#636EFA', 'Female': '#EF553B'},
-        hole=0.5
-    )
-    fig.update_traces(textinfo='percent+label')
+
+    # Hierarchical Demographic Analysis Chart
+    st.subheader(_("Hierarchical Demographic Analysis"))
+    demographic_counts = data.groupby(['Age', 'Region', 'Gender']).size().reset_index(name='Counts')
+    fig = px.sunburst(demographic_counts, path=['Region', 'Age', 'Gender'], values='Counts', color='Gender', 
+                      color_discrete_map={'Male': '#636EFA', 'Female': '#EF553B'})
     st.plotly_chart(fig, use_container_width=True)
     st.markdown(_("**Navigate through the sidebar to explore different sections of the dashboard.**"))
 
-# Data visualization function
+# Data visualization function with more charts
 def data_visualization(data):
     st.header("📊 " + _("Data Visualization"))
 
-    # Gender Distribution Pie Chart
-    st.subheader(_("Gender Distribution"))
-    gender_counts = data['Gender'].value_counts()
-    fig = px.pie(
-        names=gender_counts.index,
-        values=gender_counts.values,
-        color=gender_counts.index,
-        color_discrete_map={'Male': '#636EFA', 'Female': '#EF553B'},
-        hole=0.5
-    )
-    fig.update_traces(textinfo='percent+label')
-    st.plotly_chart(fig, use_container_width=True)
-
-    # Age Distribution Histogram
-    st.subheader(_("Age Distribution"))
-    fig = px.histogram(data, x='Age', nbins=10, color_discrete_sequence=['#00CC96'])
-    st.plotly_chart(fig, use_container_width=True)
-
-    # Regional Distribution Bar Chart
-    st.subheader(_("Regional Distribution"))
-    region_counts = data['Region'].value_counts().reset_index()
-    region_counts.columns = ['Region', 'Count']
-    fig = px.bar(region_counts, x='Region', y='Count', color='Region', color_discrete_sequence=px.colors.qualitative.Set2)
-    st.plotly_chart(fig, use_container_width=True)
-
-    # Mental Health Metrics Over Time Line Plot
-    st.subheader(_("Mental Health Metrics Over Time"))
+    # Mental Health Trends over Time (Depression, Anxiety, Stress)
+    st.subheader(_("Mental Health Trends Over Time"))
     metrics = ['Depression_Score', 'Anxiety_Score', 'Stress_Level']
     selected_metrics = st.multiselect(_("Select metrics to display:"), metrics, default=metrics)
     if selected_metrics:
@@ -298,6 +267,39 @@ def data_visualization(data):
         )
         st.plotly_chart(fig, use_container_width=True)
 
+    # Heatmap by Region
+    st.subheader(_("Heatmap by Region"))
+    region_metrics = data.groupby('Region').mean().reset_index()
+    fig = go.Figure(data=go.Heatmap(
+        z=region_metrics[['Depression_Score', 'Anxiety_Score', 'Stress_Level']].values,
+        x=['Depression Score', 'Anxiety Score', 'Stress Level'],
+        y=region_metrics['Region'],
+        colorscale='Viridis'
+    ))
+    fig.update_layout(height=400)
+    st.plotly_chart(fig, use_container_width=True)
+
+# Chatbot Interface
+def chatbot_interface():
+    st.header("🧠 " + _("Mental Health Chatbot"))
+
+    st.write(_("Hello! I'm **Menti**, your mental health assistant. How can I help you today?"))
+
+    if 'history' not in st.session_state:
+        st.session_state['history'] = []
+
+    # Chat interface
+    user_input = st.text_input(_("You") + ":", "", key="input")
+    if user_input:
+        # Simulate chatbot response
+        assistant_response = f"**Menti**: Based on your query, here's some information related to mental health."
+        st.session_state.history.append({"user": user_input, "assistant": assistant_response})
+
+    # Display conversation history
+    for chat in st.session_state.history:
+        st.markdown(f"<div class='chat-message user-message'><strong>{_('You')}:</strong> {chat['user']}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='chat-message assistant-message'><strong>Menti:</strong> {chat['assistant']}</div>", unsafe_allow_html=True)
+
 # Main function to control flow
 def main():
     set_language()
@@ -306,10 +308,9 @@ def main():
     options = [
         _("Home"),
         _("Data Visualization"),
-        _("Predictive Modeling"),
-        _("Sentiment Analysis"),
+        _("Chatbot"),
     ]
-    icons = ["house", "bar-chart", "cpu", "chat-dots"]
+    icons = ["house", "bar-chart", "chat-dots"]
 
     selected = option_menu(
         menu_title=_("Main Menu"),
@@ -334,6 +335,8 @@ def main():
         home(data)
     elif selected == _("Data Visualization"):
         data_visualization(data)
+    elif selected == _("Chatbot"):
+        chatbot_interface()
 
 if __name__ == '__main__':
     main()
