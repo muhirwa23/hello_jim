@@ -197,25 +197,25 @@ def data_visualization(youth_data, mental_data, dhs_data, gen_pop_data, mental_y
 
     st.markdown("---")
 
-    # Gender-Based Depression Score - Youth Data
-    if 'Gender' in youth_data.columns and 'Depression_Score' in youth_data.columns:
-        with st.container():
-            st.subheader(_("Depression Score by Gender"))
-            gender_counts = youth_data.groupby('Gender')['Depression_Score'].mean().reset_index()
-             fig = px.bar(
-                gender_counts, 
-                x='Gender', 
-                y='Depression_Score', 
-                title=_("Average Depression Score by Gender"),
-                template="presentation"
-            )
+   # Gender-Based Depression Score - Youth Data
+if 'Gender' in youth_data.columns and 'Depression_Score' in youth_data.columns:
+    with st.container():
+        st.subheader(_("Depression Score by Gender"))
+        gender_counts = youth_data.groupby('Gender')['Depression_Score'].mean().reset_index()
+        fig = px.bar(
+            gender_counts, 
+            x='Gender', 
+            y='Depression_Score', 
+            title=_("Average Depression Score by Gender"),
+            template="presentation"
+        )
         fig.update_layout(
-                margin=dict(l=10, r=10, t=50, b=10),
-                paper_bgcolor="rgba(0,0,0,0)"
-            )
-            st.plotly_chart(fig, use_container_width=True)
+            margin=dict(l=10, r=10, t=50, b=10),
+            paper_bgcolor="rgba(0,0,0,0)"
+        )
+        st.plotly_chart(fig, use_container_width=True)
 
-    st.markdown("---")
+st.markdown("---")
 
     # Time Series of Depression Score - Mental Health Youth Data
     if 'Date' in mental_youth_data.columns and 'Depression_Score' in mental_youth_data.columns:
