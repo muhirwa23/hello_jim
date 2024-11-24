@@ -9,6 +9,14 @@ from textblob import TextBlob
 import nltk
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+import os
+import openai
+from langdetect import detect
+from googletrans import Translator
+import streamlit as st
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+
 
 # Download NLTK data (if not already downloaded)
 nltk.download('punkt')
@@ -476,38 +484,46 @@ def data_visualization(data):
         st.plotly_chart(fig, use_container_width=True)
 
 # Chatbot Interface
-def chatbot_interface():
-    st.header(" " + _("Mental Health Chatbot"))
+# Securely retrieve the OpenAI API key
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
-    st.write(_("Hello! I'm **Menti**, your mental health assistant. How can I help you today?"))
+translator = Translator()
+
+# Chatbot Interface
+def chatbot_interface():
+    st.header("🤖 Mental Health Chatbot")
+    st.write("Hello! I'm **Menti**, your mental health assistant. How can I help you today?")
 
     if 'history' not in st.session_state:
         st.session_state['history'] = []
 
-    # Chat interface
-    user_input = st.text_input(_("You") + ":", "", key="input")
+    user_input = st.text_input("You:", "", key="input")
     if user_input:
-        #  chatbot response using TextBlob for sentiment analysis
-        blob = TextBlob(user_input)
-        sentiment = blob.sentiment.polarity
-        if sentiment > 0.1:
-            assistant_response = "That's great to hear! How can I assist you further?"
-        elif sentiment < -0.1:
-            assistant_response = "I'm sorry you're feeling this way. Please consider reaching out to a professional for support."
-        else:
-            assistant_response = "I understand. Could you please provide more details or specify how I can help you?"
+        user_lang = detect(user_input)
+        translated_input = translator.translate(user_input, src=user_lang, dest="en").text if user_lang != "en" else user_input
 
-        st.session_state.history.append({"user": user_input, "assistant": assistant_response})
+        response = openai.ChatCompletion.create(
+            model="gpt-4",
+            messages=[
+                {"role": "system", "content": "You are a compassionate and multilingual mental health assistant."},
+                {"role": "user", "content": translated_input}
+            ],
+            temperature=0.7,
+            max_tokens=150
+        )
+        assistant_reply = response['choices'][0]['message']['content']
+        if user_lang != "en":
+            assistant_reply = translator.translate(assistant_reply, src="en", dest=user_lang).text
 
-    # Display conversation history
+        st.session_state.history.append({"user": user_input, "assistant": assistant_reply})
+
     st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
     for chat in st.session_state.history:
-        st.markdown(f"<div class='chat-message user-message'><strong>{_('You')}:</strong> {chat['user']}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='chat-message user-message'><strong>You:</strong> {chat['user']}</div>", unsafe_allow_html=True)
         st.markdown(f"<div class='chat-message assistant-message'><strong>Menti:</strong> {chat['assistant']}</div>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
-    # Optionally, add a Word Cloud based on user inputs
-    if st.checkbox(_("Show Word Cloud of Your Conversations")):
+    if st.checkbox("Show Word Cloud of Your Conversations"):
         all_text = ' '.join([chat['user'] for chat in st.session_state.history])
         if all_text:
             wordcloud = WordCloud(width=800, height=400, background_color='white').generate(all_text)
@@ -516,7 +532,10 @@ def chatbot_interface():
             plt.axis('off')
             st.pyplot(plt)
         else:
-            st.write(_("No conversations to display."))
+            st.write("No conversations to display.")
+
+if __name__ == "__main__":
+    chatbot_interface()
 
 # Community Forum (Simulated Feature)
 def community_forum():
