@@ -16,7 +16,7 @@ from googletrans import Translator
 import streamlit as st
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 # Download NLTK data (if not already downloaded)
 nltk.download('punkt')
