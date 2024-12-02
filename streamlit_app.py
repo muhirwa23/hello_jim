@@ -25,7 +25,7 @@ nltk.download('averaged_perceptron_tagger')
 # Set page configuration
 st.set_page_config(
     page_title="Mental Health Dashboard",
-    page_icon="🧠",
+    page_icon="🤓",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -534,9 +534,6 @@ def chatbot_interface():
         else:
             st.write("No conversations to display.")
 
-if _name_ == "_main_":
-    chatbot_interface()
-
 # Community Forum (Simulated Feature)
 def community_forum():
     st.header("👥 " + _("Community Forum"))
@@ -701,7 +698,6 @@ def main():
         _("Home"),
         _("Data Visualization"),
         _("Predictive Modeling"),
-        _("Chatbot"),
         _("Community Forum"),
         _("Contact Professionals"),
         _("Sentiment Analysis"),
@@ -740,22 +736,12 @@ def main():
         data_visualization(data)
     elif selected == _("Predictive Modeling"):
         predictive_modeling()
-    elif selected == _("Chatbot"):
-        chatbot_interface()
     elif selected == _("Community Forum"):
         community_forum()
     elif selected == _("Contact Professionals"):
         contact_professionals()
     elif selected == _("Sentiment Analysis"):
         sentiment_analysis()
-   # elif selected == _("Analytics"):
-      #  st.header(_("Analytics"))
-      #  st.markdown(_("This section can include advanced analytics features such as predictive modeling insights, trend analysis, and more."))
-        # Placeholder for future analytics features
-    #elif selected == _("Settings"):
-      #  st.header(_("Settings"))
-    #    st.markdown(_("Customize your dashboard settings here."))
-        # Placeholder for future settings features
 
-if _name_ == '_main_':
-    main() .
+if __name__ == '__main__':
+    main()
