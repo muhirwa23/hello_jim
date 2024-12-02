@@ -568,57 +568,119 @@ def data_visualization(data):
             title='Depression vs. Anxiety Scores by Gender'
         )
         st.plotly_chart(fig, use_container_width=True)
-
 # Chatbot Interface
-# Securely retrieve the OpenAI API key
 openai.api_key = os.getenv("OPENAI_API_KEY")
+import streamlit as st
+import openai
+import os
+from langdetect import detect
+from googletrans import Translator
+import time
 
 translator = Translator()
 
+# Add CSS styles to improve chatbot UI
+def add_custom_css():
+    st.markdown(
+        """
+        <style>
+        .chat-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f4f8;  /* Light blue medical theme */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .chat-message {
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .user-message {
+            background-color: #d1e7dd;
+            text-align: right;
+        }
+        .assistant-message {
+            background-color: #eaf1f8;  /* Soft blue for assistant messages */
+        }
+        .user-message strong, .assistant-message strong {
+            color: #007bff;  /* Medical blue for usernames */
+        }
+        .input-container {
+            max-width: 700px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .header-container {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .stButton>button {
+            background-color: #007bff;
+            color: white;
+            border-radius: 8px;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .stButton>button:hover {
+            background-color: #0056b3;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
 # Chatbot Interface
 def chatbot_interface():
-    st.header("🤖 Mental Health Chatbot")
-    st.write("Hello! I'm **Menti**, your mental health assistant. How can I help you today?")
+    add_custom_css() 
+    st.markdown("<div class='header-container'><h1>🤖 Mental Health Chatbot</h1></div>", unsafe_allow_html=True)
+    st.write("<div class='header-container'><p>Hello! I'm <strong>Menti</strong>, your mental health assistant. How can I help you today?</p></div>", unsafe_allow_html=True)
 
     if 'history' not in st.session_state:
         st.session_state['history'] = []
 
+    st.markdown("<div class='input-container'>", unsafe_allow_html=True)
     user_input = st.text_input("You:", "", key="input")
-    if user_input:
-        user_lang = detect(user_input)
-        translated_input = translator.translate(user_input, src=user_lang, dest="en").text if user_lang != "en" else user_input
+    if st.button("Send"):
+        if user_input:
+            with st.spinner('Menti is typing...'):
+                user_lang = detect(user_input)
+                translated_input = translator.translate(user_input, src=user_lang, dest="en").text if user_lang != "en" else user_input
 
-        response = openai.ChatCompletion.create(
-            model="gpt-4",
-            messages=[
-                {"role": "system", "content": "You are a compassionate and multilingual mental health assistant."},
-                {"role": "user", "content": translated_input}
-            ],
-            temperature=0.7,
-            max_tokens=150
-        )
-        assistant_reply = response['choices'][0]['message']['content']
-        if user_lang != "en":
-            assistant_reply = translator.translate(assistant_reply, src="en", dest=user_lang).text
+                # Adding context for the full conversation history to make it more like ChatGPT
+                messages = [
+                    {"role": "system", "content": "You are a compassionate and multilingual mental health assistant."}
+                ]
+                for chat in st.session_state.history:
+                    messages.append({"role": "user", "content": chat['user']})
+                    messages.append({"role": "assistant", "content": chat['assistant']})
+                messages.append({"role": "user", "content": translated_input})
 
-        st.session_state.history.append({"user": user_input, "assistant": assistant_reply})
+                response = openai.ChatCompletion.create(
+                    model="gpt-4",
+                    messages=messages,
+                    temperature=0.7,
+                    max_tokens=150
+                )
+                assistant_reply = response['choices'][0]['message']['content']
+                if user_lang != "en":
+                    assistant_reply = translator.translate(assistant_reply, src="en", dest=user_lang).text
 
+                st.session_state.history.append({"user": user_input, "assistant": assistant_reply})
+                time.sleep(1)  # Adding a slight delay to mimic typing
+
+    st.markdown("</div>", unsafe_allow_html=True)
+    
     st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
     for chat in st.session_state.history:
         st.markdown(f"<div class='chat-message user-message'><strong>You:</strong> {chat['user']}</div>", unsafe_allow_html=True)
         st.markdown(f"<div class='chat-message assistant-message'><strong>Menti:</strong> {chat['assistant']}</div>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
-
-    if st.checkbox("Show Word Cloud of Your Conversations"):
-        all_text = ' '.join([chat['user'] for chat in st.session_state.history])
-        if all_text:
-            wordcloud = WordCloud(width=800, height=400, background_color='white').generate(all_text)
-            plt.figure(figsize=(10, 5))
-            plt.imshow(wordcloud, interpolation='bilinear')
-            plt.axis('off')
-            st.pyplot(plt)
-        else:
-            st.write("No conversations to display.")
 
 if __name__ == "__main__":
     chatbot_interface()
