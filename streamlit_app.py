@@ -272,16 +272,6 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import classification_report
 
-# Exploratory Data Analysis (EDA)
-# 1. Correlation Heatmap
-plt.figure(figsize=(8, 5))
-corr = mental_health_data.corr()
-sns.heatmap(corr, annot=True, cmap='coolwarm', linewidths=0.5)
-plt.title('Correlation Heatmap', fontsize=16)
-plt.xticks(rotation=45)
-plt.yticks(rotation=0)
-plt.show()
-
 # 2. Distribution of Depression Scores with Annotation
 plt.figure(figsize=(8, 5))
 sns.histplot(mental_health_data['Depression_Score'], kde=True, color='blue')
