@@ -810,38 +810,38 @@ def main():
         },
     )
 
-    # Simulate data once to avoid regenerating it on every interaction
-    data = simulate_data()
+   # Load the mental health data once to avoid regenerating it on every interaction
+data = load_data()
 
-    # Display user authentication sidebar
-    user_authentication()
+# Display user authentication sidebar
+user_authentication()
 
-    # Add Hotline and Resources to the sidebar
-    sidebar_hotline_and_resources()
+# Add Hotline and Resources to the sidebar
+sidebar_hotline_and_resources()
 
-    # Handle navigation
-    if selected == _("Home"):
-        home(data)
-    elif selected == _("Data Visualization"):
-        data_visualization(data)
-    elif selected == _("Predictive Modeling"):
-        predictive_modeling()
-    elif selected == _("Chatbot"):
-        chatbot_interface()
-    elif selected == _("Community Forum"):
-        community_forum()
-    elif selected == _("Contact Professionals"):
-        contact_professionals()
-    elif selected == _("Sentiment Analysis"):
-        sentiment_analysis()
-   # elif selected == _("Analytics"):
-      #  st.header(_("Analytics"))
-      #  st.markdown(_("This section can include advanced analytics features such as predictive modeling insights, trend analysis, and more."))
-        # Placeholder for future analytics features
-    #elif selected == _("Settings"):
-      #  st.header(_("Settings"))
-    #    st.markdown(_("Customize your dashboard settings here."))
-        # Placeholder for future settings features
+# Handle navigation based on user's selection
+if selected == _("Home"):
+    home(data)
+elif selected == _("Data Visualization"):
+    data_visualization(data)
+elif selected == _("Predictive Modeling"):
+    predictive_modeling(data)  # Pass the data for predictive modeling
+elif selected == _("Chatbot"):
+    chatbot_interface()
+elif selected == _("Community Forum"):
+    community_forum()
+elif selected == _("Contact Professionals"):
+    contact_professionals()
+elif selected == _("Sentiment Analysis"):
+    sentiment_analysis(data)  # Pass the data if needed for sentiment analysis
+# elif selected == _("Analytics"):
+#    st.header(_("Analytics"))
+#    st.markdown(_("This section can include advanced analytics features such as predictive modeling insights, trend analysis, and more."))
+    # Placeholder for future analytics features
+# elif selected == _("Settings"):
+#    st.header(_("Settings"))
+#    st.markdown(_("Customize your dashboard settings here."))
+    # Placeholder for future settings features
 
 if __name__ == '__main__':
     main()
