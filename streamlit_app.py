@@ -253,30 +253,126 @@ def _(text):
         return translations.get(text, text)
     else:
         return text
-
+        # Load mental health data from CSV
+mental_health_data = pd.read_csv("mental_health_data.csv")
 # Simulate data function for visualization
 @st.cache(allow_output_mutation=True)
-def simulate_data():
-    np.random.seed(42)
-    num_samples = 1000
-    data = pd.DataFrame({
-        'Age': np.random.randint(15, 25, num_samples),
-        'Gender': np.random.choice(['Male', 'Female'], num_samples),
-        'Depression_Score': np.random.normal(50, 15, num_samples),
-        'Anxiety_Score': np.random.normal(50, 15, num_samples),
-        'Stress_Level': np.random.normal(50, 15, num_samples),
-        'Social_Media_Usage': np.random.randint(0, 12, num_samples),  # Hours per day
-        'Physical_Activity': np.random.randint(0, 14, num_samples),    # Hours per week
-        'Sleep_Duration': np.random.normal(7, 1.5, num_samples),      # Hours per night
-        'Region': np.random.choice(['Kigali', 'Northern', 'Southern', 'Eastern', 'Western'], num_samples),
-        'Date': pd.date_range(start='2022-01-01', periods=num_samples, freq='D').tolist()
-    })
-    # Ensure scores are within 0-100
-    for score in ['Depression_Score', 'Anxiety_Score', 'Stress_Level']:
-        data[score] = data[score].clip(0, 100)
-    # Ensure no missing values in 'Region'
-    data['Region'] = data['Region'].fillna('Unknown')
-    return data
+def load_data():
+    return mental_health_data
+
+# Import necessary libraries for insights
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error, accuracy_score
+from sklearn.preprocessing import LabelEncoder
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+
+# Exploratory Data Analysis (EDA)
+# 1. Correlation Heatmap
+plt.figure(figsize=(8, 5))
+corr = mental_health_data.corr()
+sns.heatmap(corr, annot=True, cmap='coolwarm', linewidths=0.5)
+plt.title('Correlation Heatmap', fontsize=16)
+plt.xticks(rotation=45)
+plt.yticks(rotation=0)
+plt.show()
+
+# 2. Distribution of Depression Scores with Annotation
+plt.figure(figsize=(8, 5))
+sns.histplot(mental_health_data['Depression_Score'], kde=True, color='blue')
+plt.title('Distribution of Depression Scores', fontsize=16)
+plt.xlabel('Depression Score', fontsize=12)
+plt.ylabel('Frequency', fontsize=12)
+mean_depression = mental_health_data['Depression_Score'].mean()
+plt.axvline(mean_depression, color='red', linestyle='--')
+plt.text(mean_depression + 1, 25, f'Mean: {mean_depression:.2f}', color='red')
+plt.show()
+
+# 3. Average Depression Score by Gender with Bar Chart
+plt.figure(figsize=(8, 5))
+avg_depression_by_gender = mental_health_data.groupby('Gender')['Depression_Score'].mean().reset_index()
+sns.barplot(data=avg_depression_by_gender, x='Gender', y='Depression_Score', palette='viridis')
+plt.title('Average Depression Score by Gender', fontsize=16)
+plt.xlabel('Gender', fontsize=12)
+plt.ylabel('Average Depression Score', fontsize=12)
+for index, row in avg_depression_by_gender.iterrows():
+    plt.text(index, row['Depression_Score'] + 1, f'{row["Depression_Score"]:.2f}', ha='center', fontsize=10)
+plt.show()
+
+# 4. Physical Activity vs Depression Score with Linear Fit
+plt.figure(figsize=(8, 5))
+sns.regplot(data=mental_health_data, x='Physical_Activity', y='Depression_Score', scatter_kws={'s': 50, 'alpha': 0.5}, line_kws={'color': 'red'})
+plt.title('Physical Activity vs Depression Score', fontsize=16)
+plt.xlabel('Physical Activity (Hours per week)', fontsize=12)
+plt.ylabel('Depression Score', fontsize=12)
+plt.show()
+
+# 5. Average Depression Score by Region with Annotations
+plt.figure(figsize=(10, 6))
+avg_depression_by_region = mental_health_data.groupby('Region')['Depression_Score'].mean().reset_index()
+sns.barplot(data=avg_depression_by_region, x='Region', y='Depression_Score', palette='viridis')
+plt.title('Average Depression Score by Region', fontsize=16)
+plt.xlabel('Region', fontsize=12)
+plt.ylabel('Average Depression Score', fontsize=12)
+for index, row in avg_depression_by_region.iterrows():
+    plt.text(index, row['Depression_Score'] + 1, f'{row["Depression_Score"]:.2f}', ha='center', fontsize=10)
+plt.xticks(rotation=45)
+plt.show()
+
+# Train predictive model to predict future depression scores
+# Splitting the data into features and target
+features = mental_health_data[['Age', 'Gender', 'Social_Media_Usage', 'Physical_Activity', 'Sleep_Duration', 'Region']]
+target = mental_health_data['Depression_Score']
+
+# Convert categorical variables to dummy variables
+features = pd.get_dummies(features, drop_first=True)
+
+# Splitting the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(features, target, test_size=0.2, random_state=42)
+
+# Initialize and train the model
+model = RandomForestRegressor(n_estimators=100, random_state=42)
+model.fit(X_train, y_train)
+
+# Make predictions
+predictions = model.predict(X_test)
+
+# Calculate and print the mean squared error
+mse = mean_squared_error(y_test, predictions)
+print(f'Mean Squared Error: {mse}')
+
+# Predicting Future State of Feeling (Classification)
+# Adding a new column for categorical classification of depression state
+mental_health_data['Depression_State'] = mental_health_data['Depression_Score'].apply(lambda x: 'High' if x > 70 else ('Moderate' if x > 40 else 'Low'))
+
+# Splitting the data for classification model
+features_classification = mental_health_data[['Age', 'Gender', 'Social_Media_Usage', 'Physical_Activity', 'Sleep_Duration', 'Region']]
+target_classification = mental_health_data['Depression_State']
+
+# Convert categorical variables to dummy variables
+features_classification = pd.get_dummies(features_classification, drop_first=True)
+
+# Encode target labels
+label_encoder = LabelEncoder()
+target_classification = label_encoder.fit_transform(target_classification)
+
+# Splitting the data into training and testing sets
+X_train_cls, X_test_cls, y_train_cls, y_test_cls = train_test_split(features_classification, target_classification, test_size=0.2, random_state=42)
+
+# Initialize and train the classification model
+classifier = LogisticRegression(max_iter=200, random_state=42)
+classifier.fit(X_train_cls, y_train_cls)
+
+# Make predictions
+predictions_cls = classifier.predict(X_test_cls)
+
+# Print classification report
+print(classification_report(y_test_cls, predictions_cls, target_names=label_encoder.classes_))
 
 # Predictive Modeling Function
 def predictive_modeling():
