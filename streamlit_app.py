@@ -9,14 +9,6 @@ from textblob import TextBlob
 import nltk
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
-import os
-import openai
-from langdetect import detect
-from googletrans import Translator
-import streamlit as st
-from wordcloud import WordCloud
-import matplotlib.pyplot as plt
-
 
 # Download NLTK data (if not already downloaded)
 nltk.download('punkt')
@@ -280,7 +272,7 @@ def simulate_data():
 
 # Predictive Modeling Function
 def predictive_modeling():
-    st.header(" " + _("Predictive Modeling"))
+    st.header("🤖 " + _("Predictive Modeling"))
     st.markdown(_("### Predict your Depression Score"))
 
     # User input form
@@ -305,7 +297,7 @@ def predictive_modeling():
 
 # Home page design with Hierarchical Demographic Analysis chart
 def home(data):
-    st.title("" + _("Mental Health Dashboard for Rwandan Youth"))
+    st.title("🧠 " + _("Mental Health Dashboard for Rwandan Youth"))
     st.markdown("### " + _("Welcome to the Mental Health Dashboard"))
     st.markdown(_("This dashboard provides insights into the mental health of Rwandan youth. Explore data visualizations, predictive modeling, and engage with our interactive chatbot."))
 
@@ -320,8 +312,8 @@ def home(data):
     st.subheader("📈 " + _("Summary Statistics"))
     st.markdown("Display key statistics about the dataset to provide a quick overview.")
     summary = data.describe().T
-    summary['median'] = data.median(numeric_only=True)
-    st.dataframe(summary[['mean','median','std','min', 'max']].round(2))
+    summary['median'] = data.median()
+    st.dataframe(summary[['mean', 'median', 'std', 'min', 'max']].round(2))
 
     # Key Performance Indicators (KPIs)
     st.subheader("🚀 " + _("Key Performance Indicators"))
@@ -484,46 +476,38 @@ def data_visualization(data):
         st.plotly_chart(fig, use_container_width=True)
 
 # Chatbot Interface
-# Securely retrieve the OpenAI API key
-openai.api_key = os.getenv("OPENAI_API_KEY")
-
-translator = Translator()
-
-# Chatbot Interface
 def chatbot_interface():
-    st.header("🤖 Mental Health Chatbot")
-    st.write("Hello! I'm **Menti**, your mental health assistant. How can I help you today?")
+    st.header("🧠 " + _("Mental Health Chatbot"))
+
+    st.write(_("Hello! I'm **Menti**, your mental health assistant. How can I help you today?"))
 
     if 'history' not in st.session_state:
         st.session_state['history'] = []
 
-    user_input = st.text_input("You:", "", key="input")
+    # Chat interface
+    user_input = st.text_input(_("You") + ":", "", key="input")
     if user_input:
-        user_lang = detect(user_input)
-        translated_input = translator.translate(user_input, src=user_lang, dest="en").text if user_lang != "en" else user_input
+        # Simulate chatbot response using TextBlob for sentiment analysis
+        blob = TextBlob(user_input)
+        sentiment = blob.sentiment.polarity
+        if sentiment > 0.1:
+            assistant_response = "That's great to hear! How can I assist you further?"
+        elif sentiment < -0.1:
+            assistant_response = "I'm sorry you're feeling this way. Please consider reaching out to a professional for support."
+        else:
+            assistant_response = "I understand. Could you please provide more details or specify how I can help you?"
 
-        response = openai.ChatCompletion.create(
-            model="gpt-4",
-            messages=[
-                {"role": "system", "content": "You are a compassionate and multilingual mental health assistant."},
-                {"role": "user", "content": translated_input}
-            ],
-            temperature=0.7,
-            max_tokens=150
-        )
-        assistant_reply = response['choices'][0]['message']['content']
-        if user_lang != "en":
-            assistant_reply = translator.translate(assistant_reply, src="en", dest=user_lang).text
+        st.session_state.history.append({"user": user_input, "assistant": assistant_response})
 
-        st.session_state.history.append({"user": user_input, "assistant": assistant_reply})
-
+    # Display conversation history
     st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
     for chat in st.session_state.history:
-        st.markdown(f"<div class='chat-message user-message'><strong>You:</strong> {chat['user']}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='chat-message user-message'><strong>{_('You')}:</strong> {chat['user']}</div>", unsafe_allow_html=True)
         st.markdown(f"<div class='chat-message assistant-message'><strong>Menti:</strong> {chat['assistant']}</div>", unsafe_allow_html=True)
     st.markdown("</div>", unsafe_allow_html=True)
 
-    if st.checkbox("Show Word Cloud of Your Conversations"):
+    # Optionally, add a Word Cloud based on user inputs
+    if st.checkbox(_("Show Word Cloud of Your Conversations")):
         all_text = ' '.join([chat['user'] for chat in st.session_state.history])
         if all_text:
             wordcloud = WordCloud(width=800, height=400, background_color='white').generate(all_text)
@@ -532,10 +516,7 @@ def chatbot_interface():
             plt.axis('off')
             st.pyplot(plt)
         else:
-            st.write("No conversations to display.")
-
-if __name__ == "__main__":
-    chatbot_interface()
+            st.write(_("No conversations to display."))
 
 # Community Forum (Simulated Feature)
 def community_forum():
@@ -748,14 +729,14 @@ def main():
         contact_professionals()
     elif selected == _("Sentiment Analysis"):
         sentiment_analysis()
-   # elif selected == _("Analytics"):
-      #  st.header(_("Analytics"))
-      #  st.markdown(_("This section can include advanced analytics features such as predictive modeling insights, trend analysis, and more."))
+    elif selected == _("Analytics"):
+        st.header(_("Analytics"))
+        st.markdown(_("This section can include advanced analytics features such as predictive modeling insights, trend analysis, and more."))
         # Placeholder for future analytics features
-    #elif selected == _("Settings"):
-      #  st.header(_("Settings"))
-    #    st.markdown(_("Customize your dashboard settings here."))
+    elif selected == _("Settings"):
+        st.header(_("Settings"))
+        st.markdown(_("Customize your dashboard settings here."))
         # Placeholder for future settings features
 
 if __name__ == '__main__':
-    main() .
+    main()
