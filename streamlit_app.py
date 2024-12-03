@@ -25,7 +25,7 @@ nltk.download('averaged_perceptron_tagger')
 # Set page configuration
 st.set_page_config(
     page_title="Mental Health Dashboard",
-    page_icon="🤓",
+    page_icon="🧠",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -163,10 +163,16 @@ def _(text):
         "Predicted Depression Score": "Amanota y'Agahinda yateganyijwe",
         "Note: Higher scores indicate higher levels of depression.":
             "Icyitonderwa: Amanota menshi agaragaza urwego rwo hejuru rw'agahinda.",
+        "Mental Health Chatbot": "Chatbot y'Ubuzima bwo mu Mutwe",
+        "Hello! I'm **Menti**, your mental health assistant. How can I help you today?":
+            "Muraho! Ndi **Menti**, umufasha wawe mu buzima bwo mu mutwe. Nigute nakugira inama uyu munsi?",
+        "You": "Wowe",
+        "Tip": "Inama",
         "Main Menu": "Menyu Nyamukuru",
         "Home": "Ahabanza",
         "Data Visualization": "Kwerekana Imibare",
         "Predictive Modeling": "Gukora Icyitegererezo",
+        "Chatbot": "Chatbot",
         "Community Forum": "Urubuga rw'Abaturage",
         "Contact Professionals": "Guhamagara Ababigize umwuga",
         "Chat with Professional": "Vugana n'Umuhanga",
@@ -201,6 +207,7 @@ def _(text):
         "Phone Number": "Numero ya Telefone",
         "Call": "Hamagara",
         "Dialing": "Hamagara",
+        "Email": "Imeli",
         "Opening email client for": "Ufunguye porogaramu ya imeli kuri",
         "Sentiment Analysis": "Isesengura ry'Umubabaro",
         "Sentiment Over Time": "Umubabaro mu Gihe",
@@ -293,7 +300,7 @@ def predictive_modeling():
         # Simple model for prediction (linear approximation)
         depression_score = (age * 0.3) + (social_media * 0.5) - (physical_activity * 0.2) + (sleep_duration * 0.4)
         depression_score = np.clip(depression_score, 0, 100)  # Ensures the score stays within 0-100 range
-        st.success(f"{_('Predicted Depression Score')}: *{depression_score:.2f}*")
+        st.success(f"{_('Predicted Depression Score')}: **{depression_score:.2f}**")
         st.info(_("Note: Higher scores indicate higher levels of depression."))
 
 # Home page design with Hierarchical Demographic Analysis chart
@@ -356,7 +363,7 @@ def data_visualization(data):
         (data['Date'] >= pd.to_datetime(date_range[0])) & (data['Date'] <= pd.to_datetime(date_range[1]))
     ]
 
-    st.markdown(f"{len(filtered_data)}** records found based on the selected filters.")
+    st.markdown(f"**{len(filtered_data)}** records found based on the selected filters.")
 
     # Tabs for organizing visualizations
     tabs = st.tabs(["Overview", "Demographics", "Mental Health Metrics", "Advanced Analysis"])
@@ -397,16 +404,16 @@ def data_visualization(data):
         # Age Distribution
         col1, col2 = st.columns(2)
         with col1:
-            st.markdown(_("*Age Distribution*"))
+            st.markdown(_("**Age Distribution**"))
             fig = px.histogram(filtered_data, x='Age', nbins=10, color='Gender', barmode='overlay', opacity=0.7)
             st.plotly_chart(fig, use_container_width=True)
         with col2:
-            st.markdown(_("*Gender Distribution*"))
+            st.markdown(_("**Gender Distribution**"))
             fig = px.pie(filtered_data, names='Gender', title='Gender Distribution', color_discrete_map={'Male': '#636EFA', 'Female': '#EF553B'})
             st.plotly_chart(fig, use_container_width=True)
 
         # Treemap
-        st.markdown(_("*User Distribution by Region and Gender*"))
+        st.markdown(_("**User Distribution by Region and Gender**"))
         fig = px.treemap(filtered_data, path=['Region', 'Gender'], title='User Distribution', color='Gender',
                          color_discrete_map={'Male': '#636EFA', 'Female': '#EF553B'})
         st.plotly_chart(fig, use_container_width=True)
@@ -416,7 +423,7 @@ def data_visualization(data):
         st.subheader(_("Mental Health Metrics"))
 
         # Mental Health Trends over Time (Depression, Anxiety, Stress)
-        st.markdown(_("*Mental Health Trends Over Time*"))
+        st.markdown(_("**Mental Health Trends Over Time**"))
         metrics = ['Depression_Score', 'Anxiety_Score', 'Stress_Level']
         selected_metrics = st.multiselect(_("Select metrics to display:"), metrics, default=metrics)
         if selected_metrics:
@@ -428,7 +435,7 @@ def data_visualization(data):
             st.plotly_chart(fig, use_container_width=True)
 
         # Distribution Plots
-        st.markdown(_("*Distribution of Mental Health Scores*"))
+        st.markdown(_("**Distribution of Mental Health Scores**"))
         col1, col2, col3 = st.columns(3)
         with col1:
             fig = px.histogram(filtered_data, x='Depression_Score', nbins=20, title='Depression Score Distribution', color='Gender', barmode='overlay', opacity=0.7)
@@ -445,7 +452,7 @@ def data_visualization(data):
         st.subheader(_("Advanced Analysis"))
 
         # Correlation Matrix
-        st.markdown(_("*Correlation Matrix*"))
+        st.markdown(_("**Correlation Matrix**"))
         corr = filtered_data[['Depression_Score', 'Anxiety_Score', 'Stress_Level', 'Social_Media_Usage', 
                             'Physical_Activity', 'Sleep_Duration', 'Age']].corr()
         fig = px.imshow(corr, text_auto=True, aspect="auto", color_continuous_scale='RdBu_r')
@@ -453,7 +460,7 @@ def data_visualization(data):
         st.plotly_chart(fig, use_container_width=True)
 
         # Scatter Plot Matrix
-        st.markdown(_("*Scatter Plot Matrix*"))
+        st.markdown(_("**Scatter Plot Matrix**"))
         fig = px.scatter_matrix(
             filtered_data,
             dimensions=['Depression_Score', 'Anxiety_Score', 'Stress_Level', 'Social_Media_Usage', 'Physical_Activity', 'Sleep_Duration'],
@@ -464,7 +471,7 @@ def data_visualization(data):
         st.plotly_chart(fig, use_container_width=True)
 
         # Trellis Plot (Faceted Scatter)
-        st.markdown(_("*Trellis Plot: Depression vs. Anxiety by Gender*"))
+        st.markdown(_("**Trellis Plot: Depression vs. Anxiety by Gender**"))
         fig = px.scatter(
             filtered_data,
             x='Depression_Score',
@@ -475,6 +482,60 @@ def data_visualization(data):
             title='Depression vs. Anxiety Scores by Gender'
         )
         st.plotly_chart(fig, use_container_width=True)
+
+# Chatbot Interface
+# Securely retrieve the OpenAI API key
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+translator = Translator()
+
+# Chatbot Interface
+def chatbot_interface():
+    st.header("🤖 Mental Health Chatbot")
+    st.write("Hello! I'm **Menti**, your mental health assistant. How can I help you today?")
+
+    if 'history' not in st.session_state:
+        st.session_state['history'] = []
+
+    user_input = st.text_input("You:", "", key="input")
+    if user_input:
+        user_lang = detect(user_input)
+        translated_input = translator.translate(user_input, src=user_lang, dest="en").text if user_lang != "en" else user_input
+
+        response = openai.ChatCompletion.create(
+            model="gpt-4",
+            messages=[
+                {"role": "system", "content": "You are a compassionate and multilingual mental health assistant."},
+                {"role": "user", "content": translated_input}
+            ],
+            temperature=0.7,
+            max_tokens=150
+        )
+        assistant_reply = response['choices'][0]['message']['content']
+        if user_lang != "en":
+            assistant_reply = translator.translate(assistant_reply, src="en", dest=user_lang).text
+
+        st.session_state.history.append({"user": user_input, "assistant": assistant_reply})
+
+    st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
+    for chat in st.session_state.history:
+        st.markdown(f"<div class='chat-message user-message'><strong>You:</strong> {chat['user']}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='chat-message assistant-message'><strong>Menti:</strong> {chat['assistant']}</div>", unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
+
+    if st.checkbox("Show Word Cloud of Your Conversations"):
+        all_text = ' '.join([chat['user'] for chat in st.session_state.history])
+        if all_text:
+            wordcloud = WordCloud(width=800, height=400, background_color='white').generate(all_text)
+            plt.figure(figsize=(10, 5))
+            plt.imshow(wordcloud, interpolation='bilinear')
+            plt.axis('off')
+            st.pyplot(plt)
+        else:
+            st.write("No conversations to display.")
+
+if __name__ == "__main__":
+    chatbot_interface()
 
 # Community Forum (Simulated Feature)
 def community_forum():
@@ -501,7 +562,7 @@ def community_forum():
 
     st.subheader(_("Recent Posts"))
     for post in reversed(st.session_state.posts[-10:]):
-        st.markdown(f"{post['username']}** { _('at') } {post['timestamp']}")
+        st.markdown(f"**{post['username']}** { _('at') } {post['timestamp']}")
         st.markdown(f"{post['content']}")
         st.markdown("---")
 
@@ -524,9 +585,9 @@ def contact_professionals():
     selected_professional = st.selectbox(_("Choose a professional to contact"), professionals['Name'])
     prof_info = professionals[professionals['Name'] == selected_professional].iloc[0]
 
-    st.markdown(f"{_('Location')}:** {prof_info['Location']}")
-    st.markdown(f"{_('Phone Number')}:** {prof_info['Phone Number']}")
-    st.markdown(f"{_('Email')}:** {prof_info['Email']}")
+    st.markdown(f"**{_('Location')}:** {prof_info['Location']}")
+    st.markdown(f"**{_('Phone Number')}:** {prof_info['Phone Number']}")
+    st.markdown(f"**{_('Email')}:** {prof_info['Email']}")
 
     col1, col2 = st.columns(2)
     with col1:
@@ -610,16 +671,16 @@ def sidebar_hotline_and_resources():
     st.sidebar.markdown("---")
     st.sidebar.header(_("Hotline"))
     st.sidebar.markdown("""
-    *Rwanda Biomedical Center (RBC):*  
+    **Rwanda Biomedical Center (RBC):**  
     📞 +250 788 000000  
 
-    *Ambulance Service:*  
+    **Ambulance Service:**  
     📞 +250 788 111111  
 
-    *Police Support:*  
+    **Police Support:**  
     📞 +250 788 222222  
 
-    *Emergency Services:*  
+    **Emergency Services:**  
     📞 +250 788 333333  
     """)
 
@@ -640,6 +701,7 @@ def main():
         _("Home"),
         _("Data Visualization"),
         _("Predictive Modeling"),
+        _("Chatbot"),
         _("Community Forum"),
         _("Contact Professionals"),
         _("Sentiment Analysis"),
@@ -678,13 +740,22 @@ def main():
         data_visualization(data)
     elif selected == _("Predictive Modeling"):
         predictive_modeling()
+    elif selected == _("Chatbot"):
+        chatbot_interface()
     elif selected == _("Community Forum"):
         community_forum()
     elif selected == _("Contact Professionals"):
         contact_professionals()
     elif selected == _("Sentiment Analysis"):
         sentiment_analysis()
+   # elif selected == _("Analytics"):
+      #  st.header(_("Analytics"))
+      #  st.markdown(_("This section can include advanced analytics features such as predictive modeling insights, trend analysis, and more."))
+        # Placeholder for future analytics features
+    #elif selected == _("Settings"):
+      #  st.header(_("Settings"))
+    #    st.markdown(_("Customize your dashboard settings here."))
+        # Placeholder for future settings features
 
 if __name__ == '__main__':
-    main()
-
+    main() .
